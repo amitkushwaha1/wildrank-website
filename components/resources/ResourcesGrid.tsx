@@ -65,7 +65,7 @@ export default function ResourcesGrid() {
                 <span className={`text-xs font-semibold ${r.color} uppercase tracking-wider`}>{r.type}</span>
                 <h3 className="text-white font-bold text-base mt-1 mb-2 leading-snug">{r.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed mb-5">{r.description}</p>
-                <motion.a href="/company/contact" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
+                <motion.a href="/contact" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
                   className="flex items-center gap-2 text-sm font-semibold text-white bg-white/5 hover:bg-accent/20 hover:text-accent border border-dark-border hover:border-accent/30 px-4 py-2.5 rounded-lg transition-all duration-200">
                   <Download className="w-4 h-4" /> Download Free <ArrowRight className="w-3.5 h-3.5 ml-auto" />
                 </motion.a>

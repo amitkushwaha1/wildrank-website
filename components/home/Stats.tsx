@@ -95,7 +95,7 @@ export default function Stats() {
             Recognized & Certified By
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8">
-            {["Google Partner", "Deloitte Fast 50", "Red Herring Top 100", "ISO 9001:2008", "Deloitte Fast 500"].map(
+            {["Google Partner", "Google Partner", "Red Herring Top 100", "ISO 9001:2008", "Google Partner0"].map(
               (name) => (
                 <div
                   key={name}

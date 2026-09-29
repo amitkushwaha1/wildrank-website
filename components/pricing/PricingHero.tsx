@@ -109,7 +109,7 @@ export default function PricingHero({ badge, title, highlight, description, colo
               View Plans <ArrowRight className="w-4 h-4" />
             </motion.a>
             <motion.a
-              href="/company/contact"
+              href="/contact"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
               className="flex items-center gap-2 border border-white/10 hover:border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"

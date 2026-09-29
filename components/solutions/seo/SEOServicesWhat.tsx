@@ -39,7 +39,7 @@ export default function SEOServicesWhat() {
                   </div>
                   <h3 className="text-white font-bold text-base mb-2">{s.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed mb-4">{s.description}</p>
-                  <a href="/pricing/seo" className="flex items-center gap-1 text-xs font-semibold text-accent group-hover:gap-2 transition-all duration-200">
+                  <a href="/seo-pricing" className="flex items-center gap-1 text-xs font-semibold text-accent group-hover:gap-2 transition-all duration-200">
                     See pricing <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 </TiltCard>

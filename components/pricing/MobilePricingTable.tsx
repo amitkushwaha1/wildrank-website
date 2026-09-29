@@ -70,7 +70,7 @@ export default function MobilePricingTable() {
                     );
                   })}
                 </div>
-                <motion.a href="/company/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
+                <motion.a href="/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
                   className={`block text-center text-sm font-semibold py-2.5 rounded-xl transition-all mt-auto ${plan.badge ? "bg-accent hover:bg-accent-light text-white" : "border border-dark-border hover:border-primary/50 text-gray-300 hover:text-white"}`}>
                   {plan.price === 0 ? "Get Custom Quote" : "Start Project"}
                 </motion.a>

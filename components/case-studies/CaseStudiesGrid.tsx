@@ -161,7 +161,7 @@ export default function CaseStudiesGrid() {
                     ))}
                   </div>
 
-                  <a href="/company/contact"
+                  <a href="/contact"
                     className="flex items-center gap-1 text-xs font-semibold text-accent group-hover:gap-2 transition-all duration-200">
                     <TrendingUp className="w-3.5 h-3.5" /> Read Case Study <ArrowRight className="w-3.5 h-3.5" />
                   </a>

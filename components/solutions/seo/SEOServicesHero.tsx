@@ -58,11 +58,11 @@ export default function SEOServicesHero() {
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-wrap gap-4">
-              <motion.a href="/pricing/seo" whileHover={{ scale: 1.04, boxShadow: "0 0 24px rgba(249,115,22,0.4)" }} whileTap={{ scale: 0.97 }}
+              <motion.a href="/seo-pricing" whileHover={{ scale: 1.04, boxShadow: "0 0 24px rgba(249,115,22,0.4)" }} whileTap={{ scale: 0.97 }}
                 className="flex items-center gap-2 bg-accent hover:bg-accent-light text-white font-semibold px-7 py-3.5 rounded-xl transition-colors shadow-lg shadow-accent/20">
                 View SEO Pricing <ArrowRight className="w-4 h-4" />
               </motion.a>
-              <motion.a href="/company/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
+              <motion.a href="/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
                 className="flex items-center gap-2 border border-white/10 hover:border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors">
                 Get Free Audit
               </motion.a>

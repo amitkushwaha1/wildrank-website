@@ -44,18 +44,18 @@ export default function CTA() {
 
             <div className="flex flex-wrap gap-4">
               <a
-                href="tel:+18001234567"
+                href="tel:+13072150728"
                 className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
               >
                 <Phone className="w-4 h-4 text-accent" />
-                +1 (800) 123-4567
+                +1 (307) 215-0728
               </a>
               <a
-                href="mailto:info@wildrank.com"
+                href="mailto:info@wildranktechnologies.com"
                 className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
               >
                 <Mail className="w-4 h-4 text-accent" />
-                info@wildrank.com
+                info@wildranktechnologies.com
               </a>
             </div>
           </motion.div>
@@ -69,7 +69,13 @@ export default function CTA() {
             className="glass-card rounded-2xl p-8 border border-dark-border"
           >
             <h3 className="text-xl font-bold text-white mb-6">Get Your Free Audit</h3>
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-4" action="https://formsubmit.co/info@wildranktechnologies.com" method="POST">
+              {/* FormSubmit configuration */}
+              <input type="hidden" name="_subject" value="New Free Audit Request - Wildrank Technologies" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="text" name="_honey" style={{ display: "none" }} />
+
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs text-gray-400 mb-1.5" htmlFor="fname">
@@ -77,9 +83,11 @@ export default function CTA() {
                   </label>
                   <input
                     id="fname"
+                    name="First Name"
                     type="text"
+                    required
                     placeholder="John"
-                    className="w-full bg-dark border border-dark-border text-white placeholder-gray-600 px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors"
+                    className="w-full bg-[#111] border border-white/10 text-white placeholder-gray-600 px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors"
                   />
                 </div>
                 <div>
@@ -88,9 +96,11 @@ export default function CTA() {
                   </label>
                   <input
                     id="lname"
+                    name="Last Name"
                     type="text"
+                    required
                     placeholder="Doe"
-                    className="w-full bg-dark border border-dark-border text-white placeholder-gray-600 px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors"
+                    className="w-full bg-[#111] border border-white/10 text-white placeholder-gray-600 px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors"
                   />
                 </div>
               </div>
@@ -101,9 +111,11 @@ export default function CTA() {
                 </label>
                 <input
                   id="email"
+                  name="Email"
                   type="email"
+                  required
                   placeholder="john@company.com"
-                  className="w-full bg-dark border border-dark-border text-white placeholder-gray-600 px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors"
+                  className="w-full bg-[#111] border border-white/10 text-white placeholder-gray-600 px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors"
                 />
               </div>
 
@@ -113,9 +125,10 @@ export default function CTA() {
                 </label>
                 <input
                   id="website"
+                  name="Website URL"
                   type="url"
                   placeholder="https://yourwebsite.com"
-                  className="w-full bg-dark border border-dark-border text-white placeholder-gray-600 px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors"
+                  className="w-full bg-[#111] border border-white/10 text-white placeholder-gray-600 px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors"
                 />
               </div>
 
@@ -125,17 +138,21 @@ export default function CTA() {
                 </label>
                 <select
                   id="service"
-                  className="w-full bg-dark border border-dark-border text-gray-300 px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors"
+                  name="Service Interested In"
+                  required
+                  className="w-full bg-[#111] border border-white/10 text-gray-300 px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors"
+                  style={{ colorScheme: "dark" }}
                 >
                   <option value="">Select a service</option>
-                  <option>SEO Services</option>
-                  <option>PPC Advertising</option>
+                  <option>Search Engine Optimization</option>
+                  <option>PPC Management</option>
                   <option>Social Media Marketing</option>
-                  <option>Web Development</option>
-                  <option>Mobile App Development</option>
+                  <option>Digital Marketing</option>
+                  <option>Local SEO</option>
+                  <option>Content Marketing</option>
+                  <option>Email Marketing</option>
+                  <option>Mobile Marketing</option>
                   <option>White Label Services</option>
-                  <option>Software Development</option>
-                  <option>IT Outsourcing</option>
                 </select>
               </div>
 
@@ -145,9 +162,10 @@ export default function CTA() {
                 </label>
                 <textarea
                   id="message"
+                  name="Message"
                   rows={3}
                   placeholder="What are you looking to achieve?"
-                  className="w-full bg-dark border border-dark-border text-white placeholder-gray-600 px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors resize-none"
+                  className="w-full bg-[#111] border border-white/10 text-white placeholder-gray-600 px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors resize-none"
                 />
               </div>
 

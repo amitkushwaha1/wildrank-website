@@ -1,25 +1,5 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/company/careers/page": "app/company/careers/page.js",
-  "/company/about/page": "app/company/about/page.js",
-  "/case-studies/page": "app/case-studies/page.js",
-  "/ai-marketing/page": "app/ai-marketing/page.js",
-  "/pricing/seo/page": "app/pricing/seo/page.js",
-  "/company/contact/page": "app/company/contact/page.js",
-  "/pricing/ppc/page": "app/pricing/ppc/page.js",
-  "/pricing/mobile-app/page": "app/pricing/mobile-app/page.js",
-  "/resources/page": "app/resources/page.js",
-  "/pricing/social-media/page": "app/pricing/social-media/page.js",
-  "/pricing/web-development/page": "app/pricing/web-development/page.js",
-  "/solutions/mobile-app/page": "app/solutions/mobile-app/page.js",
-  "/seo-pricing/page": "app/seo-pricing/page.js",
-  "/pricing/white-label/page": "app/pricing/white-label/page.js",
-  "/solutions/web-development/page": "app/solutions/web-development/page.js",
-  "/solutions/social-media/page": "app/solutions/social-media/page.js",
-  "/solutions/ppc/page": "app/solutions/ppc/page.js",
-  "/solutions/seo/page": "app/solutions/seo/page.js",
-  "/company/team/page": "app/company/team/page.js",
-  "/solutions/white-label/page": "app/solutions/white-label/page.js"
+  "/search-engine-optimization-services/page": "app/search-engine-optimization-services/page.js",
+  "/about/page": "app/about/page.js",
+  "/page": "app/page.js"
 }

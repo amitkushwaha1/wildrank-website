@@ -68,7 +68,7 @@ export default function PPCPricingTable() {
                     </div>
                   ))}
                 </div>
-                <motion.a href="/company/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
+                <motion.a href="/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
                   className={`block text-center text-sm font-semibold py-2.5 rounded-xl transition-all mt-auto ${plan.badge ? "bg-accent hover:bg-accent-light text-white" : "border border-dark-border hover:border-primary/50 text-gray-300 hover:text-white"}`}>
                   Get Started
                 </motion.a>
@@ -81,7 +81,7 @@ export default function PPCPricingTable() {
           className="glass-card rounded-2xl p-8 border border-accent/20 text-center">
           <h3 className="text-xl font-bold text-white mb-2">Need a Custom PPC Strategy?</h3>
           <p className="text-gray-400 mb-5 max-w-xl mx-auto">Enterprise brands with large budgets get custom pricing, dedicated teams, and priority support.</p>
-          <motion.a href="/company/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
+          <motion.a href="/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
             className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-white font-semibold px-7 py-3.5 rounded-xl transition-colors">
             Talk to Sales
           </motion.a>

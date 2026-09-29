@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}";
+self.__REACT_LOADABLE_MANIFEST="{\"components\\\\home\\\\Hero.tsx -> @/components/home/SEOUniverse\":{\"id\":\"components\\\\home\\\\Hero.tsx -> @/components/home/SEOUniverse\",\"files\":[\"static/chunks/_app-pages-browser_components_home_SEOUniverse_tsx.js\"]}}"

@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const contactInfo = [
-  { icon: Mail, label: "Email Us", value: "info@wildrank.com", href: "mailto:info@wildrank.com" },
-  { icon: Phone, label: "Call Us", value: "+1 (800) 123-4567", href: "tel:+18001234567" },
+  { icon: Mail, label: "Email Us", value: "info@wildranktechnologies.com", href: "mailto:info@wildranktechnologies.com" },
+  { icon: Phone, label: "Call Us", value: "+1 (307) 215-0728", href: "tel:+13072150728" },
   { icon: MapPin, label: "Our Office", value: "Noida, India & USA", href: "#" },
   { icon: Clock, label: "Response Time", value: "Within 24 hours", href: "#" },
 ];

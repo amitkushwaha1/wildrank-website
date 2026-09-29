@@ -45,7 +45,7 @@ export default function CareersOpenings() {
                   <span className="flex items-center gap-1 text-xs text-gray-400">
                     <Clock className="w-3.5 h-3.5" />{job.type}
                   </span>
-                  <motion.a href="/company/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
+                  <motion.a href="/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
                     className="flex items-center gap-1 bg-accent hover:bg-accent-light text-white text-xs font-semibold px-4 py-2 rounded-lg transition-colors">
                     Apply <ArrowRight className="w-3.5 h-3.5" />
                   </motion.a>

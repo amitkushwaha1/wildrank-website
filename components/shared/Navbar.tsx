@@ -2,56 +2,73 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, DollarSign } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import Logo from "@/components/shared/Logo";
 
 const navLinks = [
   { label: "Home", href: "/" },
   {
-    label: "Solutions",
+    label: "Services",
     href: "#",
     children: [
-      { label: "SEO Services",             href: "/solutions/seo" },
-      { label: "PPC Advertising",          href: "/solutions/ppc" },
-      { label: "Social Media Marketing",   href: "/solutions/social-media" },
-      { label: "Web Development",          href: "/solutions/web-development" },
-      { label: "Mobile App Development",   href: "/solutions/mobile-app" },
-      { label: "White Label Services",     href: "/solutions/white-label" },
+      { label: "Search Engine Optimization Services", href: "/search-engine-optimization-services" },
+      { label: "Digital Marketing Services",          href: "/digital-marketing-services" },
+      { label: "Social Media Marketing Services",     href: "/social-media-marketing-services" },
+      { label: "Mobile Marketing Services",           href: "/mobile-marketing-services" },
+      { label: "Local SEO Services",                  href: "/local-seo-services" },
+      { label: "Email Marketing Services",            href: "/email-marketing-services" },
+      { label: "Content Marketing Services",          href: "/content-marketing-services" },
+      { label: "Pay Per Click (PPC) Management",      href: "/ppc-services" },
     ],
   },
   {
-    label: "Pricing",
+    label: "White Label",
     href: "#",
     children: [
-      { label: "SEO Pricing",              href: "/pricing/seo" },
-      { label: "PPC Pricing",              href: "/pricing/ppc" },
-      { label: "Social Media Pricing",     href: "/pricing/social-media" },
-      { label: "Web Development Pricing",  href: "/pricing/web-development" },
-      { label: "Mobile App Pricing",       href: "/pricing/mobile-app" },
-      { label: "White Label Pricing",      href: "/pricing/white-label" },
+      { label: "White Label Social Media Management", href: "/white-label-social-media" },
+      { label: "White Label Digital Marketing",       href: "/white-label-digital-marketing" },
+      { label: "White Label AI Services",             href: "/white-label-ai-services" },
+      { label: "White Label SEO Services",            href: "/white-label-seo-services" },
+      { label: "White Label PPC Services",            href: "/white-label-ppc-services" },
+      { label: "White Label Website Development",     href: "/white-label-website-development" },
+      { label: "White Label Virtual Assistant",       href: "/white-label-virtual-assistant" },
+      { label: "White Label Link Building",           href: "/white-label-link-building" },
+      { label: "White Label Guest Post Services",     href: "/white-label-guest-post-services" },
+      { label: "Hire SEO Expert for Agencies",        href: "/hire-seo-expert" },
+      { label: "Hire PPC Expert",                     href: "/hire-ppc-expert" },
     ],
   },
   {
     label: "Company",
     href: "#",
     children: [
-      { label: "About Us",  href: "/company/about" },
-      { label: "Our Team",  href: "/company/team" },
-      { label: "Careers",   href: "/company/careers" },
-      { label: "Contact",   href: "/company/contact" },
+      { label: "About Us",  href: "/about" },
+      { label: "Our Team",  href: "/our-team" },
+      { label: "Careers",   href: "/careers" },
+      { label: "Contact",   href: "/contact" },
     ],
   },
-  { label: "Case Studies",        href: "/case-studies" },
+  {
+    label: "Pricing",
+    href: "#",
+    children: [
+      { label: "SEO Pricing",              href: "/seo-pricing" },
+      { label: "PPC Pricing",              href: "/ppc-pricing" },
+      { label: "Social Media Pricing",     href: "/social-media-pricing" },
+      { label: "Web Development Pricing",  href: "/web-development-pricing" },
+      { label: "Mobile App Pricing",       href: "/mobile-app-pricing" },
+    ],
+  },
   { label: "AI Marketing Agency", href: "/ai-marketing" },
   { label: "Blog",                href: "/blog" },
   { label: "Resources",           href: "/resources" },
 ];
 
 export default function Navbar() {
-  const [scrolled,        setScrolled]        = useState(false);
-  const [mobileOpen,      setMobileOpen]      = useState(false);
-  const [activeDropdown,  setActiveDropdown]  = useState<string | null>(null);
-  const [mobileExpanded,  setMobileExpanded]  = useState<string | null>(null);
+  const [scrolled,       setScrolled]       = useState(false);
+  const [mobileOpen,     setMobileOpen]     = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -66,7 +83,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0d1117]/95 backdrop-blur-xl border-b border-[#21262d] shadow-2xl"
+          ? "bg-[#0a0a0a]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl"
           : "bg-transparent"
       }`}
     >
@@ -91,7 +108,6 @@ export default function Navbar() {
                   href={link.href}
                   className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-lg hover:bg-white/5 whitespace-nowrap"
                 >
-                  {link.label === "Pricing" && <DollarSign className="w-3.5 h-3.5 text-accent" />}
                   {link.label}
                   {link.children && (
                     <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === link.label ? "rotate-180" : ""}`} />
@@ -105,20 +121,19 @@ export default function Navbar() {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.18, ease: "easeOut" }}
-                      className="absolute top-full left-0 mt-2 w-60 rounded-xl overflow-hidden shadow-2xl border border-[#21262d]"
-                      style={{ background: "rgba(13,17,23,0.97)", backdropFilter: "blur(20px)" }}
+                      className="absolute top-full left-0 mt-2 w-72 rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-[#111111] z-[100]"
                     >
-                      <div className="p-1.5">
+                      <div className="p-1.5 max-h-[400px] overflow-y-auto">
                         {link.children.map((child, ci) => (
                           <motion.a
                             key={child.label}
                             href={child.href}
                             initial={{ opacity: 0, x: -8 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: ci * 0.04 }}
+                            transition={{ delay: ci * 0.03 }}
                             className="flex items-center gap-2 px-3 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/8 rounded-lg transition-all duration-150 group"
                           >
-                            <span className="w-1.5 h-1.5 rounded-full bg-accent/50 group-hover:bg-accent transition-colors flex-shrink-0" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary transition-colors flex-shrink-0" />
                             {child.label}
                           </motion.a>
                         ))}
@@ -133,10 +148,10 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden xl:flex items-center gap-3">
             <motion.a
-              href="/company/contact"
-              whileHover={{ scale: 1.04, boxShadow: "0 0 20px rgba(249,115,22,0.4)" }}
+              href="/contact"
+              whileHover={{ scale: 1.04, boxShadow: "0 0 20px rgba(255,107,53,0.4)" }}
               whileTap={{ scale: 0.97 }}
-              className="bg-accent hover:bg-accent-light text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap"
+              className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap"
             >
               Get Free Audit
             </motion.a>
@@ -166,8 +181,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="xl:hidden border-t border-[#21262d] overflow-hidden"
-            style={{ background: "rgba(13,17,23,0.98)", backdropFilter: "blur(20px)" }}
+            className="xl:hidden border-t border-white/10 overflow-hidden bg-[#0a0a0a]/98 backdrop-blur-xl"
           >
             <div className="px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
               {navLinks.map((link) => (
@@ -178,29 +192,15 @@ export default function Navbar() {
                         onClick={() => setMobileExpanded(mobileExpanded === link.label ? null : link.label)}
                         className="w-full flex items-center justify-between px-4 py-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
                       >
-                        <span className="flex items-center gap-2">
-                          {link.label === "Pricing" && <DollarSign className="w-3.5 h-3.5 text-accent" />}
-                          {link.label}
-                        </span>
+                        {link.label}
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileExpanded === link.label ? "rotate-180" : ""}`} />
                       </button>
                       <AnimatePresence>
                         {mobileExpanded === link.label && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="overflow-hidden ml-4 mt-1 space-y-1"
-                          >
+                          <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }} className="overflow-hidden ml-4 mt-1 space-y-1">
                             {link.children.map((child) => (
-                              <a
-                                key={child.label}
-                                href={child.href}
-                                className="flex items-center gap-2 px-4 py-2 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
-                                onClick={() => setMobileOpen(false)}
-                              >
-                                <span className="w-1 h-1 rounded-full bg-accent/50 flex-shrink-0" />
+                              <a key={child.label} href={child.href} className="flex items-center gap-2 px-4 py-2 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors" onClick={() => setMobileOpen(false)}>
+                                <span className="w-1 h-1 rounded-full bg-primary/30 flex-shrink-0" />
                                 {child.label}
                               </a>
                             ))}
@@ -209,22 +209,14 @@ export default function Navbar() {
                       </AnimatePresence>
                     </>
                   ) : (
-                    <a
-                      href={link.href}
-                      className="block px-4 py-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
-                      onClick={() => setMobileOpen(false)}
-                    >
+                    <a href={link.href} className="block px-4 py-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors" onClick={() => setMobileOpen(false)}>
                       {link.label}
                     </a>
                   )}
                 </div>
               ))}
-              <div className="pt-3 border-t border-[#21262d]">
-                <a
-                  href="/company/contact"
-                  className="block text-center bg-accent text-white text-sm font-semibold px-5 py-3 rounded-lg"
-                  onClick={() => setMobileOpen(false)}
-                >
+              <div className="pt-3 border-t border-white/10">
+                <a href="/contact" className="block text-center bg-accent text-white text-sm font-semibold px-5 py-3 rounded-lg" onClick={() => setMobileOpen(false)}>
                   Get Free Audit
                 </a>
               </div>

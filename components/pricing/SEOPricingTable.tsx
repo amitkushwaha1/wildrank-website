@@ -72,7 +72,7 @@ export default function SEOPricingTable() {
                   ))}
                   <div className="flex justify-between"><span>Google My Business</span><span>{plan.gmb ? <Check className="w-3.5 h-3.5 text-green-400 inline" /> : <X className="w-3.5 h-3.5 text-gray-600 inline" />}</span></div>
                 </div>
-                <motion.a href="/company/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
+                <motion.a href="/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
                   className={`block text-center text-sm font-semibold py-2.5 rounded-xl transition-all ${plan.badge ? "bg-accent hover:bg-accent-light text-white" : "border border-dark-border hover:border-primary/50 text-gray-300 hover:text-white"}`}>
                   Get Started
                 </motion.a>

@@ -26,7 +26,7 @@ export default function AboutHero() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-wrap gap-4">
             {[
-              { icon: Award, text: "Deloitte Fast 50 India" },
+              { icon: Award, text: "Google Partner India" },
               { icon: Shield, text: "ISO 9001:2008 Certified" },
               { icon: TrendingUp, text: "Google Partner" },
             ].map(({ icon: Icon, text }) => (
