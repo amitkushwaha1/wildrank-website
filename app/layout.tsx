@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   title: "Wildrank | Digital Marketing & IT Solutions",
   description:
     "Award-winning digital marketing and IT services company. SEO, PPC, Social Media, Web Development, Mobile Apps, and White Label services.",
+  verification: {
+    google: "A16vNGwuWHzOYZYlxjLt7EUy2VTMvUifQlwIV5QveLE",
+  },
 };
 
 export default function RootLayout({
