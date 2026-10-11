@@ -2,8 +2,8 @@ import LocationPage from "@/components/locations/LocationPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Miami SEO Company | Wildrank Technologies",
-  description: "Top-rated SEO company in Miami, FL. Drive local traffic, dominate Google rankings, and grow your business with proven SEO strategies.",
+  title: "Miami SEO Company - Wildrank Technologies",
+  description: "Miami SEO company helping real estate, travel and ecommerce brands get found on Google, Gemini and ChatGPT. Book your free strategy call today.",
   alternates: { canonical: "/miami-seo-company" },
 };
 

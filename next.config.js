@@ -34,7 +34,9 @@ const nextConfig = {
       // ── Company: old /company/* → flat URLs ──
       { source: "/company/about", destination: "/about", permanent: true },
       { source: "/company/team", destination: "/our-team", permanent: true },
-      { source: "/company/careers", destination: "/careers", permanent: true },
+      { source: "/company/careers", destination: "/about", permanent: true },
+      // /careers removed — keep old links + Google index alive
+      { source: "/careers", destination: "/about", permanent: true },
       { source: "/company/contact", destination: "/contact", permanent: true },
 
       // ── Pricing: old /pricing/* → flat URLs ──

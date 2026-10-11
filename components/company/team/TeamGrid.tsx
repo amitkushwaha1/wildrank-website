@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Linkedin, Twitter } from "lucide-react";
+import { Linkedin } from "lucide-react";
+import XLogo from "@/components/shared/XLogo";
 
 const departments = [
   {
@@ -60,8 +61,8 @@ export default function TeamGrid() {
                     <a href="#" aria-label="LinkedIn" className="w-7 h-7 bg-white/5 rounded-lg flex items-center justify-center text-gray-500 hover:text-white transition-colors">
                       <Linkedin className="w-3.5 h-3.5" />
                     </a>
-                    <a href="#" aria-label="Twitter" className="w-7 h-7 bg-white/5 rounded-lg flex items-center justify-center text-gray-500 hover:text-white transition-colors">
-                      <Twitter className="w-3.5 h-3.5" />
+                    <a href="#" aria-label="X" className="w-7 h-7 bg-white/5 rounded-lg flex items-center justify-center text-gray-500 hover:text-white transition-colors">
+                      <XLogo className="w-3.5 h-3.5" />
                     </a>
                   </div>
                 </motion.div>
@@ -76,9 +77,9 @@ export default function TeamGrid() {
           className="mt-16 glass-card rounded-2xl p-10 border border-accent/20 text-center">
           <h3 className="text-2xl font-bold text-white mb-3">Want to Join the Team?</h3>
           <p className="text-gray-400 mb-6 max-w-xl mx-auto">We&apos;re always looking for talented people who are passionate about digital marketing and technology.</p>
-          <motion.a href="/careers" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
+          <motion.a href="/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
             className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-white font-semibold px-7 py-3.5 rounded-xl transition-colors">
-            View Open Positions
+            Get in Touch
           </motion.a>
         </motion.div>
       </div>

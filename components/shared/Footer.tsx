@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Linkedin, Twitter, Facebook, Instagram, ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import Logo from "@/components/shared/Logo";
+import { socialLinks } from "@/lib/socialLinks";
 
 const services = [
   { label: "Search Engine Optimization", href: "/search-engine-optimization-services" },
@@ -41,18 +42,12 @@ const serviceAreas = [
 const company = [
   { label: "About Us",           href: "/about" },
   { label: "Our Team",           href: "/our-team" },
-  { label: "Careers",            href: "/careers" },
   { label: "AI Marketing",       href: "/ai-marketing" },
   { label: "Blog",               href: "/blog" },
   { label: "Resources",          href: "/resources" },
 ];
 
-const socials = [
-  { icon: Linkedin,  href: "#", label: "LinkedIn" },
-  { icon: Twitter,   href: "#", label: "Twitter / X" },
-  { icon: Facebook,  href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-];
+const socials = socialLinks;
 
 export default function Footer() {
   return (
@@ -108,8 +103,8 @@ export default function Footer() {
             </motion.a>
             <div className="flex items-center gap-2 mt-6">
               <Phone className="w-4 h-4 text-accent flex-shrink-0" />
-              <a href="tel:+13072150728" className="text-gray-400 hover:text-white text-sm transition-colors">
-                +1 (307) 215-0728
+              <a href="tel:+17754715295" className="text-gray-400 hover:text-white text-sm transition-colors">
+                +1 (775) 471-5295
               </a>
             </div>
           </div>
@@ -168,11 +163,13 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Wildrank Technologies. All rights reserved.
             </p>
             <div className="flex items-center gap-3">
-              {socials.map(({ icon: Icon, href, label }) => (
+              {socials.map(({ icon: Icon, href, label, external }) => (
                 <motion.a
                   key={label}
                   href={href}
                   aria-label={label}
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noopener noreferrer" : undefined}
                   whileHover={{ scale: 1.15, y: -2 }}
                   className="w-8 h-8 border border-white/10 hover:border-white/30 rounded flex items-center justify-center text-gray-500 hover:text-white transition-colors"
                 >

@@ -36,7 +36,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Company
     "/about",
     "/our-team",
-    "/careers",
     "/contact",
     // Other
     "/ai-marketing",

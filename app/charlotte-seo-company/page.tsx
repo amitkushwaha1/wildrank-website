@@ -2,8 +2,8 @@ import LocationPage from "@/components/locations/LocationPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Charlotte SEO Company | Wildrank Technologies",
-  description: "Top-rated SEO company in Charlotte, NC. Drive local traffic, dominate Google rankings, and grow your business with proven SEO strategies.",
+  title: "Charlotte SEO Company - Wildrank Technologies",
+  description: "Need more organic leads in Charlotte? Wildrank's AI-powered SEO, content and link building help finance and B2B brands grow. Get a free audit.",
   alternates: { canonical: "/charlotte-seo-company" },
 };
 
