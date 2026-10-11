@@ -6,6 +6,7 @@ import CTA from "@/components/home/CTA";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ai-marketing" },
   title: "AI Marketing Agency | Wildrank Technologies",
   description: "AI-powered digital marketing that outperforms traditional agencies. Smarter targeting, faster results, lower costs.",
 };

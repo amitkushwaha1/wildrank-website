@@ -4,6 +4,7 @@ import CTA from "@/components/home/CTA";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog" },
   title: "Blog | Wildrank Technologies",
   description: "Digital marketing insights, SEO tips, and industry news from the Wildrank Technologies team.",
 };
