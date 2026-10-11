@@ -73,7 +73,7 @@ export default function LocationPage({ city, state }: Props) {
               Dominate search results in {city}. Our local SEO experts help businesses in {location} rank higher on Google, drive qualified traffic, and convert more customers with proven, data-driven strategies.
             </p>
             <ul className="grid grid-cols-2 gap-3 mb-8">
-              {[`Local SEO for ${city} Businesses`, "Google Business Profile Optimization", "Local Link Building", "Monthly Reporting & Transparency"].map(h => (
+              {[`500+ clients served nationwide`, "Google Business Profile Optimization", "Local Link Building", "Monthly Reporting & Transparency"].map(h => (
                 <li key={h} className="flex items-center gap-2 text-sm text-gray-300"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />{h}</li>
               ))}
             </ul>
@@ -208,7 +208,7 @@ export default function LocationPage({ city, state }: Props) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { value: "30 days", label: "To First Ranking Wins", color: "text-green-400" },
+              { value: "500+", label: "Clients Served Nationwide", color: "text-green-400" },
               { value: "Local", label: "Google Business Profile", color: "text-blue-400" },
               { value: "Monthly", label: "Reporting, No Lock-In", color: "text-orange-400" },
               { value: "AI-Ready", label: "G.E.O and A.E.O Included", color: "text-purple-400" },

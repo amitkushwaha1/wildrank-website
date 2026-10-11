@@ -38,6 +38,10 @@ export function buildFaqEntries(city: string, location: string): FaqEntry[] {
       a: `Yes. We work with businesses nationwide, including companies based outside ${city} that need visibility in the ${city} market. If you have customers there but no local presence, that is a solvable problem and worth a conversation about what it would take.`,
     },
     {
+      q: `How many businesses have you worked with?`,
+      a: `More than 500 clients nationwide, across local businesses, SaaS, retail and multi-location operators. We are not able to break that down by city, so treat it as the overall scale of the business rather than a per-city count. What we can show you is your own numbers: every campaign starts from a baseline audit of where you currently stand.`,
+    },
+    {
       q: `What does G.E.O and A.E.O mean?`,
       a: `G.E.O is Generative Engine Optimization and A.E.O is Answer Engine Optimization. They cover the shift from clicking links to asking questions: ChatGPT, Perplexity and AI Overviews quote sources and attribute claims clearly, so being structured and specific about what you do matters more than it used to. Every plan includes both alongside conventional SEO.`,
     },
