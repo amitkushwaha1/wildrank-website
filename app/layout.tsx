@@ -71,6 +71,13 @@ const organizationSchema = {
   ],
 };
 
+const GA_MEASUREMENT_ID = "G-EC7689B0MJ";
+
+const GA_INIT_SCRIPT = `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`;
+
 export default function RootLayout({
   children,
 }: {
@@ -78,7 +85,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
+      {/* Head scripts: Google Analytics + Organization/WebSite JSON-LD */}
       <head>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        />
+        <script dangerouslySetInnerHTML={{ __html: GA_INIT_SCRIPT }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
