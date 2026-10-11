@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/denver-seo-company" },
 };
 
+
 export default function Page() {
   return <LocationPage city="Denver" state="CO" />;
 }
