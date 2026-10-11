@@ -20,6 +20,13 @@ export const metadata: Metadata = {
   },
 };
 
+const GA_MEASUREMENT_ID = "G-EC7689B0MJ";
+
+const GA_INIT_SCRIPT = `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`;
+
 export default function RootLayout({
   children,
 }: {
@@ -27,6 +34,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
+      {/* Google Analytics (gtag.js) — both tags live in <head> */}
+      <head>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        />
+        <script dangerouslySetInnerHTML={{ __html: GA_INIT_SCRIPT }} />
+      </head>
       <body className={inter.className}>
         <Navbar />
         <main>{children}</main>
