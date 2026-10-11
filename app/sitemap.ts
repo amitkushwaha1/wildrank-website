@@ -32,7 +32,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/social-media-pricing",
     "/web-development-pricing",
     "/mobile-app-pricing",
-    "/white-label-pricing",
     // Company
     "/about",
     "/our-team",
