@@ -13,8 +13,14 @@ const stats = [
 
 function CountUp({ target, suffix }: { target: number; suffix: string }) {
   const [count, setCount] = useState(0);
+  const [mounted, setMounted] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
+
+  // Before hydration the real figure is rendered server-side, so crawlers and
+  // no-JS clients read "350+" rather than a literal "0+". The count-up is a
+  // progressive enhancement layered on top of already-correct content.
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (!inView) return;
@@ -35,7 +41,7 @@ function CountUp({ target, suffix }: { target: number; suffix: string }) {
 
   return (
     <span ref={ref}>
-      {count.toLocaleString()}
+      {(mounted ? count : target).toLocaleString()}
       {suffix}
     </span>
   );
@@ -95,7 +101,7 @@ export default function Stats() {
             Recognized & Certified By
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8">
-            {["Google Partner", "Google Partner", "Red Herring Top 100", "ISO 9001:2008", "Google Partner0"].map(
+            {["Google Partner", "Red Herring Top 100", "ISO 9001:2008"].map(
               (name) => (
                 <div
                   key={name}
