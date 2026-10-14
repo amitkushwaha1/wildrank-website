@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { INDUSTRIES, SERVICES } from "@/data/industries";
 
 const BASE_URL = "https://wildranktechnologies.com";
 
@@ -69,10 +70,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const now = new Date();
 
-  return routes.map((route) => ({
+  const staticRoutes: MetadataRoute.Sitemap = routes.map((route) => ({
     url: `${BASE_URL}${route}`,
     lastModified: now,
     changeFrequency: route === "" ? "daily" : "weekly",
     priority: route === "" ? 1 : route.includes("pricing") ? 0.8 : 0.7,
   }));
+
+  const industryRoutes: MetadataRoute.Sitemap = [];
+  for (const ind of INDUSTRIES) {
+    for (const srv of SERVICES) {
+      industryRoutes.push({
+        url: `${BASE_URL}/industries/${ind.slug}/${srv.slug}`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.6,
+      });
+    }
+  }
+
+  return [...staticRoutes, ...industryRoutes];
 }
