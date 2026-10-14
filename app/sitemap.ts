@@ -14,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/email-marketing-services",
     "/content-marketing-services",
     "/ppc-services",
+    // AI Call Automation (Hermes AI System)
+    "/hermes-ai-system",
     // White Label
     "/white-label-social-media",
     "/white-label-digital-marketing",
