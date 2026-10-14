@@ -8,7 +8,7 @@ const milestones = [
   { year: "2014", title: "Google Partner Status", desc: "Achieved Google AdWords Certified Partner status and ISO 9001:2008 certification, validating our quality standards." },
   { year: "2018", title: "Google Partner", desc: "Recognized by Deloitte as one of the fastest-growing technology companies in India. Expanded to US and UK markets." },
   { year: "2022", title: "AI-Powered Platform", desc: "Launched our proprietary AI marketing platform, enabling smarter targeting, faster optimization, and better results." },
-  { year: "2024", title: "350+ Team, 30+ Countries", desc: "Today we serve clients across 30+ countries with a 350+ person team and 660+ successful projects delivered." },
+  { year: "2024", title: "Milestone", desc: "Today we serve clients across 30+ countries with a focused team and verified project delivery. Specific results vary by client sector and campaign execution." },
 ];
 
 export default function AboutStory() {

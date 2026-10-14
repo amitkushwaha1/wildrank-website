@@ -46,7 +46,7 @@ const caseStudies = [
     category: "SEO",
     industry: "Real Estate",
     duration: "8 months",
-    results: [{ metric: "Qualified Leads", value: "+220%" }, { metric: "Organic Traffic", value: "+280%" }, { metric: "Listings Sold", value: "+65%" }],
+    results: [{ metric: "Qualified Leads", value: "Varies by client and sector", description: "Results depend on specific business goals, market, and campaign execution" }, { metric: "Organic Traffic", value: "Varies by keyword landscape and competitive landscape", description: "Traffic growth depends on current index position, content depth, and technical SEO health" }, { metric: "Listings Sold", value: "Varies by market and property type", description: "Sales velocity depends on pricing, inventory, and local market conditions" }],
     color: "from-orange-500 to-orange-700",
     bg: "bg-orange-500/10",
     border: "border-orange-500/20",

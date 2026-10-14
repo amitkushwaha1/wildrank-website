@@ -2,8 +2,8 @@ import LocationPage from "@/components/locations/LocationPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Phoenix SEO Company - Wildrank Technologies",
-  description: "Phoenix SEO company for home services, real estate and local brands. Rank in Google Maps and local search to get more calls. Free audit available.",
+  title: "SEO Firm | Phoenix | Wildrank Technologies — Rank on Google & AI Search",
+  description: "Wildrank is an SEO firm helping Phoenix startups and local brands win rankings on Google, Perplexity and Gemini. Free audit + AI search visibility strategy. Book a consultation.",
   alternates: { canonical: "/phoenix-seo-company" },
 };
 

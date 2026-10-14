@@ -7,7 +7,7 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
     q: "What makes Wildrank different from other digital marketing agencies?",
-    a: "We combine 17+ years of experience with AI-powered tools and a team of 350+ specialists. Unlike generalist agencies, we offer end-to-end services — from SEO and PPC to custom software development — all under one roof. Our white-label model also lets agencies scale without hiring.",
+    a: "We combine 17+ years of experience with AI-powered tools and a dedicated team. Unlike generalist agencies, we offer end-to-end services — from SEO and PPC to custom software development — all under one roof. Our white-label model also lets agencies scale without hiring.",
   },
   {
     q: "How long does it take to see results from SEO?",

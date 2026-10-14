@@ -2,8 +2,8 @@ import LocationPage from "@/components/locations/LocationPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "San Francisco SEO Company - Wildrank Technologies",
-  description: "San Francisco SEO company for SaaS, startups and tech brands. Scale organic traffic with technical SEO, content and GEO. Book a strategy session.",
+  title: "SEO Firm | San Francisco | Wildrank Technologies — Rank on Google & AI Search",
+  description: "Wildrank is an SEO firm helping San Francisco startups and local brands win rankings on Google, Perplexity and Gemini. Free audit + AI search visibility strategy. Book a consultation.",
   alternates: { canonical: "/san-francisco-seo-company" },
 };
 

@@ -2,8 +2,8 @@ import WhiteLabelPage from "@/components/white-label/WhiteLabelPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hire SEO Expert for Agencies | Wildrank Technologies",
-  description: "Hire dedicated white-label SEO experts for your agency. Skilled, vetted SEO specialists working under your brand.",
+  title: "SEO Firm Expert | Wildrank Technologies",
+  description: "Wildrank SEO firm expert helping startups and local brands win rankings on Google, Perplexity and Gemini. Free audit + AI search visibility strategy. Book a consultation.",
   alternates: { canonical: "/hire-seo-expert" },
 };
 

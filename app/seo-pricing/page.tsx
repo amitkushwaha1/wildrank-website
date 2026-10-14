@@ -5,8 +5,8 @@ import SeoPricingClient from "./client";
 // metadata. The server shell owns the SEO surface; the client component owns
 // the interactive markup. Do not merge them back.
 export const metadata: Metadata = {
-  title: "SEO Pricing - Plans From $499/month | Wildrank Technologies",
-  description: "Transparent SEO pricing: Basic, Silver, Gold and Premium plans from $499 per month. Every plan includes G.E.O and A.E.O strategy.",
+  title: "SEO Firm Pricing | Wildrank Technologies",
+  description: "Wildrank SEO firm pricing: Basic, Silver, Gold and Premium plans from $499/month. Every plan includes GEO and AEO strategy. Free audit and consultation.",
   alternates: { canonical: "/seo-pricing" },
 };
 
