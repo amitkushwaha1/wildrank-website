@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Us | Wildrank Technologies",
-  description: "17+ years of digital excellence. Learn about Wildrank Technologies — our story, mission, and the team behind your growth.",
+  description: "500+ clients served company-wide. Learn about Wildrank Technologies — our story, mission, and the team behind your growth.",
   alternates: { canonical: "/about" },
 };
 

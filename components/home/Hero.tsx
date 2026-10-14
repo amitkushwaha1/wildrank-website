@@ -9,8 +9,8 @@ const SEOUniverse = dynamic(() => import("@/components/home/SEOUniverse"), { ssr
 
 const stats = [
   { icon: Users,     value: "Team",           title: "Industry Experts",          desc: "Strategists, creatives, and technologists turning bold ideas into scalable digital growth.",            color: "text-blue-400",    bg: "bg-blue-500/10" },
-  { icon: Award,     value: "17+",    title: "Years of Proven Impact",     desc: "A track record of delivering measurable growth through innovation and forward-thinking execution.",      color: "text-secondary",   bg: "bg-secondary/10" },
-  { icon: Rocket,    value: "Over 500",   title: "Projects Delivered",         desc: "From complex challenges to seamless solutions, we bring visions to life with precision.",               color: "text-accent",      bg: "bg-accent/10" },
+  { icon: Award,     value: "500+",   title: "Clients Served Company-Wide",     desc: "A track record of delivering measurable growth through innovation and forward-thinking execution.",      color: "text-secondary",   bg: "bg-secondary/10" },
+  { icon: Rocket,    value: "500+",   title: "Clients Served Nationwide",         desc: "From complex challenges to seamless solutions, we bring visions to life with precision.",               color: "text-accent",      bg: "bg-accent/10" },
   { icon: Handshake, value: "—",   title: "Meaningful Collaborations",  desc: "Long-term partnerships that go beyond execution, driving sustained digital growth together.",           color: "text-green-400",   bg: "bg-green-500/10" },
   { icon: Activity,  value: "99.9%",  title: "Campaign Uptime",            desc: "Reliability and performance with robust, always-on digital marketing infrastructure.",                  color: "text-cyan-400",    bg: "bg-cyan-500/10" },
 ];
@@ -21,7 +21,7 @@ const cardVariants = {
 };
 
 export default function Hero() {
-  const trustLogos = ["Google Partner", "AI-Powered SEO", "ISO 9001 Certified", "17+ Years Experience"];
+  const trustLogos = ["Google Partner", "AI-Powered SEO", "ISO 9001 Certified", "AI-Powered SEO"];
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#060608] pt-20">
 

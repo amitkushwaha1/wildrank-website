@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle, Layers, DollarSign, Users, TrendingUp } from "
 const highlights = [
   "Your brand, our execution",
   "Save 40–60% vs in-house",
-  "350+ expert team members",
+  "a dedicated specialist team",
   "Dedicated account manager",
 ];
 

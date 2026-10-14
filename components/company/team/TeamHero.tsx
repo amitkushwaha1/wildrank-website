@@ -20,7 +20,7 @@ export default function TeamHero() {
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
             className="text-gray-400 text-xl leading-relaxed">
-            350+ strategists, developers, designers, and marketers — all working together to deliver results that matter.
+            strategists, developers, designers, and marketers — all working together to deliver results that matter.
           </motion.p>
         </div>
       </div>

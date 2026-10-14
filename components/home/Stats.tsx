@@ -2,13 +2,14 @@
 
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { TrendingUp, Users, Globe, Award } from "lucide-react";
+import { TrendingUp } from "lucide-react";
 
+// Only the client count is owner-verified. The former 660+ projects, 350+
+// team, 8,000+ resources and 17+ years claims are removed rather than
+// restated, so this band carries the one figure we can stand behind and
+// leaves credibility to the certification row beneath it.
 const stats = [
-  { icon: TrendingUp, value: 660, suffix: "+", label: "Projects Delivered", color: "text-blue-400" },
-  { icon: Users, value: 350, suffix: "+", label: "Expert Team Members", color: "text-orange-400" },
-  { icon: Globe, value: 8000, suffix: "+", label: "Resources Deployed", color: "text-green-400" },
-  { icon: Award, value: 17, suffix: "+", label: "Years of Excellence", color: "text-purple-400" },
+  { icon: TrendingUp, value: 500, suffix: "+", label: "Clients Served Company-Wide", color: "text-blue-400" },
 ];
 
 function CountUp({ target, suffix }: { target: number; suffix: string }) {
@@ -18,7 +19,7 @@ function CountUp({ target, suffix }: { target: number; suffix: string }) {
   const inView = useInView(ref, { once: true });
 
   // Before hydration the real figure is rendered server-side, so crawlers and
-  // no-JS clients read "350+" rather than a literal "0+". The count-up is a
+  // no-JS clients read "500+" rather than a literal "0+". The count-up is a
   // progressive enhancement layered on top of already-correct content.
   useEffect(() => setMounted(true), []);
 
@@ -59,12 +60,12 @@ export default function Stats() {
           className="text-center mb-12"
         >
           <h2 className="text-2xl sm:text-3xl font-bold text-white">
-            Numbers That Speak for Themselves
+            A Track Record Built Nationwide
           </h2>
-          <p className="text-gray-400 mt-2">Trusted by hundreds of brands worldwide</p>
+          <p className="text-gray-400 mt-2">500+ clients served company-wide</p>
         </motion.div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="max-w-md mx-auto">
           {stats.map((stat, i) => {
             const Icon = stat.icon;
             return (
