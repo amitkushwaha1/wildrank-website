@@ -16,6 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ppc-services",
     // AI Call Automation (Hermes AI System)
     "/hermes-ai-system",
+    "/geo-aeo-services",
+    "/ai-receptionist",
     // White Label
     "/white-label-social-media",
     "/white-label-digital-marketing",
