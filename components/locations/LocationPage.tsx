@@ -1,5 +1,6 @@
 "use client";
 
+import { PHONE_E164 } from "@/lib/site";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, MapPin, TrendingUp, Search, Users, BarChart3 } from "lucide-react";
 import CTA from "@/components/home/CTA";
@@ -25,7 +26,7 @@ export default function LocationPage({ city, state }: Props) {
     url: `${SITE}/${slug}-seo-company`,
     description: `Local SEO and AI-visibility services for businesses in ${location}.`,
     email: "gupta@wildranktechnologies.com",
-    telephone: "+1-363-222-1815",
+    telephone: PHONE_E164,
     areaServed: { "@type": "City", name: city },
     parentOrganization: { "@id": `${SITE}/#organization` },
     serviceType: [
