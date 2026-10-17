@@ -19,15 +19,15 @@ export default function ContactHero() {
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           <div>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold px-4 py-2 rounded-full mb-6">
+              className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 text-primary-light text-xs font-semibold px-4 py-2 rounded-full mb-6">
               <Mail className="w-3.5 h-3.5" /> Get In Touch
             </motion.div>
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-6">
+              className="text-4xl sm:text-5xl font-extrabold text-ink leading-tight mb-6">
               Let&apos;s Talk About <span className="gradient-text">Your Growth</span>
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-gray-400 text-lg leading-relaxed mb-8">
+              className="text-muted text-lg leading-relaxed mb-8">
               Whether you need SEO, PPC, web development, or a full digital strategy — we&apos;re ready to help. Reach out and we&apos;ll respond within 24 hours.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
@@ -38,8 +38,8 @@ export default function ContactHero() {
                   <div className="w-9 h-9 bg-accent/10 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                     <Icon className="w-4 h-4 text-accent" />
                   </div>
-                  <p className="text-xs text-gray-500 mb-0.5">{label}</p>
-                  <p className="text-sm text-white font-medium">{value}</p>
+                  <p className="text-xs text-subtle mb-0.5">{label}</p>
+                  <p className="text-sm text-ink font-medium">{value}</p>
                 </a>
               ))}
             </motion.div>
@@ -49,10 +49,10 @@ export default function ContactHero() {
             <div className="space-y-4">
               <div className="flex items-center gap-3 p-4 bg-green-500/5 border border-green-500/20 rounded-xl">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                <span className="text-sm text-gray-300">Our team is online and ready to help</span>
+                <span className="text-sm text-muted">Our team is online and ready to help</span>
               </div>
               {["Free website & SEO audit", "No commitment required", "Response within 24 hours", "Dedicated account manager assigned"].map((item) => (
-                <div key={item} className="flex items-center gap-3 text-sm text-gray-400">
+                <div key={item} className="flex items-center gap-3 text-sm text-muted">
                   <div className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0" />
                   {item}
                 </div>

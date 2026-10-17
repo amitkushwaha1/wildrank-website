@@ -8,42 +8,42 @@ const reasons = [
     icon: Shield,
     title: "White-Hat Only",
     description: "We use only Google-approved techniques. No shortcuts, no penalties — just sustainable rankings that last.",
-    color: "text-green-400",
+    color: "text-green-700",
     bg: "bg-green-500/10",
   },
   {
     icon: Zap,
     title: "AI-Powered Strategy",
     description: "Our proprietary AI tools analyze search trends, competitor gaps, and content opportunities faster than any manual process.",
-    color: "text-yellow-400",
+    color: "text-yellow-700",
     bg: "bg-yellow-500/10",
   },
   {
     icon: Users,
     title: "Dedicated SEO Team",
     description: "You get a dedicated account manager, SEO strategist, and content team — not a shared pool of generalists.",
-    color: "text-blue-400",
+    color: "text-blue-600",
     bg: "bg-blue-500/10",
   },
   {
     icon: BarChart3,
     title: "Full Transparency",
     description: "Live dashboards and monthly reports show exactly what we're doing, what's ranking, and what revenue it's driving.",
-    color: "text-purple-400",
+    color: "text-purple-600",
     bg: "bg-purple-500/10",
   },
   {
     icon: Globe,
     title: "Local & Global SEO",
     description: "Whether you target one city or multiple countries, we build strategies that dominate at every geographic level.",
-    color: "text-cyan-400",
+    color: "text-cyan-700",
     bg: "bg-cyan-500/10",
   },
   {
     icon: HeadphonesIcon,
     title: "24/7 Support",
     description: "Email, phone, and chat support available around the clock. Your questions never go unanswered.",
-    color: "text-orange-400",
+    color: "text-orange-700",
     bg: "bg-orange-500/10",
   },
 ];
@@ -62,10 +62,10 @@ export default function SEOWhyUs() {
           <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">
             Why Choose Us
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">
             SEO Done <span className="gradient-text">The Right Way</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-muted text-lg max-w-2xl mx-auto">
             We combine deep expertise, cutting-edge tools, and genuine transparency to deliver SEO results you can count on.
           </p>
         </motion.div>
@@ -86,8 +86,8 @@ export default function SEOWhyUs() {
                 <div className={`w-12 h-12 ${r.bg} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <Icon className={`w-6 h-6 ${r.color}`} />
                 </div>
-                <h3 className="text-white font-bold text-base mb-2">{r.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{r.description}</p>
+                <h3 className="text-ink font-bold text-base mb-2">{r.title}</h3>
+                <p className="text-muted text-sm leading-relaxed">{r.description}</p>
               </motion.div>
             );
           })}

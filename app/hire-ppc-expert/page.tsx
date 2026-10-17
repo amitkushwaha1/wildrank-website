@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { icon: "Users", title: "Dedicated PPC Specialist", desc: "A certified paid media expert working exclusively on your clients' campaigns.", color: "text-blue-400", bg: "bg-blue-500/10" },
-  { icon: "Target", title: "Multi-Platform Mastery", desc: "Google, Bing, Meta, and LinkedIn ads managed by one skilled professional.", color: "text-orange-400", bg: "bg-orange-500/10" },
-  { icon: "BarChart3", title: "ROAS Optimization", desc: "Daily bid management and optimization focused on your clients' return on ad spend.", color: "text-green-400", bg: "bg-green-500/10" },
-  { icon: "Award", title: "Certified & Vetted", desc: "Google and Meta certified experts, screened for skills and results.", color: "text-purple-400", bg: "bg-purple-500/10" },
-  { icon: "Clock", title: "Flexible Engagement", desc: "Full-time, part-time, or per-project — scale to your client load.", color: "text-pink-400", bg: "bg-pink-500/10" },
-  { icon: "MousePointerClick", title: "Branded Reporting", desc: "Campaign reports delivered under your agency's brand.", color: "text-cyan-400", bg: "bg-cyan-500/10" },
+  { icon: "Users", title: "Dedicated PPC Specialist", desc: "A certified paid media expert working exclusively on your clients' campaigns.", color: "text-blue-600", bg: "bg-blue-500/10" },
+  { icon: "Target", title: "Multi-Platform Mastery", desc: "Google, Bing, Meta, and LinkedIn ads managed by one skilled professional.", color: "text-orange-700", bg: "bg-orange-500/10" },
+  { icon: "BarChart3", title: "ROAS Optimization", desc: "Daily bid management and optimization focused on your clients' return on ad spend.", color: "text-green-700", bg: "bg-green-500/10" },
+  { icon: "Award", title: "Certified & Vetted", desc: "Google and Meta certified experts, screened for skills and results.", color: "text-purple-600", bg: "bg-purple-500/10" },
+  { icon: "Clock", title: "Flexible Engagement", desc: "Full-time, part-time, or per-project — scale to your client load.", color: "text-pink-700", bg: "bg-pink-500/10" },
+  { icon: "MousePointerClick", title: "Branded Reporting", desc: "Campaign reports delivered under your agency's brand.", color: "text-cyan-700", bg: "bg-cyan-500/10" },
 ];
 
 const faqs = [

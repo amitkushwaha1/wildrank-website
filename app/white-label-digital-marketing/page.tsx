@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { icon: "Search", title: "White Label SEO", desc: "Full-service organic search optimization delivered as your agency's work.", color: "text-blue-400", bg: "bg-blue-500/10" },
-  { icon: "MousePointerClick", title: "White Label PPC", desc: "Google and social paid campaigns managed under your brand.", color: "text-orange-400", bg: "bg-orange-500/10" },
-  { icon: "Share2", title: "Social Media", desc: "Content, community management, and paid social for your clients.", color: "text-pink-400", bg: "bg-pink-500/10" },
-  { icon: "Mail", title: "Email Marketing", desc: "Automated campaigns and newsletters branded as your agency.", color: "text-purple-400", bg: "bg-purple-500/10" },
-  { icon: "PenTool", title: "Content Marketing", desc: "Blogs, landing pages, and copy that ranks and converts.", color: "text-green-400", bg: "bg-green-500/10" },
-  { icon: "BarChart3", title: "Unified Reporting", desc: "One branded dashboard across every channel you resell.", color: "text-cyan-400", bg: "bg-cyan-500/10" },
+  { icon: "Search", title: "White Label SEO", desc: "Full-service organic search optimization delivered as your agency's work.", color: "text-blue-600", bg: "bg-blue-500/10" },
+  { icon: "MousePointerClick", title: "White Label PPC", desc: "Google and social paid campaigns managed under your brand.", color: "text-orange-700", bg: "bg-orange-500/10" },
+  { icon: "Share2", title: "Social Media", desc: "Content, community management, and paid social for your clients.", color: "text-pink-700", bg: "bg-pink-500/10" },
+  { icon: "Mail", title: "Email Marketing", desc: "Automated campaigns and newsletters branded as your agency.", color: "text-purple-600", bg: "bg-purple-500/10" },
+  { icon: "PenTool", title: "Content Marketing", desc: "Blogs, landing pages, and copy that ranks and converts.", color: "text-green-700", bg: "bg-green-500/10" },
+  { icon: "BarChart3", title: "Unified Reporting", desc: "One branded dashboard across every channel you resell.", color: "text-cyan-700", bg: "bg-cyan-500/10" },
 ];
 
 const faqs = [

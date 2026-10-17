@@ -6,12 +6,12 @@ import { ArrowRight, CheckCircle, MousePointerClick, Target, TrendingUp, BarChar
 import CTA from "@/components/home/CTA";
 
 const services = [
-  { icon: MousePointerClick, title: "Google Ads Management", desc: "Search, display, shopping, and Performance Max campaigns optimized for your target CPA and ROAS goals.", color: "text-blue-400", bg: "bg-blue-500/10" },
-  { icon: Target, title: "Social PPC (Meta & LinkedIn)", desc: "Precision-targeted paid campaigns on Facebook, Instagram, and LinkedIn that reach your ideal buyers.", color: "text-pink-400", bg: "bg-pink-500/10" },
-  { icon: RefreshCw, title: "Remarketing & Retargeting", desc: "Re-engage visitors who left without converting using dynamic creatives and smart audience segmentation.", color: "text-green-400", bg: "bg-green-500/10" },
-  { icon: ShoppingCart, title: "E-Commerce & Shopping Ads", desc: "Product listing ads that showcase your inventory directly in search results with pricing and images.", color: "text-yellow-400", bg: "bg-yellow-500/10" },
-  { icon: Globe, title: "Bing & Microsoft Ads", desc: "Capture the 30% of searchers who don't use Google — often at a lower cost-per-click.", color: "text-cyan-400", bg: "bg-cyan-500/10" },
-  { icon: BarChart3, title: "Conversion Rate Optimization", desc: "Landing page testing, funnel optimization, and tracking setup to maximize every dollar of ad spend.", color: "text-purple-400", bg: "bg-purple-500/10" },
+  { icon: MousePointerClick, title: "Google Ads Management", desc: "Search, display, shopping, and Performance Max campaigns optimized for your target CPA and ROAS goals.", color: "text-blue-600", bg: "bg-blue-500/10" },
+  { icon: Target, title: "Social PPC (Meta & LinkedIn)", desc: "Precision-targeted paid campaigns on Facebook, Instagram, and LinkedIn that reach your ideal buyers.", color: "text-pink-700", bg: "bg-pink-500/10" },
+  { icon: RefreshCw, title: "Remarketing & Retargeting", desc: "Re-engage visitors who left without converting using dynamic creatives and smart audience segmentation.", color: "text-green-700", bg: "bg-green-500/10" },
+  { icon: ShoppingCart, title: "E-Commerce & Shopping Ads", desc: "Product listing ads that showcase your inventory directly in search results with pricing and images.", color: "text-yellow-700", bg: "bg-yellow-500/10" },
+  { icon: Globe, title: "Bing & Microsoft Ads", desc: "Capture the 30% of searchers who don't use Google — often at a lower cost-per-click.", color: "text-cyan-700", bg: "bg-cyan-500/10" },
+  { icon: BarChart3, title: "Conversion Rate Optimization", desc: "Landing page testing, funnel optimization, and tracking setup to maximize every dollar of ad spend.", color: "text-purple-600", bg: "bg-purple-500/10" },
 ];
 
 const process = [
@@ -23,10 +23,10 @@ const process = [
 ];
 
 const stats = [
-  { value: "8.5x", label: "Average ROAS", color: "text-green-400" },
-  { value: "-42%", label: "Cost Per Lead Reduced", color: "text-blue-400" },
-  { value: "+340%", label: "Conversion Rate Lift", color: "text-orange-400" },
-  { value: "200+", label: "Campaigns Managed", color: "text-purple-400" },
+  { value: "8.5x", label: "Average ROAS", color: "text-green-700" },
+  { value: "-42%", label: "Cost Per Lead Reduced", color: "text-blue-600" },
+  { value: "+340%", label: "Conversion Rate Lift", color: "text-orange-700" },
+  { value: "200+", label: "Campaigns Managed", color: "text-purple-600" },
 ];
 
 const faqs = [
@@ -46,25 +46,25 @@ export default function PpcServicesClient() {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
           <div className="max-w-3xl animate-[fadeInUp_0.6s_ease-out_both]">
-            <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-semibold px-4 py-2 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-700 text-xs font-semibold px-4 py-2 rounded-full mb-6">
               <MousePointerClick className="w-3.5 h-3.5" /> PPC Management Services
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink leading-tight mb-6">
               Pay Per Click Management <span className="gradient-text">Services</span>
             </h1>
-            <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-2xl">
+            <p className="text-muted text-lg leading-relaxed mb-8 max-w-2xl">
               Stop wasting money on ads that don&apos;t convert. Our data-driven PPC campaigns deliver qualified leads at a fraction of the cost — with full transparency on every dollar spent.
             </p>
             <ul className="grid grid-cols-2 gap-3 mb-8">
               {["Google & Bing Certified", "No wasted ad spend", "Real-time optimization", "Full conversion tracking"].map(h => (
-                <li key={h} className="flex items-center gap-2 text-sm text-gray-300"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />{h}</li>
+                <li key={h} className="flex items-center gap-2 text-sm text-muted"><CheckCircle className="w-4 h-4 text-green-700 flex-shrink-0" />{h}</li>
               ))}
             </ul>
             <div className="flex flex-wrap gap-4">
               <a href="/contact" className="flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-7 py-3.5 rounded-xl transition-all hover:scale-[1.03]">
                 Get Free PPC Audit <ArrowRight className="w-4 h-4" />
               </a>
-              <a href="/ppc-pricing" className="flex items-center gap-2 border border-white/10 hover:border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl transition-all">
+              <a href="/ppc-pricing" className="flex items-center gap-2 border border-hairline/10 hover:border-hairline/30 text-ink font-semibold px-7 py-3.5 rounded-xl transition-all">
                 View Pricing
               </a>
             </div>
@@ -76,8 +76,8 @@ export default function PpcServicesClient() {
       <section className="py-24 section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">Why Businesses Choose <span className="gradient-text">PPC Advertising</span></h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">SEO takes months. PPC delivers qualified traffic today — with full control over budget, targeting, and messaging.</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">Why Businesses Choose <span className="gradient-text">PPC Advertising</span></h2>
+            <p className="text-muted text-lg max-w-2xl mx-auto">SEO takes months. PPC delivers qualified traffic today — with full control over budget, targeting, and messaging.</p>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -87,8 +87,8 @@ export default function PpcServicesClient() {
               { title: "Scalable Growth", desc: "Found a winning campaign? Scale it instantly. PPC grows as fast as your budget allows." },
             ].map((item, i) => (
               <motion.div key={item.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="glass-card rounded-2xl p-6">
-                <h3 className="text-white font-bold mb-2">{item.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="text-ink font-bold mb-2">{item.title}</h3>
+                <p className="text-muted text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -96,18 +96,18 @@ export default function PpcServicesClient() {
       </section>
 
       {/* What We Deliver */}
-      <section className="py-24 bg-[#0a0a0a]">
+      <section className="py-24 bg-canvas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">Our PPC Services</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">Every Paid Channel, <span className="gradient-text">Mastered</span></h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">Every Paid Channel, <span className="gradient-text">Mastered</span></h2>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => { const Icon = s.icon; return (
               <motion.div key={s.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} whileHover={{ y: -5 }} className="glass-card rounded-2xl p-6 group">
                 <div className={`w-12 h-12 ${s.bg} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}><Icon className={`w-6 h-6 ${s.color}`} /></div>
-                <h3 className="text-white font-bold text-base mb-2">{s.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
+                <h3 className="text-ink font-bold text-base mb-2">{s.title}</h3>
+                <p className="text-muted text-sm leading-relaxed">{s.desc}</p>
               </motion.div>
             ); })}
           </div>
@@ -118,14 +118,14 @@ export default function PpcServicesClient() {
       <section className="py-24 section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">Our PPC <span className="gradient-text">Process</span></h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">Our PPC <span className="gradient-text">Process</span></h2>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
             {process.map((s, i) => (
               <motion.div key={s.step} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="glass-card rounded-2xl p-5 text-center">
-                <div className="text-3xl font-black text-white/5 mb-2">{s.step}</div>
-                <h3 className="text-white font-bold text-sm mb-2">{s.title}</h3>
-                <p className="text-gray-500 text-xs leading-relaxed">{s.desc}</p>
+                <div className="text-3xl font-black text-ink/5 mb-2">{s.step}</div>
+                <h3 className="text-ink font-bold text-sm mb-2">{s.title}</h3>
+                <p className="text-subtle text-xs leading-relaxed">{s.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -133,16 +133,16 @@ export default function PpcServicesClient() {
       </section>
 
       {/* Results */}
-      <section className="py-24 bg-[#0a0a0a]">
+      <section className="py-24 bg-canvas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">Results That <span className="gradient-text">Speak</span></h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">Results That <span className="gradient-text">Speak</span></h2>
           </motion.div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((s, i) => (
               <motion.div key={s.label} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="glass-card rounded-2xl p-6 text-center">
                 <p className={`text-4xl font-extrabold ${s.color} mb-2`}>{s.value}</p>
-                <p className="text-gray-400 text-sm">{s.label}</p>
+                <p className="text-muted text-sm">{s.label}</p>
               </motion.div>
             ))}
           </div>
@@ -153,19 +153,19 @@ export default function PpcServicesClient() {
       <section className="py-24 section-gradient">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-            <h2 className="text-3xl font-extrabold text-white mb-3">PPC <span className="gradient-text">FAQ</span></h2>
+            <h2 className="text-3xl font-extrabold text-ink mb-3">PPC <span className="gradient-text">FAQ</span></h2>
           </motion.div>
           <div className="space-y-3">
             {faqs.map((faq, i) => (
               <div key={i} className={`glass-card rounded-xl overflow-hidden transition-all ${openFaq === i ? "border-primary/40" : ""}`}>
                 <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-between px-6 py-5 text-left">
-                  <span className="text-white font-medium pr-4">{faq.q}</span>
-                  {openFaq === i ? <Minus className="w-5 h-5 text-accent flex-shrink-0" /> : <Plus className="w-5 h-5 text-gray-400 flex-shrink-0" />}
+                  <span className="text-ink font-medium pr-4">{faq.q}</span>
+                  {openFaq === i ? <Minus className="w-5 h-5 text-accent flex-shrink-0" /> : <Plus className="w-5 h-5 text-muted flex-shrink-0" />}
                 </button>
                 <AnimatePresence initial={false}>
                   {openFaq === i && (
                     <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }}>
-                      <p className="px-6 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/10 pt-4">{faq.a}</p>
+                      <p className="px-6 pb-5 text-muted text-sm leading-relaxed border-t border-hairline/10 pt-4">{faq.a}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>

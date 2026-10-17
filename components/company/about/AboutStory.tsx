@@ -17,7 +17,7 @@ export default function AboutStory() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-16">
           <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">Our Journey</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">From Startup to <span className="gradient-text">Global Leader</span></h2>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">From Startup to <span className="gradient-text">Global Leader</span></h2>
         </motion.div>
         <div className="relative">
           <div className="absolute left-1/2 -translate-x-px top-0 bottom-0 w-px bg-dark-border hidden lg:block" />
@@ -29,8 +29,8 @@ export default function AboutStory() {
                 <div className={`flex-1 ${i % 2 === 0 ? "lg:text-right" : "lg:text-left"}`}>
                   <div className="glass-card rounded-2xl p-6 border border-dark-border inline-block w-full lg:max-w-sm">
                     <span className="text-accent font-bold text-sm">{m.year}</span>
-                    <h3 className="text-white font-bold text-lg mt-1 mb-2">{m.title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">{m.desc}</p>
+                    <h3 className="text-ink font-bold text-lg mt-1 mb-2">{m.title}</h3>
+                    <p className="text-muted text-sm leading-relaxed">{m.desc}</p>
                   </div>
                 </div>
                 <div className="w-4 h-4 bg-accent rounded-full border-4 border-dark flex-shrink-0 z-10 hidden lg:block" />

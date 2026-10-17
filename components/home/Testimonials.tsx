@@ -66,10 +66,10 @@ export default function Testimonials() {
           <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">
             Client Stories
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink mb-4">
             Results Our Clients <span className="gradient-text">Love</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-muted text-lg max-w-2xl mx-auto">
             Real results from real businesses. See what our clients say about working with us.
           </p>
         </motion.div>
@@ -89,11 +89,11 @@ export default function Testimonials() {
 
               <div className="flex items-center gap-1 mb-6">
                 {Array.from({ length: testimonials[current].rating }).map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star key={i} className="w-5 h-5 text-yellow-700 fill-current" />
                 ))}
               </div>
 
-              <p className="text-gray-200 text-lg md:text-xl leading-relaxed mb-8 italic">
+              <p className="text-subtle text-lg md:text-xl leading-relaxed mb-8 italic">
                 &ldquo;{testimonials[current].text}&rdquo;
               </p>
 
@@ -103,11 +103,11 @@ export default function Testimonials() {
                     {testimonials[current].avatar}
                   </div>
                   <div>
-                    <p className="text-white font-semibold">{testimonials[current].name}</p>
-                    <p className="text-gray-400 text-sm">{testimonials[current].role}</p>
+                    <p className="text-ink font-semibold">{testimonials[current].name}</p>
+                    <p className="text-muted text-sm">{testimonials[current].role}</p>
                   </div>
                 </div>
-                <div className="bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-semibold px-4 py-2 rounded-full">
+                <div className="bg-green-500/10 border border-green-500/20 text-green-700 text-sm font-semibold px-4 py-2 rounded-full">
                   {testimonials[current].result}
                 </div>
               </div>
@@ -120,7 +120,7 @@ export default function Testimonials() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={prev}
-              className="w-10 h-10 glass-card border border-dark-border rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+              className="w-10 h-10 glass-card border border-dark-border rounded-full flex items-center justify-center text-muted hover:text-ink transition-colors"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -143,7 +143,7 @@ export default function Testimonials() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={next}
-              className="w-10 h-10 glass-card border border-dark-border rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+              className="w-10 h-10 glass-card border border-dark-border rounded-full flex items-center justify-center text-muted hover:text-ink transition-colors"
               aria-label="Next testimonial"
             >
               <ChevronRight className="w-5 h-5" />
@@ -169,11 +169,11 @@ export default function Testimonials() {
                   {t.avatar}
                 </div>
                 <div>
-                  <p className="text-white text-xs font-semibold">{t.name}</p>
-                  <p className="text-gray-500 text-xs">{t.role.split(",")[0]}</p>
+                  <p className="text-ink text-xs font-semibold">{t.name}</p>
+                  <p className="text-subtle text-xs">{t.role.split(",")[0]}</p>
                 </div>
               </div>
-              <p className="text-green-400 text-xs font-semibold">{t.result}</p>
+              <p className="text-green-700 text-xs font-semibold">{t.result}</p>
             </motion.button>
           ))}
         </div>

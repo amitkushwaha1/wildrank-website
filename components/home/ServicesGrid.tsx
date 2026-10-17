@@ -21,7 +21,7 @@ const services = [
     title: "SEO Services",
     description:
       "AI-powered search engine optimization that drives organic traffic and improves rankings across all major search engines.",
-    iconColor: "text-blue-400",
+    iconColor: "text-blue-600",
     bg: "bg-blue-500/10",
     border: "border-blue-500/20",
     tags: ["Technical SEO", "Link Building", "Content Strategy"],
@@ -31,7 +31,7 @@ const services = [
     title: "PPC Advertising",
     description:
       "Data-driven pay-per-click campaigns on Google, Bing, and social platforms that maximize ROI and minimize wasted spend.",
-    iconColor: "text-orange-400",
+    iconColor: "text-orange-700",
     bg: "bg-orange-500/10",
     border: "border-orange-500/20",
     tags: ["Google Ads", "Bing Ads", "Retargeting"],
@@ -41,7 +41,7 @@ const services = [
     title: "Social Media Marketing",
     description:
       "Strategic social media management and paid campaigns that build brand awareness and drive meaningful engagement.",
-    iconColor: "text-pink-400",
+    iconColor: "text-pink-700",
     bg: "bg-pink-500/10",
     border: "border-pink-500/20",
     tags: ["Meta Ads", "LinkedIn", "Content Creation"],
@@ -51,7 +51,7 @@ const services = [
     title: "Web Development",
     description:
       "Custom, high-performance websites and web applications built with modern technologies and optimized for conversions.",
-    iconColor: "text-cyan-400",
+    iconColor: "text-cyan-700",
     bg: "bg-cyan-500/10",
     border: "border-cyan-500/20",
     tags: ["React / Next.js", "E-Commerce", "CMS"],
@@ -61,7 +61,7 @@ const services = [
     title: "Mobile App Development",
     description:
       "Native and cross-platform mobile applications for iOS and Android that deliver seamless user experiences.",
-    iconColor: "text-green-400",
+    iconColor: "text-green-700",
     bg: "bg-green-500/10",
     border: "border-green-500/20",
     tags: ["iOS & Android", "React Native", "Flutter"],
@@ -71,7 +71,7 @@ const services = [
     title: "White Label Services",
     description:
       "Fully managed white-label digital marketing and development services for agencies looking to scale without overhead.",
-    iconColor: "text-purple-400",
+    iconColor: "text-purple-600",
     bg: "bg-purple-500/10",
     border: "border-purple-500/20",
     tags: ["Agency Partner", "Reseller", "Managed"],
@@ -81,7 +81,7 @@ const services = [
     title: "Software Development",
     description:
       "End-to-end custom software solutions, SaaS platforms, and enterprise applications tailored to your business needs.",
-    iconColor: "text-yellow-400",
+    iconColor: "text-yellow-700",
     bg: "bg-yellow-500/10",
     border: "border-yellow-500/20",
     tags: ["SaaS", "Enterprise", "API Integration"],
@@ -91,7 +91,7 @@ const services = [
     title: "IT Outsourcing",
     description:
       "Dedicated development teams and IT outsourcing solutions that save up to 60% in costs while maintaining quality.",
-    iconColor: "text-red-400",
+    iconColor: "text-red-700",
     bg: "bg-red-500/10",
     border: "border-red-500/20",
     tags: ["Dedicated Teams", "Staff Aug", "Cost Saving"],
@@ -128,11 +128,11 @@ export default function ServicesGrid() {
           <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">
             What We Do
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink mb-4">
             Full-Spectrum Digital{" "}
             <span className="gradient-text">Services</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-muted text-lg max-w-2xl mx-auto">
             From strategy to execution, we cover every aspect of your digital growth — under one roof.
           </p>
         </motion.div>
@@ -160,14 +160,14 @@ export default function ServicesGrid() {
                   <Icon className={`w-6 h-6 ${service.iconColor}`} />
                 </div>
 
-                <h3 className="text-white font-bold text-base mb-2">{service.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">{service.description}</p>
+                <h3 className="text-ink font-bold text-base mb-2">{service.title}</h3>
+                <p className="text-muted text-sm leading-relaxed mb-4">{service.description}</p>
 
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {service.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs text-gray-500 bg-white/5 px-2 py-0.5 rounded-full"
+                      className="text-xs text-subtle bg-tint/5 px-2 py-0.5 rounded-full"
                     >
                       {tag}
                     </span>

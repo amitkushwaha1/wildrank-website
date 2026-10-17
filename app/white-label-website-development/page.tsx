@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { icon: "Globe", title: "Custom Websites", desc: "Brand-aligned, conversion-focused websites built for your clients under your name.", color: "text-cyan-400", bg: "bg-cyan-500/10" },
-  { icon: "ShoppingCart", title: "E-Commerce Stores", desc: "Shopify, WooCommerce, and custom storefronts that drive online sales.", color: "text-orange-400", bg: "bg-orange-500/10" },
-  { icon: "Code2", title: "Web Applications", desc: "Custom web apps and SaaS platforms built with modern frameworks.", color: "text-blue-400", bg: "bg-blue-500/10" },
-  { icon: "Layers", title: "CMS Development", desc: "WordPress and headless CMS builds that clients can easily manage.", color: "text-green-400", bg: "bg-green-500/10" },
-  { icon: "Smartphone", title: "Responsive Design", desc: "Mobile-first, pixel-perfect designs that look great on every device.", color: "text-purple-400", bg: "bg-purple-500/10" },
-  { icon: "Settings", title: "Maintenance & Support", desc: "Ongoing updates and support delivered as your agency's service.", color: "text-pink-400", bg: "bg-pink-500/10" },
+  { icon: "Globe", title: "Custom Websites", desc: "Brand-aligned, conversion-focused websites built for your clients under your name.", color: "text-cyan-700", bg: "bg-cyan-500/10" },
+  { icon: "ShoppingCart", title: "E-Commerce Stores", desc: "Shopify, WooCommerce, and custom storefronts that drive online sales.", color: "text-orange-700", bg: "bg-orange-500/10" },
+  { icon: "Code2", title: "Web Applications", desc: "Custom web apps and SaaS platforms built with modern frameworks.", color: "text-blue-600", bg: "bg-blue-500/10" },
+  { icon: "Layers", title: "CMS Development", desc: "WordPress and headless CMS builds that clients can easily manage.", color: "text-green-700", bg: "bg-green-500/10" },
+  { icon: "Smartphone", title: "Responsive Design", desc: "Mobile-first, pixel-perfect designs that look great on every device.", color: "text-purple-600", bg: "bg-purple-500/10" },
+  { icon: "Settings", title: "Maintenance & Support", desc: "Ongoing updates and support delivered as your agency's service.", color: "text-pink-700", bg: "bg-pink-500/10" },
 ];
 
 const faqs = [

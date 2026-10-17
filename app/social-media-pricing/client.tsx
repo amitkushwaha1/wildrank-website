@@ -57,13 +57,13 @@ const sections: { title: string; rows: { label: string; values: Val[] }[] }[] = 
 
 function Cell({ v }: { v: Val }) {
   if (v === true) return (
-    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#FF6B35] shadow-[0_0_8px_rgba(255,107,53,0.5)] mx-auto">
-      <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
+    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#FC4812] shadow-[0_0_8px_rgba(252,72,18,0.5)] mx-auto">
+      <Check className="w-3.5 h-3.5 text-ink stroke-[2.5]" />
     </span>
   );
   if (v === false) return (
-    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white/10 border border-white/15 mx-auto">
-      <X className="w-3 h-3 text-gray-500 stroke-[2.5]" />
+    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-tint/10 border border-hairline/15 mx-auto">
+      <X className="w-3 h-3 text-subtle stroke-[2.5]" />
     </span>
   );
   return <span className="text-xs text-accent font-semibold">{v}</span>;
@@ -82,22 +82,22 @@ export default function SocialMediaPricingClient() {
       <section className="relative hero-gradient pt-28 pb-16 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.1) 1px,transparent 1px)", backgroundSize: "60px 60px" }} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs font-semibold px-4 py-2 rounded-full mb-4">
+          <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 bg-pink-500/10 border border-pink-500/20 text-pink-700 text-xs font-semibold px-4 py-2 rounded-full mb-4">
             <Star className="w-3.5 h-3.5" /> Social Media Pricing
           </motion.span>
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-4">
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink mb-4">
             Social Media <span className="gradient-text">Management Plans</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-            className="text-gray-400 text-lg max-w-xl mx-auto">
+            className="text-muted text-lg max-w-xl mx-auto">
             Choose the plan that matches your brand ambitions and let&apos;s grow your social presence.
           </motion.p>
         </div>
       </section>
 
       {/* Plan Cards */}
-      <section className="py-16 bg-[#0a0a0a]">
+      <section className="py-16 bg-canvas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {plans.map((plan, i) => (
@@ -110,17 +110,17 @@ export default function SocialMediaPricingClient() {
                 )}
                 <div className={`text-base font-bold bg-gradient-to-r ${plan.color} bg-clip-text text-transparent mb-1`}>{plan.name}</div>
                 <div className="flex items-end gap-0.5 mb-2">
-                  <span className="text-3xl font-extrabold text-white">${plan.price.toLocaleString()}</span>
-                  <span className="text-gray-500 text-sm mb-1">/ month</span>
+                  <span className="text-3xl font-extrabold text-ink">${plan.price.toLocaleString()}</span>
+                  <span className="text-subtle text-sm mb-1">/ month</span>
                 </div>
-                <p className="text-gray-500 text-xs mb-4 leading-relaxed">{plan.tagline}</p>
-                <div className="space-y-2 text-xs text-gray-400 mb-5 flex-1">
-                  <div className="flex justify-between gap-2"><span>Platforms</span><span className="text-white font-semibold text-right">{plan.platforms.split("(")[0].trim()}</span></div>
-                  <div className="flex justify-between"><span>Posts / Week</span><span className="text-white font-semibold">{plan.postsPerWeek}</span></div>
-                  <div className="flex justify-between"><span>Stories / Week</span><span className="text-white font-semibold">{plan.storiesPerWeek}</span></div>
+                <p className="text-subtle text-xs mb-4 leading-relaxed">{plan.tagline}</p>
+                <div className="space-y-2 text-xs text-muted mb-5 flex-1">
+                  <div className="flex justify-between gap-2"><span>Platforms</span><span className="text-ink font-semibold text-right">{plan.platforms.split("(")[0].trim()}</span></div>
+                  <div className="flex justify-between"><span>Posts / Week</span><span className="text-ink font-semibold">{plan.postsPerWeek}</span></div>
+                  <div className="flex justify-between"><span>Stories / Week</span><span className="text-ink font-semibold">{plan.storiesPerWeek}</span></div>
                 </div>
                 <motion.a href="/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
-                  className={`block text-center text-sm font-semibold py-2.5 rounded-xl transition-all mt-auto ${plan.badge ? "bg-accent hover:bg-accent-dark text-white" : "border border-white/10 hover:border-accent/50 text-gray-300 hover:text-white"}`}>
+                  className={`block text-center text-sm font-semibold py-2.5 rounded-xl transition-all mt-auto ${plan.badge ? "bg-accent hover:bg-accent-dark text-white" : "border border-hairline/10 hover:border-accent/50 text-muted hover:text-ink"}`}>
                   Start Today
                 </motion.a>
               </motion.div>
@@ -133,28 +133,28 @@ export default function SocialMediaPricingClient() {
       <section className="py-16 section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="text-2xl sm:text-3xl font-extrabold text-white text-center mb-10">
+            className="text-2xl sm:text-3xl font-extrabold text-ink text-center mb-10">
             Full Plan <span className="gradient-text">Comparison</span>
           </motion.h2>
           <div className="glass-card rounded-2xl overflow-hidden">
             {sections.map((section) => (
-              <div key={section.title} className="border-b border-white/5 last:border-0">
+              <div key={section.title} className="border-b border-hairline/5 last:border-0">
                 <button onClick={() => toggle(section.title)} className="w-full flex items-center justify-between px-6 py-4 bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
-                  <span className="text-sm font-bold text-white uppercase tracking-wider">{section.title}</span>
-                  {openSections[section.title] ? <ChevronUp className="w-4 h-4 text-gray-400" /> : <ChevronDown className="w-4 h-4 text-gray-400" />}
+                  <span className="text-sm font-bold text-ink uppercase tracking-wider">{section.title}</span>
+                  {openSections[section.title] ? <ChevronUp className="w-4 h-4 text-muted" /> : <ChevronDown className="w-4 h-4 text-muted" />}
                 </button>
                 <AnimatePresence initial={false}>
                   {openSections[section.title] && (
                     <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.25 }} className="overflow-hidden">
-                      <div className="grid grid-cols-5 border-b border-white/5 bg-[#0d0d0d]">
-                        <div className="px-6 py-2 text-xs text-gray-600 font-medium">Feature</div>
+                      <div className="grid grid-cols-5 border-b border-hairline/5 bg-band">
+                        <div className="px-6 py-2 text-xs text-faint font-medium">Feature</div>
                         {plans.map(p => (
                           <div key={p.name} className={`px-2 py-2 text-center text-xs font-bold bg-gradient-to-r ${p.color} bg-clip-text text-transparent`}>{p.name}</div>
                         ))}
                       </div>
                       {section.rows.map((row, ri) => (
-                        <div key={row.label} className={`grid grid-cols-5 border-b border-white/5 last:border-0 ${ri % 2 === 0 ? "" : "bg-white/[0.01]"}`}>
-                          <div className="px-6 py-3 text-xs sm:text-sm text-gray-400">{row.label}</div>
+                        <div key={row.label} className={`grid grid-cols-5 border-b border-hairline/5 last:border-0 ${ri % 2 === 0 ? "" : "bg-white/[0.01]"}`}>
+                          <div className="px-6 py-3 text-xs sm:text-sm text-muted">{row.label}</div>
                           {row.values.map((v, vi) => (
                             <div key={vi} className="px-2 py-3 flex items-center justify-center"><Cell v={v} /></div>
                           ))}
@@ -170,8 +170,8 @@ export default function SocialMediaPricingClient() {
           {/* CTA */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="mt-10 glass-card rounded-2xl p-8 border border-accent/20 text-center">
-            <h3 className="text-xl font-bold text-white mb-2">Need a Custom Social Strategy?</h3>
-            <p className="text-gray-400 mb-5 max-w-xl mx-auto">Enterprise brands and multi-location businesses get tailored social packages with dedicated creative teams.</p>
+            <h3 className="text-xl font-bold text-ink mb-2">Need a Custom Social Strategy?</h3>
+            <p className="text-muted mb-5 max-w-xl mx-auto">Enterprise brands and multi-location businesses get tailored social packages with dedicated creative teams.</p>
             <motion.a href="/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-7 py-3.5 rounded-xl transition-colors">
               Talk to Our Team <ArrowRight className="w-4 h-4" />

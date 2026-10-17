@@ -93,10 +93,10 @@ export default function AIReceptionistPage() {
           <p className="text-primary-light font-semibold uppercase tracking-widest text-sm mb-4">
             Missed Call Recovery
           </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight max-w-4xl">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink leading-tight max-w-4xl">
             57% of inbound calls go unanswered
           </h1>
-          <p className="mt-6 text-lg text-gray-300 max-w-3xl leading-relaxed">
+          <p className="mt-6 text-lg text-muted max-w-3xl leading-relaxed">
             Most of those callers do not leave a voicemail. They dial the next
             result on their phone. An AI receptionist answers when your line rings
             and nobody is free to, and texts back anyone who gets through to voicemail.
@@ -110,7 +110,7 @@ export default function AIReceptionistPage() {
             </Link>
             <a
               href="#how"
-              className="px-8 py-3 rounded-lg border border-white/20 text-white font-semibold hover:bg-white/5 transition"
+              className="px-8 py-3 rounded-lg border border-hairline/20 text-ink font-semibold hover:bg-tint/5 transition"
             >
               How it works
             </a>
@@ -120,7 +120,7 @@ export default function AIReceptionistPage() {
 
       <section id="how" className="py-16 bg-dark-card border-y border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-8">What it does</h2>
+          <h2 className="text-3xl font-bold text-ink mb-8">What it does</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               ["Answers when you cannot", "Picks up outside hours, during peak, or when the line is busy."],
@@ -129,8 +129,8 @@ export default function AIReceptionistPage() {
               ["Books or routes", "Sends a booking link, or routes urgent calls to a human."],
             ].map(([t, d]) => (
               <div key={t} className="glass-card rounded-2xl p-6 border border-dark-border">
-                <h3 className="text-white font-bold mb-2">{t}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{d}</p>
+                <h3 className="text-ink font-bold mb-2">{t}</h3>
+                <p className="text-sm text-muted leading-relaxed">{d}</p>
               </div>
             ))}
           </div>
@@ -139,7 +139,7 @@ export default function AIReceptionistPage() {
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-10">Where it pays for itself</h2>
+          <h2 className="text-3xl font-bold text-ink mb-10">Where it pays for itself</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               ["Home services", "Roofing, HVAC, plumbing, electrical. Emergency calls that ring out are the whole margin."],
@@ -147,8 +147,8 @@ export default function AIReceptionistPage() {
               ["Sales-led local business", "Real estate, auto repair, agencies. High-value enquiries made while the team is on a job."],
             ].map(([t, d]) => (
               <div key={t} className="glass-card rounded-2xl p-6 border border-dark-border">
-                <h3 className="text-lg font-bold text-white mb-2">{t}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{d}</p>
+                <h3 className="text-lg font-bold text-ink mb-2">{t}</h3>
+                <p className="text-sm text-muted leading-relaxed">{d}</p>
               </div>
             ))}
           </div>
@@ -157,11 +157,11 @@ export default function AIReceptionistPage() {
 
       <section className="py-20 bg-dark-card border-y border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-8">Pricing</h2>
+          <h2 className="text-3xl font-bold text-ink mb-8">Pricing</h2>
           <div className="glass-card rounded-2xl p-8 border border-dark-border max-w-lg">
-            <p className="text-sm text-gray-400 uppercase tracking-widest mb-2">Setup</p>
-            <p className="text-4xl font-extrabold text-white mb-2">$499</p>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-muted uppercase tracking-widest mb-2">Setup</p>
+            <p className="text-4xl font-extrabold text-ink mb-2">$499</p>
+            <p className="text-sm text-muted">
               One-time. Ongoing usage depends on your call volume and is agreed at the
               consultation.
             </p>
@@ -171,12 +171,12 @@ export default function AIReceptionistPage() {
 
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-10">Questions</h2>
+          <h2 className="text-3xl font-bold text-ink mb-10">Questions</h2>
           <div className="space-y-8">
             {FAQS.map((f) => (
               <div key={f.q} className="border-b border-dark-border pb-6">
-                <h3 className="text-lg font-bold text-white mb-2">{f.q}</h3>
-                <p className="text-gray-400 leading-relaxed">{f.a}</p>
+                <h3 className="text-lg font-bold text-ink mb-2">{f.q}</h3>
+                <p className="text-muted leading-relaxed">{f.a}</p>
               </div>
             ))}
           </div>
@@ -185,8 +185,8 @@ export default function AIReceptionistPage() {
 
       <section className="py-20 bg-dark-card border-t border-dark-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Count the calls you are losing</h2>
-          <p className="text-gray-400 mb-8">
+          <h2 className="text-3xl font-bold text-ink mb-4">Count the calls you are losing</h2>
+          <p className="text-muted mb-8">
             We will tell you if your volume does not justify it.
           </p>
           <Link
@@ -195,7 +195,7 @@ export default function AIReceptionistPage() {
           >
             Book a consultation
           </Link>
-          <p className="text-gray-500 text-sm mt-6">Prefer to talk? {PHONE_E164}</p>
+          <p className="text-subtle text-sm mt-6">Prefer to talk? {PHONE_E164}</p>
         </div>
       </section>
     </>

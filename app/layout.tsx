@@ -75,10 +75,7 @@ const organizationSchema = {
 
 const GA_MEASUREMENT_ID = "G-EC7689B0MJ";
 
-const GA_INIT_SCRIPT = `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '${GA_MEASUREMENT_ID}');`;
+const GA_INIT_SCRIPT = `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${GA_MEASUREMENT_ID}');`;
 
 export default function RootLayout({
   children,

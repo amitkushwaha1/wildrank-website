@@ -57,10 +57,10 @@ export default function PricingFAQ({ service }: { service: string }) {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-extrabold text-white mb-3">
+          <h2 className="text-3xl font-extrabold text-ink mb-3">
             Common <span className="gradient-text">Questions</span>
           </h2>
-          <p className="text-gray-400">Everything you need to know before choosing a plan.</p>
+          <p className="text-muted">Everything you need to know before choosing a plan.</p>
         </motion.div>
 
         <div className="space-y-3">
@@ -77,10 +77,10 @@ export default function PricingFAQ({ service }: { service: string }) {
                 onClick={() => setOpen(open === i ? null : i)}
                 className="w-full flex items-center justify-between px-6 py-5 text-left"
               >
-                <span className="text-white font-medium pr-4">{faq.q}</span>
+                <span className="text-ink font-medium pr-4">{faq.q}</span>
                 {open === i
                   ? <Minus className="w-5 h-5 text-accent flex-shrink-0" />
-                  : <Plus  className="w-5 h-5 text-gray-400 flex-shrink-0" />}
+                  : <Plus  className="w-5 h-5 text-muted flex-shrink-0" />}
               </button>
               <AnimatePresence initial={false}>
                 {open === i && (
@@ -90,7 +90,7 @@ export default function PricingFAQ({ service }: { service: string }) {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <p className="px-6 pb-5 text-gray-400 text-sm leading-relaxed border-t border-dark-border pt-4">
+                    <p className="px-6 pb-5 text-muted text-sm leading-relaxed border-t border-dark-border pt-4">
                       {faq.a}
                     </p>
                   </motion.div>

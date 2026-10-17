@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { TrendingUp, Users, Award, Clock } from "lucide-react";
 
 const stats = [
-  { icon: TrendingUp, value: "340%", label: "Avg. Traffic Increase", color: "text-green-400", bg: "bg-green-500/10" },
-  { icon: Users, value: "600+", label: "SEO Clients Served", color: "text-blue-400", bg: "bg-blue-500/10" },
-  { icon: Award, value: "98%", label: "Client Retention Rate", color: "text-orange-400", bg: "bg-orange-500/10" },
-  { icon: Clock, value: "90 Days", label: "Avg. Time to Results", color: "text-purple-400", bg: "bg-purple-500/10" },
+  { icon: TrendingUp, value: "340%", label: "Avg. Traffic Increase", color: "text-green-700", bg: "bg-green-500/10" },
+  { icon: Users, value: "600+", label: "SEO Clients Served", color: "text-blue-600", bg: "bg-blue-500/10" },
+  { icon: Award, value: "98%", label: "Client Retention Rate", color: "text-orange-700", bg: "bg-orange-500/10" },
+  { icon: Clock, value: "90 Days", label: "Avg. Time to Results", color: "text-purple-600", bg: "bg-purple-500/10" },
 ];
 
 export default function SEOStats() {
@@ -31,7 +31,7 @@ export default function SEOStats() {
                 </div>
                 <div>
                   <p className={`text-2xl font-extrabold ${s.color}`}>{s.value}</p>
-                  <p className="text-xs text-gray-500">{s.label}</p>
+                  <p className="text-xs text-subtle">{s.label}</p>
                 </div>
               </motion.div>
             );

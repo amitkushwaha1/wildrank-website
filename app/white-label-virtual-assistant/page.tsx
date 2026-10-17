@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { icon: "Calendar", title: "Scheduling & Calendar", desc: "Appointment setting, calendar management, and meeting coordination for your clients.", color: "text-blue-400", bg: "bg-blue-500/10" },
-  { icon: "FileText", title: "Admin & Data Entry", desc: "Accurate data entry, document management, and administrative support.", color: "text-green-400", bg: "bg-green-500/10" },
-  { icon: "Mail", title: "Inbox & Email Management", desc: "Email triage, responses, and follow-ups handled professionally.", color: "text-orange-400", bg: "bg-orange-500/10" },
-  { icon: "Database", title: "CRM Management", desc: "Lead entry, pipeline updates, and CRM hygiene to keep data clean.", color: "text-purple-400", bg: "bg-purple-500/10" },
-  { icon: "Headphones", title: "Customer Support", desc: "Chat, email, and ticket support delivered under your brand.", color: "text-pink-400", bg: "bg-pink-500/10" },
-  { icon: "Users", title: "Research & Outreach", desc: "Lead research, list building, and cold outreach support.", color: "text-cyan-400", bg: "bg-cyan-500/10" },
+  { icon: "Calendar", title: "Scheduling & Calendar", desc: "Appointment setting, calendar management, and meeting coordination for your clients.", color: "text-blue-600", bg: "bg-blue-500/10" },
+  { icon: "FileText", title: "Admin & Data Entry", desc: "Accurate data entry, document management, and administrative support.", color: "text-green-700", bg: "bg-green-500/10" },
+  { icon: "Mail", title: "Inbox & Email Management", desc: "Email triage, responses, and follow-ups handled professionally.", color: "text-orange-700", bg: "bg-orange-500/10" },
+  { icon: "Database", title: "CRM Management", desc: "Lead entry, pipeline updates, and CRM hygiene to keep data clean.", color: "text-purple-600", bg: "bg-purple-500/10" },
+  { icon: "Headphones", title: "Customer Support", desc: "Chat, email, and ticket support delivered under your brand.", color: "text-pink-700", bg: "bg-pink-500/10" },
+  { icon: "Users", title: "Research & Outreach", desc: "Lead research, list building, and cold outreach support.", color: "text-cyan-700", bg: "bg-cyan-500/10" },
 ];
 
 const faqs = [

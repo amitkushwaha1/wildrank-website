@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { icon: "FileText", title: "Guest Post Outreach", desc: "Editorially placed guest posts on relevant, high-authority websites.", color: "text-blue-400", bg: "bg-blue-500/10" },
-  { icon: "Globe", title: "Digital PR Links", desc: "Earned media coverage and links from news sites and industry publications.", color: "text-orange-400", bg: "bg-orange-500/10" },
-  { icon: "Award", title: "Niche Edits", desc: "Contextual links inserted into existing, indexed, relevant content.", color: "text-green-400", bg: "bg-green-500/10" },
-  { icon: "Search", title: "Competitor Backlink Analysis", desc: "We reverse-engineer competitor link profiles to find your best opportunities.", color: "text-purple-400", bg: "bg-purple-500/10" },
-  { icon: "Link", title: "Tiered Link Building", desc: "Strategic link tiers that strengthen authority safely and sustainably.", color: "text-pink-400", bg: "bg-pink-500/10" },
-  { icon: "BarChart3", title: "Branded Link Reports", desc: "Monthly reports showing every link acquired, with metrics, under your brand.", color: "text-cyan-400", bg: "bg-cyan-500/10" },
+  { icon: "FileText", title: "Guest Post Outreach", desc: "Editorially placed guest posts on relevant, high-authority websites.", color: "text-blue-600", bg: "bg-blue-500/10" },
+  { icon: "Globe", title: "Digital PR Links", desc: "Earned media coverage and links from news sites and industry publications.", color: "text-orange-700", bg: "bg-orange-500/10" },
+  { icon: "Award", title: "Niche Edits", desc: "Contextual links inserted into existing, indexed, relevant content.", color: "text-green-700", bg: "bg-green-500/10" },
+  { icon: "Search", title: "Competitor Backlink Analysis", desc: "We reverse-engineer competitor link profiles to find your best opportunities.", color: "text-purple-600", bg: "bg-purple-500/10" },
+  { icon: "Link", title: "Tiered Link Building", desc: "Strategic link tiers that strengthen authority safely and sustainably.", color: "text-pink-700", bg: "bg-pink-500/10" },
+  { icon: "BarChart3", title: "Branded Link Reports", desc: "Monthly reports showing every link acquired, with metrics, under your brand.", color: "text-cyan-700", bg: "bg-cyan-500/10" },
 ];
 
 const faqs = [

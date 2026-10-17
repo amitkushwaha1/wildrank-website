@@ -11,15 +11,15 @@ export default function CaseStudiesHero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
         <div className="max-w-3xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold px-4 py-2 rounded-full mb-6">
+            className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 text-primary-light text-xs font-semibold px-4 py-2 rounded-full mb-6">
             <BarChart3 className="w-3.5 h-3.5" /> Case Studies
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink leading-tight mb-6">
             Real Results for <span className="gradient-text">Real Businesses</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-400 text-xl leading-relaxed">
+            className="text-muted text-xl leading-relaxed">
             Explore how we&apos;ve helped brands across industries grow their traffic, leads, and revenue with data-driven digital marketing.
           </motion.p>
         </div>

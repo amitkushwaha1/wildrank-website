@@ -15,11 +15,11 @@ export default function TeamHero() {
             <Users className="w-3.5 h-3.5" /> Our Team
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink leading-tight mb-6">
             Meet the People Behind <span className="gradient-text">Your Growth</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-400 text-xl leading-relaxed">
+            className="text-muted text-xl leading-relaxed">
             strategists, developers, designers, and marketers — all working together to deliver results that matter.
           </motion.p>
         </div>

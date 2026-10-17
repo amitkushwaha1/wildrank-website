@@ -20,7 +20,7 @@ export default function AboutStats() {
               viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }}
               className="text-center">
               <p className="text-3xl font-extrabold gradient-text mb-1">{s.value}</p>
-              <p className="text-xs text-gray-500">{s.label}</p>
+              <p className="text-xs text-subtle">{s.label}</p>
             </motion.div>
           ))}
         </div>

@@ -82,7 +82,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0a0a0a]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl"
+          ? "bg-canvas/95 backdrop-blur-xl border-b border-hairline/10 shadow-2xl"
           : "bg-transparent"
       }`}
     >
@@ -105,7 +105,7 @@ export default function Navbar() {
               >
                 <a
                   href={link.href}
-                  className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-lg hover:bg-white/5 whitespace-nowrap"
+                  className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-muted hover:text-ink transition-colors rounded-lg hover:bg-tint/5 whitespace-nowrap"
                 >
                   {link.label}
                   {link.children && (
@@ -120,7 +120,7 @@ export default function Navbar() {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.18, ease: "easeOut" }}
-                      className="absolute top-full left-0 mt-2 w-72 rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-[#111111] z-[100]"
+                      className="absolute top-full left-0 mt-2 w-72 rounded-xl overflow-hidden shadow-2xl border border-hairline/10 bg-band z-[100]"
                     >
                       <div className="p-1.5 max-h-[400px] overflow-y-auto">
                         {link.children.map((child, ci) => (
@@ -130,7 +130,7 @@ export default function Navbar() {
                             initial={{ opacity: 0, x: -8 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: ci * 0.03 }}
-                            className="flex items-center gap-2 px-3 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/8 rounded-lg transition-all duration-150 group"
+                            className="flex items-center gap-2 px-3 py-2.5 text-sm text-muted hover:text-ink hover:bg-tint/8 rounded-lg transition-all duration-150 group"
                           >
                             <span className="w-1.5 h-1.5 rounded-full bg-primary/30 group-hover:bg-primary transition-colors flex-shrink-0" />
                             {child.label}
@@ -148,7 +148,7 @@ export default function Navbar() {
           <div className="hidden xl:flex items-center gap-3">
             <motion.a
               href="/contact"
-              whileHover={{ scale: 1.04, boxShadow: "0 0 20px rgba(255,107,53,0.4)" }}
+              whileHover={{ scale: 1.04, boxShadow: "0 0 20px rgba(252,72,18,0.4)" }}
               whileTap={{ scale: 0.97 }}
               className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap"
             >
@@ -158,7 +158,7 @@ export default function Navbar() {
 
           {/* Mobile toggle */}
           <button
-            className="xl:hidden p-2 text-gray-300 hover:text-white"
+            className="xl:hidden p-2 text-muted hover:text-ink"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -180,7 +180,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="xl:hidden border-t border-white/10 overflow-hidden bg-[#0a0a0a]/98 backdrop-blur-xl"
+            className="xl:hidden border-t border-hairline/10 overflow-hidden bg-canvas/98 backdrop-blur-xl"
           >
             <div className="px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
               {navLinks.map((link) => (
@@ -189,7 +189,7 @@ export default function Navbar() {
                     <>
                       <button
                         onClick={() => setMobileExpanded(mobileExpanded === link.label ? null : link.label)}
-                        className="w-full flex items-center justify-between px-4 py-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+                        className="w-full flex items-center justify-between px-4 py-3 text-sm font-medium text-muted hover:text-ink hover:bg-tint/5 rounded-lg transition-colors"
                       >
                         {link.label}
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileExpanded === link.label ? "rotate-180" : ""}`} />
@@ -198,7 +198,7 @@ export default function Navbar() {
                         {mobileExpanded === link.label && (
                           <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }} className="overflow-hidden ml-4 mt-1 space-y-1">
                             {link.children.map((child) => (
-                              <a key={child.label} href={child.href} className="flex items-center gap-2 px-4 py-2 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors" onClick={() => setMobileOpen(false)}>
+                              <a key={child.label} href={child.href} className="flex items-center gap-2 px-4 py-2 text-xs text-muted hover:text-ink hover:bg-tint/5 rounded-lg transition-colors" onClick={() => setMobileOpen(false)}>
                                 <span className="w-1 h-1 rounded-full bg-primary/30 flex-shrink-0" />
                                 {child.label}
                               </a>
@@ -208,13 +208,13 @@ export default function Navbar() {
                       </AnimatePresence>
                     </>
                   ) : (
-                    <a href={link.href} className="block px-4 py-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors" onClick={() => setMobileOpen(false)}>
+                    <a href={link.href} className="block px-4 py-3 text-sm font-medium text-muted hover:text-ink hover:bg-tint/5 rounded-lg transition-colors" onClick={() => setMobileOpen(false)}>
                       {link.label}
                     </a>
                   )}
                 </div>
               ))}
-              <div className="pt-3 border-t border-white/10">
+              <div className="pt-3 border-t border-hairline/10">
                 <a href="/contact" className="block text-center bg-accent text-white text-sm font-semibold px-5 py-3 rounded-lg" onClick={() => setMobileOpen(false)}>
                   Get Free Audit
                 </a>

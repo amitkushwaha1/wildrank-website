@@ -16,11 +16,11 @@ export default function AboutHero() {
             <Award className="w-3.5 h-3.5" /> About Wildrank Technologies
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink leading-tight mb-6">
             500+ Clients Served <span className="gradient-text">Company-Wide</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-400 text-xl leading-relaxed mb-8">
+            className="text-muted text-xl leading-relaxed mb-8">
             We started as a small SEO team in Noida, India. Today we&apos;re a global digital marketing and IT services company trusted by brands across 30+ countries.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
@@ -30,7 +30,7 @@ export default function AboutHero() {
               { icon: Shield, text: "ISO 9001:2008 Certified" },
               { icon: TrendingUp, text: "Google Partner" },
             ].map(({ icon: Icon, text }) => (
-              <div key={text} className="flex items-center gap-2 text-sm text-gray-400">
+              <div key={text} className="flex items-center gap-2 text-sm text-muted">
                 <Icon className="w-4 h-4 text-accent" />{text}
               </div>
             ))}

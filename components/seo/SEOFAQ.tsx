@@ -55,10 +55,10 @@ export default function SEOFAQ() {
           <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">
             FAQ
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">
             SEO Pricing <span className="gradient-text">Questions Answered</span>
           </h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-muted text-lg">
             Everything you need to know before choosing a plan.
           </p>
         </motion.div>
@@ -80,12 +80,12 @@ export default function SEOFAQ() {
                 className="w-full flex items-center justify-between px-6 py-5 text-left"
                 aria-expanded={open === i}
               >
-                <span className="text-white font-medium pr-4">{faq.q}</span>
+                <span className="text-ink font-medium pr-4">{faq.q}</span>
                 <span className="flex-shrink-0">
                   {open === i ? (
                     <Minus className="w-5 h-5 text-accent" />
                   ) : (
-                    <Plus className="w-5 h-5 text-gray-400" />
+                    <Plus className="w-5 h-5 text-muted" />
                   )}
                 </span>
               </button>
@@ -98,7 +98,7 @@ export default function SEOFAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
-                    <div className="px-6 pb-5 text-gray-400 text-sm leading-relaxed border-t border-dark-border pt-4">
+                    <div className="px-6 pb-5 text-muted text-sm leading-relaxed border-t border-dark-border pt-4">
                       {faq.a}
                     </div>
                   </motion.div>

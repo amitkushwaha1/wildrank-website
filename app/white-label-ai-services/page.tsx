@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { icon: "Search", title: "AI SEO (GEO)", desc: "Generative Engine Optimization to get your clients cited in ChatGPT, Gemini, and Perplexity.", color: "text-blue-400", bg: "bg-blue-500/10" },
-  { icon: "MessageSquareText", title: "Answer Engine Optimization", desc: "Structured content that wins featured snippets and AI-generated answers.", color: "text-green-400", bg: "bg-green-500/10" },
-  { icon: "Brain", title: "AI Content Generation", desc: "Human-edited, AI-assisted content produced at scale under your brand.", color: "text-purple-400", bg: "bg-purple-500/10" },
-  { icon: "Bot", title: "AI Chatbots", desc: "Custom AI chat assistants built and deployed for your clients' websites.", color: "text-orange-400", bg: "bg-orange-500/10" },
-  { icon: "Sparkles", title: "Predictive Analytics", desc: "AI-powered keyword and trend prediction to keep clients ahead.", color: "text-pink-400", bg: "bg-pink-500/10" },
-  { icon: "Cpu", title: "Automation Workflows", desc: "AI marketing automation that saves your team hours every week.", color: "text-cyan-400", bg: "bg-cyan-500/10" },
+  { icon: "Search", title: "AI SEO (GEO)", desc: "Generative Engine Optimization to get your clients cited in ChatGPT, Gemini, and Perplexity.", color: "text-blue-600", bg: "bg-blue-500/10" },
+  { icon: "MessageSquareText", title: "Answer Engine Optimization", desc: "Structured content that wins featured snippets and AI-generated answers.", color: "text-green-700", bg: "bg-green-500/10" },
+  { icon: "Brain", title: "AI Content Generation", desc: "Human-edited, AI-assisted content produced at scale under your brand.", color: "text-purple-600", bg: "bg-purple-500/10" },
+  { icon: "Bot", title: "AI Chatbots", desc: "Custom AI chat assistants built and deployed for your clients' websites.", color: "text-orange-700", bg: "bg-orange-500/10" },
+  { icon: "Sparkles", title: "Predictive Analytics", desc: "AI-powered keyword and trend prediction to keep clients ahead.", color: "text-pink-700", bg: "bg-pink-500/10" },
+  { icon: "Cpu", title: "Automation Workflows", desc: "AI marketing automation that saves your team hours every week.", color: "text-cyan-700", bg: "bg-cyan-500/10" },
 ];
 
 const faqs = [

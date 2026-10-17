@@ -99,7 +99,7 @@ export default function AISection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-6"
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink leading-tight mb-6"
             >
               The Best AI SEO{" "}
               <span className="gradient-text">Agency</span>
@@ -118,7 +118,7 @@ export default function AISection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-gray-300 text-base leading-relaxed mb-6"
+              className="text-muted text-base leading-relaxed mb-6"
             >
               Search is evolving faster. With the rise of LLMs and Generative Engine Optimization (GEO), the way people search information is changing, and traditional SEO alone may not be enough. AI-powered SEO is smarter and more adaptive, ensuring your business stays visible across emerging AI-driven platforms.
             </motion.p>
@@ -128,7 +128,7 @@ export default function AISection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-gray-300 text-base leading-relaxed mb-8"
+              className="text-muted text-base leading-relaxed mb-8"
             >
               At Wildrank, our AI SEO experts combine user data, search intent, keyword prediction, and intelligent content optimization to keep your brand future-proof in this new era of search.
             </motion.p>
@@ -146,7 +146,7 @@ export default function AISection() {
                 { icon: Sparkles, text: "Smart Keyword Prediction" },
                 { icon: TrendingUp, text: "LLM Visibility Boost" },
               ].map(({ icon: Icon, text }) => (
-                <div key={text} className="flex items-center gap-2 text-sm text-white font-medium">
+                <div key={text} className="flex items-center gap-2 text-sm text-ink font-medium">
                   <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Icon className="w-4 h-4 text-primary-light" />
                   </div>
@@ -167,7 +167,7 @@ export default function AISection() {
             <div className="glass-card rounded-2xl p-8 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-2xl" />
 
-              <h3 className="text-lg font-bold text-white mb-6 relative z-10">AI Platforms We Optimize For</h3>
+              <h3 className="text-lg font-bold text-ink mb-6 relative z-10">AI Platforms We Optimize For</h3>
 
               <div className="space-y-3 relative z-10">
                 {aiPlatforms.map((platform, i) => (
@@ -178,14 +178,14 @@ export default function AISection() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
                     whileHover={{ x: 8, scale: 1.02 }}
-                    className="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-all duration-200 cursor-default"
+                    className="flex items-center gap-4 p-3 rounded-xl hover:bg-tint/5 transition-all duration-200 cursor-default"
                   >
                     <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${platform.bg}`}>
                       <platform.Logo />
                     </div>
                     <div>
-                      <p className="text-white font-semibold text-sm">{platform.name}</p>
-                      <p className="text-gray-400 text-xs">Optimized for visibility</p>
+                      <p className="text-ink font-semibold text-sm">{platform.name}</p>
+                      <p className="text-muted text-xs">Optimized for visibility</p>
                     </div>
                     <div className="ml-auto w-2 h-2 bg-green-400 rounded-full animate-pulse" />
                   </motion.div>

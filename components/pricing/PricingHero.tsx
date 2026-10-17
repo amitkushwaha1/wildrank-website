@@ -5,12 +5,12 @@ import { ArrowRight, CheckCircle, DollarSign } from "lucide-react";
 import { FloatingOrb } from "@/components/shared/Motion3D";
 
 const colorMap: Record<string, { badge: string; glow: string }> = {
-  blue:   { badge: "bg-blue-500/10 border-blue-500/20 text-blue-400",   glow: "rgba(59,130,246,0.12)" },
-  orange: { badge: "bg-orange-500/10 border-orange-500/20 text-orange-400", glow: "rgba(249,115,22,0.12)" },
-  pink:   { badge: "bg-pink-500/10 border-pink-500/20 text-pink-400",   glow: "rgba(236,72,153,0.12)" },
-  cyan:   { badge: "bg-cyan-500/10 border-cyan-500/20 text-cyan-400",   glow: "rgba(6,182,212,0.12)" },
-  green:  { badge: "bg-green-500/10 border-green-500/20 text-green-400", glow: "rgba(34,197,94,0.12)" },
-  purple: { badge: "bg-purple-500/10 border-purple-500/20 text-purple-400", glow: "rgba(168,85,247,0.12)" },
+  blue:   { badge: "bg-blue-500/10 border-blue-500/20 text-blue-600",   glow: "rgba(252,72,18,0.12)" },
+  orange: { badge: "bg-orange-500/10 border-orange-500/20 text-orange-700", glow: "rgba(249,115,22,0.12)" },
+  pink:   { badge: "bg-pink-500/10 border-pink-500/20 text-pink-700",   glow: "rgba(236,72,153,0.12)" },
+  cyan:   { badge: "bg-cyan-500/10 border-cyan-500/20 text-cyan-700",   glow: "rgba(6,182,212,0.12)" },
+  green:  { badge: "bg-green-500/10 border-green-500/20 text-green-700", glow: "rgba(34,197,94,0.12)" },
+  purple: { badge: "bg-purple-500/10 border-purple-500/20 text-purple-600", glow: "rgba(168,85,247,0.12)" },
 };
 
 interface Props {
@@ -35,14 +35,14 @@ export default function PricingHero({ badge, title, highlight, description, colo
 
       {/* Rotating ring */}
       <motion.div
-        className="absolute top-1/2 right-[8%] -translate-y-1/2 w-64 h-64 rounded-full border border-white/5 hidden lg:block"
+        className="absolute top-1/2 right-[8%] -translate-y-1/2 w-64 h-64 rounded-full border border-hairline/5 hidden lg:block"
         animate={{ rotate: 360 }}
         transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
       >
         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-accent/60" />
       </motion.div>
       <motion.div
-        className="absolute top-1/2 right-[8%] -translate-y-1/2 w-44 h-44 rounded-full border border-white/5 hidden lg:block"
+        className="absolute top-1/2 right-[8%] -translate-y-1/2 w-44 h-44 rounded-full border border-hairline/5 hidden lg:block"
         animate={{ rotate: -360 }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       >
@@ -65,7 +65,7 @@ export default function PricingHero({ badge, title, highlight, description, colo
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6"
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink leading-tight mb-6"
           >
             {title}{" "}
             <span className="gradient-text">{highlight}</span>
@@ -75,7 +75,7 @@ export default function PricingHero({ badge, title, highlight, description, colo
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-400 text-lg leading-relaxed mb-8 max-w-2xl"
+            className="text-muted text-lg leading-relaxed mb-8 max-w-2xl"
           >
             {description}
           </motion.p>
@@ -87,8 +87,8 @@ export default function PricingHero({ badge, title, highlight, description, colo
             className="flex flex-wrap gap-3 mb-8"
           >
             {["No hidden fees", "No long-term contracts", "Dedicated account manager", "Results guaranteed"].map((item) => (
-              <div key={item} className="flex items-center gap-2 text-sm text-gray-300">
-                <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+              <div key={item} className="flex items-center gap-2 text-sm text-muted">
+                <CheckCircle className="w-4 h-4 text-green-700 flex-shrink-0" />
                 {item}
               </div>
             ))}
@@ -104,7 +104,7 @@ export default function PricingHero({ badge, title, highlight, description, colo
               href="#plans"
               whileHover={{ scale: 1.04, boxShadow: "0 0 24px rgba(249,115,22,0.4)" }}
               whileTap={{ scale: 0.97 }}
-              className="flex items-center gap-2 bg-accent hover:bg-accent-light text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
+              className="flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
             >
               View Plans <ArrowRight className="w-4 h-4" />
             </motion.a>
@@ -112,7 +112,7 @@ export default function PricingHero({ badge, title, highlight, description, colo
               href="/contact"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="flex items-center gap-2 border border-white/10 hover:border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
+              className="flex items-center gap-2 border border-hairline/10 hover:border-hairline/30 text-ink font-semibold px-7 py-3.5 rounded-xl transition-colors"
             >
               Talk to Sales
             </motion.a>

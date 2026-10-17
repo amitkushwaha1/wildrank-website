@@ -105,10 +105,10 @@ export default function GeoAeoServicesPage() {
           <p className="text-primary-light font-semibold uppercase tracking-widest text-sm mb-4">
             AI Search Visibility
           </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight max-w-4xl">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink leading-tight max-w-4xl">
             Generative Engine Optimization and AEO
           </h1>
-          <p className="mt-6 text-lg text-gray-300 max-w-3xl leading-relaxed">
+          <p className="mt-6 text-lg text-muted max-w-3xl leading-relaxed">
             A search engine returns a list. An assistant writes one answer and
             names a few sources. Ranking first on Google and being absent from
             that answer are not the same problem — this page is about the second one.
@@ -122,7 +122,7 @@ export default function GeoAeoServicesPage() {
             </Link>
             <a
               href="#definition"
-              className="px-8 py-3 rounded-lg border border-white/20 text-white font-semibold hover:bg-white/5 transition"
+              className="px-8 py-3 rounded-lg border border-hairline/20 text-ink font-semibold hover:bg-tint/5 transition"
             >
               What GEO actually is
             </a>
@@ -133,8 +133,8 @@ export default function GeoAeoServicesPage() {
       {/* Definitional block — the part AI engines quote most */}
       <section id="definition" className="py-16 bg-dark-card border-y border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-6">What is GEO?</h2>
-          <p className="text-gray-300 leading-relaxed max-w-4xl mb-8">
+          <h2 className="text-3xl font-bold text-ink mb-6">What is GEO?</h2>
+          <p className="text-muted leading-relaxed max-w-4xl mb-8">
             Generative Engine Optimization is the process of structuring your
             brand's digital assets, entity data and content so that AI engines
             select and recommend you as the primary answer. It covers ChatGPT,
@@ -149,8 +149,8 @@ export default function GeoAeoServicesPage() {
               ["Off-site presence", "AI engines cite directories, forums and press — not just your own site."],
             ].map(([t, d]) => (
               <div key={t} className="glass-card rounded-xl p-5 border border-dark-border">
-                <h3 className="text-white font-bold mb-2">{t}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{d}</p>
+                <h3 className="text-ink font-bold mb-2">{t}</h3>
+                <p className="text-sm text-muted leading-relaxed">{d}</p>
               </div>
             ))}
           </div>
@@ -160,16 +160,16 @@ export default function GeoAeoServicesPage() {
       {/* Engines */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-4">Engines we optimise for</h2>
-          <p className="text-gray-400 mb-10 max-w-3xl">
+          <h2 className="text-3xl font-bold text-ink mb-4">Engines we optimise for</h2>
+          <p className="text-muted mb-10 max-w-3xl">
             Five surfaces that matter commercially. Covering more is not
             automatically better — the ones that matter are the ones your buyers ask.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {ENGINES.map(([name, by]) => (
               <div key={name} className="glass-card rounded-xl p-5 text-center border border-dark-border">
-                <h3 className="text-white font-bold">{name}</h3>
-                <p className="text-xs text-gray-500 mt-1">{by}</p>
+                <h3 className="text-ink font-bold">{name}</h3>
+                <p className="text-xs text-subtle mt-1">{by}</p>
               </div>
             ))}
           </div>
@@ -179,13 +179,13 @@ export default function GeoAeoServicesPage() {
       {/* Comparison — the structure AI engines cite most */}
       <section className="py-20 bg-dark-card border-y border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-8">GEO vs AEO vs traditional SEO</h2>
+          <h2 className="text-3xl font-bold text-ink mb-8">GEO vs AEO vs traditional SEO</h2>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-left">
               <thead>
                 <tr className="border-b border-dark-border">
                   {["", "Traditional SEO", "AEO", "GEO"].map((h) => (
-                    <th key={h} className="p-4 text-white font-bold">{h}</th>
+                    <th key={h} className="p-4 text-ink font-bold">{h}</th>
                   ))}
                 </tr>
               </thead>
@@ -198,7 +198,7 @@ export default function GeoAeoServicesPage() {
                 ].map((row) => (
                   <tr key={row[0]} className="border-b border-dark-border/50">
                     {row.map((c, i) => (
-                      <td key={i} className={`p-4 ${i === 0 ? "text-gray-300 font-semibold" : "text-gray-400"}`}>
+                      <td key={i} className={`p-4 ${i === 0 ? "text-muted font-semibold" : "text-muted"}`}>
                         {c}
                       </td>
                     ))}
@@ -213,7 +213,7 @@ export default function GeoAeoServicesPage() {
       {/* Honest limits */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-6">What we will not promise</h2>
+          <h2 className="text-3xl font-bold text-ink mb-6">What we will not promise</h2>
           <div className="space-y-4">
             {[
               "We cannot guarantee a position in an AI answer. No one can — models change without notice and nobody controls their output.",
@@ -222,7 +222,7 @@ export default function GeoAeoServicesPage() {
             ].map((t) => (
               <div key={t} className="flex gap-3">
                 <span className="text-primary-light mt-1">→</span>
-                <p className="text-gray-300 leading-relaxed">{t}</p>
+                <p className="text-muted leading-relaxed">{t}</p>
               </div>
             ))}
           </div>
@@ -232,12 +232,12 @@ export default function GeoAeoServicesPage() {
       {/* FAQ */}
       <section className="py-20 bg-dark-card border-y border-dark-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-10">Questions</h2>
+          <h2 className="text-3xl font-bold text-ink mb-10">Questions</h2>
           <div className="space-y-8">
             {FAQS.map((f) => (
               <div key={f.q} className="border-b border-dark-border pb-6">
-                <h3 className="text-lg font-bold text-white mb-2">{f.q}</h3>
-                <p className="text-gray-400 leading-relaxed">{f.a}</p>
+                <h3 className="text-lg font-bold text-ink mb-2">{f.q}</h3>
+                <p className="text-muted leading-relaxed">{f.a}</p>
               </div>
             ))}
           </div>
@@ -246,8 +246,8 @@ export default function GeoAeoServicesPage() {
 
       <section className="py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Find out whether AI search matters to you yet</h2>
-          <p className="text-gray-400 mb-8">
+          <h2 className="text-3xl font-bold text-ink mb-4">Find out whether AI search matters to you yet</h2>
+          <p className="text-muted mb-8">
             It may not, depending on how your buyers research. We will say so.
           </p>
           <Link
@@ -256,7 +256,7 @@ export default function GeoAeoServicesPage() {
           >
             Book a consultation
           </Link>
-          <p className="text-gray-500 text-sm mt-6">
+          <p className="text-subtle text-sm mt-6">
             Prefer to talk? {PHONE_E164}
           </p>
         </div>

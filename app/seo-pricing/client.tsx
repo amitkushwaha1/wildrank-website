@@ -131,13 +131,13 @@ const sections: { title: string; rows: { label: string; values: Val[] }[] }[] = 
 
 function Cell({ v }: { v: Val }) {
   if (v === true) return (
-    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#FF6B35] shadow-[0_0_8px_rgba(255,107,53,0.5)]">
-      <Check className="w-3.5 h-3.5 text-white stroke-[2.5]" />
+    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#FC4812] shadow-[0_0_8px_rgba(252,72,18,0.5)]">
+      <Check className="w-3.5 h-3.5 text-ink stroke-[2.5]" />
     </span>
   );
   if (v === false) return (
-    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white/10 border border-white/15">
-      <X className="w-3 h-3 text-gray-500 stroke-[2.5]" />
+    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-tint/10 border border-hairline/15">
+      <X className="w-3 h-3 text-subtle stroke-[2.5]" />
     </span>
   );
   return <span className="text-xs text-accent font-semibold">{v}</span>;
@@ -161,18 +161,18 @@ export default function SeoPricingClient() {
             <Star className="w-3.5 h-3.5" /> SEO Pricing
           </motion.span>
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-4">
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink mb-4">
             Our SEO <span className="gradient-text">Plans</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-            className="text-gray-400 text-lg max-w-xl mx-auto">
+            className="text-muted text-lg max-w-xl mx-auto">
             Pick the plan that fits your growth goals and let&apos;s start ranking.
           </motion.p>
         </div>
       </section>
 
       {/* Plan summary cards */}
-      <section className="py-16 bg-[#0a0a0a]">
+      <section className="py-16 bg-canvas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {plans.map((plan, i) => (
@@ -185,22 +185,22 @@ export default function SeoPricingClient() {
                 )}
                 <div className={`text-base font-bold bg-gradient-to-r ${plan.color} bg-clip-text text-transparent mb-1`}>{plan.name}</div>
                 <div className="flex items-end gap-0.5 mb-4">
-                  <span className="text-3xl font-extrabold text-white">${plan.price}</span>
-                  <span className="text-gray-500 text-sm mb-1">/ month</span>
+                  <span className="text-3xl font-extrabold text-ink">${plan.price}</span>
+                  <span className="text-subtle text-sm mb-1">/ month</span>
                 </div>
-                <div className="space-y-2 text-xs text-gray-400 mb-5">
-                  <div className="flex justify-between"><span>Keywords Targeted</span><span className="text-white font-semibold">{plan.summary.keywords}</span></div>
-                  <div className="flex justify-between"><span>Backlinks / Month</span><span className="text-white font-semibold">{plan.summary.backlinks}</span></div>
-                  <div className="flex justify-between"><span>Pages Optimized</span><span className="text-white font-semibold">{plan.summary.pages}</span></div>
-                  <div className="flex justify-between"><span>Google Business Profile</span><span>{plan.summary.gbp ? <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FF6B35] shadow-[0_0_6px_rgba(255,107,53,0.5)]"><Check className="w-3 h-3 text-white stroke-[2.5]" /></span> : <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FF6B35] shadow-[0_0_6px_rgba(255,107,53,0.4)]"><X className="w-2.5 h-2.5 text-white stroke-[2.5]" /></span>}</span></div>
-                  <div className="flex justify-between"><span>Geotagging</span><span>{plan.summary.geo ? <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FF6B35] shadow-[0_0_6px_rgba(255,107,53,0.5)]"><Check className="w-3 h-3 text-white stroke-[2.5]" /></span> : <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FF6B35] shadow-[0_0_6px_rgba(255,107,53,0.4)]"><X className="w-2.5 h-2.5 text-white stroke-[2.5]" /></span>}</span></div>
-                  <div className="flex justify-between"><span>G.E.O Strategy</span><span>{plan.summary.geoSeo ? <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FF6B35] shadow-[0_0_6px_rgba(255,107,53,0.5)]"><Check className="w-3 h-3 text-white stroke-[2.5]" /></span> : <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FF6B35] shadow-[0_0_6px_rgba(255,107,53,0.4)]"><X className="w-2.5 h-2.5 text-white stroke-[2.5]" /></span>}</span></div>
-                  <div className="flex justify-between"><span>A.E.O Strategy</span><span>{plan.summary.aeo ? <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FF6B35] shadow-[0_0_6px_rgba(255,107,53,0.5)]"><Check className="w-3 h-3 text-white stroke-[2.5]" /></span> : <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FF6B35] shadow-[0_0_6px_rgba(255,107,53,0.4)]"><X className="w-2.5 h-2.5 text-white stroke-[2.5]" /></span>}</span></div>
-                  <div className="flex justify-between"><span>AI Compatibility Audit</span><span>{plan.summary.aiTest ? <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FF6B35] shadow-[0_0_6px_rgba(255,107,53,0.5)]"><Check className="w-3 h-3 text-white stroke-[2.5]" /></span> : <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FF6B35] shadow-[0_0_6px_rgba(255,107,53,0.4)]"><X className="w-2.5 h-2.5 text-white stroke-[2.5]" /></span>}</span></div>
+                <div className="space-y-2 text-xs text-muted mb-5">
+                  <div className="flex justify-between"><span>Keywords Targeted</span><span className="text-ink font-semibold">{plan.summary.keywords}</span></div>
+                  <div className="flex justify-between"><span>Backlinks / Month</span><span className="text-ink font-semibold">{plan.summary.backlinks}</span></div>
+                  <div className="flex justify-between"><span>Pages Optimized</span><span className="text-ink font-semibold">{plan.summary.pages}</span></div>
+                  <div className="flex justify-between"><span>Google Business Profile</span><span>{plan.summary.gbp ? <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FC4812] shadow-[0_0_6px_rgba(252,72,18,0.5)]"><Check className="w-3 h-3 text-ink stroke-[2.5]" /></span> : <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FC4812] shadow-[0_0_6px_rgba(252,72,18,0.4)]"><X className="w-2.5 h-2.5 text-ink stroke-[2.5]" /></span>}</span></div>
+                  <div className="flex justify-between"><span>Geotagging</span><span>{plan.summary.geo ? <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FC4812] shadow-[0_0_6px_rgba(252,72,18,0.5)]"><Check className="w-3 h-3 text-ink stroke-[2.5]" /></span> : <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FC4812] shadow-[0_0_6px_rgba(252,72,18,0.4)]"><X className="w-2.5 h-2.5 text-ink stroke-[2.5]" /></span>}</span></div>
+                  <div className="flex justify-between"><span>G.E.O Strategy</span><span>{plan.summary.geoSeo ? <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FC4812] shadow-[0_0_6px_rgba(252,72,18,0.5)]"><Check className="w-3 h-3 text-ink stroke-[2.5]" /></span> : <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FC4812] shadow-[0_0_6px_rgba(252,72,18,0.4)]"><X className="w-2.5 h-2.5 text-ink stroke-[2.5]" /></span>}</span></div>
+                  <div className="flex justify-between"><span>A.E.O Strategy</span><span>{plan.summary.aeo ? <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FC4812] shadow-[0_0_6px_rgba(252,72,18,0.5)]"><Check className="w-3 h-3 text-ink stroke-[2.5]" /></span> : <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FC4812] shadow-[0_0_6px_rgba(252,72,18,0.4)]"><X className="w-2.5 h-2.5 text-ink stroke-[2.5]" /></span>}</span></div>
+                  <div className="flex justify-between"><span>AI Compatibility Audit</span><span>{plan.summary.aiTest ? <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FC4812] shadow-[0_0_6px_rgba(252,72,18,0.5)]"><Check className="w-3 h-3 text-ink stroke-[2.5]" /></span> : <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#FC4812] shadow-[0_0_6px_rgba(252,72,18,0.4)]"><X className="w-2.5 h-2.5 text-ink stroke-[2.5]" /></span>}</span></div>
                   <div className="flex justify-between"><span>AI Visibility Report</span><span className="text-accent font-semibold">{plan.summary.aiAudit}</span></div>
                 </div>
                 <motion.a href="/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
-                  className={`block text-center text-sm font-semibold py-2.5 rounded-xl transition-all ${plan.badge ? "bg-accent hover:bg-accent-dark text-white" : "border border-white/10 hover:border-accent/50 text-gray-300 hover:text-white"}`}>
+                  className={`block text-center text-sm font-semibold py-2.5 rounded-xl transition-all ${plan.badge ? "bg-accent hover:bg-accent-dark text-white" : "border border-hairline/10 hover:border-accent/50 text-muted hover:text-ink"}`}>
                   Start Today
                 </motion.a>
               </motion.div>
@@ -213,31 +213,31 @@ export default function SeoPricingClient() {
       <section className="py-16 section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="text-2xl sm:text-3xl font-extrabold text-white text-center mb-10">
+            className="text-2xl sm:text-3xl font-extrabold text-ink text-center mb-10">
             Detailed Plan <span className="gradient-text">Comparison</span>
           </motion.h2>
 
           <div className="glass-card rounded-2xl overflow-hidden">
             {sections.map((section) => (
-              <div key={section.title} className="border-b border-white/5 last:border-0">
+              <div key={section.title} className="border-b border-hairline/5 last:border-0">
                 <button onClick={() => toggle(section.title)} className="w-full flex items-center justify-between px-6 py-4 bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
-                  <span className="text-sm font-bold text-white uppercase tracking-wider">{section.title}</span>
-                  {openSections[section.title] ? <ChevronUp className="w-4 h-4 text-gray-400" /> : <ChevronDown className="w-4 h-4 text-gray-400" />}
+                  <span className="text-sm font-bold text-ink uppercase tracking-wider">{section.title}</span>
+                  {openSections[section.title] ? <ChevronUp className="w-4 h-4 text-muted" /> : <ChevronDown className="w-4 h-4 text-muted" />}
                 </button>
                 <AnimatePresence initial={false}>
                   {openSections[section.title] && (
                     <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.25 }} className="overflow-hidden">
                       {/* Header row */}
-                      <div className="grid grid-cols-5 border-b border-white/5 bg-[#0d0d0d]">
-                        <div className="px-6 py-2 text-xs text-gray-600 font-medium">Feature</div>
+                      <div className="grid grid-cols-5 border-b border-hairline/5 bg-band">
+                        <div className="px-6 py-2 text-xs text-faint font-medium">Feature</div>
                         {plans.map(p => (
                           <div key={p.name} className={`px-2 py-2 text-center text-xs font-bold bg-gradient-to-r ${p.color} bg-clip-text text-transparent`}>{p.name}</div>
                         ))}
                       </div>
                       {/* Rows */}
                       {section.rows.map((row, ri) => (
-                        <div key={row.label} className={`grid grid-cols-5 border-b border-white/5 last:border-0 ${ri % 2 === 0 ? "" : "bg-white/[0.01]"}`}>
-                          <div className="px-6 py-3 text-xs sm:text-sm text-gray-400">{row.label}</div>
+                        <div key={row.label} className={`grid grid-cols-5 border-b border-hairline/5 last:border-0 ${ri % 2 === 0 ? "" : "bg-white/[0.01]"}`}>
+                          <div className="px-6 py-3 text-xs sm:text-sm text-muted">{row.label}</div>
                           {row.values.map((v, vi) => (
                             <div key={vi} className="px-2 py-3 flex items-center justify-center"><Cell v={v} /></div>
                           ))}
@@ -253,8 +253,8 @@ export default function SeoPricingClient() {
           {/* Bottom CTA */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="mt-10 glass-card rounded-2xl p-8 border border-accent/20 text-center">
-            <h3 className="text-xl font-bold text-white mb-2">Need a Custom Enterprise Plan?</h3>
-            <p className="text-gray-400 mb-5 max-w-xl mx-auto">Large websites and agencies get custom pricing with dedicated resources, white-label options, and priority support.</p>
+            <h3 className="text-xl font-bold text-ink mb-2">Need a Custom Enterprise Plan?</h3>
+            <p className="text-muted mb-5 max-w-xl mx-auto">Large websites and agencies get custom pricing with dedicated resources, white-label options, and priority support.</p>
             <motion.a href="/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-7 py-3.5 rounded-xl transition-colors">
               Talk to Our Team <ArrowRight className="w-4 h-4" />

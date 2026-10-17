@@ -23,7 +23,7 @@ export default function HeroBackground() {
     let raf = 0;
 
     const PARTICLE_COUNT = Math.min(90, Math.floor((width * height) / 16000));
-    const colors = ["#2563EB", "#7C3AED", "#FF6B35"];
+    const colors = ["#FC4812", "#D33A0A", "#FC4812"];
 
     type P = { x: number; y: number; vx: number; vy: number; r: number; c: string };
     const particles: P[] = Array.from({ length: PARTICLE_COUNT }, () => ({
@@ -109,8 +109,8 @@ export default function HeroBackground() {
       />
 
       {/* Dark gradient overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/40 to-[#0a0a0a] pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/60 via-transparent to-[#0a0a0a]/60 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-canvas/70 via-canvas/40 to-canvas pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-canvas/60 via-transparent to-canvas/60 pointer-events-none" />
     </div>
   );
 }

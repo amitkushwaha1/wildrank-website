@@ -14,7 +14,7 @@ const caseStudies = [
     industry: "E-Commerce",
     duration: "6 months",
     results: [{ metric: "Organic Traffic", value: "+340%" }, { metric: "Revenue", value: "+$2.4M" }, { metric: "Keywords on Page 1", value: "180+" }],
-    color: "from-blue-500 to-blue-700",
+    color: "from-blue-700 to-blue-800",
     bg: "bg-blue-500/10",
     border: "border-blue-500/20",
   },
@@ -25,7 +25,7 @@ const caseStudies = [
     industry: "Healthcare",
     duration: "3 months",
     results: [{ metric: "Cost Per Lead", value: "−58%" }, { metric: "Leads/Month", value: "+220%" }, { metric: "ROAS", value: "7.2x" }],
-    color: "from-green-500 to-green-700",
+    color: "from-green-700 to-green-800",
     bg: "bg-green-500/10",
     border: "border-green-500/20",
   },
@@ -36,7 +36,7 @@ const caseStudies = [
     industry: "SaaS",
     duration: "4 months",
     results: [{ metric: "Trial Signups", value: "+340%" }, { metric: "CAC Reduced", value: "−45%" }, { metric: "MRR Growth", value: "+$180K" }],
-    color: "from-purple-500 to-purple-700",
+    color: "from-purple-700 to-purple-800",
     bg: "bg-purple-500/10",
     border: "border-purple-500/20",
   },
@@ -47,7 +47,7 @@ const caseStudies = [
     industry: "Real Estate",
     duration: "8 months",
     results: [{ metric: "Qualified Leads", value: "Varies by client and sector", description: "Results depend on specific business goals, market, and campaign execution" }, { metric: "Organic Traffic", value: "Varies by keyword landscape and competitive landscape", description: "Traffic growth depends on current index position, content depth, and technical SEO health" }, { metric: "Listings Sold", value: "Varies by market and property type", description: "Sales velocity depends on pricing, inventory, and local market conditions" }],
-    color: "from-orange-500 to-orange-700",
+    color: "from-orange-700 to-orange-800",
     bg: "bg-orange-500/10",
     border: "border-orange-500/20",
   },
@@ -58,7 +58,7 @@ const caseStudies = [
     industry: "Food & Beverage",
     duration: "5 months",
     results: [{ metric: "Followers Gained", value: "50K+" }, { metric: "Engagement Rate", value: "+185%" }, { metric: "Foot Traffic", value: "+42%" }],
-    color: "from-pink-500 to-pink-700",
+    color: "from-pink-700 to-pink-800",
     bg: "bg-pink-500/10",
     border: "border-pink-500/20",
   },
@@ -69,7 +69,7 @@ const caseStudies = [
     industry: "Education",
     duration: "7 months",
     results: [{ metric: "Active Users", value: "50K+" }, { metric: "App Store Rating", value: "4.8★" }, { metric: "Daily Sessions", value: "120K+" }],
-    color: "from-cyan-500 to-cyan-700",
+    color: "from-cyan-700 to-cyan-800",
     bg: "bg-cyan-500/10",
     border: "border-cyan-500/20",
   },
@@ -80,7 +80,7 @@ const caseStudies = [
     industry: "Finance",
     duration: "3 months",
     results: [{ metric: "ROAS", value: "12x" }, { metric: "Conversions", value: "+310%" }, { metric: "CPC Reduced", value: "−38%" }],
-    color: "from-yellow-500 to-yellow-700",
+    color: "from-yellow-700 to-yellow-800",
     bg: "bg-yellow-500/10",
     border: "border-yellow-500/20",
   },
@@ -91,7 +91,7 @@ const caseStudies = [
     industry: "Travel",
     duration: "3 months",
     results: [{ metric: "Online Bookings", value: "+89%" }, { metric: "Page Speed", value: "98/100" }, { metric: "Bounce Rate", value: "−52%" }],
-    color: "from-teal-500 to-teal-700",
+    color: "from-teal-700 to-teal-800",
     bg: "bg-teal-500/10",
     border: "border-teal-500/20",
   },
@@ -102,7 +102,7 @@ const caseStudies = [
     industry: "Automotive",
     duration: "6 months",
     results: [{ metric: "Local Rankings", value: "#1 in 12 cities" }, { metric: "Showroom Visits", value: "+78%" }, { metric: "Test Drive Leads", value: "+145%" }],
-    color: "from-red-500 to-red-700",
+    color: "from-red-700 to-red-800",
     bg: "bg-red-500/10",
     border: "border-red-500/20",
   },
@@ -124,7 +124,7 @@ export default function CaseStudiesGrid() {
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                 active === cat
                   ? "bg-accent text-white"
-                  : "glass-card border border-dark-border text-gray-400 hover:text-white hover:border-primary/30"
+                  : "glass-card border border-dark-border text-muted hover:text-ink hover:border-primary/30"
               }`}>
               {cat}
             </button>
@@ -146,17 +146,17 @@ export default function CaseStudiesGrid() {
                     <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${cs.bg} ${cs.color.replace("from-", "text-").split(" ")[0]}`}>
                       {cs.category}
                     </span>
-                    <span className="text-xs text-gray-500">{cs.industry}</span>
+                    <span className="text-xs text-subtle">{cs.industry}</span>
                   </div>
-                  <h3 className="text-white font-bold text-base mb-1 leading-snug">{cs.title}</h3>
-                  <p className="text-gray-500 text-xs mb-4">{cs.client} · {cs.duration}</p>
+                  <h3 className="text-ink font-bold text-base mb-1 leading-snug">{cs.title}</h3>
+                  <p className="text-subtle text-xs mb-4">{cs.client} · {cs.duration}</p>
 
                   {/* Results */}
                   <div className="grid grid-cols-3 gap-2 mb-5">
                     {cs.results.map((r) => (
                       <div key={r.metric} className="text-center">
                         <p className={`text-sm font-extrabold ${cs.color.replace("from-", "text-").split(" ")[0]}`}>{r.value}</p>
-                        <p className="text-gray-600 text-xs leading-tight mt-0.5">{r.metric}</p>
+                        <p className="text-faint text-xs leading-tight mt-0.5">{r.metric}</p>
                       </div>
                     ))}
                   </div>

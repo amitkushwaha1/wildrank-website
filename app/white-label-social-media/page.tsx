@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { icon: "PenTool", title: "Content Creation", desc: "Graphics, captions, reels, and videos crafted for each platform — under your brand.", color: "text-pink-400", bg: "bg-pink-500/10" },
-  { icon: "Calendar", title: "Scheduling & Posting", desc: "Full content calendars planned, scheduled, and published for your clients.", color: "text-blue-400", bg: "bg-blue-500/10" },
-  { icon: "MessageCircle", title: "Community Management", desc: "Daily monitoring and responding to comments and DMs as your agency.", color: "text-green-400", bg: "bg-green-500/10" },
-  { icon: "Camera", title: "Reels & Story Creation", desc: "Short-form video content that drives engagement on Instagram and TikTok.", color: "text-orange-400", bg: "bg-orange-500/10" },
-  { icon: "Share2", title: "Paid Social", desc: "Boosted posts and paid campaigns to amplify reach for your clients.", color: "text-purple-400", bg: "bg-purple-500/10" },
-  { icon: "BarChart3", title: "Branded Analytics", desc: "Monthly engagement and growth reports with your logo and branding.", color: "text-cyan-400", bg: "bg-cyan-500/10" },
+  { icon: "PenTool", title: "Content Creation", desc: "Graphics, captions, reels, and videos crafted for each platform — under your brand.", color: "text-pink-700", bg: "bg-pink-500/10" },
+  { icon: "Calendar", title: "Scheduling & Posting", desc: "Full content calendars planned, scheduled, and published for your clients.", color: "text-blue-600", bg: "bg-blue-500/10" },
+  { icon: "MessageCircle", title: "Community Management", desc: "Daily monitoring and responding to comments and DMs as your agency.", color: "text-green-700", bg: "bg-green-500/10" },
+  { icon: "Camera", title: "Reels & Story Creation", desc: "Short-form video content that drives engagement on Instagram and TikTok.", color: "text-orange-700", bg: "bg-orange-500/10" },
+  { icon: "Share2", title: "Paid Social", desc: "Boosted posts and paid campaigns to amplify reach for your clients.", color: "text-purple-600", bg: "bg-purple-500/10" },
+  { icon: "BarChart3", title: "Branded Analytics", desc: "Monthly engagement and growth reports with your logo and branding.", color: "text-cyan-700", bg: "bg-cyan-500/10" },
 ];
 
 const faqs = [

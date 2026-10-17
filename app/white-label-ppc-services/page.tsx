@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { icon: "MousePointerClick", title: "Google Ads Management", desc: "Search, display, and Performance Max campaigns built and optimized under your brand.", color: "text-blue-400", bg: "bg-blue-500/10" },
-  { icon: "Target", title: "Social PPC", desc: "Meta, LinkedIn, and TikTok ad campaigns managed for your clients.", color: "text-pink-400", bg: "bg-pink-500/10" },
-  { icon: "RefreshCw", title: "Remarketing", desc: "Retargeting campaigns that re-engage your clients' lost visitors.", color: "text-green-400", bg: "bg-green-500/10" },
-  { icon: "ShoppingCart", title: "Shopping Ads", desc: "E-commerce product campaigns that drive sales for your retail clients.", color: "text-yellow-400", bg: "bg-yellow-500/10" },
-  { icon: "Globe", title: "Bing & Microsoft Ads", desc: "Expand reach to the audiences Google misses, at lower CPCs.", color: "text-cyan-400", bg: "bg-cyan-500/10" },
-  { icon: "BarChart3", title: "White-Label Reporting", desc: "Branded performance dashboards showing spend, conversions, and ROAS.", color: "text-purple-400", bg: "bg-purple-500/10" },
+  { icon: "MousePointerClick", title: "Google Ads Management", desc: "Search, display, and Performance Max campaigns built and optimized under your brand.", color: "text-blue-600", bg: "bg-blue-500/10" },
+  { icon: "Target", title: "Social PPC", desc: "Meta, LinkedIn, and TikTok ad campaigns managed for your clients.", color: "text-pink-700", bg: "bg-pink-500/10" },
+  { icon: "RefreshCw", title: "Remarketing", desc: "Retargeting campaigns that re-engage your clients' lost visitors.", color: "text-green-700", bg: "bg-green-500/10" },
+  { icon: "ShoppingCart", title: "Shopping Ads", desc: "E-commerce product campaigns that drive sales for your retail clients.", color: "text-yellow-700", bg: "bg-yellow-500/10" },
+  { icon: "Globe", title: "Bing & Microsoft Ads", desc: "Expand reach to the audiences Google misses, at lower CPCs.", color: "text-cyan-700", bg: "bg-cyan-500/10" },
+  { icon: "BarChart3", title: "White-Label Reporting", desc: "Branded performance dashboards showing spend, conversions, and ROAS.", color: "text-purple-600", bg: "bg-purple-500/10" },
 ];
 
 const faqs = [

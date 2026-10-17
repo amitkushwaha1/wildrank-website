@@ -34,8 +34,8 @@ export default function PPCPricingTable() {
     <section id="plans" className="py-24 section-gradient">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">PPC <span className="gradient-text">Management Plans</span></h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">Flat monthly management fees — no percentage of spend. Your budget goes entirely to ads.</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">PPC <span className="gradient-text">Management Plans</span></h2>
+          <p className="text-muted text-lg max-w-2xl mx-auto">Flat monthly management fees — no percentage of spend. Your budget goes entirely to ads.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
@@ -49,27 +49,27 @@ export default function PPCPricingTable() {
                 )}
                 <div className={`text-base font-bold bg-gradient-to-r ${plan.color} bg-clip-text text-transparent mb-1`}>{plan.name}</div>
                 <div className="flex items-end gap-1 mb-1">
-                  <span className="text-3xl font-extrabold text-white">${plan.price}</span>
-                  <span className="text-gray-500 text-sm mb-1">/mo</span>
+                  <span className="text-3xl font-extrabold text-ink">${plan.price}</span>
+                  <span className="text-subtle text-sm mb-1">/mo</span>
                 </div>
-                <p className="text-xs text-gray-500 mb-4">+ ad spend billed separately</p>
-                <div className="space-y-2 mb-5 text-xs text-gray-400 flex-1">
+                <p className="text-xs text-subtle mb-4">+ ad spend billed separately</p>
+                <div className="space-y-2 mb-5 text-xs text-muted flex-1">
                   {[["Ad Spend", plan.adSpend], ["Campaigns", plan.campaigns], ["Platforms", plan.platforms]].map(([k, v]) => (
-                    <div key={String(k)} className="flex justify-between gap-2"><span>{k}</span><span className="text-white font-semibold text-right">{v}</span></div>
+                    <div key={String(k)} className="flex justify-between gap-2"><span>{k}</span><span className="text-ink font-semibold text-right">{v}</span></div>
                   ))}
                 </div>
                 <div className="space-y-2 mb-5">
                   {featureLabels.map((feat, fi) => (
-                    <div key={feat} className="flex items-center gap-2 text-xs text-gray-400">
+                    <div key={feat} className="flex items-center gap-2 text-xs text-muted">
                       {plan.features[fi]
-                        ? <Check className="w-3.5 h-3.5 text-green-400 flex-shrink-0" />
-                        : <X className="w-3.5 h-3.5 text-gray-600 flex-shrink-0" />}
+                        ? <Check className="w-3.5 h-3.5 text-green-700 flex-shrink-0" />
+                        : <X className="w-3.5 h-3.5 text-faint flex-shrink-0" />}
                       {feat}
                     </div>
                   ))}
                 </div>
                 <motion.a href="/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
-                  className={`block text-center text-sm font-semibold py-2.5 rounded-xl transition-all mt-auto ${plan.badge ? "bg-accent hover:bg-accent-light text-white" : "border border-dark-border hover:border-primary/50 text-gray-300 hover:text-white"}`}>
+                  className={`block text-center text-sm font-semibold py-2.5 rounded-xl transition-all mt-auto ${plan.badge ? "bg-accent hover:bg-accent-dark text-white" : "border border-dark-border hover:border-primary/50 text-muted hover:text-ink"}`}>
                   Get Started
                 </motion.a>
               </TiltCard>
@@ -79,10 +79,10 @@ export default function PPCPricingTable() {
 
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
           className="glass-card rounded-2xl p-8 border border-accent/20 text-center">
-          <h3 className="text-xl font-bold text-white mb-2">Need a Custom PPC Strategy?</h3>
-          <p className="text-gray-400 mb-5 max-w-xl mx-auto">Enterprise brands with large budgets get custom pricing, dedicated teams, and priority support.</p>
+          <h3 className="text-xl font-bold text-ink mb-2">Need a Custom PPC Strategy?</h3>
+          <p className="text-muted mb-5 max-w-xl mx-auto">Enterprise brands with large budgets get custom pricing, dedicated teams, and priority support.</p>
           <motion.a href="/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
-            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-white font-semibold px-7 py-3.5 rounded-xl transition-colors">
+            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-7 py-3.5 rounded-xl transition-colors">
             Talk to Sales
           </motion.a>
         </motion.div>

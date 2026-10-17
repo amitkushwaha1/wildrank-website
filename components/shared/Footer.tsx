@@ -51,20 +51,20 @@ const socials = socialLinks;
 
 export default function Footer() {
   return (
-    <footer className="bg-[#060608] border-t border-white/5 relative overflow-hidden">
+    <footer className="bg-band border-t border-hairline/5 relative overflow-hidden">
       {/* Newsletter strip */}
-      <div className="border-b border-white/5">
+      <div className="border-b border-hairline/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="text-white font-bold text-lg mb-1">Stay Ahead of the Algorithm</h3>
-              <p className="text-gray-500 text-sm">Get weekly SEO insights and digital marketing tips.</p>
+              <h3 className="text-ink font-bold text-lg mb-1">Stay Ahead of the Algorithm</h3>
+              <p className="text-subtle text-sm">Get weekly SEO insights and digital marketing tips.</p>
             </div>
             <div className="flex w-full md:w-auto gap-2">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 md:w-72 bg-white/5 border border-white/10 text-white placeholder-gray-600 px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors"
+                className="flex-1 md:w-72 bg-tint/5 border border-hairline/10 text-ink placeholder-gray-600 px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors"
               />
               <motion.button
                 whileHover={{ scale: 1.04 }}
@@ -90,20 +90,20 @@ export default function Footer() {
             <p className="text-xs font-semibold text-primary-light tracking-widest uppercase mb-3">
               AI-Powered Digital Marketing
             </p>
-            <p className="text-gray-500 text-sm leading-relaxed mb-6">
+            <p className="text-subtle text-sm leading-relaxed mb-6">
               The agency built to engineer your visibility across all search surfaces — from Google to Gemini, Perplexity to voice. Since 2006.
             </p>
             <motion.a
               href="/contact"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center gap-2 border border-white/20 hover:border-accent text-white text-xs font-semibold tracking-widest uppercase px-5 py-3 rounded transition-all duration-300"
+              className="inline-flex items-center gap-2 border border-hairline/20 hover:border-accent text-ink text-xs font-semibold tracking-widest uppercase px-5 py-3 rounded transition-all duration-300"
             >
               Book Strategy Call <ArrowRight className="w-3.5 h-3.5" />
             </motion.a>
             <div className="flex items-center gap-2 mt-6">
               <Phone className="w-4 h-4 text-accent flex-shrink-0" />
-              <a href="tel:+17754715295" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <a href="tel:+17754715295" className="text-muted hover:text-ink text-sm transition-colors">
                 +1 (775) 471-5295
               </a>
             </div>
@@ -111,11 +111,11 @@ export default function Footer() {
 
           {/* Services */}
           <div className="lg:col-span-2">
-            <h4 className="text-xs font-bold text-gray-500 tracking-[0.2em] uppercase mb-5">Services</h4>
+            <h4 className="text-xs font-bold text-subtle tracking-[0.2em] uppercase mb-5">Services</h4>
             <ul className="space-y-3">
               {services.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2 group">
+                  <a href={link.href} className="text-sm text-muted hover:text-ink transition-colors flex items-center gap-2 group">
                     <span className="w-1 h-1 rounded-full bg-accent/50 group-hover:bg-accent transition-colors flex-shrink-0" />
                     {link.label}
                   </a>
@@ -126,10 +126,10 @@ export default function Footer() {
 
           {/* Service Areas — two sub-cols */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-bold text-gray-500 tracking-[0.2em] uppercase mb-5">Service Areas</h4>
+            <h4 className="text-xs font-bold text-subtle tracking-[0.2em] uppercase mb-5">Service Areas</h4>
             <div className="grid grid-cols-2 gap-x-4 gap-y-3">
               {serviceAreas.map((link) => (
-                <a key={link.label} href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group">
+                <a key={link.label} href={link.href} className="text-sm text-muted hover:text-ink transition-colors flex items-center gap-1.5 group">
                   <span className="w-1 h-1 rounded-full bg-accent/50 group-hover:bg-accent transition-colors flex-shrink-0" />
                   {link.label}
                 </a>
@@ -139,11 +139,11 @@ export default function Footer() {
 
           {/* Company */}
           <div className="lg:col-span-2">
-            <h4 className="text-xs font-bold text-gray-500 tracking-[0.2em] uppercase mb-5">Company</h4>
+            <h4 className="text-xs font-bold text-subtle tracking-[0.2em] uppercase mb-5">Company</h4>
             <ul className="space-y-3">
               {company.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2 group">
+                  <a href={link.href} className="text-sm text-muted hover:text-ink transition-colors flex items-center gap-2 group">
                     <span className="w-1 h-1 rounded-full bg-accent/50 group-hover:bg-accent transition-colors flex-shrink-0" />
                     {link.label}
                   </a>
@@ -157,9 +157,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/5">
+      <div className="border-t border-hairline/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-xs text-gray-600">
+            <p className="text-xs text-faint">
               &copy; {new Date().getFullYear()} Wildrank Technologies. All rights reserved.
             </p>
             <div className="flex items-center gap-3">
@@ -171,15 +171,15 @@ export default function Footer() {
                   target={external ? "_blank" : undefined}
                   rel={external ? "noopener noreferrer" : undefined}
                   whileHover={{ scale: 1.15, y: -2 }}
-                  className="w-8 h-8 border border-white/10 hover:border-white/30 rounded flex items-center justify-center text-gray-500 hover:text-white transition-colors"
+                  className="w-8 h-8 border border-hairline/10 hover:border-hairline/30 rounded flex items-center justify-center text-subtle hover:text-ink transition-colors"
                 >
                   <Icon className="w-3.5 h-3.5" />
                 </motion.a>
               ))}
             </div>
             <div className="flex items-center gap-4">
-              <a href="#" className="text-xs text-gray-600 hover:text-gray-300 transition-colors">Privacy Policy</a>
-              <a href="#" className="text-xs text-gray-600 hover:text-gray-300 transition-colors">Terms of Service</a>
+              <a href="#" className="text-xs text-faint hover:text-muted transition-colors">Privacy Policy</a>
+              <a href="#" className="text-xs text-faint hover:text-muted transition-colors">Terms of Service</a>
             </div>
           </div>
       </div>

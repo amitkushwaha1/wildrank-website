@@ -7,9 +7,9 @@ const PLATFORMS = [
   { name: "ChatGPT",           color: "#10A37F", angle: 0 },
   { name: "Gemini",            color: "#4285F4", angle: 60 },
   { name: "Perplexity",        color: "#20B8CD", angle: 120 },
-  { name: "DeepSeek",          color: "#7C3AED", angle: 180 },
+  { name: "DeepSeek",          color: "#D33A0A", angle: 180 },
   { name: "Claude",            color: "#CC9B7A", angle: 240 },
-  { name: "MS Copilot",        color: "#2563EB", angle: 300 },
+  { name: "MS Copilot",        color: "#FC4812", angle: 300 },
 ];
 
 export default function SEOUniverse() {
@@ -92,7 +92,7 @@ export default function SEOUniverse() {
             ctx.beginPath();
             ctx.moveTo(proj[i].sx, proj[i].sy);
             ctx.lineTo(proj[j].sx, proj[j].sy);
-            ctx.strokeStyle = `rgba(37,99,235,${alpha})`;
+            ctx.strokeStyle = `rgba(252,72,18,${alpha})`;
             ctx.lineWidth = 0.6;
             ctx.stroke();
           }
@@ -108,8 +108,8 @@ export default function SEOUniverse() {
 
         // Glow
         const grd = ctx.createRadialGradient(sx, sy, 0, sx, sy, r * 3);
-        grd.addColorStop(0, `rgba(37,99,235,${brightness * 0.25 * pulse})`);
-        grd.addColorStop(1, `rgba(37,99,235,0)`);
+        grd.addColorStop(0, `rgba(252,72,18,${brightness * 0.25 * pulse})`);
+        grd.addColorStop(1, `rgba(252,72,18,0)`);
         ctx.beginPath();
         ctx.arc(sx, sy, r * 3, 0, Math.PI * 2);
         ctx.fillStyle = grd;
@@ -187,8 +187,8 @@ export default function SEOUniverse() {
 
       // Centre glow
       const cGrd = ctx.createRadialGradient(cx, cy, 0, cx, cy, R * 0.35);
-      cGrd.addColorStop(0, "rgba(37,99,235,0.08)");
-      cGrd.addColorStop(0.5, "rgba(124,58,237,0.04)");
+      cGrd.addColorStop(0, "rgba(252,72,18,0.08)");
+      cGrd.addColorStop(0.5, "rgba(211,58,10,0.04)");
       cGrd.addColorStop(1, "rgba(0,0,0,0)");
       ctx.beginPath();
       ctx.arc(cx, cy, R * 0.35, 0, Math.PI * 2);

@@ -75,10 +75,10 @@ export default function HermesAISystemPage() {
           <p className="text-primary-light font-semibold uppercase tracking-widest text-sm mb-4">
             AI Call Automation
           </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight max-w-4xl">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink leading-tight max-w-4xl">
             The Hermes AI System, deployed for your business
           </h1>
-          <p className="mt-6 text-lg text-gray-300 max-w-3xl leading-relaxed">
+          <p className="mt-6 text-lg text-muted max-w-3xl leading-relaxed">
             A missed call is a lost customer. Hermes answers when you cannot, texts
             back the caller within seconds, and puts every lead straight into your CRM.
           </p>
@@ -91,7 +91,7 @@ export default function HermesAISystemPage() {
             </Link>
             <a
               href="#how"
-              className="px-8 py-3 rounded-lg border border-white/20 text-white font-semibold hover:bg-white/5 transition"
+              className="px-8 py-3 rounded-lg border border-hairline/20 text-ink font-semibold hover:bg-tint/5 transition"
             >
               How it works
             </a>
@@ -102,14 +102,14 @@ export default function HermesAISystemPage() {
       {/* What it is */}
       <section className="py-16 bg-dark-card border-y border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-6">What the Hermes AI System actually does</h2>
-          <p className="text-gray-300 leading-relaxed max-w-4xl">
+          <h2 className="text-3xl font-bold text-ink mb-6">What the Hermes AI System actually does</h2>
+          <p className="text-muted leading-relaxed max-w-4xl">
             Hermes is an autonomous AI agent. Out of the box it is a general-purpose
             system; what Wildrank does is configure and deploy it for a specific
             business — wiring it to your phone line, teaching it your services and
             booking rules, and connecting it to the systems you already use.
           </p>
-          <p className="text-gray-300 leading-relaxed max-w-4xl mt-4">
+          <p className="text-muted leading-relaxed max-w-4xl mt-4">
             That is the honest scope. It is not a turnkey box that plugs into any
             phone system. The work is the integration, and the quality of the result
             depends on how well we know your business before we start.
@@ -120,7 +120,7 @@ export default function HermesAISystemPage() {
       {/* Capabilities */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-10">Core capabilities</h2>
+          <h2 className="text-3xl font-bold text-ink mb-10">Core capabilities</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               ["24/7 call answering", "The agent picks up when your line rings and nobody is free to."],
@@ -134,8 +134,8 @@ export default function HermesAISystemPage() {
                 key={title}
                 className="glass-card rounded-2xl p-6 border border-dark-border"
               >
-                <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{desc}</p>
+                <h3 className="text-lg font-bold text-ink mb-2">{title}</h3>
+                <p className="text-sm text-muted leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -145,7 +145,7 @@ export default function HermesAISystemPage() {
       {/* How */}
       <section id="how" className="py-20 bg-dark-card border-y border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-10">How deployment works</h2>
+          <h2 className="text-3xl font-bold text-ink mb-10">How deployment works</h2>
           <ol className="space-y-6 max-w-3xl">
             {[
               ["Consultation", "We map your services, opening hours, call routing and CRM."],
@@ -155,12 +155,12 @@ export default function HermesAISystemPage() {
               ["Go live and tune", "The agent starts taking calls. We adjust it based on real call data."],
             ].map(([title, desc], i) => (
               <li key={title} className="flex gap-5">
-                <span className="flex-shrink-0 w-9 h-9 rounded-full bg-primary/15 text-primary-light font-bold flex items-center justify-center">
+                <span className="flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary-light font-bold flex items-center justify-center">
                   {i + 1}
                 </span>
                 <div>
-                  <h3 className="text-white font-bold text-lg">{title}</h3>
-                  <p className="text-gray-400 mt-1 leading-relaxed">{desc}</p>
+                  <h3 className="text-ink font-bold text-lg">{title}</h3>
+                  <p className="text-muted mt-1 leading-relaxed">{desc}</p>
                 </div>
               </li>
             ))}
@@ -171,12 +171,12 @@ export default function HermesAISystemPage() {
       {/* FAQ */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-10">Questions</h2>
+          <h2 className="text-3xl font-bold text-ink mb-10">Questions</h2>
           <div className="space-y-8">
             {FAQS.map((f) => (
               <div key={f.q} className="border-b border-dark-border pb-6">
-                <h3 className="text-lg font-bold text-white mb-2">{f.q}</h3>
-                <p className="text-gray-400 leading-relaxed">{f.a}</p>
+                <h3 className="text-lg font-bold text-ink mb-2">{f.q}</h3>
+                <p className="text-muted leading-relaxed">{f.a}</p>
               </div>
             ))}
           </div>
@@ -186,10 +186,10 @@ export default function HermesAISystemPage() {
       {/* CTA */}
       <section className="py-20 bg-dark-card border-t border-dark-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-3xl font-bold text-ink mb-4">
             Find out whether Hermes fits your call volume
           </h2>
-          <p className="text-gray-400 mb-8">
+          <p className="text-muted mb-8">
             We will tell you honestly if your call pattern does not justify it.
           </p>
           <Link

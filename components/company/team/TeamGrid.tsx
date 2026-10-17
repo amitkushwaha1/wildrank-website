@@ -8,28 +8,28 @@ const departments = [
   {
     name: "Leadership",
     members: [
-      { name: "Rajiv Sharma", role: "CEO & Founder", initials: "RS", color: "from-orange-500 to-red-600" },
-      { name: "Priya Mehta", role: "COO", initials: "PM", color: "from-blue-500 to-blue-700" },
-      { name: "Arjun Kapoor", role: "CTO", initials: "AK", color: "from-green-500 to-green-700" },
-      { name: "Neha Singh", role: "CMO", initials: "NS", color: "from-purple-500 to-purple-700" },
+      { name: "Rajiv Sharma", role: "CEO & Founder", initials: "RS", color: "from-orange-700 to-red-800" },
+      { name: "Priya Mehta", role: "COO", initials: "PM", color: "from-blue-700 to-blue-800" },
+      { name: "Arjun Kapoor", role: "CTO", initials: "AK", color: "from-green-700 to-green-800" },
+      { name: "Neha Singh", role: "CMO", initials: "NS", color: "from-purple-700 to-purple-800" },
     ],
   },
   {
     name: "Digital Marketing",
     members: [
-      { name: "Vikram Patel", role: "Head of SEO", initials: "VP", color: "from-cyan-500 to-cyan-700" },
-      { name: "Ananya Roy", role: "PPC Lead", initials: "AR", color: "from-pink-500 to-pink-700" },
-      { name: "Rohan Gupta", role: "Social Media Director", initials: "RG", color: "from-yellow-500 to-yellow-700" },
-      { name: "Kavya Nair", role: "Content Strategist", initials: "KN", color: "from-indigo-500 to-indigo-700" },
+      { name: "Vikram Patel", role: "Head of SEO", initials: "VP", color: "from-cyan-700 to-cyan-800" },
+      { name: "Ananya Roy", role: "PPC Lead", initials: "AR", color: "from-pink-700 to-pink-800" },
+      { name: "Rohan Gupta", role: "Social Media Director", initials: "RG", color: "from-yellow-700 to-yellow-800" },
+      { name: "Kavya Nair", role: "Content Strategist", initials: "KN", color: "from-indigo-700 to-indigo-800" },
     ],
   },
   {
     name: "Technology",
     members: [
-      { name: "Aditya Kumar", role: "Lead Developer", initials: "AK", color: "from-teal-500 to-teal-700" },
-      { name: "Shreya Joshi", role: "Mobile App Lead", initials: "SJ", color: "from-rose-500 to-rose-700" },
-      { name: "Manish Verma", role: "UI/UX Director", initials: "MV", color: "from-amber-500 to-amber-700" },
-      { name: "Pooja Iyer", role: "DevOps Engineer", initials: "PI", color: "from-lime-500 to-lime-700" },
+      { name: "Aditya Kumar", role: "Lead Developer", initials: "AK", color: "from-teal-700 to-teal-800" },
+      { name: "Shreya Joshi", role: "Mobile App Lead", initials: "SJ", color: "from-rose-700 to-rose-800" },
+      { name: "Manish Verma", role: "UI/UX Director", initials: "MV", color: "from-amber-700 to-amber-800" },
+      { name: "Pooja Iyer", role: "DevOps Engineer", initials: "PI", color: "from-lime-700 to-lime-800" },
     ],
   },
 ];
@@ -42,7 +42,7 @@ export default function TeamGrid() {
           <div key={dept.name} className="mb-16 last:mb-0">
             <motion.h2 initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-xl font-bold text-white mb-8 flex items-center gap-3">
+              className="text-xl font-bold text-ink mb-8 flex items-center gap-3">
               <span className="w-8 h-0.5 bg-accent inline-block" />
               {dept.name}
             </motion.h2>
@@ -55,13 +55,13 @@ export default function TeamGrid() {
                   <div className={`w-16 h-16 bg-gradient-to-br ${member.color} rounded-2xl flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300`}>
                     {member.initials}
                   </div>
-                  <h3 className="text-white font-semibold text-sm mb-1">{member.name}</h3>
-                  <p className="text-gray-500 text-xs mb-3">{member.role}</p>
+                  <h3 className="text-ink font-semibold text-sm mb-1">{member.name}</h3>
+                  <p className="text-subtle text-xs mb-3">{member.role}</p>
                   <div className="flex items-center justify-center gap-2">
-                    <a href="#" aria-label="LinkedIn" className="w-7 h-7 bg-white/5 rounded-lg flex items-center justify-center text-gray-500 hover:text-white transition-colors">
+                    <a href="#" aria-label="LinkedIn" className="w-7 h-7 bg-tint/5 rounded-lg flex items-center justify-center text-subtle hover:text-ink transition-colors">
                       <Linkedin className="w-3.5 h-3.5" />
                     </a>
-                    <a href="#" aria-label="X" className="w-7 h-7 bg-white/5 rounded-lg flex items-center justify-center text-gray-500 hover:text-white transition-colors">
+                    <a href="#" aria-label="X" className="w-7 h-7 bg-tint/5 rounded-lg flex items-center justify-center text-subtle hover:text-ink transition-colors">
                       <XLogo className="w-3.5 h-3.5" />
                     </a>
                   </div>
@@ -75,10 +75,10 @@ export default function TeamGrid() {
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mt-16 glass-card rounded-2xl p-10 border border-accent/20 text-center">
-          <h3 className="text-2xl font-bold text-white mb-3">Want to Join the Team?</h3>
-          <p className="text-gray-400 mb-6 max-w-xl mx-auto">We&apos;re always looking for talented people who are passionate about digital marketing and technology.</p>
+          <h3 className="text-2xl font-bold text-ink mb-3">Want to Join the Team?</h3>
+          <p className="text-muted mb-6 max-w-xl mx-auto">We&apos;re always looking for talented people who are passionate about digital marketing and technology.</p>
           <motion.a href="/contact" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
-            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-white font-semibold px-7 py-3.5 rounded-xl transition-colors">
+            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-7 py-3.5 rounded-xl transition-colors">
             Get in Touch
           </motion.a>
         </motion.div>

@@ -9,7 +9,7 @@ import { TrendingUp } from "lucide-react";
 // restated, so this band carries the one figure we can stand behind and
 // leaves credibility to the certification row beneath it.
 const stats = [
-  { icon: TrendingUp, value: 500, suffix: "+", label: "Clients Served Company-Wide", color: "text-blue-400" },
+  { icon: TrendingUp, value: 500, suffix: "+", label: "Clients Served Company-Wide", color: "text-blue-600" },
 ];
 
 function CountUp({ target, suffix }: { target: number; suffix: string }) {
@@ -59,10 +59,10 @@ export default function Stats() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold text-ink">
             A Track Record Built Nationwide
           </h2>
-          <p className="text-gray-400 mt-2">500+ clients served company-wide</p>
+          <p className="text-muted mt-2">500+ clients served company-wide</p>
         </motion.div>
 
         <div className="max-w-md mx-auto">
@@ -78,13 +78,13 @@ export default function Stats() {
                 whileHover={{ scale: 1.04 }}
                 className="glass-card rounded-2xl p-6 text-center border border-dark-border"
               >
-                <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-tint/5 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className={`w-6 h-6 ${stat.color}`} />
                 </div>
                 <p className={`text-4xl font-extrabold ${stat.color} mb-1`}>
                   <CountUp target={stat.value} suffix={stat.suffix} />
                 </p>
-                <p className="text-sm text-gray-400">{stat.label}</p>
+                <p className="text-sm text-muted">{stat.label}</p>
               </motion.div>
             );
           })}
@@ -98,7 +98,7 @@ export default function Stats() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-14 pt-10 border-t border-dark-border"
         >
-          <p className="text-center text-xs text-gray-600 uppercase tracking-widest mb-6">
+          <p className="text-center text-xs text-faint uppercase tracking-widest mb-6">
             Recognized & Certified By
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8">
@@ -106,7 +106,7 @@ export default function Stats() {
               (name) => (
                 <div
                   key={name}
-                  className="px-5 py-2.5 bg-white/5 border border-dark-border rounded-lg text-xs font-semibold text-gray-400"
+                  className="px-5 py-2.5 bg-tint/5 border border-dark-border rounded-lg text-xs font-semibold text-muted"
                 >
                   {name}
                 </div>

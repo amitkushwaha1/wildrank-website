@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { icon: "Users", title: "Dedicated SEO Specialist", desc: "A vetted, full-time SEO expert working exclusively on your clients' accounts.", color: "text-blue-400", bg: "bg-blue-500/10" },
-  { icon: "Settings", title: "Technical & On-Page", desc: "Audits, optimization, and fixes handled by an experienced professional.", color: "text-green-400", bg: "bg-green-500/10" },
-  { icon: "Search", title: "Keyword & Strategy", desc: "Research, mapping, and ongoing strategy aligned with your clients' goals.", color: "text-orange-400", bg: "bg-orange-500/10" },
-  { icon: "Award", title: "Vetted Expertise", desc: "Every expert is screened for skills, communication, and proven results.", color: "text-purple-400", bg: "bg-purple-500/10" },
-  { icon: "Clock", title: "Flexible Hours", desc: "Full-time, part-time, or project-based — scale up or down as needed.", color: "text-pink-400", bg: "bg-pink-500/10" },
-  { icon: "BarChart3", title: "Branded Reporting", desc: "Your expert delivers reports under your agency's brand.", color: "text-cyan-400", bg: "bg-cyan-500/10" },
+  { icon: "Users", title: "Dedicated SEO Specialist", desc: "A vetted, full-time SEO expert working exclusively on your clients' accounts.", color: "text-blue-600", bg: "bg-blue-500/10" },
+  { icon: "Settings", title: "Technical & On-Page", desc: "Audits, optimization, and fixes handled by an experienced professional.", color: "text-green-700", bg: "bg-green-500/10" },
+  { icon: "Search", title: "Keyword & Strategy", desc: "Research, mapping, and ongoing strategy aligned with your clients' goals.", color: "text-orange-700", bg: "bg-orange-500/10" },
+  { icon: "Award", title: "Vetted Expertise", desc: "Every expert is screened for skills, communication, and proven results.", color: "text-purple-600", bg: "bg-purple-500/10" },
+  { icon: "Clock", title: "Flexible Hours", desc: "Full-time, part-time, or project-based — scale up or down as needed.", color: "text-pink-700", bg: "bg-pink-500/10" },
+  { icon: "BarChart3", title: "Branded Reporting", desc: "Your expert delivers reports under your agency's brand.", color: "text-cyan-700", bg: "bg-cyan-500/10" },
 ];
 
 const faqs = [

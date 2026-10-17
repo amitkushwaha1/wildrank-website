@@ -378,12 +378,12 @@ const plans: Plan[] = [
 
 function FeatureCell({ value }: { value: FeatureValue }) {
   if (value === true)
-    return <Check className="w-4 h-4 text-green-400 mx-auto" />;
+    return <Check className="w-4 h-4 text-green-700 mx-auto" />;
   if (value === false)
-    return <X className="w-4 h-4 text-gray-600 mx-auto" />;
+    return <X className="w-4 h-4 text-faint mx-auto" />;
   if (value === "Paid Add-on")
     return (
-      <span className="flex items-center justify-center gap-0.5 text-yellow-400 text-xs font-semibold">
+      <span className="flex items-center justify-center gap-0.5 text-yellow-700 text-xs font-semibold">
         <DollarSign className="w-3 h-3" />Add-on
       </span>
     );
@@ -416,10 +416,10 @@ export default function SEOPricingPlans() {
           <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">
             SEO Plans
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink mb-4">
             Choose the Right <span className="gradient-text">SEO Plan</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-muted text-lg max-w-2xl mx-auto">
             All plans include a dedicated SEO manager, monthly reports, and full transparency. Scale up anytime.
           </p>
         </motion.div>
@@ -433,9 +433,7 @@ export default function SEOPricingPlans() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`glass-card rounded-2xl p-6 border ${plan.borderColor} relative ${
-                plan.badge ? `shadow-xl ${plan.glowColor}` : ""
-              }`}
+              className={`glass-card rounded-2xl p-6 border ${plan.borderColor} relative ${ plan.badge ? `shadow-xl ${plan.glowColor}` : "" }`}
             >
               {plan.badge && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
@@ -449,26 +447,26 @@ export default function SEOPricingPlans() {
                 {plan.name}
               </div>
               <div className="flex items-end gap-1 mb-4">
-                <span className="text-3xl font-extrabold text-white">${plan.price}</span>
-                <span className="text-gray-500 text-sm mb-1">/mo</span>
+                <span className="text-3xl font-extrabold text-ink">${plan.price}</span>
+                <span className="text-subtle text-sm mb-1">/mo</span>
               </div>
 
-              <div className="space-y-2 mb-5 text-xs text-gray-400">
+              <div className="space-y-2 mb-5 text-xs text-muted">
                 <div className="flex justify-between">
                   <span>Keywords</span>
-                  <span className="text-white font-semibold">{plan.keywords}</span>
+                  <span className="text-ink font-semibold">{plan.keywords}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Backlinks/mo</span>
-                  <span className="text-white font-semibold">{plan.backlinks}</span>
+                  <span className="text-ink font-semibold">{plan.backlinks}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Landing Pages</span>
-                  <span className="text-white font-semibold">{plan.landingPages}</span>
+                  <span className="text-ink font-semibold">{plan.landingPages}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Google My Business</span>
-                  <span>{plan.gmb ? <Check className="w-3.5 h-3.5 text-green-400 inline" /> : <X className="w-3.5 h-3.5 text-gray-600 inline" />}</span>
+                  <span>{plan.gmb ? <Check className="w-3.5 h-3.5 text-green-700 inline" /> : <X className="w-3.5 h-3.5 text-faint inline" />}</span>
                 </div>
               </div>
 
@@ -478,8 +476,8 @@ export default function SEOPricingPlans() {
                 whileTap={{ scale: 0.97 }}
                 className={`block text-center text-sm font-semibold py-2.5 rounded-xl transition-all ${
                   plan.badge
-                    ? "bg-accent hover:bg-accent-light text-white"
-                    : "border border-dark-border hover:border-primary/50 text-gray-300 hover:text-white"
+                    ? "bg-accent hover:bg-accent-dark text-white"
+                    : "border border-dark-border hover:border-primary/50 text-muted hover:text-ink"
                 }`}
               >
                 Get Started
@@ -503,11 +501,11 @@ export default function SEOPricingPlans() {
                 onClick={() => toggleSection(section)}
                 className="w-full flex items-center justify-between px-6 py-4 bg-white/[0.02] hover:bg-white/[0.04] transition-colors"
               >
-                <span className="text-sm font-bold text-white uppercase tracking-wider">{section}</span>
+                <span className="text-sm font-bold text-ink uppercase tracking-wider">{section}</span>
                 {openSections[section] ? (
-                  <ChevronUp className="w-4 h-4 text-gray-400" />
+                  <ChevronUp className="w-4 h-4 text-muted" />
                 ) : (
-                  <ChevronDown className="w-4 h-4 text-gray-400" />
+                  <ChevronDown className="w-4 h-4 text-muted" />
                 )}
               </button>
 
@@ -522,7 +520,7 @@ export default function SEOPricingPlans() {
                   >
                     {/* Column headers (sticky on scroll) */}
                     <div className="grid grid-cols-5 border-b border-dark-border bg-dark-card">
-                      <div className="px-6 py-2 text-xs text-gray-600 font-medium">Feature</div>
+                      <div className="px-6 py-2 text-xs text-faint font-medium">Feature</div>
                       {plans.map((p) => (
                         <div
                           key={p.name}
@@ -541,7 +539,7 @@ export default function SEOPricingPlans() {
                           fi % 2 === 0 ? "bg-transparent" : "bg-white/[0.01]"
                         }`}
                       >
-                        <div className="px-6 py-3 text-sm text-gray-400">{feature}</div>
+                        <div className="px-6 py-3 text-sm text-muted">{feature}</div>
                         {plans.map((plan) => (
                           <div key={plan.name} className="px-2 py-3 flex items-center justify-center">
                             <FeatureCell value={plan.features[section][feature]} />
@@ -564,15 +562,15 @@ export default function SEOPricingPlans() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-8 glass-card rounded-2xl p-8 border border-accent/20 text-center"
         >
-          <h3 className="text-xl font-bold text-white mb-2">Need a Custom Plan?</h3>
-          <p className="text-gray-400 mb-5 max-w-xl mx-auto">
+          <h3 className="text-xl font-bold text-ink mb-2">Need a Custom Plan?</h3>
+          <p className="text-muted mb-5 max-w-xl mx-auto">
             Enterprise brands and agencies get custom pricing with dedicated resources, white-label options, and priority support.
           </p>
           <motion.a
             href="#contact"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
-            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
+            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
           >
             Talk to Sales
           </motion.a>

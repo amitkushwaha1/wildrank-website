@@ -1,5 +1,24 @@
 import type { Config } from "tailwindcss";
 
+/**
+ * ── Colour system ──────────────────────────────────────────────────────────
+ *
+ * The brand colour comes from the logo mark: #FC4812, sampled directly out of
+ * public/logo.png. The previous palette led with blue #2563EB and purple
+ * #7C3AED, neither of which appears anywhere in the logo or the app icon.
+ *
+ * Every neutral is a *semantic* token backed by a CSS variable declared in
+ * app/globals.css. Changing the theme means editing those variables, not the
+ * components — so `text-ink` means "body text" rather than "white".
+ *
+ * `surface`, `text` and `dark` are kept so the existing usages of
+ * `bg-dark-card` / `border-dark-border` (126 across 72 files, previously dead
+ * classes that compiled to nothing) keep working — they now resolve to the
+ * same variables as `band` and `hairline`.
+ * ──────────────────────────────────────────────────────────────────────────
+ */
+const v = (name: string) => `rgb(var(--${name}) / <alpha-value>)`;
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,46 +28,56 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "#2563EB",
-          light: "#3B82F6",
-          dark: "#1D4ED8",
-        },
-        secondary: {
-          DEFAULT: "#7C3AED",
-          light: "#8B5CF6",
-          dark: "#6D28D9",
-        },
-        accent: {
-          DEFAULT: "#FF6B35",
-          light: "#FF8A5C",
-          dark: "#E85A28",
-        },
-        surface: {
-          DEFAULT: "#F8FAFC",
-          card: "#FFFFFF",
-          dark: "#F1F5F9",
-        },
-        text: {
-          primary: "#111827",
-          secondary: "#6B7280",
+        // ── Brand — sampled from the logo mark ──
+        // #FC4812 is the logo's exact orange, but it only reaches 3.23:1 on
+        // the section band, which fails WCAG AA for text and button labels.
+        // #CF3B0F is the lightest shade of the same hue that clears 4.5:1 on
+        // white (4.90), on the band (4.58) and on an orange tint (4.24 — so
+        // text sitting on a tint uses the deeper accent-dark below).
+        // `brand` keeps the literal logo value for display text and graphics,
+        // where the 3:1 large-text bar applies.
+        brand: "#FC4812",
+        primary: { DEFAULT: "#CF3B0F", light: "#B93307", dark: "#B93307" },
+        secondary: { DEFAULT: "#17171A", light: "#2A2A30", dark: "#0B0B0C" },
+        accent: { DEFAULT: "#CF3B0F", light: "#B93307", dark: "#B93307" },
+
+        // ── Semantic neutrals (variable-backed) ──
+        canvas: v("canvas"),       // page background
+        card: v("card"),           // card surface
+        band: v("band"),           // alternating section band
+        ink: v("ink"),             // primary text
+        muted: v("muted"),         // secondary text
+        subtle: v("subtle"),       // tertiary text / captions
+        faint: v("faint"),         // legal, footnotes
+        hairline: v("hairline"),   // borders (use with an opacity, e.g. /10)
+        tint: v("tint"),           // subtle fills (use with an opacity, e.g. /5)
+
+        // ── Legacy keys, kept so existing classes keep resolving ──
+        // `border-dark-border` carries no opacity, so it needs a low alpha
+        // baked in — otherwise the 102 usages would draw black borders.
+        surface: { DEFAULT: v("band"), card: v("card"), dark: v("band") },
+        text: { primary: v("ink"), secondary: v("muted") },
+        dark: {
+          DEFAULT: v("band"),
+          card: v("band"),
+          border: "rgb(var(--hairline) / 0.10)",
         },
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        card: "0 4px 24px rgba(37,99,235,0.08)",
-        "card-hover": "0 8px 40px rgba(37,99,235,0.14)",
-        glow: "0 0 30px rgba(37,99,235,0.2)",
-        "glow-accent": "0 0 30px rgba(255,107,53,0.25)",
+        card: "0 4px 24px rgba(17,17,20,0.06)",
+        "card-hover": "0 8px 40px rgba(17,17,20,0.10)",
+        glow: "0 0 30px rgba(252,72,18,0.18)",
+        "glow-accent": "0 0 30px rgba(252,72,18,0.22)",
       },
       borderColor: {
-        subtle: "rgba(37,99,235,0.15)",
+        subtle: "rgba(252,72,18,0.25)",
       },
       backgroundImage: {
-        "gradient-brand": "linear-gradient(135deg, #2563EB 0%, #7C3AED 100%)",
-        "gradient-hero": "linear-gradient(135deg, #2563EB 0%, #7C3AED 50%, #FF6B35 100%)",
+        "gradient-brand": "linear-gradient(135deg, #FC4812 0%, #D33A0A 100%)",
+        "gradient-hero": "linear-gradient(135deg, #FC4812 0%, #FF6A3D 50%, #D33A0A 100%)",
       },
       animation: {
         "gradient-x": "gradient-x 8s ease infinite",

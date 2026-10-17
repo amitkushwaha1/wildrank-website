@@ -2,49 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─────────────────────────────────────────────────────────────────────────
+   THEME VARIABLES — the single place a theme is defined.
+
+   Values are space-separated RGB channels so Tailwind can apply opacity:
+       text-ink/70   →   rgb(var(--ink) / 0.7)
+
+   To re-theme the site, change these nine lines. Nothing else needs to move.
+   Current theme: light. Brand colour #FC4812 is sampled from the logo mark.
+   ───────────────────────────────────────────────────────────────────────── */
+:root {
+  --canvas:    255 255 255;  /* page background        */
+  --band:      247 247 248;  /* alternating section bg */
+  --card:      255 255 255;  /* card surface           */
+  --ink:        17  17  20;  /* primary text           — 18.0:1 on canvas */
+  --muted:      71  71  82;  /* secondary text         —  9.2:1 on canvas */
+  --subtle:     99  99 110;  /* tertiary text          —  5.9:1 on canvas */
+  --faint:     110 110 122;  /* legal / footnotes      —  5.0:1 on canvas */
+  --hairline:   17  17  20;  /* borders  (use /10)     */
+  --tint:       17  17  20;  /* fills    (use /5)      */
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
 body {
-  background-color: #0a0a0a;
-  color: #e5e7eb;
+  background-color: rgb(var(--canvas));
+  color: rgb(var(--ink));
   font-family: 'Inter', system-ui, sans-serif;
   overflow-x: hidden;
 }
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #0a0a0a; }
-::-webkit-scrollbar-thumb { background: #2563EB; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #1D4ED8; }
+::-webkit-scrollbar-track { background: rgb(var(--band)); }
+::-webkit-scrollbar-thumb { background: #FC4812; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #D33A0A; }
 
 /* ── Gradient text ── */
 .gradient-text {
-  background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
+  background: linear-gradient(135deg, #FC4812 0%, #D33A0A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* ── Glass card (dark mode) ── */
+/* ── Glass card (light) ── */
 .glass-card {
-  background: rgba(17, 17, 17, 0.85);
+  background: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(37,99,235,0.15);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  border: 1px solid rgb(var(--hairline) / 0.08);
+  box-shadow: 0 2px 12px rgba(17, 17, 20, 0.05);
   border-radius: 1rem;
 }
 .glass-card:hover {
-  box-shadow: 0 8px 40px rgba(37,99,235,0.18);
+  box-shadow: 0 10px 34px rgba(252, 72, 18, 0.10);
+  border-color: rgb(var(--hairline) / 0.14);
 }
 
 /* ── Backgrounds ── */
 .hero-gradient {
-  background: radial-gradient(ellipse at 20% 50%, rgba(37,99,235,0.12) 0%, transparent 60%),
-              radial-gradient(ellipse at 80% 20%, rgba(124,58,237,0.08) 0%, transparent 50%),
-              #0a0a0a;
+  background: radial-gradient(ellipse at 20% 50%, rgba(252, 72, 18, 0.07) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, rgba(255, 106, 61, 0.06) 0%, transparent 50%),
+              rgb(var(--canvas));
 }
 .section-gradient {
-  background: linear-gradient(180deg, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
+  background: linear-gradient(180deg, rgb(var(--canvas)) 0%, rgb(var(--band)) 50%, rgb(var(--canvas)) 100%);
 }
 
 /* ── 3D perspective ── */
@@ -58,12 +80,12 @@ body {
 }
 .card-3d:hover {
   transform: translateY(-8px) rotateX(3deg) rotateY(-3deg) scale(1.02);
-  box-shadow: 0 24px 60px rgba(37,99,235,0.2);
+  box-shadow: 0 24px 60px rgba(252, 72, 18, 0.14);
 }
 
 /* ── Shimmer gradient ── */
 .shimmer-text {
-  background: linear-gradient(90deg, #2563EB 0%, #7C3AED 40%, #FF6B35 60%, #7C3AED 80%, #2563EB 100%);
+  background: linear-gradient(90deg, #FC4812 0%, #FF6A3D 40%, #D33A0A 60%, #FF6A3D 80%, #FC4812 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -77,8 +99,8 @@ body {
 
 /* ── Popular pricing card ── */
 .pricing-popular {
-  background: linear-gradient(135deg, rgba(37,99,235,0.08) 0%, rgba(124,58,237,0.08) 100%);
-  border-color: rgba(37,99,235,0.4) !important;
+  background: linear-gradient(135deg, rgba(252, 72, 18, 0.06) 0%, rgba(255, 106, 61, 0.06) 100%);
+  border-color: rgba(252, 72, 18, 0.45) !important;
 }
 
 /* ── Buttons ── */

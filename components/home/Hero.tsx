@@ -8,11 +8,11 @@ import dynamic from "next/dynamic";
 const SEOUniverse = dynamic(() => import("@/components/home/SEOUniverse"), { ssr: false });
 
 const stats = [
-  { icon: Users,     value: "Team",           title: "Industry Experts",          desc: "Strategists, creatives, and technologists turning bold ideas into scalable digital growth.",            color: "text-blue-400",    bg: "bg-blue-500/10" },
+  { icon: Users,     value: "Team",           title: "Industry Experts",          desc: "Strategists, creatives, and technologists turning bold ideas into scalable digital growth.",            color: "text-blue-600",    bg: "bg-blue-500/10" },
   { icon: Award,     value: "500+",   title: "Clients Served Company-Wide",     desc: "A track record of delivering measurable growth through innovation and forward-thinking execution.",      color: "text-secondary",   bg: "bg-secondary/10" },
   { icon: Rocket,    value: "500+",   title: "Clients Served Nationwide",         desc: "From complex challenges to seamless solutions, we bring visions to life with precision.",               color: "text-accent",      bg: "bg-accent/10" },
-  { icon: Handshake, value: "—",   title: "Meaningful Collaborations",  desc: "Long-term partnerships that go beyond execution, driving sustained digital growth together.",           color: "text-green-400",   bg: "bg-green-500/10" },
-  { icon: Activity,  value: "99.9%",  title: "Campaign Uptime",            desc: "Reliability and performance with robust, always-on digital marketing infrastructure.",                  color: "text-cyan-400",    bg: "bg-cyan-500/10" },
+  { icon: Handshake, value: "—",   title: "Meaningful Collaborations",  desc: "Long-term partnerships that go beyond execution, driving sustained digital growth together.",           color: "text-green-700",   bg: "bg-green-500/10" },
+  { icon: Activity,  value: "99.9%",  title: "Campaign Uptime",            desc: "Reliability and performance with robust, always-on digital marketing infrastructure.",                  color: "text-cyan-700",    bg: "bg-cyan-500/10" },
 ];
 
 const cardVariants = {
@@ -23,7 +23,7 @@ const cardVariants = {
 export default function Hero() {
   const trustLogos = ["Google Partner", "AI-Powered SEO", "ISO 9001 Certified", "AI-Powered SEO"];
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#060608] pt-20">
+    <section className="relative min-h-screen overflow-hidden bg-band pt-20">
 
       {/* ── Subtle grid overlay ── */}
       <div
@@ -61,7 +61,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="text-5xl sm:text-6xl lg:text-[4.5rem] font-extrabold leading-[1.04] mb-6"
             >
-              <span className="text-white">Be the Brand Google Ranks</span>
+              <span className="text-ink">Be the Brand Google Ranks</span>
               <br />
               <span className="gradient-text">and AI Recommends First</span>
             </motion.h1>
@@ -69,7 +69,7 @@ export default function Hero() {
             {/* Sub */}
             <motion.p
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.25 }}
-              className="text-gray-400 text-lg leading-relaxed max-w-lg mb-4"
+              className="text-muted text-lg leading-relaxed max-w-lg mb-4"
             >
               From Google to Gemini, Perplexity to voice — we engineer your brand&apos;s visibility across every AI and search surface that your customers use.
             </motion.p>
@@ -80,7 +80,7 @@ export default function Hero() {
               className="flex flex-wrap gap-x-6 gap-y-2 mb-8"
             >
               {trustLogos.map(l => (
-                <span key={l} className="text-xs font-semibold text-gray-600 tracking-widest uppercase">{l}</span>
+                <span key={l} className="text-xs font-semibold text-faint tracking-widest uppercase">{l}</span>
               ))}
             </motion.div>
 
@@ -91,7 +91,7 @@ export default function Hero() {
             >
               <motion.a
                 href="/contact"
-                whileHover={{ scale: 1.04, boxShadow: "0 0 28px rgba(255,107,53,0.45)" }}
+                whileHover={{ scale: 1.04, boxShadow: "0 0 28px rgba(252,72,18,0.45)" }}
                 whileTap={{ scale: 0.97 }}
                 className="flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-8 py-4 rounded-xl transition-all"
               >
@@ -101,7 +101,7 @@ export default function Hero() {
                 href="/search-engine-optimization-services"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                className="flex items-center gap-2 border border-white/10 hover:border-white/30 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:bg-white/5"
+                className="flex items-center gap-2 border border-hairline/10 hover:border-hairline/30 text-ink font-semibold px-8 py-4 rounded-xl transition-all hover:bg-tint/5"
               >
                 Explore Services
               </motion.a>
@@ -153,8 +153,8 @@ export default function Hero() {
                   <Icon className={`w-5 h-5 ${stat.color}`} />
                 </div>
                 <p className={`text-2xl font-extrabold ${stat.color} mb-0.5`}>{stat.value}</p>
-                <p className="text-white font-semibold text-sm mb-1">{stat.title}</p>
-                <p className="text-gray-600 text-xs leading-relaxed">{stat.desc}</p>
+                <p className="text-ink font-semibold text-sm mb-1">{stat.title}</p>
+                <p className="text-faint text-xs leading-relaxed">{stat.desc}</p>
               </motion.div>
             );
           })}

@@ -67,22 +67,22 @@ export default function LocationPage({ city, state }: Props) {
             <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary-light text-xs font-semibold px-4 py-2 rounded-full mb-6">
               <MapPin className="w-3.5 h-3.5" /> {location} SEO Company
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink leading-tight mb-6">
               {city} SEO <span className="gradient-text">Company</span>
             </h1>
-            <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-2xl">
+            <p className="text-muted text-lg leading-relaxed mb-8 max-w-2xl">
               Dominate search results in {city}. Our local SEO experts help businesses in {location} rank higher on Google, drive qualified traffic, and convert more customers with proven, data-driven strategies.
             </p>
             <ul className="grid grid-cols-2 gap-3 mb-8">
               {[`500+ clients served nationwide`, "Google Business Profile Optimization", "Local Link Building", "Monthly Reporting & Transparency"].map(h => (
-                <li key={h} className="flex items-center gap-2 text-sm text-gray-300"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />{h}</li>
+                <li key={h} className="flex items-center gap-2 text-sm text-muted"><CheckCircle className="w-4 h-4 text-green-700 flex-shrink-0" />{h}</li>
               ))}
             </ul>
             <div className="flex flex-wrap gap-4">
               <a href="/contact" className="flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-7 py-3.5 rounded-xl transition-all hover:scale-[1.03]">
                 Get Free {city} SEO Audit <ArrowRight className="w-4 h-4" />
               </a>
-              <a href="/seo-pricing" className="flex items-center gap-2 border border-white/10 hover:border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl transition-all">
+              <a href="/seo-pricing" className="flex items-center gap-2 border border-hairline/10 hover:border-hairline/30 text-ink font-semibold px-7 py-3.5 rounded-xl transition-all">
                 View Pricing
               </a>
             </div>
@@ -94,15 +94,15 @@ export default function LocationPage({ city, state }: Props) {
       <section className="py-24 section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">Why {city} Businesses Choose <span className="gradient-text">Wildrank</span></h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">We understand the {city} market. Our local SEO strategies are tailored to your city, your industry, and your competition.</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">Why {city} Businesses Choose <span className="gradient-text">Wildrank</span></h2>
+            <p className="text-muted text-lg max-w-2xl mx-auto">We understand the {city} market. Our local SEO strategies are tailored to your city, your industry, and your competition.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: MapPin, title: `${city} Market Expertise`, desc: `Deep knowledge of ${city}'s business landscape, local directories, and neighborhood-level targeting.`, color: "text-blue-400", bg: "bg-blue-500/10" },
-              { icon: Search, title: "Google Map Pack Dominance", desc: "We get your business into the coveted 3-pack for your most important local search terms.", color: "text-green-400", bg: "bg-green-500/10" },
-              { icon: TrendingUp, title: "Measured, Not Guessed", desc: `Every ${city} campaign starts with a baseline audit, so improvement is measured against your own starting point rather than an industry average.`, color: "text-orange-400", bg: "bg-orange-500/10" },
-              { icon: Users, title: "Dedicated Local Team", desc: `A named strategist who understands ${city} and manages your campaign from start to finish.`, color: "text-purple-400", bg: "bg-purple-500/10" },
+              { icon: MapPin, title: `${city} Market Expertise`, desc: `Deep knowledge of ${city}'s business landscape, local directories, and neighborhood-level targeting.`, color: "text-blue-600", bg: "bg-blue-500/10" },
+              { icon: Search, title: "Google Map Pack Dominance", desc: "We get your business into the coveted 3-pack for your most important local search terms.", color: "text-green-700", bg: "bg-green-500/10" },
+              { icon: TrendingUp, title: "Measured, Not Guessed", desc: `Every ${city} campaign starts with a baseline audit, so improvement is measured against your own starting point rather than an industry average.`, color: "text-orange-700", bg: "bg-orange-500/10" },
+              { icon: Users, title: "Dedicated Local Team", desc: `A named strategist who understands ${city} and manages your campaign from start to finish.`, color: "text-purple-600", bg: "bg-purple-500/10" },
             ].map((item, i) => {
               const Icon = item.icon;
               return (
@@ -110,8 +110,8 @@ export default function LocationPage({ city, state }: Props) {
                   <div className={`w-12 h-12 ${item.bg} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                     <Icon className={`w-6 h-6 ${item.color}`} />
                   </div>
-                  <h3 className="text-white font-bold text-base mb-2">{item.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                  <h3 className="text-ink font-bold text-base mb-2">{item.title}</h3>
+                  <p className="text-muted text-sm leading-relaxed">{item.desc}</p>
                 </motion.div>
               );
             })}
@@ -120,10 +120,10 @@ export default function LocationPage({ city, state }: Props) {
       </section>
 
       {/* Services for this city */}
-      <section className="py-24 bg-[#0a0a0a]">
+      <section className="py-24 bg-canvas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">Our SEO Services in <span className="gradient-text">{city}</span></h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">Our SEO Services in <span className="gradient-text">{city}</span></h2>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -135,8 +135,8 @@ export default function LocationPage({ city, state }: Props) {
               { title: "Monthly Reporting", desc: "Transparent monthly reports showing rankings, traffic, leads, and revenue impact." },
             ].map((s, i) => (
               <motion.div key={s.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} whileHover={{ y: -5 }} className="glass-card rounded-2xl p-6">
-                <h3 className="text-white font-bold text-base mb-2">{s.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
+                <h3 className="text-ink font-bold text-base mb-2">{s.title}</h3>
+                <p className="text-muted text-sm leading-relaxed">{s.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -147,13 +147,13 @@ export default function LocationPage({ city, state }: Props) {
       <section className="py-20 section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">What {city} SEO Actually Involves</h2>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">What {city} SEO Actually Involves</h2>
+            <p className="text-muted text-lg max-w-3xl mx-auto">
               Ranking for local searches is not one tactic. It is a sequence, and skipping a step
               usually costs you the position you were chasing.
             </p>
           </motion.div>
-          <div className="max-w-4xl mx-auto space-y-10 text-gray-400">
+          <div className="max-w-4xl mx-auto space-y-10 text-muted">
             {[
               {
                 h: "Google Business Profile is the foundation",
@@ -177,7 +177,7 @@ export default function LocationPage({ city, state }: Props) {
               },
             ].map((item, i) => (
               <motion.div key={item.h} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}>
-                <h3 className="text-white font-bold text-xl mb-2">{item.h}</h3>
+                <h3 className="text-ink font-bold text-xl mb-2">{item.h}</h3>
                 <p className="leading-relaxed">{item.p}</p>
               </motion.div>
             ))}
@@ -186,18 +186,18 @@ export default function LocationPage({ city, state }: Props) {
       </section>
 
       {/* FAQ — also emitted as FAQPage structured data */}
-      <section className="py-20 bg-[#0a0a0a]">
+      <section className="py-20 bg-canvas">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">{city} SEO FAQs</h2>
-            <p className="text-gray-400 text-lg">The questions {city} business owners ask us most often.</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">{city} SEO FAQs</h2>
+            <p className="text-muted text-lg">The questions {city} business owners ask us most often.</p>
           </motion.div>
           <div className="space-y-4">
             {FAQS.map((f, i) => (
               <motion.div key={f.q} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
                 className="glass-card rounded-xl p-6">
-                <h3 className="text-white font-bold text-base mb-2">{f.q}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{f.a}</p>
+                <h3 className="text-ink font-bold text-base mb-2">{f.q}</h3>
+                <p className="text-muted text-sm leading-relaxed">{f.a}</p>
               </motion.div>
             ))}
           </div>
@@ -209,14 +209,14 @@ export default function LocationPage({ city, state }: Props) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { value: "500+", label: "Clients Served Nationwide", color: "text-green-400" },
-              { value: "Local", label: "Google Business Profile", color: "text-blue-400" },
-              { value: "Monthly", label: "Reporting, No Lock-In", color: "text-orange-400" },
-              { value: "AI-Ready", label: "G.E.O and A.E.O Included", color: "text-purple-400" },
+              { value: "500+", label: "Clients Served Nationwide", color: "text-green-700" },
+              { value: "Local", label: "Google Business Profile", color: "text-blue-600" },
+              { value: "Monthly", label: "Reporting, No Lock-In", color: "text-orange-700" },
+              { value: "AI-Ready", label: "G.E.O and A.E.O Included", color: "text-purple-600" },
             ].map((s, i) => (
               <motion.div key={s.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="glass-card rounded-2xl p-6 text-center">
                 <p className={`text-3xl font-extrabold ${s.color} mb-1`}>{s.value}</p>
-                <p className="text-gray-400 text-sm">{s.label}</p>
+                <p className="text-muted text-sm">{s.label}</p>
               </motion.div>
             ))}
           </div>

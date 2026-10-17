@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { icon: "Settings", title: "Technical SEO", desc: "Site audits, speed optimization, structured data, and crawl fixes — branded as your agency's work.", color: "text-blue-400", bg: "bg-blue-500/10" },
-  { icon: "Search", title: "On-Page Optimization", desc: "Title tags, meta descriptions, content optimization, and internal linking for your clients.", color: "text-orange-400", bg: "bg-orange-500/10" },
-  { icon: "Link", title: "Link Building", desc: "White-hat backlinks through guest posts and digital PR — reported under your brand.", color: "text-green-400", bg: "bg-green-500/10" },
-  { icon: "FileText", title: "Content Creation", desc: "SEO blog posts and landing pages written by our team, delivered as yours.", color: "text-purple-400", bg: "bg-purple-500/10" },
-  { icon: "MapPin", title: "Local SEO", desc: "Google Business Profile optimization and local citations for your clients' locations.", color: "text-red-400", bg: "bg-red-500/10" },
-  { icon: "BarChart3", title: "White-Label Reports", desc: "Monthly ranking and traffic reports with your logo, colors, and branding.", color: "text-cyan-400", bg: "bg-cyan-500/10" },
+  { icon: "Settings", title: "Technical SEO", desc: "Site audits, speed optimization, structured data, and crawl fixes — branded as your agency's work.", color: "text-blue-600", bg: "bg-blue-500/10" },
+  { icon: "Search", title: "On-Page Optimization", desc: "Title tags, meta descriptions, content optimization, and internal linking for your clients.", color: "text-orange-700", bg: "bg-orange-500/10" },
+  { icon: "Link", title: "Link Building", desc: "White-hat backlinks through guest posts and digital PR — reported under your brand.", color: "text-green-700", bg: "bg-green-500/10" },
+  { icon: "FileText", title: "Content Creation", desc: "SEO blog posts and landing pages written by our team, delivered as yours.", color: "text-purple-600", bg: "bg-purple-500/10" },
+  { icon: "MapPin", title: "Local SEO", desc: "Google Business Profile optimization and local citations for your clients' locations.", color: "text-red-700", bg: "bg-red-500/10" },
+  { icon: "BarChart3", title: "White-Label Reports", desc: "Monthly ranking and traffic reports with your logo, colors, and branding.", color: "text-cyan-700", bg: "bg-cyan-500/10" },
 ];
 
 const faqs = [

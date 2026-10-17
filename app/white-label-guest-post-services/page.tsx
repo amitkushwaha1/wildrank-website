@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { icon: "Search", title: "Site Prospecting", desc: "We find relevant, high-authority blogs with real traffic in your client's niche.", color: "text-blue-400", bg: "bg-blue-500/10" },
-  { icon: "PenTool", title: "Content Writing", desc: "Expert writers craft genuinely useful articles that publishers want to feature.", color: "text-green-400", bg: "bg-green-500/10" },
-  { icon: "Globe", title: "Editorial Outreach", desc: "Real relationships with editors get your content placed, not paid link farms.", color: "text-orange-400", bg: "bg-orange-500/10" },
-  { icon: "Award", title: "High-Authority Placements", desc: "Guest posts on sites with strong Domain Rating and genuine readership.", color: "text-purple-400", bg: "bg-purple-500/10" },
-  { icon: "FileText", title: "Contextual Backlinks", desc: "Natural, relevant anchor text links within high-quality content.", color: "text-pink-400", bg: "bg-pink-500/10" },
-  { icon: "BarChart3", title: "Branded Reporting", desc: "Full reports of every placement with live links and metrics, under your brand.", color: "text-cyan-400", bg: "bg-cyan-500/10" },
+  { icon: "Search", title: "Site Prospecting", desc: "We find relevant, high-authority blogs with real traffic in your client's niche.", color: "text-blue-600", bg: "bg-blue-500/10" },
+  { icon: "PenTool", title: "Content Writing", desc: "Expert writers craft genuinely useful articles that publishers want to feature.", color: "text-green-700", bg: "bg-green-500/10" },
+  { icon: "Globe", title: "Editorial Outreach", desc: "Real relationships with editors get your content placed, not paid link farms.", color: "text-orange-700", bg: "bg-orange-500/10" },
+  { icon: "Award", title: "High-Authority Placements", desc: "Guest posts on sites with strong Domain Rating and genuine readership.", color: "text-purple-600", bg: "bg-purple-500/10" },
+  { icon: "FileText", title: "Contextual Backlinks", desc: "Natural, relevant anchor text links within high-quality content.", color: "text-pink-700", bg: "bg-pink-500/10" },
+  { icon: "BarChart3", title: "Branded Reporting", desc: "Full reports of every placement with live links and metrics, under your brand.", color: "text-cyan-700", bg: "bg-cyan-500/10" },
 ];
 
 const faqs = [
