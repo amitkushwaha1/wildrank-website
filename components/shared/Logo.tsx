@@ -24,10 +24,13 @@ const ASSETS = {
 } as const;
 
 export default function Logo({ size = "md", on = "light", className = "" }: LogoProps) {
+  // Sized against the surfaces that actually use them: the navbar bar is 64px
+  // on mobile and 80px on desktop, so `lg` steps up rather than sitting at one
+  // fixed height that is cramped on a phone and lost on a desktop.
   const dimensions = {
-    sm: { width: 130, height: 48, className: "h-8 w-auto" },
-    md: { width: 163, height: 60, className: "h-10 w-auto" },
-    lg: { width: 220, height: 80, className: "h-14 w-auto" },
+    sm: { width: 130,  height: 48, className: "h-8 w-auto" },
+    md: { width: 180,  height: 66, className: "h-11 w-auto" },
+    lg: { width: 229,  height: 84, className: "h-11 lg:h-14 w-auto" },
   };
 
   const d = dimensions[size];

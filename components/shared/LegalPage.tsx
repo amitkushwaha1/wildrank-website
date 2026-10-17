@@ -63,7 +63,7 @@ export default function LegalPage({
 
       <section className="bg-canvas py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <div className="space-y-10 [&_a]:font-semibold [&_a]:text-primary [&_a]:underline [&_a]:decoration-primary/30 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:tracking-tight [&_h2]:text-ink [&_h3]:mt-6 [&_h3]:text-base [&_h3]:font-bold [&_h3]:text-ink [&_li]:mt-2 [&_li]:leading-relaxed [&_li]:text-muted [&_p]:mt-3 [&_p]:leading-relaxed [&_p]:text-muted [&_strong]:text-ink [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:space-y-1 [&_ul]:pl-5">
+          <div className="space-y-12 [&_a]:font-semibold [&_a]:text-primary [&_a]:underline [&_a]:decoration-primary/30 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:tracking-tight [&_h2]:text-ink [&_h3]:mt-8 [&_h3]:text-base [&_h3]:font-bold [&_h3]:text-ink [&_li]:mt-2.5 [&_li]:leading-[1.75] [&_li]:text-muted [&_p]:mt-4 [&_p]:leading-[1.75] [&_p]:text-muted [&_strong]:text-ink [&_ul]:mt-4 [&_ul]:list-disc [&_ul]:space-y-1.5 [&_ul]:pl-5">
             {children}
           </div>
         </div>

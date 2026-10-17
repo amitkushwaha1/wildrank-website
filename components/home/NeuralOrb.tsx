@@ -361,9 +361,6 @@ export default function NeuralOrb({ className = "" }: { className?: string }) {
         </span>
       ))}
 
-      <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.28em] text-faint">
-        Drag to rotate
-      </span>
     </div>
   );
 }

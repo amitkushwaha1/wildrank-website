@@ -19,7 +19,7 @@ export default function AISeoSection() {
   const rotate = useTransform(scrollYProgress, [0, 1], [-8, 8]);
 
   return (
-    <section ref={ref} className="py-24 bg-canvas relative overflow-hidden">
+    <section ref={ref} className="py-24 lg:py-16 bg-canvas relative overflow-hidden">
       {/* Animated background orbs */}
       <motion.div style={{ y }} className="absolute top-20 -left-20 w-80 h-80 bg-purple-500/8 rounded-full blur-3xl pointer-events-none" />
       <motion.div style={{ y: useTransform(scrollYProgress, [0, 1], [-40, 40]) }} className="absolute bottom-20 -right-20 w-72 h-72 bg-blue-500/8 rounded-full blur-3xl pointer-events-none" />

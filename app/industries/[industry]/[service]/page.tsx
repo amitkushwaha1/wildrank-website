@@ -122,7 +122,7 @@ export default function IndustryServicePage({ params }: Props) {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-20 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-ink mb-10">
             Questions {ind.name.toLowerCase()} firms ask us
@@ -138,7 +138,7 @@ export default function IndustryServicePage({ params }: Props) {
         </div>
       </section>
 
-      <section className="py-20 bg-dark-card border-y border-dark-border">
+      <section className="py-20 lg:py-16 bg-dark-card border-y border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-ink mb-10">Other sectors we work in</h2>
           <div className="flex flex-wrap gap-3">
@@ -155,7 +155,7 @@ export default function IndustryServicePage({ params }: Props) {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-20 lg:py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-ink mb-4">
             Is this worth doing for {ind.name.toLowerCase()}?

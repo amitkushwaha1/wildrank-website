@@ -114,7 +114,7 @@ export default function CaseStudiesGrid() {
   const filtered = active === "All" ? caseStudies : caseStudies.filter((c) => c.category === active);
 
   return (
-    <section className="py-24 bg-dark">
+    <section className="py-24 lg:py-16 bg-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Filter tabs */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}

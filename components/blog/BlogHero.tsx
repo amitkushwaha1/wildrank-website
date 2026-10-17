@@ -8,7 +8,7 @@ export default function BlogHero() {
     <section className="relative min-h-[50vh] hero-gradient flex items-center overflow-hidden pt-20">
       <div className="absolute inset-0 opacity-[0.55]" style={{ backgroundImage: "linear-gradient(rgba(17,17,20,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(17,17,20,0.05) 1px, transparent 1px)", backgroundSize: "60px 60px", maskImage: "radial-gradient(ellipse at 40% 40%, black 0%, transparent 72%)", WebkitMaskImage: "radial-gradient(ellipse at 40% 40%, black 0%, transparent 72%)" }} />
       <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-16 w-full">
         <div className="max-w-3xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 text-primary-light text-xs font-semibold px-4 py-2 rounded-full mb-6">

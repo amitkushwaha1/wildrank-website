@@ -49,7 +49,7 @@ export default function PricingHero({ badge, title, highlight, description, colo
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-2 h-2 rounded-full bg-primary-light/60" />
       </motion.div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-16 w-full relative z-10">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

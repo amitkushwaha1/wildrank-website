@@ -137,7 +137,7 @@ export default function AIReceptionistPage() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-20 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-ink mb-10">Where it pays for itself</h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -155,7 +155,7 @@ export default function AIReceptionistPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-dark-card border-y border-dark-border">
+      <section className="py-20 lg:py-16 bg-dark-card border-y border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-ink mb-8">Pricing</h2>
           <div className="glass-card rounded-2xl p-8 border border-dark-border max-w-lg">
@@ -169,7 +169,7 @@ export default function AIReceptionistPage() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-20 lg:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-ink mb-10">Questions</h2>
           <div className="space-y-8">
@@ -183,7 +183,7 @@ export default function AIReceptionistPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-dark-card border-t border-dark-border">
+      <section className="py-20 lg:py-16 bg-dark-card border-t border-dark-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-ink mb-4">Count the calls you are losing</h2>
           <p className="text-muted mb-8">

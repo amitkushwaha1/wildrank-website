@@ -48,7 +48,7 @@ export default function WhiteLabelPage({ badge, title, highlight, description, i
       <section className="relative min-h-[70vh] hero-gradient flex items-center overflow-hidden pt-20">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
         <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-blue-500/8 rounded-full blur-3xl pointer-events-none animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-16 w-full relative z-10">
           <div className="max-w-3xl animate-[fadeInUp_0.6s_ease-out_both]">
             <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 text-purple-600 text-xs font-semibold px-4 py-2 rounded-full mb-6">
               <Layers className="w-3.5 h-3.5" /> {badge}
@@ -75,7 +75,7 @@ export default function WhiteLabelPage({ badge, title, highlight, description, i
       </section>
 
       {/* Intro */}
-      <section className="py-20 section-gradient">
+      <section className="py-20 lg:py-16 section-gradient">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
             className="text-muted text-lg leading-relaxed">{intro}</motion.p>
@@ -83,7 +83,7 @@ export default function WhiteLabelPage({ badge, title, highlight, description, i
       </section>
 
       {/* Features */}
-      <section className="py-24 bg-canvas">
+      <section className="py-24 lg:py-16 bg-canvas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">What You Get</span>
@@ -102,7 +102,7 @@ export default function WhiteLabelPage({ badge, title, highlight, description, i
       </section>
 
       {/* Why Partner */}
-      <section className="py-24 section-gradient">
+      <section className="py-24 lg:py-16 section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">Why Agencies <span className="gradient-text">Partner With Us</span></h2>
@@ -120,7 +120,7 @@ export default function WhiteLabelPage({ badge, title, highlight, description, i
       </section>
 
       {/* FAQ */}
-      <section className="py-24 bg-canvas">
+      <section className="py-24 lg:py-16 bg-canvas">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-extrabold text-ink mb-3">Frequently Asked <span className="gradient-text">Questions</span></h2>

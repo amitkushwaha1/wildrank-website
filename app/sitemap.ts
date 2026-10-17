@@ -39,12 +39,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/mobile-app-pricing",
     // Company
     "/about",
-    "/our-team",
     "/contact",
     // Other
     "/ai-marketing",
     "/blog",
-    "/resources",
     // Legal — required for E-E-A-T and for advertising platform reviews. Both
     // were missing entirely, while the footer linked to them with href="#".
     "/privacy-policy",

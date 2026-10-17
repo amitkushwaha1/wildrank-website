@@ -18,6 +18,12 @@ import { useEffect, useRef } from "react";
  *     judged with an IntersectionObserver rather than a scroll listener
  *   - `prefers-reduced-motion` gets one static frame and no loop at all
  *   - no shadowBlur: that forces a per-star offscreen blur pass every frame
+ *
+ * Intensity was raised ~30% after review — the first version was tasteful but
+ * too quiet to register as motion on a bright hero, which is the whole point of
+ * putting it there. Trail length, stroke weight, alpha and spawn rate all moved
+ * together rather than alpha alone, because raising alpha by itself reads as a
+ * smear rather than as a star.
  */
 export default function FallingStars({
   className = "",
@@ -57,20 +63,20 @@ export default function FallingStars({
     const makeStar = (spread: boolean): Star => ({
       x: Math.random() * (width + 260) - 80,
       y: spread ? Math.random() * height * 0.7 : -80 - Math.random() * 120,
-      len: 70 + Math.random() * 90,
-      speed: 3.4 + Math.random() * 4,
-      opacity: 0.16 + Math.random() * 0.20,
-      tail: 1 + Math.random() * 0.7,
+      len: 88 + Math.random() * 110,
+      speed: 3.6 + Math.random() * 4.4,
+      opacity: 0.21 + Math.random() * 0.26,
+      tail: 1.1 + Math.random() * 0.85,
       rgb: Math.random() > 0.35 ? ORANGE : WARM,
     });
 
     const seed = () => {
-      const count = Math.min(90, Math.max(30, Math.round((width * height) / 26000 * density)));
+      const count = Math.min(120, Math.max(36, Math.round((width * height) / 20000 * density)));
       twinkles = Array.from({ length: count }, () => ({
         x: Math.random() * width,
         y: Math.random() * height,
         r: 0.6 + Math.random() * 1.1,
-        base: 0.06 + Math.random() * 0.12,
+        base: 0.08 + Math.random() * 0.16,
         phase: Math.random() * Math.PI * 2,
         speed: 0.006 + Math.random() * 0.014,
       }));
@@ -142,7 +148,7 @@ export default function FallingStars({
       return () => window.removeEventListener("resize", onResize);
     }
 
-    for (let i = 0; i < 2; i++) stars.push(makeStar(true));
+    for (let i = 0; i < 3; i++) stars.push(makeStar(true));
 
     let last = 0;
     let frame = 0;
@@ -155,7 +161,7 @@ export default function FallingStars({
       if (now - last < 33) return; // ~30 fps
       last = now;
       frame++;
-      if (frame % 90 === 0 && stars.length < 5) stars.push(makeStar(false));
+      if (frame % 68 === 0 && stars.length < 7) stars.push(makeStar(false));
       drawFrame(true);
     };
 

@@ -43,7 +43,6 @@ const navLinks = [
     href: "#",
     children: [
       { label: "About Us",  href: "/about" },
-      { label: "Our Team",  href: "/our-team" },
       { label: "Contact",   href: "/contact" },
     ],
   },
@@ -60,7 +59,6 @@ const navLinks = [
   },
   { label: "AI Marketing Agency", href: "/ai-marketing" },
   { label: "Blog",                href: "/blog" },
-  { label: "Resources",           href: "/resources" },
 ];
 
 export default function Navbar() {
@@ -91,7 +89,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <motion.a href="/" whileHover={{ scale: 1.03 }} className="flex items-center flex-shrink-0">
-            <Logo size="md" />
+            <Logo size="lg" />
           </motion.a>
 
           {/* Desktop Nav */}

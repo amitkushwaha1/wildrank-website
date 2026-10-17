@@ -41,10 +41,10 @@ const serviceAreas = [
 
 const company = [
   { label: "About Us",           href: "/about" },
-  { label: "Our Team",           href: "/our-team" },
   { label: "AI Marketing",       href: "/ai-marketing" },
+  { label: "GEO & AEO Services", href: "/geo-aeo-services" },
+  { label: "Hermes AI System",   href: "/hermes-ai-system" },
   { label: "Blog",               href: "/blog" },
-  { label: "Resources",          href: "/resources" },
 ];
 
 const socials = socialLinks;

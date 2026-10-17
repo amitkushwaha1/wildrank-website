@@ -54,7 +54,7 @@ export default function Testimonials() {
   const next = () => setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
 
   return (
-    <section id="testimonials" className="section-gradient py-24">
+    <section id="testimonials" className="section-gradient py-24 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

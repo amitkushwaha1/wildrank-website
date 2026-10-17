@@ -44,7 +44,7 @@ export default function PpcServicesClient() {
       {/* Hero */}
       <section className="relative min-h-[75vh] hero-gradient flex items-center overflow-hidden pt-20">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-16 w-full">
           <div className="max-w-3xl animate-[fadeInUp_0.6s_ease-out_both]">
             <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-700 text-xs font-semibold px-4 py-2 rounded-full mb-6">
               <MousePointerClick className="w-3.5 h-3.5" /> PPC Management Services
@@ -73,7 +73,7 @@ export default function PpcServicesClient() {
       </section>
 
       {/* Why You Need PPC */}
-      <section className="py-24 section-gradient">
+      <section className="py-24 lg:py-16 section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">Why Businesses Choose <span className="gradient-text">PPC Advertising</span></h2>
@@ -96,7 +96,7 @@ export default function PpcServicesClient() {
       </section>
 
       {/* What We Deliver */}
-      <section className="py-24 bg-canvas">
+      <section className="py-24 lg:py-16 bg-canvas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">Our PPC Services</span>
@@ -115,7 +115,7 @@ export default function PpcServicesClient() {
       </section>
 
       {/* Process */}
-      <section className="py-24 section-gradient">
+      <section className="py-24 lg:py-16 section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">Our PPC <span className="gradient-text">Process</span></h2>
@@ -133,7 +133,7 @@ export default function PpcServicesClient() {
       </section>
 
       {/* Results */}
-      <section className="py-24 bg-canvas">
+      <section className="py-24 lg:py-16 bg-canvas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">Results That <span className="gradient-text">Speak</span></h2>
@@ -150,7 +150,7 @@ export default function PpcServicesClient() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 section-gradient">
+      <section className="py-24 lg:py-16 section-gradient">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-extrabold text-ink mb-3">PPC <span className="gradient-text">FAQ</span></h2>

@@ -31,7 +31,7 @@ const featureLabels = ["Keyword Research", "Campaign Setup", "Ad Copywriting", "
 
 export default function PPCPricingTable() {
   return (
-    <section id="plans" className="py-24 section-gradient">
+    <section id="plans" className="py-24 lg:py-16 section-gradient">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">PPC <span className="gradient-text">Management Plans</span></h2>

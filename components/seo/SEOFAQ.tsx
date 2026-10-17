@@ -43,7 +43,7 @@ export default function SEOFAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="py-24 section-gradient">
+    <section className="py-24 lg:py-16 section-gradient">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

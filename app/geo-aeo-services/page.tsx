@@ -157,7 +157,7 @@ export default function GeoAeoServicesPage() {
       </section>
 
       {/* Engines */}
-      <section className="py-20">
+      <section className="py-20 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-ink mb-4">Engines we optimise for</h2>
           <p className="text-muted mb-10 max-w-3xl">
@@ -176,7 +176,7 @@ export default function GeoAeoServicesPage() {
       </section>
 
       {/* Comparison — the structure AI engines cite most */}
-      <section className="py-20 bg-dark-card border-y border-dark-border">
+      <section className="py-20 lg:py-16 bg-dark-card border-y border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-ink mb-8">GEO vs AEO vs traditional SEO</h2>
           <div className="overflow-x-auto">
@@ -210,7 +210,7 @@ export default function GeoAeoServicesPage() {
       </section>
 
       {/* Honest limits */}
-      <section className="py-20">
+      <section className="py-20 lg:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-ink mb-6">What we will not promise</h2>
           <div className="space-y-4">
@@ -229,7 +229,7 @@ export default function GeoAeoServicesPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-dark-card border-y border-dark-border">
+      <section className="py-20 lg:py-16 bg-dark-card border-y border-dark-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-ink mb-10">Questions</h2>
           <div className="space-y-8">
@@ -243,7 +243,7 @@ export default function GeoAeoServicesPage() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-20 lg:py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-ink mb-4">Find out whether AI search matters to you yet</h2>
           <p className="text-muted mb-8">

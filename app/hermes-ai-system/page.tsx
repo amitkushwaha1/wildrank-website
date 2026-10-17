@@ -118,7 +118,7 @@ export default function HermesAISystemPage() {
       </section>
 
       {/* Capabilities */}
-      <section className="py-20">
+      <section className="py-20 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-ink mb-10">Core capabilities</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -143,7 +143,7 @@ export default function HermesAISystemPage() {
       </section>
 
       {/* How */}
-      <section id="how" className="py-20 bg-dark-card border-y border-dark-border">
+      <section id="how" className="py-20 lg:py-16 bg-dark-card border-y border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-ink mb-10">How deployment works</h2>
           <ol className="space-y-6 max-w-3xl">
@@ -169,7 +169,7 @@ export default function HermesAISystemPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20">
+      <section className="py-20 lg:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-ink mb-10">Questions</h2>
           <div className="space-y-8">
@@ -184,7 +184,7 @@ export default function HermesAISystemPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-dark-card border-t border-dark-border">
+      <section className="py-20 lg:py-16 bg-dark-card border-t border-dark-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-ink mb-4">
             Find out whether Hermes fits your call volume

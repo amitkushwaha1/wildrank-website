@@ -11,7 +11,7 @@ const results = [
 
 export default function SEOServicesResults() {
   return (
-    <section className="py-24 bg-dark">
+    <section className="py-24 lg:py-16 bg-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-16">
           <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">Proven Results</span>

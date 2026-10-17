@@ -33,7 +33,7 @@ const nextConfig = {
 
       // ── Company: old /company/* → flat URLs ──
       { source: "/company/about", destination: "/about", permanent: true },
-      { source: "/company/team", destination: "/our-team", permanent: true },
+      { source: "/company/team", destination: "/about", permanent: true },
       { source: "/company/careers", destination: "/about", permanent: true },
       // /careers removed — keep old links + Google index alive
       { source: "/careers", destination: "/about", permanent: true },
@@ -92,14 +92,24 @@ const nextConfig = {
       { source: "/gmb-pricing", destination: "/local-seo-services", permanent: true },                           // 141 impr
       { source: "/media-marketing", destination: "/social-media-marketing-services", permanent: true },          // 100 impr · pos 3.7
       { source: "/marketing-analysis", destination: "/digital-marketing-services", permanent: true },            // 122 impr · pos 3.1
-      { source: "/project-detail", destination: "/resources", permanent: true },                                 // 107 impr · pos 4.5 · 2 clicks
-      { source: "/our-projects", destination: "/resources", permanent: true },                                   // 52 impr · pos 2.6
+      { source: "/project-detail", destination: "/about", permanent: true },                                     // 107 impr · pos 4.5 · 2 clicks
+      { source: "/our-projects", destination: "/about", permanent: true },                                       // 52 impr · pos 2.6
 
       // Company
       { source: "/about-us", destination: "/about", permanent: true },                 // 23 impr · pos 1.4
-      { source: "/team", destination: "/our-team", permanent: true },
-      { source: "/team/savannah-nguyen", destination: "/our-team", permanent: true },  // 34 impr · pos 9.7
-      { source: "/team/brooklyn-simmons", destination: "/our-team", permanent: true }, // 14 impr · pos 10.3
+      // /our-team was removed: it listed twelve invented people with invented job
+      // titles, which is an E-E-A-T liability rather than an asset. The legacy
+      // URLs that still rank — /team had 34 and 14 impressions at positions 9-10 —
+      // now 301 to /about, which is a real page about real people.
+      { source: "/team", destination: "/about", permanent: true },
+      { source: "/team/savannah-nguyen", destination: "/about", permanent: true },     // 34 impr · pos 9.7
+      { source: "/team/brooklyn-simmons", destination: "/about", permanent: true },    // 14 impr · pos 10.3
+      // The two retired routes themselves. Deleting a page and letting it 404
+      // throws away whatever Google has already cached about it, so both are
+      // 301s instead — /our-team to the page about the same subject, /resources
+      // (a guides hub with no replacement) to the content hub that replaces it.
+      { source: "/our-team", destination: "/about", permanent: true },
+      { source: "/resources", destination: "/blog", permanent: true },
 
         // Legal pages now exist at their real paths, so the legacy /privacy-policy
         // URL Google still ranks (73 impr, pos 3.6) finally resolves instead of

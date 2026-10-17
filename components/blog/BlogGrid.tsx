@@ -48,7 +48,7 @@ export default function BlogGrid() {
   const filtered = active === "All" ? topics : topics.filter((t) => t.category === active);
 
   return (
-    <section className="bg-band py-24">
+    <section className="bg-band py-24 lg:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-10 max-w-2xl text-center">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-primary-light">

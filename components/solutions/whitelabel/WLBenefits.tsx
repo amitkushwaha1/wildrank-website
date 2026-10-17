@@ -14,7 +14,7 @@ const benefits = [
 
 export default function WLBenefits() {
   return (
-    <section className="py-24 bg-dark-card border-y border-dark-border">
+    <section className="py-24 lg:py-16 bg-dark-card border-y border-dark-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-16">
           <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">Why Partner With Us</span>

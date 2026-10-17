@@ -46,7 +46,7 @@ export default function PrivacyPolicyPage() {
         <h3>Information collected automatically</h3>
         <ul>
           <li>
-            <strong>Usage data.</strong> Like most sites, ours records standard technical
+            <strong>Usage data.</strong> Like most sites, we record standard technical
             information when you visit: pages viewed, time on page, referring page, approximate
             location derived from IP address, browser, device type and operating system.
           </li>

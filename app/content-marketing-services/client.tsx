@@ -80,7 +80,7 @@ export default function ContentMarketingServicesClient() {
       {/* Hero */}
       <section className="relative min-h-[75vh] hero-gradient flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.1) 1px,transparent 1px)", backgroundSize: "60px 60px" }} />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-16 w-full relative z-10">
           <div className="max-w-4xl">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
               className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 text-purple-600 text-xs font-semibold px-4 py-2 rounded-full mb-6">
@@ -114,7 +114,7 @@ export default function ContentMarketingServicesClient() {
       </section>
 
       {/* Pain Points */}
-      <section className="py-20 bg-canvas">
+      <section className="py-20 lg:py-16 bg-canvas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">Why Most Content Marketing Fails</h2>
@@ -138,7 +138,7 @@ export default function ContentMarketingServicesClient() {
       </section>
 
       {/* Services */}
-      <section className="py-24 section-gradient">
+      <section className="py-24 lg:py-16 section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-16">
             <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">What We Deliver</span>
@@ -164,7 +164,7 @@ export default function ContentMarketingServicesClient() {
       </section>
 
       {/* Process */}
-      <section className="py-24 bg-canvas border-y border-hairline/5">
+      <section className="py-24 lg:py-16 bg-canvas border-y border-hairline/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-16">
             <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">Our Process</span>
@@ -189,7 +189,7 @@ export default function ContentMarketingServicesClient() {
       </section>
 
       {/* Results */}
-      <section className="py-20 section-gradient">
+      <section className="py-20 lg:py-16 section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-16">
             <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">Results We&apos;ve Achieved</span>
@@ -210,7 +210,7 @@ export default function ContentMarketingServicesClient() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-canvas">
+      <section className="py-24 lg:py-16 bg-canvas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-16">
             <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">Why Wildrank</span>
@@ -236,7 +236,7 @@ export default function ContentMarketingServicesClient() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 section-gradient">
+      <section className="py-24 lg:py-16 section-gradient">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-16">
             <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">FAQ</span>

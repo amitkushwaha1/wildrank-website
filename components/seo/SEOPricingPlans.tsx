@@ -403,7 +403,7 @@ export default function SEOPricingPlans() {
   const allSections = Object.keys(plans[0].features);
 
   return (
-    <section id="plans" className="py-24 bg-dark">
+    <section id="plans" className="py-24 lg:py-16 bg-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

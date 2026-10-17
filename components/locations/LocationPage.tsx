@@ -62,7 +62,7 @@ export default function LocationPage({ city, state }: Props) {
       <section className="relative min-h-[70vh] hero-gradient flex items-center overflow-hidden pt-20">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
         <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-secondary/8 rounded-full blur-3xl pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-16 w-full relative z-10">
           <div className="max-w-3xl animate-[fadeInUp_0.6s_ease-out_both]">
             <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary-light text-xs font-semibold px-4 py-2 rounded-full mb-6">
               <MapPin className="w-3.5 h-3.5" /> {location} SEO Company
@@ -91,7 +91,7 @@ export default function LocationPage({ city, state }: Props) {
       </section>
 
       {/* Why local SEO */}
-      <section className="py-24 section-gradient">
+      <section className="py-24 lg:py-16 section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">Why {city} Businesses Choose <span className="gradient-text">Wildrank</span></h2>
@@ -120,7 +120,7 @@ export default function LocationPage({ city, state }: Props) {
       </section>
 
       {/* Services for this city */}
-      <section className="py-24 bg-canvas">
+      <section className="py-24 lg:py-16 bg-canvas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">Our SEO Services in <span className="gradient-text">{city}</span></h2>
@@ -144,7 +144,7 @@ export default function LocationPage({ city, state }: Props) {
       </section>
 
       {/* What local SEO actually involves */}
-      <section className="py-20 section-gradient">
+      <section className="py-20 lg:py-16 section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">What {city} SEO Actually Involves</h2>
@@ -186,7 +186,7 @@ export default function LocationPage({ city, state }: Props) {
       </section>
 
       {/* FAQ — also emitted as FAQPage structured data */}
-      <section className="py-20 bg-canvas">
+      <section className="py-20 lg:py-16 bg-canvas">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">{city} SEO FAQs</h2>
