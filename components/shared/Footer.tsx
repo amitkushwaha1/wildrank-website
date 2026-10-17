@@ -178,8 +178,8 @@ export default function Footer() {
               ))}
             </div>
             <div className="flex items-center gap-4">
-              <a href="#" className="text-xs text-faint hover:text-muted transition-colors">Privacy Policy</a>
-              <a href="#" className="text-xs text-faint hover:text-muted transition-colors">Terms of Service</a>
+              <a href="/privacy-policy" className="text-xs text-faint hover:text-muted transition-colors">Privacy Policy</a>
+              <a href="/terms-of-service" className="text-xs text-faint hover:text-muted transition-colors">Terms of Service</a>
             </div>
           </div>
       </div>

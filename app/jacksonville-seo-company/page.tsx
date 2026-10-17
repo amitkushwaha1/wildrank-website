@@ -2,9 +2,8 @@ import LocationPage from "@/components/locations/LocationPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Jacksonville SEO Company | Wildrank Technologies",
-  description:
-    "Jacksonville, FL: Wildrank is an SEO company for Jacksonville businesses — technical SEO, local search and AI visibility across Google, Perplexity and Gemini. Free audit. No long-term contract.",
+  title: "Jacksonville SEO Company | SEO & AI Search | WildRank",
+  description: "SEO company in Jacksonville, FL — technical SEO, local search and AI search visibility (GEO/AEO) for Jacksonville businesses. Get a free audit.",
   alternates: { canonical: "/jacksonville-seo-company" },
 };
 

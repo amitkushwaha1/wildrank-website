@@ -5,9 +5,8 @@ import { PHONE_E164 } from "@/lib/site";
 const SITE = "https://wildranktechnologies.com";
 
 export const metadata: Metadata = {
-  title: "Generative Engine Optimization (GEO) & AEO Agency | WildRank Technologies",
-  description:
-    "GEO and AEO services that get your brand cited inside ChatGPT, Claude, Gemini and Perplexity answers. Entity work, schema, and prompt measurement. Book a consultation.",
+  title: "Generative Engine Optimization (GEO) & AEO | WildRank",
+  description: "GEO and AEO services that get your brand cited inside ChatGPT, Claude, Gemini and Perplexity answers. Entity work, schema and prompt measurement.",
   alternates: { canonical: "/geo-aeo-services" },
   keywords: [
     "geo agency",

@@ -5,7 +5,7 @@ import SocialMediaPricingClient from "./client";
 // metadata. The server shell owns the SEO surface; the client component owns
 // the interactive markup. Do not merge them back.
 export const metadata: Metadata = {
-  title: "Social Media Pricing - Plans & Packages | Wildrank Technologies",
+  title: "Social Media Pricing - Plans & Packages | WildRank",
   description: "Social media management pricing with Basic, Silver, Gold and Premium options covering content, publishing and community management.",
   alternates: { canonical: "/social-media-pricing" },
 };

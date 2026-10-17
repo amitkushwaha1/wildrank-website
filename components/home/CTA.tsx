@@ -242,7 +242,7 @@ export default function CTA() {
                     name="Service Interested In"
                     required
                     className={inputClass}
-                    style={{ colorScheme: "dark" }}
+                    style={{ colorScheme: "light" }}
                   >
                     <option value="">Select a service</option>
                     {services.map((s) => (

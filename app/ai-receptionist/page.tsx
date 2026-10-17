@@ -5,7 +5,7 @@ import { PHONE_E164 } from "@/lib/site";
 const SITE = "https://wildranktechnologies.com";
 
 export const metadata: Metadata = {
-  title: "AI Receptionist & Missed Call Recovery System | WildRank Technologies",
+  title: "AI Receptionist & Missed Call Recovery System | WildRank",
   description:
     "Never lose a lead to a missed call again. An AI receptionist answers 24/7 and texts missed callers back within seconds. Setup from $499. Book a consultation.",
   alternates: { canonical: "/ai-receptionist" },

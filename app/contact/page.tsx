@@ -3,8 +3,8 @@ import ContactForm from "@/components/company/contact/ContactForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Wildrank Technologies",
-  description: "Get in touch with Wildrank Technologies. We respond within 24 hours.",
+  title: "Contact Wildrank Technologies | Free Marketing Audit",
+  description: "Contact Wildrank Technologies for a free marketing audit. Tell us your goals and we will reply within one business day with clear next steps.",
   alternates: { canonical: "/contact" },
 };
 

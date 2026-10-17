@@ -2,9 +2,8 @@ import LocationPage from "@/components/locations/LocationPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Toronto SEO Company | Wildrank Technologies",
-  description:
-    "Toronto, ON: Wildrank is an SEO company for Toronto businesses — technical SEO, local search and AI visibility across Google, Perplexity and Gemini. Free audit. No long-term contract.",
+  title: "Toronto SEO Company | SEO & AI Search | WildRank",
+  description: "SEO company in Toronto, ON — technical SEO, local search and AI search visibility (GEO/AEO) for Toronto businesses. Get a free audit.",
   alternates: { canonical: "/toronto-seo-company" },
 };
 

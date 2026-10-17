@@ -5,8 +5,8 @@ import LocalSeoServicesClient from "./client";
 // metadata. The server shell owns the SEO surface; the client component owns
 // the interactive markup. Do not merge them back.
 export const metadata: Metadata = {
-  title: "SEO Firm Services | Wildrank Technologies",
-  description: "Wildrank SEO firm services: Local SEO, Technical SEO, Content Marketing, AI Search Optimization. Free audit and consultation for new clients.",
+  title: "Local SEO Services | Google Business Profile | WildRank",
+  description: "Local SEO services that put your business in the map pack: Google Business Profile optimisation, reviews, local landing pages and citation building.",
   alternates: { canonical: "/local-seo-services" },
 };
 

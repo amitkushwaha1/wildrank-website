@@ -2,9 +2,8 @@ import LocationPage from "@/components/locations/LocationPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Columbus SEO Company | Wildrank Technologies",
-  description:
-    "Columbus, OH: Wildrank is an SEO company for Columbus businesses — technical SEO, local search and AI visibility across Google, Perplexity and Gemini. Free audit. No long-term contract.",
+  title: "Columbus SEO Company | SEO & AI Search | WildRank",
+  description: "SEO company in Columbus, OH — technical SEO, local search and AI search visibility (GEO/AEO) for Columbus businesses. Get a free audit.",
   alternates: { canonical: "/columbus-seo-company" },
 };
 

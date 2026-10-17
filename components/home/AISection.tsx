@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Cpu, Search, Sparkles, Globe, Brain, TrendingUp } from "lucide-react";
 
 /* SVG logos for each AI platform */
@@ -156,45 +157,59 @@ export default function AISection() {
             </motion.div>
           </div>
 
-          {/* Right — AI Platforms Visual */}
+          {/* Right — the human side of the AI story, with the platform card
+              cascading over its lower edge (overlap removed below lg). */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative"
+            transition={{ duration: 0.7, delay: 0.2, ease: [0.32, 0.72, 0, 1] }}
+            className="relative mx-auto w-full max-w-[500px]"
           >
-            <div className="glass-card rounded-2xl p-8 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-2xl" />
+            {/* Double-bezel: a glass shell around an inner core, so the image
+                reads as a mounted pane rather than a pasted rectangle. */}
+            <div className="glass-card rounded-[2rem] p-2">
+              <div className="relative overflow-hidden rounded-[1.6rem]">
+                <Image
+                  src="/images/ai-search-strategist.webp"
+                  alt="Strategist wearing a transparent neural-interface helmet, representing AI-driven search visibility"
+                  width={900}
+                  height={900}
+                  sizes="(max-width: 1024px) 92vw, 46vw"
+                  className="h-auto w-full object-cover"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent" />
+                <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full border border-white/15 bg-ink/70 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-md">
+                  <Globe className="h-3 w-3" />
+                  Generative Engine Optimization
+                </div>
+              </div>
+            </div>
 
-              <h3 className="text-lg font-bold text-ink mb-6 relative z-10">AI Platforms We Optimize For</h3>
+            <div className="glass-card relative z-10 -mt-14 ml-auto w-[95%] rounded-2xl p-6 lg:-mt-16">
+              <h3 className="mb-5 text-base font-bold text-ink">AI Platforms We Optimize For</h3>
 
-              <div className="space-y-3 relative z-10">
+              <div className="space-y-2.5">
                 {aiPlatforms.map((platform, i) => (
                   <motion.div
                     key={platform.name}
-                    initial={{ opacity: 0, x: 30 }}
+                    initial={{ opacity: 0, x: 24 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
-                    whileHover={{ x: 8, scale: 1.02 }}
-                    className="flex items-center gap-4 p-3 rounded-xl hover:bg-tint/5 transition-all duration-200 cursor-default"
+                    transition={{ duration: 0.45, delay: 0.25 + i * 0.08, ease: [0.32, 0.72, 0, 1] }}
+                    whileHover={{ x: 6 }}
+                    className="flex items-center gap-3.5 rounded-xl p-2.5 transition-colors hover:bg-tint/5"
                   >
-                    <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${platform.bg}`}>
+                    <div className={`flex h-10 w-10 items-center justify-center rounded-xl ${platform.bg}`}>
                       <platform.Logo />
                     </div>
                     <div>
-                      <p className="text-ink font-semibold text-sm">{platform.name}</p>
-                      <p className="text-muted text-xs">Optimized for visibility</p>
+                      <p className="text-sm font-semibold text-ink">{platform.name}</p>
+                      <p className="text-xs text-muted">Optimized for visibility</p>
                     </div>
-                    <div className="ml-auto w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                    <div className="ml-auto h-2 w-2 shrink-0 animate-pulse rounded-full bg-green-500" />
                   </motion.div>
                 ))}
-              </div>
-
-              {/* Globe icon */}
-              <div className="absolute bottom-4 right-4 opacity-10">
-                <Globe className="w-24 h-24 text-primary" />
               </div>
             </div>
           </motion.div>

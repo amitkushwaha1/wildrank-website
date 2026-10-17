@@ -5,7 +5,7 @@ import DigitalMarketingServicesClient from "./client";
 // metadata. The server shell owns the SEO surface; the client component owns
 // the interactive markup. Do not merge them back.
 export const metadata: Metadata = {
-  title: "Digital Marketing Services | Wildrank Technologies",
+  title: "Digital Marketing Services | WildRank",
   description: "Paid and organic digital marketing managed as one system. Campaigns, content and analytics aligned to revenue, not vanity metrics.",
   alternates: { canonical: "/digital-marketing-services" },
 };

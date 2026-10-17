@@ -45,6 +45,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ai-marketing",
     "/blog",
     "/resources",
+    // Legal — required for E-E-A-T and for advertising platform reviews. Both
+    // were missing entirely, while the footer linked to them with href="#".
+    "/privacy-policy",
+    "/terms-of-service",
     // Location Pages
     "/austin-seo-company",
     "/boston-seo-company",

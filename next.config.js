@@ -101,10 +101,12 @@ const nextConfig = {
       { source: "/team/savannah-nguyen", destination: "/our-team", permanent: true },  // 34 impr · pos 9.7
       { source: "/team/brooklyn-simmons", destination: "/our-team", permanent: true }, // 14 impr · pos 10.3
 
-      // DELIBERATELY NOT REDIRECTED: /privacy-policy (73 impr · pos 3.6).
-      // The site serves no privacy or terms page at ANY path (/,/privacy,/terms
-      // all 404). There is nothing honest to point it at, and funneling a legal
-      // page into a marketing page is worse than the 404. Create the real pages.
+        // Legal pages now exist at their real paths, so the legacy /privacy-policy
+        // URL Google still ranks (73 impr, pos 3.6) finally resolves instead of
+        // 404ing. The short forms were 404s at every path before.
+        { source: "/privacy", destination: "/privacy-policy", permanent: true },
+        { source: "/terms", destination: "/terms-of-service", permanent: true },
+        { source: "/terms-of-use", destination: "/terms-of-service", permanent: true },
 
       // ── Misc legacy ──
       { source: "/case-studies", destination: "/", permanent: true },

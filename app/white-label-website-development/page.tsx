@@ -2,8 +2,8 @@ import WhiteLabelPage from "@/components/white-label/WhiteLabelPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "White Label Website Development | Wildrank Technologies",
-  description: "White label web development for agencies. Custom websites, e-commerce, and web apps built under your brand.",
+  title: "White Label Website Development | WildRank",
+  description: "White label web development for agencies: custom websites, e-commerce stores and web apps built under your brand, ready to hand straight to your client.",
   alternates: { canonical: "/white-label-website-development" },
 };
 

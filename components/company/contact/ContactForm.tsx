@@ -113,7 +113,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <label className="block text-xs text-muted mb-1.5" htmlFor="c-service">Service Interested In</label>
-                  <select id="c-service" name="Service Interested In" required style={{ colorScheme: "dark" }}
+                  <select id="c-service" name="Service Interested In" required style={{ colorScheme: "light" }}
                     className="w-full bg-band border border-hairline/10 text-muted px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors">
                     <option value="">Select a service</option>
                     <option>Search Engine Optimization</option>
@@ -130,7 +130,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <label className="block text-xs text-muted mb-1.5" htmlFor="c-budget">Monthly Budget</label>
-                  <select id="c-budget" name="Monthly Budget" style={{ colorScheme: "dark" }}
+                  <select id="c-budget" name="Monthly Budget" style={{ colorScheme: "light" }}
                     className="w-full bg-band border border-hairline/10 text-muted px-4 py-3 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors">
                     <option value="">Select budget range</option>
                     <option>Under $500/mo</option>

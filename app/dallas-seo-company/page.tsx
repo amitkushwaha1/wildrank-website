@@ -2,9 +2,8 @@ import LocationPage from "@/components/locations/LocationPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Dallas SEO Company | Wildrank Technologies",
-  description:
-    "Dallas, TX: Wildrank is an SEO company for Dallas businesses — technical SEO, local search and AI visibility across Google, Perplexity and Gemini. Free audit. No long-term contract.",
+  title: "Dallas SEO Company | SEO & AI Search | WildRank",
+  description: "SEO company in Dallas, TX — technical SEO, local search and AI search visibility (GEO/AEO) for Dallas businesses. Get a free audit.",
   alternates: { canonical: "/dallas-seo-company" },
 };
 

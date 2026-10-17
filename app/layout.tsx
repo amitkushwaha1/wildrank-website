@@ -1,14 +1,25 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 
-const inter = Inter({
+// Plus Jakarta Sans replaces Inter. Inter was the single most "default tech
+// template" tell on the site; Jakarta has the same neutral readability with
+// noticeably more character in the heavy weights used by the headings.
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-jakarta",
+});
+
+// Used only for small technical labels (measurable/mono details), never body copy.
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  variable: "--font-mono",
 });
 
 // Absolute base for canonical/OG URLs. Must match app/sitemap.ts BASE_URL.
@@ -27,12 +38,22 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: SITE_URL,
     siteName: "Wildrank Technologies",
     locale: "en_US",
+    // Every page had no og:image, so a shared link rendered as a bare text
+    // card. This is the site-wide fallback; pages may override it.
+    images: [
+      {
+        url: "/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Wildrank Technologies — be the brand Google ranks and AI recommends first",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/og-default.jpg"],
   },
   robots: {
     index: true,
@@ -61,6 +82,13 @@ const organizationSchema = {
         "Digital marketing and IT services company providing SEO, PPC, social media, web development, mobile apps and white label services.",
       email: "gupta@wildranktechnologies.com",
       telephone: PHONE_E164,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/logo-on-light.png`,
+        width: 163,
+        height: 60,
+      },
+      image: `${SITE_URL}/og-default.jpg`,
     },
     {
       "@type": "WebSite",
@@ -83,7 +111,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${jakarta.variable} ${mono.variable}`}>
       {/* Head scripts: Google Analytics + Organization/WebSite JSON-LD */}
       <head>
         <script
@@ -96,7 +124,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${jakarta.className} antialiased`}>
         <Navbar />
         <main>{children}</main>
         <Footer />

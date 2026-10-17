@@ -21,14 +21,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const srv = getService(params.service);
   if (!ind || !srv) return {};
 
-  const title = `${srv.shortName} for ${ind.name} | WildRank Technologies`;
-  const description = `${srv.summary} Built for ${ind.name.toLowerCase()}, where ${ind.painPoint
-    .split(".")[0]
-    .toLowerCase()}. Book a consultation.`;
+  // Titles are kept inside the ~60 character window SERPs actually display.
+  // The old form appended "| WildRank" unconditionally, which
+  // pushed all 28 tiles past 60 characters and got the brand cut off anyway.
+  const base = `${srv.shortName} for ${ind.name}`;
+  const title = `${base} | WildRank`.length <= 60 ? `${base} | WildRank` : base;
+
+  // Clamp descriptions on a word boundary rather than slicing mid-word at 180.
+  const raw =
+    `${srv.summary} Built for ${ind.name.toLowerCase()}, where ` +
+    `${ind.painPoint.split(".")[0].toLowerCase()}. Book a free consultation.`;
+  const description =
+    raw.length <= 158 ? raw : raw.slice(0, raw.slice(0, 158).lastIndexOf(" ")) + "…";
 
   return {
     title,
-    description: description.slice(0, 180),
+    description,
     alternates: { canonical: `/industries/${ind.slug}/${srv.slug}` },
     keywords: ind.keywords,
   };

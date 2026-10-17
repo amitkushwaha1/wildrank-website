@@ -2,7 +2,7 @@ import WhiteLabelPage from "@/components/white-label/WhiteLabelPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "White Label Guest Post Services | Wildrank Technologies",
+  title: "White Label Guest Post Services | WildRank",
   description: "White label guest posting for agencies. Editorially placed guest posts on relevant high-authority sites under your brand.",
   alternates: { canonical: "/white-label-guest-post-services" },
 };

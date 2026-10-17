@@ -5,7 +5,7 @@ import PpcPricingClient from "./client";
 // metadata. The server shell owns the SEO surface; the client component owns
 // the interactive markup. Do not merge them back.
 export const metadata: Metadata = {
-  title: "PPC Pricing - Plans For Every Budget | Wildrank Technologies",
+  title: "PPC Pricing - Plans For Every Budget | WildRank",
   description: "Straightforward PPC pricing across Basic, Silver, Gold and Premium tiers. Transparent reporting on spend, conversions and ROAS.",
   alternates: { canonical: "/ppc-pricing" },
 };

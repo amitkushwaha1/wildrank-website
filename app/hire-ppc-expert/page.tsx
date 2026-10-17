@@ -2,7 +2,7 @@ import WhiteLabelPage from "@/components/white-label/WhiteLabelPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hire PPC Expert | Wildrank Technologies",
+  title: "Hire a PPC Expert | Google & Meta Ads Specialists | WildRank",
   description: "Hire dedicated white-label PPC experts for your agency. Certified Google & Meta ads specialists working under your brand.",
   alternates: { canonical: "/hire-ppc-expert" },
 };

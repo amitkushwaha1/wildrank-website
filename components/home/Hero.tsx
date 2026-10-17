@@ -2,10 +2,8 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Users, Award, Rocket, Handshake, Activity } from "lucide-react";
-import dynamic from "next/dynamic";
-
-// Lazy-load the heavy canvas component — no SSR needed
-const SEOUniverse = dynamic(() => import("@/components/home/SEOUniverse"), { ssr: false });
+import NeuralOrb from "@/components/home/NeuralOrb";
+import FallingStars from "@/components/shared/FallingStars";
 
 const stats = [
   { icon: Users,     value: "Team",           title: "Industry Experts",          desc: "Strategists, creatives, and technologists turning bold ideas into scalable digital growth.",            color: "text-blue-600",    bg: "bg-blue-500/10" },
@@ -21,23 +19,30 @@ const cardVariants = {
 };
 
 export default function Hero() {
-  const trustLogos = ["Google Partner", "AI-Powered SEO", "ISO 9001 Certified", "AI-Powered SEO"];
+  const trustLogos = ["Google Partner", "AI-Powered SEO", "ISO 9001 Certified", "GEO & AEO Ready"];
   return (
     <section className="relative min-h-screen overflow-hidden bg-band pt-20">
 
-      {/* ── Subtle grid overlay ── */}
+      {/* ── Ambient drifting stars ── */}
+      <FallingStars />
+
+      {/* ── Technical grid. This was drawn in white, so on the light band it was
+             invisible — three "opacity-[0.03]" layers contributing nothing. ── */}
       <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        className="pointer-events-none absolute inset-0"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.15) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.15) 1px,transparent 1px)",
+            "linear-gradient(rgba(17,17,20,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(17,17,20,0.05) 1px,transparent 1px)",
           backgroundSize: "64px 64px",
+          maskImage: "radial-gradient(ellipse at 50% 25%, black 0%, transparent 72%)",
+          WebkitMaskImage: "radial-gradient(ellipse at 50% 25%, black 0%, transparent 72%)",
         }}
       />
 
-      {/* ── Ambient glows ── */}
-      <div className="absolute top-0 left-0 w-[40rem] h-[40rem] bg-primary/8 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/6 rounded-full blur-[100px] pointer-events-none" />
+      {/* ── Ambient glows. The second was `secondary`, which is near-black ink
+             and read as a grey smudge rather than warmth. ── */}
+      <div className="pointer-events-none absolute top-0 left-0 h-[40rem] w-[40rem] rounded-full bg-primary/8 blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-0 right-0 h-96 w-96 rounded-full bg-accent/6 blur-[100px]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -109,25 +114,14 @@ export default function Hero() {
 
           </div>
 
-          {/* RIGHT — SEO Universe Globe */}
+          {/* RIGHT — the neural orb */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="relative hidden lg:block"
-            style={{ height: "600px" }}
+            transition={{ duration: 1.1, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="relative hidden items-center justify-center lg:flex"
           >
-            {/* Globe canvas */}
-            <SEOUniverse />
-
-            {/* Centre label */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="text-center">
-                <p className="text-[10px] font-bold text-primary-light tracking-[0.3em] uppercase opacity-70">
-                  Search Universe
-                </p>
-              </div>
-            </div>
+            <NeuralOrb />
           </motion.div>
 
         </div>

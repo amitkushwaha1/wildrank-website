@@ -2,7 +2,7 @@ import WhiteLabelPage from "@/components/white-label/WhiteLabelPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "White Label Link Building Services | Wildrank Technologies",
+  title: "White Label Link Building Services | WildRank",
   description: "White label link building for agencies. High-authority backlinks via guest posts, digital PR, and outreach under your brand.",
   alternates: { canonical: "/white-label-link-building" },
 };

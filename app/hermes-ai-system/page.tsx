@@ -4,7 +4,7 @@ import Link from "next/link";
 const SITE = "https://wildranktechnologies.com";
 
 export const metadata: Metadata = {
-  title: "Hermes AI System — AI Call Agent Setup & Missed Call Recovery | Wildrank",
+  title: "Hermes AI System | AI Call Agent & Missed Call Recovery",
   description:
     "Deploy the Hermes AI System as your 24/7 call answering agent. Instant SMS text-back on missed calls, lead qualification and CRM sync. Booked by consultation.",
   alternates: { canonical: "/hermes-ai-system" },

@@ -5,8 +5,8 @@ import CTA from "@/components/home/CTA";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Web Development Pricing | Wildrank Technologies",
-  description: "Web development pricing for landing pages, business websites, e-commerce stores, and custom web applications.",
+  title: "Web Development Pricing | WildRank",
+  description: "Web development pricing for landing pages, business websites, e-commerce stores and custom web apps. Transparent packages with no hidden fees.",
   alternates: { canonical: "/web-development-pricing" },
 };
 

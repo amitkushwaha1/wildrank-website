@@ -2,9 +2,8 @@ import LocationPage from "@/components/locations/LocationPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Philadelphia SEO Company | Wildrank Technologies",
-  description:
-    "Philadelphia, PA: Wildrank is an SEO company for Philadelphia businesses — technical SEO, local search and AI visibility across Google, Perplexity and Gemini. Free audit. No long-term contract.",
+  title: "Philadelphia SEO Company | SEO & AI Search | WildRank",
+  description: "SEO company in Philadelphia, PA — technical SEO, local search and AI search visibility (GEO/AEO) for Philadelphia businesses. Get a free audit.",
   alternates: { canonical: "/philadelphia-seo-company" },
 };
 

@@ -5,8 +5,8 @@ import CTA from "@/components/home/CTA";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Mobile App Development Pricing | Wildrank Technologies",
-  description: "Mobile app development pricing for iOS, Android, and cross-platform apps. React Native and Flutter specialists.",
+  title: "Mobile App Development Pricing | WildRank",
+  description: "Mobile app development pricing for iOS, Android and cross-platform builds. React Native and Flutter specialists with fixed, upfront project quotes.",
   alternates: { canonical: "/mobile-app-pricing" },
 };
 
