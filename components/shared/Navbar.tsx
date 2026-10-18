@@ -85,7 +85,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14 lg:h-16">
+        <div className="flex items-center justify-between h-12 lg:h-14">
  
           {/* Logo */}
           <motion.a href="/" whileHover={{ scale: 1.03 }} className="flex items-center flex-shrink-0">
@@ -103,7 +103,7 @@ export default function Navbar() {
               >
                 <a
                   href={link.href}
-                  className="flex items-center gap-1 px-2.5 py-1.5 text-xs font-medium text-muted hover:text-ink transition-colors rounded-md hover:bg-tint/5 whitespace-nowrap"
+                  className="flex items-center gap-1 px-2 py-1 text-[11px] font-medium text-muted hover:text-ink transition-colors rounded-md hover:bg-tint/5 whitespace-nowrap"
                 >
                   {link.label}
                   {link.children && (
@@ -148,7 +148,7 @@ export default function Navbar() {
               href="/contact"
               whileHover={{ scale: 1.04, boxShadow: "0 0 20px rgba(252,72,18,0.4)" }}
               whileTap={{ scale: 0.97 }}
-              className="bg-accent hover:bg-accent-dark text-white text-xs font-semibold px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
+              className="bg-accent hover:bg-accent-dark text-white text-[11px] font-semibold px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap"
             >
               Get Free Audit
             </motion.a>
