@@ -183,10 +183,9 @@ export default function Testimonials() {
       </div>
 
       {/* Full-bleed, so the row runs off both edges instead of stopping at the
-          gutter. Pausing on hover exists so a card can actually be finished
-          reading; on touch there is no hover and it simply keeps rolling. */}
-      <div className="group flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] motion-reduce:overflow-x-auto">
-        <div className="flex w-max items-stretch gap-6 pr-6 animate-marquee-left group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+          gutter. On touch there is no hover and it simply keeps rolling. */}
+      <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] motion-reduce:overflow-x-auto">
+        <div className="flex w-max items-stretch gap-6 pr-6 animate-marquee-left motion-reduce:animate-none">
           {copies.map((t, i) => (
             <Card
               key={`${t.name}-${i}`}
