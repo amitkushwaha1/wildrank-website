@@ -2,7 +2,7 @@ import WhiteLabelPage from "@/components/white-label/WhiteLabelPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "White Label AI Services | WildRank",
+  title: "White Label AI Services | Wildrank Technologies",
   description: "White label AI services for agencies: AI SEO, GEO, AEO, content automation and chatbots, delivered under your brand in your client's own accounts.",
   alternates: { canonical: "/white-label-ai-services" },
 };

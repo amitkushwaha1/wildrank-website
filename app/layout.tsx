@@ -32,7 +32,7 @@ const SITE_URL = "https://wildranktechnologies.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Wildrank | Digital Marketing & IT Solutions",
+  title: "Wildrank Technologies | Digital Marketing & IT Solutions",
   description:
     "Award-winning digital marketing and IT services company. SEO, PPC, Social Media, Web Development, Mobile Apps, and White Label services.",
   verification: {
@@ -78,7 +78,11 @@ const organizationSchema = {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
       name: "Wildrank Technologies",
-      alternateName: "WildRank",
+      // Aliases, not branding. This is the field an assistant reads to decide
+      // that a search for "WildRank" and a search for "Wildrank Technologies"
+      // are the same entity — which is the whole point of alternateName.
+      // Every visible surface says "Wildrank Technologies".
+      alternateName: ["WildRank", "Wildrank"],
       url: SITE_URL,
       description:
         "Digital marketing and IT services company providing SEO, PPC, social media, web development, mobile apps and white label services.",

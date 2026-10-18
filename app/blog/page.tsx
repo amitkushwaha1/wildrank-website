@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog" },
-  title: "Marketing Guides & Insights | WildRank",
+  title: "Marketing Guides & Insights | Wildrank Technologies",
   description:
     "Browse the topics our team works in — SEO, local search, paid media, content, social, AI search and white label growth — and how we approach each one.",
 };

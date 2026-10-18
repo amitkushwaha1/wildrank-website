@@ -347,7 +347,7 @@ export default function NeuralOrb({ className = "" }: { className?: string }) {
       <canvas
         ref={canvasRef}
         role="img"
-        aria-label="Interactive globe of the AI search surfaces Wildrank optimises for: ChatGPT, Gemini, Perplexity, DeepSeek, Claude and Google AI"
+        aria-label="Interactive globe of the AI search surfaces Wildrank Technologies optimises for: ChatGPT, Gemini, Perplexity, DeepSeek, Claude and Google AI"
         className="absolute inset-0 h-full w-full cursor-grab touch-none active:cursor-grabbing"
         onPointerDown={grab}
         onPointerMove={drag}

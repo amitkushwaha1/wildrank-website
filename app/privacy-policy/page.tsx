@@ -2,7 +2,7 @@ import LegalPage from "@/components/shared/LegalPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | WildRank Technologies",
+  title: "Privacy Policy | Wildrank Technologies",
   description:
     "How Wildrank Technologies collects, uses and protects personal data, what our contact form and analytics record, and how to exercise your privacy rights.",
   alternates: { canonical: "/privacy-policy" },
@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
       <div>
         <h2>Who we are</h2>
         <p>
-          Wildrank Technologies (&quot;Wildrank&quot;, &quot;we&quot;, &quot;us&quot;) is a digital
+          Wildrank Technologies (&quot;Wildrank Technologies&quot;, &quot;we&quot;, &quot;us&quot;) is a digital
           marketing and IT services company. We are the controller of the personal data described in
           this policy. For any privacy question or request, write to{" "}
           <a href="mailto:gupta@wildranktechnologies.com">gupta@wildranktechnologies.com</a> or call{" "}

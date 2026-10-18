@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "What is the Hermes AI System?",
-    a: "Hermes is an autonomous AI agent. Deployed as a call-handling agent, it answers inbound calls, responds conversationally, and pushes every conversation to your CRM. Wildrank configures the agent for your business: your services, your hours, your booking rules, and your CRM destination.",
+    a: "Hermes is an autonomous AI agent. Deployed as a call-handling agent, it answers inbound calls, responds conversationally, and pushes every conversation to your CRM. Wildrank Technologies configures the agent for your business: your services, your hours, your booking rules, and your CRM destination.",
   },
   {
     q: "How does it handle a call my staff misses?",
@@ -107,7 +107,7 @@ export default function HermesAISystemPage() {
           <h2 className="text-3xl font-bold text-ink mb-6">What the Hermes AI System actually does</h2>
           <p className="text-muted leading-relaxed max-w-4xl">
             Hermes is an autonomous AI agent. Out of the box it is a general-purpose
-            system; what Wildrank does is configure and deploy it for a specific
+            system; what Wildrank Technologies does is configure and deploy it for a specific
             business — wiring it to your phone line, teaching it your services and
             booking rules, and connecting it to the systems you already use.
           </p>

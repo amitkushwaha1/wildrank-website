@@ -2,7 +2,7 @@ import LegalPage from "@/components/shared/LegalPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | WildRank Technologies",
+  title: "Terms of Service | Wildrank Technologies",
   description:
     "The terms that apply to Wildrank Technologies' website and client engagements: scope, fees, client responsibilities, ownership and limits of liability.",
   alternates: { canonical: "/terms-of-service" },
@@ -19,7 +19,7 @@ export default function TermsOfServicePage() {
         <h2>The agreement</h2>
         <p>
           By using wildranktechnologies.com, or by engaging Wildrank Technologies
-          (&quot;Wildrank&quot;, &quot;we&quot;, &quot;us&quot;) to provide services, you agree to
+          (&quot;Wildrank Technologies&quot;, &quot;we&quot;, &quot;us&quot;) to provide services, you agree to
           these terms. If you are agreeing on behalf of a company, you confirm you are authorised to
           do so.
         </p>
@@ -148,7 +148,7 @@ export default function TermsOfServicePage() {
         <h2>Governing law</h2>
         <p>
           Unless your proposal or master services agreement says otherwise, these terms are governed
-          by the laws of the jurisdiction in which the Wildrank entity that contracts with you is
+          by the laws of the jurisdiction in which the Wildrank Technologies entity that contracts with you is
           registered, and disputes are subject to the courts of that jurisdiction.
         </p>
       </div>

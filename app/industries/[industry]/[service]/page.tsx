@@ -22,10 +22,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!ind || !srv) return {};
 
   // Titles are kept inside the ~60 character window SERPs actually display.
-  // The old form appended "| WildRank" unconditionally, which
-  // pushed all 28 tiles past 60 characters and got the brand cut off anyway.
-  const base = `${srv.shortName} for ${ind.name}`;
-  const title = `${base} | WildRank`.length <= 60 ? `${base} | WildRank` : base;
+  // `ind.short` exists for exactly this: embedding the full name ("for Real
+  // Estate & Property Management") pushed all 28 tiles past 60 characters, so
+  // the old template dropped the brand to compensate. With the short label
+  // every tile keeps both the industry and the full brand name.
+  const title = `${srv.shortName} for ${ind.short} | Wildrank Technologies`;
 
   // Clamp descriptions on a word boundary rather than slicing mid-word at 180.
   const raw =
@@ -125,7 +126,7 @@ export default function IndustryServicePage({ params }: Props) {
       <section className="py-20 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-ink mb-10">
-            Questions {ind.name.toLowerCase()} firms ask us
+            Questions {ind.name.toLowerCase()} ask us
           </h2>
           <div className="max-w-3xl space-y-8">
             {ind.objections.map((o) => (

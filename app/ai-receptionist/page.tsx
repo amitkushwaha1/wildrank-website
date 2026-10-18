@@ -6,7 +6,7 @@ import IndustriesSection from "@/components/shared/IndustriesSection";
 const SITE = "https://wildranktechnologies.com";
 
 export const metadata: Metadata = {
-  title: "AI Receptionist & Missed Call Recovery System | WildRank",
+  title: "AI Receptionist for Missed Calls | Wildrank Technologies",
   description:
     "Never lose a lead to a missed call again. An AI receptionist answers 24/7 and texts missed callers back within seconds. Setup from $499. Book a consultation.",
   alternates: { canonical: "/ai-receptionist" },

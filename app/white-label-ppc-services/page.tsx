@@ -2,7 +2,7 @@ import WhiteLabelPage from "@/components/white-label/WhiteLabelPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "White Label PPC Services | WildRank",
+  title: "White Label PPC Services | Wildrank Technologies",
   description: "White label PPC management for agencies — Google Ads, Bing and paid social campaigns built, optimised and reported entirely under your brand.",
   alternates: { canonical: "/white-label-ppc-services" },
 };

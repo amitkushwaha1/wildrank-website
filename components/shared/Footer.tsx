@@ -50,6 +50,34 @@ const company = [
 ];
 
 /**
+ * White label + staffing pages, plus every pricing page.
+ *
+ * Eleven of these were in the sitemap and reachable from nowhere else on the
+ * site: no other page linked to any of them, so Google crawled each once from
+ * the sitemap and had no reason to come back. The pricing pages were not orphaned
+ * but had a single inbound link each. A footer link from every page is the
+ * cheapest fix, and it lets a reader find them too.
+ */
+const whiteLabel = [
+  { label: "White Label SEO",             href: "/white-label-seo-services" },
+  { label: "White Label PPC",             href: "/white-label-ppc-services" },
+  { label: "White Label Social Media",    href: "/white-label-social-media" },
+  { label: "White Label Digital Marketing", href: "/white-label-digital-marketing" },
+  { label: "White Label Link Building",   href: "/white-label-link-building" },
+  { label: "White Label Guest Posts",     href: "/white-label-guest-post-services" },
+  { label: "White Label Web Development", href: "/white-label-website-development" },
+  { label: "White Label Virtual Assistant", href: "/white-label-virtual-assistant" },
+  { label: "White Label AI Services",     href: "/white-label-ai-services" },
+  { label: "Hire an SEO Expert",          href: "/hire-seo-expert" },
+  { label: "Hire a PPC Expert",           href: "/hire-ppc-expert" },
+  { label: "Web Development Pricing",     href: "/web-development-pricing" },
+  { label: "Mobile App Pricing",          href: "/mobile-app-pricing" },
+  { label: "PPC Pricing",                 href: "/ppc-pricing" },
+  { label: "Social Media Pricing",        href: "/social-media-pricing" },
+  { label: "SEO Pricing",                 href: "/seo-pricing" },
+];
+
+/**
  * A social entry with a placeholder href is not a link. Every entry in
  * socialLinks.ts now has a real URL, so this passes all five through — it stays
  * as a backstop, because the failure it prevents is silent: a dead icon in the
@@ -195,6 +223,24 @@ export default function Footer() {
               </Link>
             </div>
           </motion.div>
+        </div>
+
+        {/* White label + staffing row. See the note on `whiteLabel` above —
+            these pages had no inbound internal link at all. */}
+        <div className="mt-12 pt-8 border-t border-hairline/5">
+          <h4 className="text-xs font-bold text-subtle tracking-[0.2em] uppercase mb-5">
+            White Label, Talent &amp; Pricing
+          </h4>
+          <ul className="flex flex-wrap gap-x-6 gap-y-3">
+            {whiteLabel.map((link) => (
+              <li key={link.label}>
+                <Link href={link.href} className="text-sm text-muted hover:text-ink transition-colors flex items-center gap-2 group">
+                  <span className="w-1 h-1 rounded-full bg-accent/50 group-hover:bg-accent transition-colors flex-shrink-0" />
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 

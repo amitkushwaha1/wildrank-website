@@ -5,7 +5,7 @@ import IndustriesSection from "@/components/shared/IndustriesSection";
 import { PHONE_E164, SITE_URL as SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Generative Engine Optimization (GEO) & AEO | WildRank",
+  title: "GEO & AEO Services | Wildrank Technologies",
   description: "GEO and AEO services that get your brand cited inside ChatGPT, Claude, Gemini and Perplexity answers. Entity work, schema and prompt measurement.",
   alternates: { canonical: "/geo-aeo-services" },
   keywords: [

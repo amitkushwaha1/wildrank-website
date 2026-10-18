@@ -54,7 +54,7 @@ const testimonials: Testimonial[] = [
     sector: "Ecommerce",
     rating: 5,
     result: "+340% Organic Traffic",
-    text: "Wildrank transformed our organic search presence completely. Within 6 months, our traffic grew by 340% and conversions doubled. Their team is incredibly responsive and data-driven.",
+    text: "Wildrank Technologies transformed our organic search presence completely. Within 6 months, our traffic grew by 340% and conversions doubled. Their team is incredibly responsive and data-driven.",
   },
   {
     name: "James Patel",
@@ -90,7 +90,7 @@ const testimonials: Testimonial[] = [
     sector: "Ecommerce",
     rating: 5,
     result: "+220% Revenue",
-    text: "Our e-commerce revenue grew by 220% after partnering with Wildrank. Their holistic approach — SEO, PPC, and CRO together — made all the difference.",
+    text: "Our e-commerce revenue grew by 220% after partnering with Wildrank Technologies. Their holistic approach — SEO, PPC, and CRO together — made all the difference.",
   },
 ];
 

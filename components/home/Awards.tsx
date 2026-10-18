@@ -33,7 +33,7 @@ export default function Awards() {
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted">
             The partnerships and certifications behind the work — each one
-            issued by an organisation outside Wildrank, and each certificate
+            issued by an organisation outside Wildrank Technologies, and each certificate
             available on request.
           </p>
         </motion.div>

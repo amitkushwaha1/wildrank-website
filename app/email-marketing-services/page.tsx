@@ -5,7 +5,7 @@ import EmailMarketingServicesClient from "./client";
 // metadata. The server shell owns the SEO surface; the client component owns
 // the interactive markup. Do not merge them back.
 export const metadata: Metadata = {
-  title: "Email Marketing Services | WildRank",
+  title: "Email Marketing Services | Wildrank Technologies",
   description: "Email that earns the open. Segmented lifecycle campaigns, automations and copywriting that turn subscribers into repeat revenue.",
   alternates: { canonical: "/email-marketing-services" },
 };

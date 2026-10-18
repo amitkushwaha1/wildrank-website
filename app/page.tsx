@@ -15,7 +15,7 @@ import { homeFaqs } from "@/lib/homeFaqs";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Agency in USA | SEO, Social Media, PPC, Web Design - Wildrank Technologies",
+  title: "Digital Marketing Agency in USA | Wildrank Technologies",
   description:
     "Wildrank Technologies is a digital marketing agency in the USA offering SEO, social media, PPC, web design, and growth-focused marketing solutions.",
   // Self-referencing canonical. The homepage was the one page without one,

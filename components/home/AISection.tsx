@@ -101,7 +101,7 @@ export default function AISection() {
               transition={{ duration: 0.6, delay: 0.12 }}
               className="text-muted text-base leading-relaxed mb-8"
             >
-              At Wildrank, our AI SEO strategists combine entity mapping,
+              At Wildrank Technologies, our AI SEO strategists combine entity mapping,
               structured markup and search-intent modelling to keep your brand
               visible in a market where being indexed is no longer the same as
               being recommended.

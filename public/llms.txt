@@ -43,11 +43,15 @@ Contact: +1-775-471-5295 · info@wildranktechnologies.com · https://wildranktec
 
 ## Pricing
 
-- [SEO Pricing](https://wildranktechnologies.com/seo-pricing)
-- [PPC Pricing](https://wildranktechnologies.com/ppc-pricing)
-- [Social Media Pricing](https://wildranktechnologies.com/social-media-pricing)
-- [Web Development Pricing](https://wildranktechnologies.com/web-development-pricing)
-- [Mobile App Pricing](https://wildranktechnologies.com/mobile-app-pricing)
+Every service is sold in tiers, never at a single price. The figures below are
+the published ranges in USD; each page lists what changes between the tiers.
+Quoting one number as "the price" would be quoting the entry tier.
+
+- [SEO Pricing](https://wildranktechnologies.com/seo-pricing) — Basic, Silver, Gold, Premium · $499–$1,799/month
+- [PPC Pricing](https://wildranktechnologies.com/ppc-pricing) — Basic, Silver, Gold, Premium · $299–$799/month, ad spend separate
+- [Social Media Pricing](https://wildranktechnologies.com/social-media-pricing) — Basic, Silver, Gold, Premium · $899–$2,499/month
+- [Web Development Pricing](https://wildranktechnologies.com/web-development-pricing) — Landing Page to Custom App · $799–$9,999 per project
+- [Mobile App Pricing](https://wildranktechnologies.com/mobile-app-pricing) — MVP to Full-Featured · $4,999–$19,999 per project, enterprise quoted
 
 ## Industries
 

@@ -2,7 +2,7 @@ import WhiteLabelPage from "@/components/white-label/WhiteLabelPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "White Label Virtual Assistant Services | WildRank",
+  title: "White Label Virtual Assistant | Wildrank Technologies",
   description: "White label virtual assistants for agencies: admin, data entry, scheduling, CRM hygiene and customer support, all working under your brand.",
   alternates: { canonical: "/white-label-virtual-assistant" },
 };

@@ -12,7 +12,7 @@ import type { FaqItem } from "@/components/shared/FaqAccordion";
  */
 export const homeFaqs: FaqItem[] = [
   {
-    q: "What makes Wildrank different from other digital marketing agencies?",
+    q: "What makes Wildrank Technologies different from other digital marketing agencies?",
     a: "We pair AI-powered tools and a dedicated team. Unlike generalist agencies, we offer end-to-end services — from SEO and PPC to custom software development — all under one roof. Our white-label model also lets agencies scale without hiring.",
   },
   {

@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ai-marketing" },
-  title: "AI Marketing Agency | AI-Driven Campaigns | WildRank",
+  title: "AI Marketing Agency | Wildrank Technologies",
   description: "AI-powered digital marketing: smarter targeting, faster creative testing and lower acquisition costs — with human strategy behind every campaign.",
 };
 

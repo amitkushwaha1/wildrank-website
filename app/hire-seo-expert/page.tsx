@@ -2,7 +2,7 @@ import WhiteLabelPage from "@/components/white-label/WhiteLabelPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hire an SEO Expert | Dedicated SEO Specialists | WildRank",
+  title: "Hire an SEO Expert | SEO Specialists | Wildrank Technologies",
   description: "Hire a dedicated SEO expert who works under your brand. Google, Perplexity and Gemini visibility for startups and local businesses. Book a call.",
   alternates: { canonical: "/hire-seo-expert" },
 };
@@ -26,6 +26,6 @@ const faqs = [
 export default function Page() {
   return <WhiteLabelPage badge="Hire SEO Expert" title="Hire a Dedicated" highlight="SEO Expert"
     description="Add a skilled, vetted SEO specialist to your team without the cost and hassle of hiring in-house."
-    intro="Building an in-house SEO team is expensive and slow. Instead, hire a dedicated white-label SEO expert through Wildrank — a vetted professional who works as part of your team, handles your clients' SEO, and reports under your brand, at a fraction of the cost of a full-time hire."
+    intro="Building an in-house SEO team is expensive and slow. Instead, hire a dedicated white-label SEO expert through Wildrank Technologies — a vetted professional who works as part of your team, handles your clients' SEO, and reports under your brand, at a fraction of the cost of a full-time hire."
     features={features} faqs={faqs} />;
 }

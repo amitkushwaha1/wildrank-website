@@ -95,7 +95,7 @@ export default function LocationPage({ city, state }: Props) {
       <section className="py-24 lg:py-16 section-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">Why {city} Businesses Choose <span className="gradient-text">Wildrank</span></h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">Why {city} Businesses Choose <span className="gradient-text">Wildrank Technologies</span></h2>
             <p className="text-muted text-lg max-w-2xl mx-auto">We understand the {city} market. Our local SEO strategies are tailored to your city, your industry, and your competition.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

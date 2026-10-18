@@ -21,6 +21,15 @@ const nextConfig = {
       { source: "/services/local-seo", destination: "/local-seo-services", permanent: true },
       { source: "/services/email-marketing", destination: "/email-marketing-services", permanent: true },
       { source: "/services/content-marketing", destination: "/content-marketing-services", permanent: true },
+      // The rest of the same family. These four were the only /services/*
+      // children still 404ing: /seo-services and /service/seo-services were
+      // mapped but /services/seo-services was not, so Google followed the
+      // pattern, hit a 404, and dropped the URL.
+      { source: "/services/seo-services", destination: "/search-engine-optimization-services", permanent: true },
+      { source: "/services/seo", destination: "/search-engine-optimization-services", permanent: true },
+      { source: "/services/ppc", destination: "/ppc-services", permanent: true },
+      { source: "/services/web-development", destination: "/web-development-pricing", permanent: true },
+      { source: "/digital-marketing-agency", destination: "/digital-marketing-services", permanent: true },
       { source: "/seo-services", destination: "/search-engine-optimization-services", permanent: true },
       { source: "/search-engine-optimization", destination: "/search-engine-optimization-services", permanent: true },
 

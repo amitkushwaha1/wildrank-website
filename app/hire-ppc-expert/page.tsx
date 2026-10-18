@@ -2,7 +2,7 @@ import WhiteLabelPage from "@/components/white-label/WhiteLabelPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hire a PPC Expert | Google & Meta Ads Specialists | WildRank",
+  title: "Hire a PPC Expert | Wildrank Technologies",
   description: "Hire dedicated white-label PPC experts for your agency. Certified Google & Meta ads specialists working under your brand.",
   alternates: { canonical: "/hire-ppc-expert" },
 };
@@ -26,6 +26,6 @@ const faqs = [
 export default function Page() {
   return <WhiteLabelPage badge="Hire PPC Expert" title="Hire a Dedicated" highlight="PPC Expert"
     description="Add a certified paid media specialist to your team without the overhead of a full-time hire."
-    intro="Great PPC managers are hard to find and expensive to keep. Hire a dedicated white-label PPC expert through Wildrank — a certified Google and Meta ads specialist who manages your clients' campaigns, optimizes for ROAS, and reports under your brand, all for a fraction of an in-house salary."
+    intro="Great PPC managers are hard to find and expensive to keep. Hire a dedicated white-label PPC expert through Wildrank Technologies — a certified Google and Meta ads specialist who manages your clients' campaigns, optimizes for ROAS, and reports under your brand, all for a fraction of an in-house salary."
     features={features} faqs={faqs} />;
 }

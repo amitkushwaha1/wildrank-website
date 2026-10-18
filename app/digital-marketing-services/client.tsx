@@ -214,7 +214,7 @@ export default function DigitalMarketingServicesClient() {
       <section className="py-24 lg:py-16 bg-canvas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-16">
-            <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">Why Wildrank</span>
+            <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">Why Wildrank Technologies</span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">What Sets Us <span className="gradient-text">Apart</span></h2>
             <p className="text-muted text-lg max-w-2xl mx-auto">We&apos;re not another generalist agency. We&apos;re a performance-obsessed team that lives and breathes ROI.</p>
           </motion.div>

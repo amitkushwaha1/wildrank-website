@@ -1,4 +1,4 @@
-# robots.txt — WildRank Technologies
+# robots.txt — Wildrank Technologies
 # AI crawler permissions added per the Gemini execution plan.
 # Without this file the site returned HTTP 404 to every crawler.
 

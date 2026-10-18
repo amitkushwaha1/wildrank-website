@@ -2,7 +2,7 @@ import WhiteLabelPage from "@/components/white-label/WhiteLabelPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "White Label Social Media Management | WildRank",
+  title: "White Label Social Media Management | Wildrank Technologies",
   description: "White label social media management for agencies. Content, scheduling, community management, and paid social under your brand.",
   alternates: { canonical: "/white-label-social-media" },
 };

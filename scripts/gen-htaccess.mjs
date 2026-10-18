@@ -36,6 +36,25 @@ const rx = (p) =>
     .replace(/[.+*?^${}()|[\]\\]/g, "\\$&")
     .replace(/^\//, "^/");
 
+// Every real page in the export, as a clean path without the .html extension.
+// Used to emit one clean-URL rewrite per page (see rule 4 — a catch-all there
+// is what produced HTTP 500s on /about/anything).
+const cleanPages = [];
+(function walk(dir) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      if (entry.name !== "_next") walk(full);
+      continue;
+    }
+    if (!entry.name.endsWith(".html") || entry.name === "404.html") continue;
+    const rel = path.relative(outDir, full).split(path.sep).join("/");
+    if (rel === "index.html") continue; // "/" is handled by DirectoryIndex
+    cleanPages.push(rel.replace(/\.html$/, ""));
+  }
+})(outDir);
+cleanPages.sort();
+
 // Every destination must be a real page in the export, or we would be
 // redirecting traffic from one 404 straight into another.
 const destOk = (dest) => {
@@ -80,10 +99,14 @@ const generated = [
   "RewriteRule ^(.+)/$ /$1 [R=308,L]",
   "",
   "# ── 4. Clean URLs: /about → /about.html ───────────────────────────────────",
-  "RewriteCond %{REQUEST_FILENAME} !-f",
-  "RewriteCond %{REQUEST_FILENAME} !-d",
-  "RewriteCond %{REQUEST_FILENAME}\\.html -f",
-  "RewriteRule ^(.+)$ $1.html [L]",
+  "# One rule per real page, generated from the export. The obvious catch-all",
+  "# (RewriteRule ^(.+)$ $1.html) is what made this host answer HTTP 500 for",
+  "# /about/anything and /blog/old-slug: LiteSpeed resolved the first segment to",
+  "# about.html and then ran it with the trailing segment as PATH_INFO. Google",
+  "# reads 5xx as \"come back later\", so those legacy URLs never resolved at all.",
+  "# Explicit rules cannot mismatch — anything not listed falls through to the",
+  "# 404 ErrorDocument below, which is what these URLs should have returned.",
+  ...cleanPages.map((p) => `RewriteRule ^${p}$ /${p}.html [L]`),
   "",
   "# ── 5. Errors ─────────────────────────────────────────────────────────────",
   "ErrorDocument 404 /404.html",

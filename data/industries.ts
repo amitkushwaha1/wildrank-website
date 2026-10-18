@@ -18,6 +18,12 @@ export type ServiceSlug =
 export interface Industry {
   slug: string;
   name: string;
+  /**
+   * Short label for SERP titles, where "for Real Estate & Property Management"
+   * would push the brand past the ~60-character window Google displays. The
+   * full `name` stays in the H1, the body copy and the schema.
+   */
+  short: string;
   /** The specific operational pain this trade actually has. */
   painPoint: string;
   /** What the job looks like when the call is lost. */
@@ -32,6 +38,7 @@ export const INDUSTRIES: Industry[] = [
   {
     slug: "roofing",
     name: "Roofing Contractors",
+    short: "Roofing",
     painPoint:
       "Crews are on roofs. When a storm call rings during a tear-off, nobody answers, and by the time the office opens the homeowner has already booked the next roofer on their list.",
     lostCallScene:
@@ -58,6 +65,7 @@ export const INDUSTRIES: Industry[] = [
   {
     slug: "hvac-plumbing",
     name: "HVAC & Plumbing Services",
+    short: "HVAC & Plumbing",
     painPoint:
       "Emergency calls arrive at the worst possible moment — nights, weekends, when the office is shut. Every call that hits voicemail is a homeowner standing in water calling the next number.",
     lostCallScene:
@@ -84,6 +92,7 @@ export const INDUSTRIES: Industry[] = [
   {
     slug: "legal",
     name: "Law Firms & Legal Intake",
+    short: "Law Firms",
     painPoint:
       "Prospective clients call three or four firms and take the first one who answers properly. Voicemail is not an option — it is an instruction to call the next firm.",
     lostCallScene:
@@ -110,6 +119,7 @@ export const INDUSTRIES: Industry[] = [
   {
     slug: "dental-medical",
     name: "Dental & Medical Clinics",
+    short: "Dental & Medical",
     painPoint:
       "The front desk is buried in check-ins while the phone rings. Calls go to voicemail during the busiest part of the day, and unfilled appointment slots sit there every month.",
     lostCallScene:
@@ -136,6 +146,7 @@ export const INDUSTRIES: Industry[] = [
   {
     slug: "real-estate",
     name: "Real Estate & Property Management",
+    short: "Real Estate",
     painPoint:
       "Agents are in showings, on site, or driving between them. Buyer calls arrive precisely when the agent cannot pick up, and a buyer who is ghosted moves on.",
     lostCallScene:
@@ -162,6 +173,7 @@ export const INDUSTRIES: Industry[] = [
   {
     slug: "auto-repair",
     name: "Auto Repair & Dealerships",
+    short: "Auto Repair",
     painPoint:
       "Service advisors are on bays, phones ring during peak, and customers calling for a quote hear music instead of an answer — then take the quote somewhere else.",
     lostCallScene:
@@ -188,6 +200,7 @@ export const INDUSTRIES: Industry[] = [
   {
     slug: "b2b-saas",
     name: "B2B SaaS & Tech Companies",
+    short: "B2B SaaS",
     painPoint:
       "Nobody is on the phone at 2am in London or Singapore, and inbound demo requests from those hours are the ones that get answered by a competitor in their own working day.",
     lostCallScene:
