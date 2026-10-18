@@ -81,6 +81,15 @@ export default function MissedCalls() {
         <div className="grid items-center gap-14 lg:grid-cols-2">
           {/* ── Left — what it is, then why it matters ── */}
           <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-xs font-semibold text-primary-light"
+            >
+              <PhoneMissed className="h-3.5 w-3.5" /> AI Receptionist · Missed Call Recovery
+            </motion.div>
 
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -185,28 +194,37 @@ export default function MissedCalls() {
                 </span>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+              <ol className="relative">
                 {TIMELINE.map(({ icon: Icon, time, title, detail, strong }, i) => (
-                  <div key={title} className="relative flex flex-col items-center text-center">
-                    {/* Connector line between steps */}
-                    {i < TIMELINE.length - 1 && (
-                      <span className="absolute left-[calc(50%+1.5rem)] top-4 hidden h-px w-[calc(100%-3rem)] bg-hairline/20 sm:block" />
-                    )}
-                    <span
-                      className={`z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${
-                        strong
-                          ? "bg-primary text-white"
-                          : "bg-primary/10 text-primary-light"
-                      }`}
-                    >
-                      <Icon className="h-4 w-4" />
-                    </span>
-                    <p className="mt-3 text-sm font-bold text-ink">{title}</p>
-                    <span className="font-mono text-[10px] text-subtle">{time}</span>
-                    <p className="mt-1 text-xs leading-relaxed text-muted">{detail}</p>
-                  </div>
+                  <li key={title} className="relative flex gap-4">
+                    <div className="flex flex-col items-center">
+                      <span
+                        className={`z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${
+                          strong
+                            ? "bg-primary text-white"
+                            : "bg-primary/10 text-primary-light"
+                        }`}
+                      >
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      {i < TIMELINE.length - 1 && (
+                        <span className="w-px flex-1 bg-hairline/15" />
+                      )}
+                    </div>
+                    <div className="pb-6 last:pb-0">
+                      <div className="flex items-baseline gap-3">
+                        <p className="text-sm font-bold text-ink">{title}</p>
+                        <span className="font-mono text-[11px] text-subtle">
+                          {time}
+                        </span>
+                      </div>
+                      <p className="mt-0.5 text-sm leading-relaxed text-muted">
+                        {detail}
+                      </p>
+                    </div>
+                  </li>
                 ))}
-              </div>
+              </ol>
             </div>
 
             <p className="mt-4 text-center text-xs text-subtle">
