@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import IndustriesSection from "@/components/shared/IndustriesSection";
 
 const SITE = "https://wildranktechnologies.com";
 
@@ -243,6 +244,8 @@ export default function HermesAISystemPage() {
           </div>
         </div>
       </section>
+
+      <IndustriesSection />
 
       {/* CTA */}
       <section className="py-20 lg:py-16 bg-dark-card border-t border-dark-border">

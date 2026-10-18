@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, X, ChevronDown, ChevronUp, ArrowRight, Zap, Star } from "lucide-react";
 import CTA from "@/components/home/CTA";
+import IndustriesSection from "@/components/shared/IndustriesSection";
 
 type Val = boolean | string;
 
@@ -245,6 +246,7 @@ export default function PpcPricingClient() {
         </div>
       </section>
 
+      <IndustriesSection />
       <CTA />
     </>
   );

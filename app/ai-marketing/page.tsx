@@ -2,6 +2,7 @@ import AIHero from "@/components/ai-marketing/AIHero";
 import AICapabilities from "@/components/ai-marketing/AICapabilities";
 import AIProcess from "@/components/ai-marketing/AIProcess";
 import AIResults from "@/components/ai-marketing/AIResults";
+import IndustriesSection from "@/components/shared/IndustriesSection";
 import CTA from "@/components/home/CTA";
 import type { Metadata } from "next";
 
@@ -18,6 +19,7 @@ export default function AIMarketingPage() {
       <AICapabilities />
       <AIProcess />
       <AIResults />
+      <IndustriesSection />
       <CTA />
     </>
   );

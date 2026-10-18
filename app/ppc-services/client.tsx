@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, CheckCircle, MousePointerClick, Target, TrendingUp, BarChart3, DollarSign, RefreshCw, ShoppingCart, Globe, Plus, Minus } from "lucide-react";
 import CTA from "@/components/home/CTA";
+import IndustriesSection from "@/components/shared/IndustriesSection";
 
 const services = [
   { icon: MousePointerClick, title: "Google Ads Management", desc: "Search, display, shopping, and Performance Max campaigns optimized for your target CPA and ROAS goals.", color: "text-blue-600", bg: "bg-blue-500/10" },
@@ -175,6 +176,7 @@ export default function PpcServicesClient() {
         </div>
       </section>
 
+      <IndustriesSection />
       <CTA />
     </>
   );

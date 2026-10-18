@@ -23,6 +23,7 @@ import {
   Workflow,
 } from "lucide-react";
 import CTA from "@/components/home/CTA";
+import IndustriesSection from "@/components/shared/IndustriesSection";
 
 const painPoints = [
   { icon: AlertTriangle, text: "Your emails land in spam or get ignored — open rates keep declining quarter after quarter" },
@@ -264,6 +265,7 @@ export default function EmailMarketingServicesClient() {
         </div>
       </section>
 
+      <IndustriesSection />
       <CTA />
     </>
   );

@@ -23,6 +23,7 @@ import {
   Eye,
 } from "lucide-react";
 import CTA from "@/components/home/CTA";
+import IndustriesSection from "@/components/shared/IndustriesSection";
 
 const painPoints = [
   { icon: AlertTriangle, text: "You post consistently but engagement is flatlined and follower growth has stalled" },
@@ -264,6 +265,7 @@ export default function SocialMediaMarketingServicesClient() {
         </div>
       </section>
 
+      <IndustriesSection />
       <CTA />
     </>
   );

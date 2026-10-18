@@ -4,6 +4,7 @@ import { PHONE_E164 } from "@/lib/site";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, MapPin, TrendingUp, Search, Users, BarChart3 } from "lucide-react";
 import CTA from "@/components/home/CTA";
+import IndustriesSection from "@/components/shared/IndustriesSection";
 import { buildFaqEntries } from "./faqs";
 
 interface Props {
@@ -223,6 +224,7 @@ export default function LocationPage({ city, state }: Props) {
         </div>
       </section>
 
+      <IndustriesSection />
       <CTA />
     </>
   );

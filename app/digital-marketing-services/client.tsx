@@ -23,6 +23,7 @@ import {
   DollarSign,
 } from "lucide-react";
 import CTA from "@/components/home/CTA";
+import IndustriesSection from "@/components/shared/IndustriesSection";
 
 const painPoints = [
   { icon: AlertTriangle, text: "You're spending on multiple channels but can't tell which ones are actually driving revenue" },
@@ -264,6 +265,7 @@ export default function DigitalMarketingServicesClient() {
         </div>
       </section>
 
+      <IndustriesSection />
       <CTA />
     </>
   );

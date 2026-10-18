@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import FaqAccordion from "@/components/shared/FaqAccordion";
+import IndustriesSection from "@/components/shared/IndustriesSection";
 import { PHONE_E164, SITE_URL as SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -237,6 +238,8 @@ export default function GeoAeoServicesPage() {
         intro="What clients ask us before they commit to a generative-search programme."
         className="bg-dark-card border-y border-dark-border"
       />
+
+      <IndustriesSection />
 
       <section className="py-20 lg:py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

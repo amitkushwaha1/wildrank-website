@@ -23,6 +23,7 @@ import {
   Search,
 } from "lucide-react";
 import CTA from "@/components/home/CTA";
+import IndustriesSection from "@/components/shared/IndustriesSection";
 
 const painPoints = [
   { icon: AlertTriangle, text: "You publish content regularly but it barely gets traffic and never generates leads" },
@@ -264,6 +265,7 @@ export default function ContentMarketingServicesClient() {
         </div>
       </section>
 
+      <IndustriesSection />
       <CTA />
     </>
   );

@@ -23,6 +23,7 @@ import {
   Target,
 } from "lucide-react";
 import CTA from "@/components/home/CTA";
+import IndustriesSection from "@/components/shared/IndustriesSection";
 import AISeoSection from "@/components/solutions/seo/AISeoSection";
 
 const painPoints = [
@@ -269,6 +270,7 @@ export default function SearchEngineOptimizationServicesClient() {
       </section>
 
       {/* CTA */}
+      <IndustriesSection />
       <CTA />
     </>
   );

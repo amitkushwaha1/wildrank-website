@@ -23,6 +23,7 @@ import {
   Radio,
 } from "lucide-react";
 import CTA from "@/components/home/CTA";
+import IndustriesSection from "@/components/shared/IndustriesSection";
 
 const painPoints = [
   { icon: AlertTriangle, text: "Over 60% of your traffic is mobile but your marketing strategy still treats it as an afterthought" },
@@ -264,6 +265,7 @@ export default function MobileMarketingServicesClient() {
         </div>
       </section>
 
+      <IndustriesSection />
       <CTA />
     </>
   );

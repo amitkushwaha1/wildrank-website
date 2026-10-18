@@ -23,6 +23,7 @@ import {
   Phone,
 } from "lucide-react";
 import CTA from "@/components/home/CTA";
+import IndustriesSection from "@/components/shared/IndustriesSection";
 
 const painPoints = [
   { icon: AlertTriangle, text: "Your business doesn't show up in Google Maps or the local 3-pack when customers search nearby" },
@@ -264,6 +265,7 @@ export default function LocalSeoServicesClient() {
         </div>
       </section>
 
+      <IndustriesSection />
       <CTA />
     </>
   );

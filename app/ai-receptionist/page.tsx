@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PHONE_E164 } from "@/lib/site";
+import IndustriesSection from "@/components/shared/IndustriesSection";
 
 const SITE = "https://wildranktechnologies.com";
 
@@ -182,6 +183,8 @@ export default function AIReceptionistPage() {
           </div>
         </div>
       </section>
+
+      <IndustriesSection />
 
       <section className="py-20 lg:py-16 bg-dark-card border-t border-dark-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
