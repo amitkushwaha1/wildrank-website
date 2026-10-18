@@ -30,9 +30,9 @@ export default function Logo({ size = "md", on = "light", className = "", threeD
   // on mobile and 80px on desktop, so `lg` steps up rather than sitting at one
   // fixed height that is cramped on a phone and lost on a desktop.
   const dimensions = {
-    sm: { width: 160,  height: 60,  className: "h-10 w-auto" },
-    md: { width: 240,  height: 88,  className: "h-14 w-auto" },
-    lg: { width: 320,  height: 118, className: "h-16 lg:h-20 w-auto" },
+    sm: { width: 70,  height: 26,  className: "h-4 w-auto" },
+    md: { width: 100, height: 37,  className: "h-6 w-auto" },
+    lg: { width: 140, height: 52,  className: "h-8 lg:h-9 w-auto" },
   };
 
   const d = dimensions[size];
