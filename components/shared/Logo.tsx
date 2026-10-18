@@ -30,9 +30,9 @@ export default function Logo({ size = "md", on = "light", className = "", threeD
   // on mobile and 80px on desktop, so `lg` steps up rather than sitting at one
   // fixed height that is cramped on a phone and lost on a desktop.
   const dimensions = {
-    sm: { width: 130,  height: 48, className: "h-8 w-auto" },
-    md: { width: 180,  height: 66, className: "h-11 w-auto" },
-    lg: { width: 229,  height: 84, className: "h-11 lg:h-14 w-auto" },
+    sm: { width: 160,  height: 60,  className: "h-10 w-auto" },
+    md: { width: 240,  height: 88,  className: "h-14 w-auto" },
+    lg: { width: 320,  height: 118, className: "h-16 lg:h-20 w-auto" },
   };
 
   const d = dimensions[size];
@@ -56,15 +56,15 @@ export default function Logo({ size = "md", on = "light", className = "", threeD
       style={{ perspective: "900px" }}
     >
       <span
-        className="logo-3d-inner relative inline-block transition-transform duration-500 ease-out will-change-transform"
-        style={{ transformStyle: "preserve-3d" }}
+        className="logo-3d-inner relative inline-block transition-transform duration-500 ease-out"
+        style={{ transformStyle: "preserve-3d", backfaceVisibility: "hidden", transform: "translateZ(0)" }}
       >
         <Image
           src={ASSETS[on]}
           alt="Wildrank Technologies"
           width={d.width}
           height={d.height}
-          className={`${d.className} object-contain drop-shadow-[0_8px_16px_rgba(207,59,15,0.35)] transition-all duration-500 group-hover:drop-shadow-[0_18px_32px_rgba(207,59,15,0.55)]`}
+          className={`${d.className} object-contain drop-shadow-[0_12px_24px_rgba(207,59,15,0.4)] transition-all duration-500 group-hover:drop-shadow-[0_28px_48px_rgba(207,59,15,0.65)]`}
           priority
         />
       </span>
