@@ -16,6 +16,8 @@ interface LogoProps {
    */
   on?: "light" | "dark";
   className?: string;
+  /** Enable the 3D pop-out effect (perspective + hover lift). Defaults on. */
+  threeD?: boolean;
 }
 
 const ASSETS = {
@@ -23,7 +25,7 @@ const ASSETS = {
   dark: "/logo-on-dark.png",
 } as const;
 
-export default function Logo({ size = "md", on = "light", className = "" }: LogoProps) {
+export default function Logo({ size = "md", on = "light", className = "", threeD = true }: LogoProps) {
   // Sized against the surfaces that actually use them: the navbar bar is 64px
   // on mobile and 80px on desktop, so `lg` steps up rather than sitting at one
   // fixed height that is cramped on a phone and lost on a desktop.
@@ -35,14 +37,37 @@ export default function Logo({ size = "md", on = "light", className = "" }: Logo
 
   const d = dimensions[size];
 
+  if (!threeD) {
+    return (
+      <Image
+        src={ASSETS[on]}
+        alt="Wildrank Technologies"
+        width={d.width}
+        height={d.height}
+        className={`${d.className} object-contain ${className}`}
+        priority
+      />
+    );
+  }
+
   return (
-    <Image
-      src={ASSETS[on]}
-      alt="Wildrank Technologies"
-      width={d.width}
-      height={d.height}
-      className={`${d.className} object-contain ${className}`}
-      priority
-    />
+    <span
+      className={`logo-3d group inline-block ${className}`}
+      style={{ perspective: "900px" }}
+    >
+      <span
+        className="logo-3d-inner relative inline-block transition-transform duration-500 ease-out will-change-transform"
+        style={{ transformStyle: "preserve-3d" }}
+      >
+        <Image
+          src={ASSETS[on]}
+          alt="Wildrank Technologies"
+          width={d.width}
+          height={d.height}
+          className={`${d.className} object-contain drop-shadow-[0_8px_16px_rgba(207,59,15,0.35)] transition-all duration-500 group-hover:drop-shadow-[0_18px_32px_rgba(207,59,15,0.55)]`}
+          priority
+        />
+      </span>
+    </span>
   );
 }
