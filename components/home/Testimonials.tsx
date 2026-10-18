@@ -1,180 +1,218 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { useMemo, useState } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Quote, Star } from "lucide-react";
 
-const testimonials = [
+/**
+ * Client results.
+ *
+ * This was a single featured quote in a carousel with dot navigation, plus a
+ * row of five mini-cards repeating the same five people — the same content
+ * twice, and only one of the five actually present in the HTML at any moment,
+ * because the carousel swapped them through AnimatePresence. Every quote is now
+ * a card in a grid, so all of them exist as crawlable text, and the sector
+ * filter row does the job the mini-card row was doing.
+ *
+ * The card shape follows the pattern the sector uses: quote, mark, then the
+ * company. Each card carries a specific result, because a quote without a
+ * number reads as a compliment rather than evidence.
+ *
+ * Two deliberate omissions:
+ *
+ *  - No Review or AggregateRating markup. Self-hosted reviews are not eligible
+ *    for review rich results, and marking up a testimonial we cannot point an
+ *    auditor at would be structured-data spam on the page that most needs to
+ *    look straight.
+ *  - No invented companies. The `logo` field is here so a real client logo can
+ *    be dropped in with one line; until one is supplied the card falls back to
+ *    an initials monogram rather than a placeholder mark.
+ */
+interface Testimonial {
+  name: string;
+  role: string;
+  company: string;
+  /** Groups the card under the filter chips. */
+  sector: string;
+  rating: number;
+  result: string;
+  text: string;
+  /** Path under /public once a client has approved their mark. */
+  logo?: string;
+}
+
+const testimonials: Testimonial[] = [
   {
     name: "Sarah Mitchell",
-    role: "CMO, TechRetail Inc.",
-    avatar: "SM",
+    role: "CMO",
+    company: "TechRetail Inc.",
+    sector: "Ecommerce",
     rating: 5,
-    text: "Wildrank transformed our organic search presence completely. Within 6 months, our traffic grew by 340% and conversions doubled. Their team is incredibly responsive and data-driven.",
     result: "+340% Organic Traffic",
+    text: "Wildrank transformed our organic search presence completely. Within 6 months, our traffic grew by 340% and conversions doubled. Their team is incredibly responsive and data-driven.",
   },
   {
     name: "James Patel",
-    role: "Founder, GrowthAgency",
-    avatar: "JP",
+    role: "Founder",
+    company: "GrowthAgency",
+    sector: "Agencies",
     rating: 5,
-    text: "We white-labeled their SEO and PPC services for our clients. The quality is outstanding and the turnaround is fast. It's like having a 50-person team without the overhead.",
     result: "60% Cost Savings",
+    text: "We white-labelled their SEO and PPC services for our clients. The quality is outstanding and the turnaround is fast. It's like having a 50-person team without the overhead.",
   },
   {
     name: "Emily Chen",
-    role: "VP Marketing, HealthPlus",
-    avatar: "EC",
+    role: "VP Marketing",
+    company: "HealthPlus",
+    sector: "Healthcare",
     rating: 5,
-    text: "Their PPC campaigns delivered an 8.5x ROI in the first quarter. The team understood our healthcare compliance requirements and built campaigns that actually convert.",
     result: "8.5x ROI",
+    text: "Their PPC campaigns delivered an 8.5x ROI in the first quarter. The team understood our healthcare compliance requirements and built campaigns that actually convert.",
   },
   {
     name: "David Okafor",
-    role: "CEO, EduLearn Platform",
-    avatar: "DO",
+    role: "CEO",
+    company: "EduLearn Platform",
+    sector: "Education",
     rating: 5,
-    text: "The mobile app they built for us has over 50,000 active users. Clean code, beautiful UI, and delivered on time. We've already started our second project with them.",
     result: "50K+ App Users",
+    text: "The mobile app they built for us has over 50,000 active users. Clean code, beautiful UI, and delivered on time. We've already started our second project with them.",
   },
   {
     name: "Rachel Torres",
-    role: "Director, LuxeCommerce",
-    avatar: "RT",
+    role: "Director",
+    company: "LuxeCommerce",
+    sector: "Ecommerce",
     rating: 5,
-    text: "Our e-commerce revenue grew by 220% after partnering with Wildrank. Their holistic approach — SEO, PPC, and CRO together — made all the difference.",
     result: "+220% Revenue",
+    text: "Our e-commerce revenue grew by 220% after partnering with Wildrank. Their holistic approach — SEO, PPC, and CRO together — made all the difference.",
   },
 ];
 
-export default function Testimonials() {
-  const [current, setCurrent] = useState(0);
+const initials = (name: string) =>
+  name
+    .split(" ")
+    .map((part) => part[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
 
-  const prev = () => setCurrent((c) => (c === 0 ? testimonials.length - 1 : c - 1));
-  const next = () => setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
+export default function Testimonials() {
+  const [active, setActive] = useState("All");
+
+  // Sectors in the order they first appear, with counts — a filter row without
+  // counts looks like a carousel, and the reader cannot tell it is a filter.
+  const sectors = useMemo(() => {
+    const seen: { label: string; count: number }[] = [];
+    for (const t of testimonials) {
+      const hit = seen.find((s) => s.label === t.sector);
+      if (hit) hit.count += 1;
+      else seen.push({ label: t.sector, count: 1 });
+    }
+    return [{ label: "All", count: testimonials.length }, ...seen];
+  }, []);
+
+  const shown = useMemo(
+    () => (active === "All" ? testimonials : testimonials.filter((t) => t.sector === active)),
+    [active]
+  );
 
   return (
     <section id="testimonials" className="section-gradient py-24 lg:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-12 text-center"
         >
-          <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">
+          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-accent">
             Client Stories
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink mb-4">
+          <h2 className="mb-4 text-3xl font-extrabold text-ink sm:text-4xl lg:text-5xl">
             Results Our Clients <span className="gradient-text">Love</span>
           </h2>
-          <p className="text-muted text-lg max-w-2xl mx-auto">
-            Real results from real businesses. See what our clients say about working with us.
+          <p className="mx-auto max-w-2xl text-lg text-muted">
+            Real results from real businesses. See what our clients say about
+            working with us.
           </p>
         </motion.div>
 
-        {/* Featured testimonial */}
-        <div className="relative max-w-4xl mx-auto mb-12">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={current}
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -40 }}
-              transition={{ duration: 0.4 }}
-              className="glass-card rounded-2xl p-8 md:p-12 border border-dark-border relative"
-            >
-              <Quote className="absolute top-6 right-8 w-12 h-12 text-primary/20" />
+        {/* Sector filter. Same five people, sliced by the industry they are in. */}
+        <div className="mb-10 flex flex-wrap items-center justify-center gap-2">
+          {sectors.map(({ label, count }) => {
+            const on = label === active;
+            return (
+              <button
+                key={label}
+                type="button"
+                onClick={() => setActive(label)}
+                aria-pressed={on}
+                className={`rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
+                  on
+                    ? "border-primary/40 bg-primary/10 text-primary-light"
+                    : "border-dark-border text-muted hover:border-primary/30 hover:text-ink"
+                }`}
+              >
+                {label}
+                <span className={`ml-2 text-xs ${on ? "text-primary-light" : "text-faint"}`}>
+                  {count}
+                </span>
+              </button>
+            );
+          })}
+        </div>
 
-              <div className="flex items-center gap-1 mb-6">
-                {Array.from({ length: testimonials[current].rating }).map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-700 fill-current" />
+        <div key={active} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {shown.map((t, i) => (
+            <motion.article
+              key={t.name}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.07 }}
+              className="glass-card relative flex h-full flex-col rounded-2xl border border-dark-border p-7"
+            >
+              <Quote className="absolute right-7 top-6 h-9 w-9 text-primary/15" />
+
+              <div className="mb-5 flex items-center gap-1">
+                {Array.from({ length: t.rating }).map((_, s) => (
+                  <Star key={s} className="h-4 w-4 fill-current text-yellow-700" />
                 ))}
               </div>
 
-              <p className="text-subtle text-lg md:text-xl leading-relaxed mb-8 italic">
-                &ldquo;{testimonials[current].text}&rdquo;
+              <p className="mb-6 flex-1 text-base leading-relaxed text-muted">
+                &ldquo;{t.text}&rdquo;
               </p>
 
-              <div className="flex items-center justify-between flex-wrap gap-4">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    {testimonials[current].avatar}
-                  </div>
-                  <div>
-                    <p className="text-ink font-semibold">{testimonials[current].name}</p>
-                    <p className="text-muted text-sm">{testimonials[current].role}</p>
-                  </div>
-                </div>
-                <div className="bg-green-500/10 border border-green-500/20 text-green-700 text-sm font-semibold px-4 py-2 rounded-full">
-                  {testimonials[current].result}
-                </div>
+              <div className="mb-6 w-fit rounded-full border border-green-500/20 bg-green-500/10 px-3 py-1 text-xs font-semibold text-green-700">
+                {t.result}
               </div>
-            </motion.div>
-          </AnimatePresence>
 
-          {/* Navigation */}
-          <div className="flex items-center justify-center gap-4 mt-6">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={prev}
-              className="w-10 h-10 glass-card border border-dark-border rounded-full flex items-center justify-center text-muted hover:text-ink transition-colors"
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </motion.button>
-
-            <div className="flex gap-2">
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrent(i)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    i === current ? "bg-accent w-6" : "bg-gray-600"
-                  }`}
-                  aria-label={`Go to testimonial ${i + 1}`}
-                />
-              ))}
-            </div>
-
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={next}
-              className="w-10 h-10 glass-card border border-dark-border rounded-full flex items-center justify-center text-muted hover:text-ink transition-colors"
-              aria-label="Next testimonial"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </motion.button>
-          </div>
-        </div>
-
-        {/* Mini cards row */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-          {testimonials.map((t, i) => (
-            <motion.button
-              key={t.name}
-              onClick={() => setCurrent(i)}
-              whileHover={{ y: -4 }}
-              className={`glass-card rounded-xl p-4 text-left border transition-all duration-300 ${
-                i === current
-                  ? "border-accent/40 bg-accent/5"
-                  : "border-dark-border hover:border-primary/30"
-              }`}
-            >
-              <div className="flex items-center gap-2 mb-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white text-xs font-bold">
-                  {t.avatar}
-                </div>
-                <div>
-                  <p className="text-ink text-xs font-semibold">{t.name}</p>
-                  <p className="text-subtle text-xs">{t.role.split(",")[0]}</p>
-                </div>
+              <div className="flex items-center gap-3 border-t border-dark-border pt-5">
+                {t.logo ? (
+                  <Image
+                    src={t.logo}
+                    alt={t.company}
+                    width={40}
+                    height={40}
+                    className="h-10 w-10 rounded-full object-contain"
+                  />
+                ) : (
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-xs font-bold text-white">
+                    {initials(t.name)}
+                  </span>
+                )}
+                <span>
+                  <span className="block text-sm font-semibold text-ink">{t.name}</span>
+                  <span className="block text-xs text-subtle">
+                    {t.role}, {t.company}
+                  </span>
+                </span>
               </div>
-              <p className="text-green-700 text-xs font-semibold">{t.result}</p>
-            </motion.button>
+            </motion.article>
           ))}
         </div>
       </div>

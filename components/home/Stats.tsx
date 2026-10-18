@@ -183,32 +183,10 @@ export default function Stats() {
           </motion.div>
         </div>
 
-        {/* ── Certifications. These are owner-supplied claims and are left as
-               supplied; "ISO 9001:2008" is a withdrawn edition, so the year is
-               worth confirming before this is treated as a trust signal. ── */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-14 border-t border-dark-border pt-10"
-        >
-          <p className="mb-6 text-center text-xs uppercase tracking-widest text-faint">
-            Recognized & Certified By
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-8">
-            {["Google Partner", "Red Herring Top 100", "ISO 9001:2008"].map(
-              (name) => (
-                <div
-                  key={name}
-                  className="rounded-lg border border-dark-border bg-tint/5 px-5 py-2.5 text-xs font-semibold text-muted"
-                >
-                  {name}
-                </div>
-              )
-            )}
-          </div>
-        </motion.div>
+        {/* ── Certifications. These moved to the Awards & Certifications
+               section, which gives each claim a line saying what the programme
+               actually is. The strip that lived here stated three names with no
+               context and no way to check any of them. ── */}
       </div>
     </section>
   );
