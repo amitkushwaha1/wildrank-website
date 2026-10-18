@@ -45,8 +45,7 @@ export default function Awards() {
             Awards &amp; Certifications
           </span>
           <h2 className="mb-4 text-3xl font-extrabold text-ink sm:text-4xl lg:text-5xl">
-            Trusted Performance.{" "}
-            <span className="gradient-text">Proven Outcomes.</span>
+            Awards &amp; Certifications
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted">
             The partnerships and certifications behind the work — each one

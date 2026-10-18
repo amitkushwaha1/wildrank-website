@@ -86,9 +86,9 @@ export default function MissedCalls() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-xs font-semibold text-primary-light"
+              className="mb-6 inline-flex items-center gap-2 rounded-full bg-primary text-white px-4 py-2 text-xs font-bold shadow-lg shadow-primary/25"
             >
-              <PhoneMissed className="h-3.5 w-3.5" /> AI Receptionist · Missed Call Recovery
+              AI Receptionist · Missed Call Recovery
             </motion.div>
 
             <motion.h2
