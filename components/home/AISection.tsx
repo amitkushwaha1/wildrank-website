@@ -1,9 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
-import { Cpu, Search, Sparkles, Globe, Brain, TrendingUp, ArrowRight } from "lucide-react";
+import { Cpu, Search, Sparkles, Brain, TrendingUp, ArrowRight } from "lucide-react";
 
 import {
   OpenAILogo,
@@ -194,25 +193,7 @@ export default function AISection() {
           >
             {/* Double-bezel: a glass shell around an inner core, so the image
                 reads as a mounted pane rather than a pasted rectangle. */}
-            <div className="glass-card rounded-[2rem] p-2">
-              <div className="relative overflow-hidden rounded-[1.6rem]">
-                <Image
-                  src="/images/ai-search-strategist.webp"
-                  alt="Strategist wearing a transparent neural-interface helmet, representing AI-driven search visibility"
-                  width={900}
-                  height={900}
-                  sizes="(max-width: 1024px) 92vw, 46vw"
-                  className="h-auto w-full object-cover"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent" />
-                <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full border border-white/15 bg-ink/70 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-md">
-                  <Globe className="h-3 w-3" />
-                  Generative Engine Optimization
-                </div>
-              </div>
-            </div>
-
-            <div className="glass-card relative z-10 -mt-14 ml-auto w-[95%] rounded-2xl p-6 lg:-mt-16">
+            <div className="glass-card relative z-10 w-full rounded-2xl p-6">
               <h3 className="text-base font-bold text-ink">AI Platforms We Optimize For</h3>
               <p className="mb-5 mt-1.5 text-xs leading-relaxed text-muted">
                 Generative Engine Optimization puts your brand inside the answer, not just the results list.

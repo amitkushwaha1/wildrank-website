@@ -83,14 +83,6 @@ export default function Hero() {
           {/* LEFT — text */}
           <div className="flex flex-col justify-center">
 
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-              className="inline-flex w-fit items-center gap-2 bg-primary/10 border border-primary/20 text-primary-light text-xs font-semibold px-4 py-2 rounded-full mb-6"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-              AI-Powered Digital Marketing
-            </motion.div>
 
             {/* Headline */}
             <motion.h1
