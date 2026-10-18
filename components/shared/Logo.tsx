@@ -71,8 +71,8 @@ export default function Logo({ size = "md", on = "light", className = "", threeD
       {/* Spherical shadow beneath the logo — radial ellipse, like a ball on a surface */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-[-6px] w-[90%] h-3 rounded-[50%] blur-md opacity-70 group-hover:opacity-90 transition-opacity duration-500"
-        style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.45) 40%, transparent 70%)" }}
+        className="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-[-6px] w-[90%] h-3 rounded-[50%] blur-md opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+        style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 40%, transparent 70%)" }}
       />
     </span>
   );
