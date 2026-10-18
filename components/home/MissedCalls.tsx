@@ -145,13 +145,16 @@ export default function MissedCalls() {
               className="glass-card ring-glow rounded-3xl border border-hairline/10 p-3"
               style={{ "--ring-hue": "205" } as React.CSSProperties}
             >
+              {/* Capped to one screen height so the whole four-step artwork is
+                  visible without scrolling; the portrait artwork letterboxes
+                  inside the panel on short viewports. */}
               <img
                 src="/images/missed-call-process.webp"
                 alt="How the AI receptionist missed call recovery process works: a busy line sends an automated text, the caller replies, and the booking lands in the CRM."
                 width={768}
                 height={1376}
                 decoding="async"
-                className="h-auto w-full rounded-2xl"
+                className="mx-auto h-auto max-h-[min(78vh,1100px)] w-auto max-w-full rounded-2xl object-contain"
               />
             </div>
           </motion.div>

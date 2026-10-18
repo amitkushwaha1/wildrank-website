@@ -196,12 +196,6 @@ export default function Testimonials() {
           ))}
         </div>
       </div>
-
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <p className="mt-10 text-center text-sm text-subtle">
-          Hover to pause and read a card in full.
-        </p>
-      </div>
     </section>
   );
 }
