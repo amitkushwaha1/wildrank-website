@@ -7,10 +7,10 @@ import { credentials } from "@/lib/credentials";
 /**
  * Awards and certifications.
  *
- * The tile style follows the reference card: the issuer's mark sits at the top,
- * the name below it, a thin accent divider under the name, and the description
- * beneath that — generous whitespace, clean white cards that read as physical
- * objects rather than flat rectangles.
+ * Each tile shows the issuer's badge artwork — the rich shield/ribbon graphics
+ * with text, not a flat logo — at the top, the name below it, a thin accent
+ * divider, and a one-line description. The tiles are generous in size so the
+ * artwork reads properly.
  *
  * Each tile carries a glowing gradient border on hover. The gradient angle and
  * hue are set per-tile through an inline --ring-hue variable, so no two tiles
@@ -67,37 +67,37 @@ export default function Awards() {
                 className="h-full"
               >
                 <div
-                  className={`glass-card ring-glow flex h-full flex-col items-start gap-3 rounded-2xl border p-6 ${
+                  className={`glass-card ring-glow flex h-full flex-col items-center gap-4 rounded-2xl border p-8 text-center ${
                     provisional
                       ? "border-dashed border-hairline/25"
                       : "border-dark-border"
                   }`}
                   style={{ "--ring-hue": String(hue) } as React.CSSProperties}
                 >
-                  {/* Issuer mark at the top of the tile, matching the reference:
-                      a clean centered mark above the title. */}
-                  <div className="flex h-12 w-full shrink-0 items-center justify-center rounded-xl bg-tint/[0.04]">
+                  {/* Badge artwork at the top — the rich shield/ribbon graphic,
+                      sized large enough to read the text and detail. */}
+                  <div className="flex h-28 w-full shrink-0 items-center justify-center">
                     {logo ? (
                       <img
                         src={logo}
                         alt=""
                         loading="lazy"
                         decoding="async"
-                        className="max-h-7 w-auto max-w-[4.5rem] object-contain"
+                        className="max-h-28 w-auto max-w-[10rem] object-contain drop-shadow-md"
                       />
                     ) : (
-                      <Icon className="h-6 w-6 text-accent" />
+                      <Icon className="h-10 w-10 text-accent" />
                     )}
                   </div>
 
                   {/* Name + thin accent divider underneath, then the note. */}
                   <div className="min-w-0 flex-1 flex-col">
-                    <p className="font-bold text-ink">{name}</p>
+                    <p className="text-lg font-bold text-ink">{name}</p>
                     <span
-                      className="mt-2 h-px w-8 bg-accent rounded"
+                      className="mx-auto mt-3 block h-0.5 w-10 rounded"
                       style={{ background: `linear-gradient(90deg, hsl(var(--ring-hue) 70% 55%), transparent)` }}
                     />
-                    <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{note}</p>
+                    <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">{note}</p>
                     {href && (
                       <a
                         href={href}

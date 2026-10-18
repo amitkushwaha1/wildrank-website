@@ -70,7 +70,7 @@ export const confirmedCredentials: Credential[] = [
     name: "Google Partner",
     note: "Google's partner programme for agencies that manage Google Ads and Analytics accounts on behalf of clients.",
     icon: BadgeCheck,
-    logo: "/awards/google.svg",
+    logo: "/awards/badge-Google.png",
   },
   {
     name: "Red Herring Top 100",
@@ -96,7 +96,7 @@ const provisionalCredentials: Credential[] = [
     name: "Meta Business Partner",
     note: "Meta's partner programme for agencies managing Facebook and Instagram advertising.",
     icon: Megaphone,
-    logo: "/awards/meta.svg",
+    logo: "/awards/badge-Meta.png",
   },
   {
     name: "Clutch",
@@ -107,7 +107,7 @@ const provisionalCredentials: Credential[] = [
     name: "GoodFirms",
     note: "A research and review platform for service and software companies.",
     icon: Star,
-    logo: "/awards/goodfirms.svg",
+    logo: "/awards/badge-GoodFirms.png",
   },
   {
     name: "DesignRush",
@@ -118,13 +118,13 @@ const provisionalCredentials: Credential[] = [
     name: "Semrush Certified",
     note: "Certification in SEO, keyword research and competitive analysis.",
     icon: TrendingUp,
-    logo: "/awards/semrush.svg",
+    logo: "/awards/badge-SEMrush.png",
   },
   {
     name: "Google Analytics Certified",
     note: "Certification in GA4 setup, measurement and reporting.",
     icon: LineChart,
-    logo: "/awards/google-analytics.svg",
+    logo: "/awards/badge-Facebook.png",
   },
 ];
 

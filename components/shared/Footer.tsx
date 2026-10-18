@@ -90,17 +90,18 @@ export default function Footer() {
       {/* Trusted-partner strip. Built from the confirmed list only, not
           everything in lib/credentials — the provisional entries in that file
           are layout placeholders, and the footer is on every page of the site,
-          so it is the last place a claim nobody has verified should appear. */}
+          so it is the last place a claim nobody has verified should appear.
+          The badge artwork is shown large enough to read, like a partner wall. */}
       <div className="border-b border-hairline/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-          <div className="flex flex-wrap items-center justify-center gap-x-7 gap-y-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-subtle">
               Certified &amp; Partnered With
             </span>
             {confirmedCredentials.map(({ name, icon: Icon, logo }) => (
               <span
                 key={name}
-                className="inline-flex items-center gap-2 text-sm font-semibold text-muted"
+                className="inline-flex items-center gap-2.5"
               >
                 {logo ? (
                   <img
@@ -108,12 +109,12 @@ export default function Footer() {
                     alt=""
                     loading="lazy"
                     decoding="async"
-                    className="h-4 w-auto max-w-[3.5rem] object-contain"
+                    className="h-10 w-auto max-w-[5rem] object-contain"
                   />
                 ) : (
-                  <Icon className="h-3.5 w-3.5 text-accent" />
+                  <Icon className="h-4 w-4 text-accent" />
                 )}
-                {name}
+                <span className="text-sm font-semibold text-muted">{name}</span>
               </span>
             ))}
           </div>
