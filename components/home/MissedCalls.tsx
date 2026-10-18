@@ -145,13 +145,12 @@ export default function MissedCalls() {
               className="glass-card ring-glow rounded-3xl border border-hairline/10 p-3"
               style={{ "--ring-hue": "205" } as React.CSSProperties}
             >
-              {/* Fills the tile width so there are no side gaps; the transparent
-                  background lets the image blend into the page. */}
+              {/* Fills the tile width; transparent bg blends with the page. */}
               <img
                 src="/images/missed-call-process.webp"
                 alt="How the AI receptionist missed call recovery process works: a busy line sends an automated text, the caller replies, and the booking lands in the CRM."
-                width={768}
-                height={1376}
+                width={1808}
+                height={2400}
                 decoding="async"
                 className="h-auto w-full rounded-2xl"
               />
