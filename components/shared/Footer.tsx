@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight, Phone, PhoneCall } from "lucide-react";
 import Logo from "@/components/shared/Logo";
 import { socialLinks } from "@/lib/socialLinks";
+import { confirmedCredentials } from "@/lib/credentials";
 import { PHONE_DISPLAY, PHONE_E164 } from "@/lib/site";
 
 const services = [
@@ -50,9 +51,10 @@ const company = [
 ];
 
 /**
- * A social entry with a placeholder href is not a link. The Facebook profile
- * has never had a URL, and a dead icon in the footer is read as an abandoned
- * account, which is worse than the icon not being there.
+ * A social entry with a placeholder href is not a link. Every entry in
+ * socialLinks.ts now has a real URL, so this passes all five through — it stays
+ * as a backstop, because the failure it prevents is silent: a dead icon in the
+ * footer reads as an abandoned account and nobody notices.
  */
 const socials = socialLinks.filter((s) => s.href && s.href !== "#");
 
@@ -81,6 +83,39 @@ export default function Footer() {
                 Subscribe <ArrowRight className="w-4 h-4" />
               </motion.button>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Trusted-partner strip. Built from the confirmed list only, not
+          everything in lib/credentials — the provisional entries in that file
+          are layout placeholders, and the footer is on every page of the site,
+          so it is the last place a claim nobody has verified should appear. */}
+      <div className="border-b border-hairline/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+          <div className="flex flex-wrap items-center justify-center gap-x-7 gap-y-3">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-subtle">
+              Certified &amp; Partnered With
+            </span>
+            {confirmedCredentials.map(({ name, icon: Icon, logo }) => (
+              <span
+                key={name}
+                className="inline-flex items-center gap-2 text-sm font-semibold text-muted"
+              >
+                {logo ? (
+                  <img
+                    src={logo}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    className="h-4 w-auto max-w-[3.5rem] object-contain"
+                  />
+                ) : (
+                  <Icon className="h-3.5 w-3.5 text-accent" />
+                )}
+                {name}
+              </span>
+            ))}
           </div>
         </div>
       </div>
@@ -118,21 +153,6 @@ export default function Footer() {
               <a href={`tel:${PHONE_E164}`} className="text-muted hover:text-ink text-sm transition-colors">
                 +1 {PHONE_DISPLAY}
               </a>
-            </div>
-            <div className="flex items-center gap-2 mt-6">
-              {socials.map(({ icon: Icon, href, label, external }) => (
-                <motion.a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  target={external ? "_blank" : undefined}
-                  rel={external ? "noopener noreferrer" : undefined}
-                  whileHover={{ scale: 1.15, y: -2 }}
-                  className="w-8 h-8 border border-hairline/10 hover:border-hairline/30 rounded flex items-center justify-center text-subtle hover:text-ink transition-colors"
-                >
-                  <Icon className="w-3.5 h-3.5" />
-                </motion.a>
-              ))}
             </div>
           </div>
 
@@ -212,14 +232,29 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar. The social icons used to live here as well as nowhere
-          else on the page; they now sit with the brand, and this row is the
-          legal line only. */}
+      {/* Bottom bar. The social icons live here rather than beside the lockup:
+          this row is the last thing on every page, and they were here before
+          the brand column briefly took them. */}
       <div className="border-t border-hairline/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs text-faint">
               &copy; {new Date().getFullYear()} Wildrank Technologies. All rights reserved.
             </p>
+            <div className="flex items-center gap-2">
+              {socials.map(({ icon: Icon, href, label, external }) => (
+                <motion.a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noopener noreferrer" : undefined}
+                  whileHover={{ scale: 1.12, y: -2 }}
+                  className="w-8 h-8 border border-hairline/10 hover:border-hairline/30 rounded flex items-center justify-center text-subtle hover:text-ink transition-colors"
+                >
+                  <Icon className="w-3.5 h-3.5" />
+                </motion.a>
+              ))}
+            </div>
             <div className="flex items-center gap-4">
               <Link href="/privacy-policy" className="text-xs text-faint hover:text-muted transition-colors">Privacy Policy</Link>
               <Link href="/terms-of-service" className="text-xs text-faint hover:text-muted transition-colors">Terms of Service</Link>

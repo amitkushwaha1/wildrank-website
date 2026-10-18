@@ -88,8 +88,25 @@ const config: Config = {
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
         "spin-slow": "spin-slow 20s linear infinite",
         "tilt-bob": "tilt-bob 6s ease-in-out infinite",
+        // The two marquees. Both shift by exactly one third of the track, and
+        // every track is rendered as three identical copies, so the moment the
+        // animation restarts it is pixel-identical to where it began and the
+        // loop has no seam. Two slower variants drive the client wall, which
+        // runs wider per cycle than the review row does.
+        "marquee-left": "marquee-left 60s linear infinite",
+        "marquee-right": "marquee-right 60s linear infinite",
+        "marquee-slow-left": "marquee-left 95s linear infinite",
+        "marquee-slow-right": "marquee-right 95s linear infinite",
       },
       keyframes: {
+        "marquee-left": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-33.3333%)" },
+        },
+        "marquee-right": {
+          from: { transform: "translateX(-33.3333%)" },
+          to: { transform: "translateX(0)" },
+        },
         "gradient-x": {
           "0%, 100%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },

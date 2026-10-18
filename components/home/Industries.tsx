@@ -1,102 +1,157 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
-  ShoppingCart,
-  Heart,
-  Home,
-  GraduationCap,
-  Landmark,
-  Plane,
-  Utensils,
+  ArrowRight,
+  Building2,
   Car,
-  Dumbbell,
-  Briefcase,
+  HardHat,
+  Laptop,
+  Scale,
+  Stethoscope,
+  Wrench,
+  type LucideIcon,
 } from "lucide-react";
 
-const industries = [
-  { icon: ShoppingCart, label: "E-Commerce", color: "text-orange-700", bg: "bg-orange-500/10" },
-  { icon: Heart, label: "Healthcare", color: "text-red-700", bg: "bg-red-500/10" },
-  { icon: Home, label: "Real Estate", color: "text-blue-600", bg: "bg-blue-500/10" },
-  { icon: GraduationCap, label: "Education", color: "text-yellow-700", bg: "bg-yellow-500/10" },
-  { icon: Landmark, label: "Finance", color: "text-green-700", bg: "bg-green-500/10" },
-  { icon: Plane, label: "Travel & Tourism", color: "text-cyan-700", bg: "bg-cyan-500/10" },
-  { icon: Utensils, label: "Food & Beverage", color: "text-pink-700", bg: "bg-pink-500/10" },
-  { icon: Car, label: "Automotive", color: "text-purple-600", bg: "bg-purple-500/10" },
-  { icon: Dumbbell, label: "Fitness & Wellness", color: "text-lime-700", bg: "bg-lime-500/10" },
-  { icon: Briefcase, label: "B2B & SaaS", color: "text-indigo-600", bg: "bg-indigo-500/10" },
-];
+import { INDUSTRIES } from "@/data/industries";
+
+/**
+ * Industries.
+ *
+ * This was ten icon tiles covering the sectors a general agency list carries —
+ * e-commerce, education, travel, food — and not one of them was a link. The
+ * site has a real vertical cluster behind it (seven trades, each with its own
+ * pages, its own copy and its own objections), and the homepage pointed at none
+ * of it.
+ *
+ * So the tiles are now built from the same array the pages are, which means
+ * they cannot drift, and each one links into its own cluster. The copy is each
+ * vertical's own pain point rather than a sentence with the noun swapped, and
+ * there is no invented outcome line, because none of these has been measured
+ * yet.
+ *
+ * The breadth the old list was carrying is not lost — the eighth card covers
+ * every other sector, which is also where the old "don't see your industry?"
+ * banner went. Folding it into the grid removed a whole band of padding.
+ */
+const STYLES: Record<
+  string,
+  { icon: LucideIcon; color: string; bg: string }
+> = {
+  roofing: { icon: HardHat, color: "text-orange-700", bg: "bg-orange-500/10" },
+  "hvac-plumbing": { icon: Wrench, color: "text-blue-600", bg: "bg-blue-500/10" },
+  legal: { icon: Scale, color: "text-indigo-600", bg: "bg-indigo-500/10" },
+  "dental-medical": { icon: Stethoscope, color: "text-red-700", bg: "bg-red-500/10" },
+  "real-estate": { icon: Building2, color: "text-cyan-700", bg: "bg-cyan-500/10" },
+  "auto-repair": { icon: Car, color: "text-purple-600", bg: "bg-purple-500/10" },
+  "b2b-saas": { icon: Laptop, color: "text-green-700", bg: "bg-green-500/10" },
+};
+
+/**
+ * Pain points run to two sentences, and the first sentence is not always enough
+ * to carry a card — "Crews are on roofs." on its own read as a caption rather
+ * than a problem. So a second sentence is pulled in whenever the first lands
+ * under a hundred characters, and the result is trimmed on a word boundary
+ * rather than mid-word.
+ */
+const painCopy = (s: string) => {
+  const sentences = s.split(/(?<=[.!?])\s+/);
+  let out = sentences[0];
+  for (let i = 1; i < sentences.length && out.length < 100; i += 1) {
+    out += " " + sentences[i];
+  }
+  if (out.length <= 190) return out;
+  const cut = out.slice(0, 187);
+  return cut.slice(0, cut.lastIndexOf(" ")).trimEnd() + "…";
+};
+
+const MotionLink = motion(Link);
 
 export default function Industries() {
   return (
-    <section id="industries" className="py-24 lg:py-16 bg-dark">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="industries" className="bg-dark py-24 lg:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
-          <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">
+          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-accent">
             Industries We Serve
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink mb-4">
-            Expertise Across <span className="gradient-text">Every Sector</span>
+          <h2 className="mb-4 text-3xl font-extrabold text-ink sm:text-4xl lg:text-5xl">
+            Driving growth across{" "}
+            <span className="gradient-text">every industry</span>
           </h2>
-          <p className="text-muted text-lg max-w-2xl mx-auto">
-            We bring deep domain knowledge to every engagement, delivering strategies that work for your specific industry.
+          <p className="mx-auto max-w-2xl text-lg text-muted">
+            Two problems show up in every trade: the buyer cannot find you, and
+            once they do, they cannot reach you. These are the verticals we have
+            built for in depth.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          {industries.map((industry, i) => {
-            const Icon = industry.icon;
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {INDUSTRIES.map((industry, i) => {
+            const style = STYLES[industry.slug];
+            if (!style) return null;
+            const Icon = style.icon;
             return (
-              <motion.div
-                key={industry.label}
-                initial={{ opacity: 0, scale: 0.85 }}
+              <MotionLink
+                key={industry.slug}
+                href={`/industries/${industry.slug}/ai-receptionist`}
+                initial={{ opacity: 0, scale: 0.92 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.06 }}
-                whileHover={{ y: -6, scale: 1.05 }}
-                className="glass-card rounded-2xl p-5 flex flex-col items-center gap-3 border border-dark-border cursor-pointer group"
+                transition={{ duration: 0.4, delay: (i % 4) * 0.06 }}
+                whileHover={{ y: -6 }}
+                className="glass-card ring-glow group flex h-full flex-col rounded-2xl border border-dark-border p-5 transition-colors hover:border-primary/30"
               >
-                <div
-                  className={`w-12 h-12 ${industry.bg} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                <span
+                  className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl ${style.bg}`}
                 >
-                  <Icon className={`w-6 h-6 ${industry.color}`} />
-                </div>
-                <span className="text-sm font-medium text-muted text-center">{industry.label}</span>
-              </motion.div>
+                  <Icon className={`h-5 w-5 ${style.color}`} />
+                </span>
+                <p className="mb-2 font-bold text-ink">{industry.name}</p>
+                <p className="mb-4 flex-1 text-sm leading-relaxed text-muted">
+                  {painCopy(industry.painPoint)}
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent">
+                  See the playbook
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              </MotionLink>
             );
           })}
-        </div>
 
-        {/* CTA Banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 glass-card rounded-2xl p-8 md:p-12 border border-primary/20 text-center relative overflow-hidden"
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 pointer-events-none" />
-          <h3 className="text-2xl md:text-3xl font-bold text-ink mb-3 relative">
-            Don&apos;t see your industry?
-          </h3>
-          <p className="text-muted mb-6 relative max-w-xl mx-auto">
-            We work with businesses of all types. Our strategies are fully customized to your market, audience, and goals.
-          </p>
-          <motion.a
-            href="#contact"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-7 py-3.5 rounded-xl transition-colors relative"
+          {/* Carries the breadth the old ten-tile row was there for, and
+              replaces the standalone "don't see your industry?" banner. */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.92 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.24 }}
+            className="glass-card flex h-full flex-col rounded-2xl border border-dashed border-primary/30 p-5"
           >
-            Talk to an Expert
-          </motion.a>
-        </motion.div>
+            <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10">
+              <ArrowRight className="h-5 w-5 text-primary-light" />
+            </span>
+            <p className="mb-2 font-bold text-ink">Your industry</p>
+            <p className="mb-4 flex-1 text-sm leading-relaxed text-muted">
+              E-commerce, education, finance, travel, food, fitness — the
+              playbook is the same two problems, mapped to your searches.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:text-primary-light"
+            >
+              Talk to an expert
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

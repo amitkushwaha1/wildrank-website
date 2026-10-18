@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Award, Activity, TrendingUp, ShieldCheck, Bot } from "lucide-react";
+import { ArrowRight, Award, PhoneCall, TrendingUp, ShieldCheck, Bot } from "lucide-react";
 import NeuralOrb from "@/components/home/NeuralOrb";
 import FallingStars from "@/components/shared/FallingStars";
 
@@ -12,9 +12,20 @@ import FallingStars from "@/components/shared/FallingStars";
  * one section below, and it used to appear in both places — a visitor met the
  * same sentence twice before scrolling past two sections. These five are the
  * figures a buyer in 2026 screens for: entity age, AI citation lift, the
- * guarantee, edge latency, and how many answer engines are actually watched.
- * That is also the vocabulary that gets a brand quoted by ChatGPT and Gemini
- * rather than merely indexed by them.
+ * guarantee, whether anyone answers the phone, and how many answer engines are
+ * actually watched. That is also the vocabulary that gets a brand quoted by
+ * ChatGPT and Gemini rather than merely indexed by them.
+ *
+ * The fourth card used to read "< 300ms — Next.js Edge Latency". It was
+ * dropped rather than reworded. A sub-300ms response is not something this
+ * business does that a competitor does not — any site on any CDN, static or
+ * not, can print the same figure, and it says nothing a buyer can hold us to.
+ * A number that a competitor could put on their own homepage unchanged is not
+ * a differentiator, it is decoration, and on a page whose whole argument is
+ * "we can be measured" it reads as the one figure we could not measure.
+ * What replaced it is the thing the section directly below now leads with: the
+ * phone gets answered. That is ownable, it is checkable, and it is the same
+ * promise the missed-call section makes in full.
  */
 type Stat = {
   icon: typeof Award;
@@ -29,7 +40,7 @@ const stats: Stat[] = [
   { icon: Award,       value: "2006",    title: "Founded & Proven",       desc: "Two decades of performance marketing and software engineering, still operator-led.",        color: "text-primary", bg: "bg-primary/10" },
   { icon: TrendingUp,  value: "+340%",   title: "Avg. AI Citation Lift",  desc: "Average lift in citations across ChatGPT, Gemini, Perplexity and Google AI Overviews.",     color: "text-primary", bg: "bg-primary/10" },
   { icon: ShieldCheck, value: "90-Day",  title: "Results Guarantee",      desc: "Agreed traffic, citation or pipeline milestones met in 90 days, or advisory fees refunded.", color: "text-primary", bg: "bg-primary/10" },
-  { icon: Activity,    value: "< 300ms", title: "Next.js Edge Latency",   desc: "Sub-second web systems on edge infrastructure — fast for buyers and for AI crawlers.",      color: "text-primary", bg: "bg-primary/10" },
+  { icon: PhoneCall,   value: "24/7",    title: "Calls Answered",         desc: "An AI receptionist picks up nights, weekends and the busy line, so an enquiry is not lost.", color: "text-primary", bg: "bg-primary/10" },
   { icon: Bot,         value: "6",       title: "AI Platforms Monitored", desc: "ChatGPT, Gemini, Perplexity, Claude, DeepSeek and Google AI Overviews, checked monthly.",   color: "text-primary", bg: "bg-primary/10" },
 ];
 
@@ -161,7 +172,7 @@ export default function Hero() {
                 key={stat.title}
                 variants={cardVariants}
                 whileHover={{ y: -6, scale: 1.02 }}
-                className="glass-card rounded-2xl p-5 group cursor-default"
+                className="glass-card ring-glow rounded-2xl p-5 group cursor-default"
               >
                 <div className={`w-10 h-10 ${stat.bg} rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>
                   <Icon className={`w-5 h-5 ${stat.color}`} />

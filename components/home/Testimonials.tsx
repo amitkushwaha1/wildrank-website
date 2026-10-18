@@ -1,6 +1,5 @@
 "use client";
 
-import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Quote, Star } from "lucide-react";
@@ -8,23 +7,28 @@ import { Quote, Star } from "lucide-react";
 /**
  * Client results.
  *
- * This was a single featured quote in a carousel with dot navigation, plus a
- * row of five mini-cards repeating the same five people — the same content
- * twice, and only one of the five actually present in the HTML at any moment,
- * because the carousel swapped them through AnimatePresence. Every quote is now
- * a card in a grid, so all of them exist as crawlable text, and the sector
- * filter row does the job the mini-card row was doing.
+ * This has been three things now, so it is worth saying what it is. It was a
+ * single featured quote in a carousel with dot navigation plus a row of five
+ * mini-cards repeating the same people — the same content twice, and only one
+ * of the five actually present in the HTML at any moment, because the carousel
+ * swapped them through AnimatePresence. It became a filterable grid, which put
+ * all five in the HTML but stacked into two rows on a laptop. It is now one
+ * continuously rolling row, which is what was asked for: five cards, then the
+ * same five again, with no end and no controls to operate.
  *
- * The card shape follows the pattern the sector uses: quote, mark, then the
- * company. Each card carries a specific result, because a quote without a
- * number reads as a compliment rather than evidence.
+ * The motion is CSS on a track that repeats three times. The animation shifts
+ * by exactly one repeat, so the restart is pixel-identical to the start and
+ * there is no seam; three repeats rather than two because a display wider than
+ * one repeat would otherwise expose the end of the track. The first repeat is
+ * the real content and the other two are marked aria-hidden, so a screen reader
+ * hears five testimonials rather than fifteen.
  *
  * Two deliberate omissions:
  *
  *  - No Review or AggregateRating markup. Self-hosted reviews are not eligible
- *    for review rich results, and marking up a testimonial we cannot point an
- *    auditor at would be structured-data spam on the page that most needs to
- *    look straight.
+ *    for review rich results, and marking up testimonials nobody can be pointed
+ *    at would be structured-data spam on the page that most needs to look
+ *    straight.
  *  - No invented companies. The `logo` field is here so a real client logo can
  *    be dropped in with one line; until one is supplied the card falls back to
  *    an initials monogram rather than a placeholder mark.
@@ -33,7 +37,7 @@ interface Testimonial {
   name: string;
   role: string;
   company: string;
-  /** Groups the card under the filter chips. */
+  /** Shown as a label on the card — it used to drive the filter row. */
   sector: string;
   rating: number;
   result: string;
@@ -98,25 +102,62 @@ const initials = (name: string) =>
     .slice(0, 2)
     .toUpperCase();
 
-export default function Testimonials() {
-  const [active, setActive] = useState("All");
+const COPIES = 3;
 
-  // Sectors in the order they first appear, with counts — a filter row without
-  // counts looks like a carousel, and the reader cannot tell it is a filter.
-  const sectors = useMemo(() => {
-    const seen: { label: string; count: number }[] = [];
-    for (const t of testimonials) {
-      const hit = seen.find((s) => s.label === t.sector);
-      if (hit) hit.count += 1;
-      else seen.push({ label: t.sector, count: 1 });
-    }
-    return [{ label: "All", count: testimonials.length }, ...seen];
-  }, []);
+function Card({ t, decorative }: { t: Testimonial; decorative?: boolean }) {
+  return (
+    <article
+      aria-hidden={decorative || undefined}
+      className="glass-card ring-glow relative flex w-[315px] shrink-0 flex-col rounded-2xl border border-dark-border p-6 sm:w-[380px] sm:p-7"
+    >
+      <Quote className="absolute right-6 top-5 h-9 w-9 text-primary/15" />
 
-  const shown = useMemo(
-    () => (active === "All" ? testimonials : testimonials.filter((t) => t.sector === active)),
-    [active]
+      <div className="mb-5 flex items-center justify-between gap-3">
+        <div className="flex items-center gap-1">
+          {Array.from({ length: t.rating }).map((_, i) => (
+            <Star key={i} className="h-4 w-4 fill-current text-yellow-700" />
+          ))}
+        </div>
+        <span className="rounded-full border border-dark-border bg-tint/5 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-subtle">
+          {t.sector}
+        </span>
+      </div>
+
+      <p className="mb-6 flex-1 text-sm leading-relaxed text-muted">
+        &ldquo;{t.text}&rdquo;
+      </p>
+
+      <div className="mb-6 w-fit rounded-full border border-green-500/20 bg-green-500/10 px-3 py-1 text-xs font-semibold text-green-700">
+        {t.result}
+      </div>
+
+      <div className="flex items-center gap-3 border-t border-dark-border pt-5">
+        {t.logo ? (
+          <Image
+            src={t.logo}
+            alt={t.company}
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-full object-contain"
+          />
+        ) : (
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-xs font-bold text-white">
+            {initials(t.name)}
+          </span>
+        )}
+        <span>
+          <span className="block text-sm font-semibold text-ink">{t.name}</span>
+          <span className="block text-xs text-subtle">
+            {t.role}, {t.company}
+          </span>
+        </span>
+      </div>
+    </article>
   );
+}
+
+export default function Testimonials() {
+  const copies = Array.from({ length: COPIES }, () => testimonials).flat();
 
   return (
     <section id="testimonials" className="section-gradient py-24 lg:py-16">
@@ -135,86 +176,30 @@ export default function Testimonials() {
             Results Our Clients <span className="gradient-text">Love</span>
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted">
-            Real results from real businesses. See what our clients say about
-            working with us.
+            Real results from real businesses, in their own words.
           </p>
         </motion.div>
+      </div>
 
-        {/* Sector filter. Same five people, sliced by the industry they are in. */}
-        <div className="mb-10 flex flex-wrap items-center justify-center gap-2">
-          {sectors.map(({ label, count }) => {
-            const on = label === active;
-            return (
-              <button
-                key={label}
-                type="button"
-                onClick={() => setActive(label)}
-                aria-pressed={on}
-                className={`rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
-                  on
-                    ? "border-primary/40 bg-primary/10 text-primary-light"
-                    : "border-dark-border text-muted hover:border-primary/30 hover:text-ink"
-                }`}
-              >
-                {label}
-                <span className={`ml-2 text-xs ${on ? "text-primary-light" : "text-faint"}`}>
-                  {count}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-
-        <div key={active} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {shown.map((t, i) => (
-            <motion.article
-              key={t.name}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.07 }}
-              className="glass-card relative flex h-full flex-col rounded-2xl border border-dark-border p-7"
-            >
-              <Quote className="absolute right-7 top-6 h-9 w-9 text-primary/15" />
-
-              <div className="mb-5 flex items-center gap-1">
-                {Array.from({ length: t.rating }).map((_, s) => (
-                  <Star key={s} className="h-4 w-4 fill-current text-yellow-700" />
-                ))}
-              </div>
-
-              <p className="mb-6 flex-1 text-base leading-relaxed text-muted">
-                &ldquo;{t.text}&rdquo;
-              </p>
-
-              <div className="mb-6 w-fit rounded-full border border-green-500/20 bg-green-500/10 px-3 py-1 text-xs font-semibold text-green-700">
-                {t.result}
-              </div>
-
-              <div className="flex items-center gap-3 border-t border-dark-border pt-5">
-                {t.logo ? (
-                  <Image
-                    src={t.logo}
-                    alt={t.company}
-                    width={40}
-                    height={40}
-                    className="h-10 w-10 rounded-full object-contain"
-                  />
-                ) : (
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-xs font-bold text-white">
-                    {initials(t.name)}
-                  </span>
-                )}
-                <span>
-                  <span className="block text-sm font-semibold text-ink">{t.name}</span>
-                  <span className="block text-xs text-subtle">
-                    {t.role}, {t.company}
-                  </span>
-                </span>
-              </div>
-            </motion.article>
+      {/* Full-bleed, so the row runs off both edges instead of stopping at the
+          gutter. Pausing on hover exists so a card can actually be finished
+          reading; on touch there is no hover and it simply keeps rolling. */}
+      <div className="group flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] motion-reduce:overflow-x-auto">
+        <div className="flex w-max items-stretch gap-6 pr-6 animate-marquee-left group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+          {copies.map((t, i) => (
+            <Card
+              key={`${t.name}-${i}`}
+              t={t}
+              decorative={i >= testimonials.length}
+            />
           ))}
         </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <p className="mt-10 text-center text-sm text-subtle">
+          Hover to pause and read a card in full.
+        </p>
       </div>
     </section>
   );

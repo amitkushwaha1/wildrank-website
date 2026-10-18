@@ -25,7 +25,7 @@ const mono = JetBrains_Mono({
 
 // Absolute base for canonical/OG URLs. Must match app/sitemap.ts BASE_URL.
 // wildrank.com is a parked third-party domain and must never be declared here.
-import { PHONE_E164 } from "@/lib/site";
+import { PHONE_E164, SOCIAL_PROFILES } from "@/lib/site";
 
 const SITE_URL = "https://wildranktechnologies.com";
 
@@ -90,6 +90,10 @@ const organizationSchema = {
         height: 60,
       },
       image: `${SITE_URL}/og-default.jpg`,
+      // Social profiles. This array existed in lib/site.ts and was imported
+      // by nothing, so the Organization node declared no sameAs at all and the
+      // profiles were unreachable to anything trying to resolve the entity.
+      sameAs: SOCIAL_PROFILES,
     },
     {
       "@type": "WebSite",

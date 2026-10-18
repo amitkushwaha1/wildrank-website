@@ -1,5 +1,15 @@
 import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
+// Static, not dynamic: the client wall is a server component with no
+// interactivity, and its ~85 KB of brand-mark paths must not reach the client
+// bundle. Importing it directly is what keeps them on the server.
+import ClientWall from "@/components/home/ClientWall";
+// Also static. It used to be lazily imported, which was right while it sat near
+// the bottom of the page; now that it is the section directly under the hero it
+// is above the fold on every screen, and lazy-loading an above-the-fold section
+// buys a second network round trip to show something the reader is already
+// looking at.
+import MissedCalls from "@/components/home/MissedCalls";
 import dynamic from "next/dynamic";
 import { homeFaqs } from "@/lib/homeFaqs";
 import { SITE_URL } from "@/lib/site";
@@ -37,7 +47,6 @@ const Stats         = dynamic(() => import("@/components/home/Stats"),        { 
 const Industries    = dynamic(() => import("@/components/home/Industries"),   { ssr: true });
 const Testimonials  = dynamic(() => import("@/components/home/Testimonials"), { ssr: true });
 const Awards        = dynamic(() => import("@/components/home/Awards"),       { ssr: true });
-const MissedCalls   = dynamic(() => import("@/components/home/MissedCalls"),   { ssr: true });
 const FAQ           = dynamic(() => import("@/components/home/FAQ"),          { ssr: true });
 const CTA           = dynamic(() => import("@/components/home/CTA"),          { ssr: true });
 
@@ -66,13 +75,20 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Hero />
+      {/* Second, not last. The missed-call section is the most concrete thing
+          the business does — a specific failure a visitor has already had, and
+          a specific thing that fixes it — so it earns the first scroll. It also
+          has to come before the client wall, because the wall answers "who
+          trusts you?" and this answers "what do you actually do?", and the
+          second question is the one a reader arrives with. */}
+      <MissedCalls />
+      <ClientWall />
       <AISection />
       <ServicesGrid />
       <Stats />
       <Industries />
       <Testimonials />
       <Awards />
-      <MissedCalls />
       <FAQ />
       <CTA />
     </>

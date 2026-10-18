@@ -1,4 +1,4 @@
-import { Linkedin, Instagram, Facebook, type LucideIcon } from "lucide-react";
+import { Linkedin, Instagram, Facebook, Youtube, type LucideIcon } from "lucide-react";
 import XLogo from "@/components/shared/XLogo";
 
 /** Anything that renders an icon from a className — lucide icons or our X logo. */
@@ -7,8 +7,19 @@ type IconComponent = LucideIcon | (({ className }: { className?: string }) => JS
 /**
  * Single source of truth for the company's social profiles.
  *
- * Used by the Footer and the Contact sidebar so the URLs can never drift
- * apart between pages. Update the links here and everywhere updates.
+ * Used by the Footer and the Contact sidebar so the URLs can never drift apart
+ * between pages, and by lib/site.ts so the same profiles reach the
+ * Organization schema as `sameAs`. Update the links here and everywhere updates.
+ *
+ * Every entry must have a real URL. A profile with a placeholder href is worse
+ * than no profile — a dead icon in the footer reads as an abandoned account,
+ * and a `sameAs` that resolves nowhere is structured-data spam. The Footer
+ * filters placeholders out as a backstop, which is why the entry that used to
+ * sit here as href="#" never rendered; the URL has since been supplied.
+ *
+ * The Facebook and YouTube pages were created from the company Workspace
+ * account (wildranktechnologies@gmail.com) rather than a personal one, which is
+ * what makes them safe to publish as the company's own.
  */
 export interface SocialLink {
   icon: IconComponent;
@@ -26,9 +37,21 @@ export const socialLinks: SocialLink[] = [
     external: true,
   },
   {
+    icon: Youtube,
+    href: "https://www.youtube.com/@WildRankTechnologies",
+    label: "YouTube",
+    external: true,
+  },
+  {
     icon: Instagram,
     href: "https://www.instagram.com/wildranktechnologies/",
     label: "Instagram",
+    external: true,
+  },
+  {
+    icon: Facebook,
+    href: "https://www.facebook.com/wildranktechnologies/",
+    label: "Facebook",
     external: true,
   },
   {
@@ -36,11 +59,5 @@ export const socialLinks: SocialLink[] = [
     href: "https://x.com/wildranktech",
     label: "X (Twitter)",
     external: true,
-  },
-  {
-    // No Facebook URL supplied yet — placeholder, safe to leave as-is.
-    icon: Facebook,
-    href: "#",
-    label: "Facebook",
   },
 ];

@@ -17,17 +17,22 @@ import {
  *
  * The rest of this page answers "how do I get found?". This answers the
  * question immediately after it — "what happens when someone actually tries to
- * reach me?" — and it earns its place on the homepage because a missed call
- * has no second chance: it cannot be ranking-recovered later, and it leaves
- * nothing behind to report on.
+ * reach me?" — and it earns its place on the homepage because a missed call has
+ * no second chance: it cannot be ranking-recovered later, and it leaves nothing
+ * behind to report on.
+ *
+ * The definition panel exists because the section was making its argument
+ * faster than a reader who has never heard the term could follow it. "AI
+ * receptionist" is now in the first line, in plain words, before any of the
+ * argument. Everything below the panel is the same case it was.
  *
  * No statistic is claimed here. /ai-receptionist carries the headline number
  * for its own argument; this section makes the argument without repeating a
  * figure that has no source, so the two pages cannot contradict each other.
  *
- * The panel on the right is a description of the mechanism, not a screenshot
- * or a claim about results. Each step matches what /ai-receptionist says the
- * system does, and the timings come from the same place.
+ * The panel on the right is a description of the mechanism, not a screenshot or
+ * a claim about results. Each step matches what /ai-receptionist says the system
+ * does, and the timings come from the same place.
  */
 const TIMELINE: {
   icon: LucideIcon;
@@ -74,7 +79,7 @@ export default function MissedCalls() {
     <section className="py-24 lg:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-14 lg:grid-cols-2">
-          {/* ── Left — the argument ── */}
+          {/* ── Left — what it is, then why it matters ── */}
           <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -83,7 +88,7 @@ export default function MissedCalls() {
               transition={{ duration: 0.5 }}
               className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-xs font-semibold text-primary-light"
             >
-              <PhoneMissed className="h-3.5 w-3.5" /> AI Adoption
+              <PhoneMissed className="h-3.5 w-3.5" /> AI Receptionist · Missed Call Recovery
             </motion.div>
 
             <motion.h2
@@ -97,18 +102,22 @@ export default function MissedCalls() {
               <span className="gradient-text">you never hear about</span>
             </motion.h2>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.08 }}
-              className="mb-5 text-base leading-relaxed text-muted"
+              className="mb-6 rounded-2xl border border-primary/20 bg-primary/[0.06] p-5"
             >
-              Search earns the enquiry. It does not answer the phone. When your
-              line is busy, it is after hours, or the whole team is on a job, the
-              caller rarely leaves a voicemail — they dial the next result on the
-              list.
-            </motion.p>
+              <p className="text-sm leading-relaxed text-ink">
+                <span className="font-bold">What it is.</span> An AI receptionist
+                answers your phone when nobody else can — it greets the caller,
+                works out what they need, books the job into your calendar, and
+                texts back anyone whose call it could not take. It exists
+                because you are already losing calls you never see, and a call
+                that never connected leaves no record to report on.
+              </p>
+            </motion.div>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -117,11 +126,10 @@ export default function MissedCalls() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="mb-8 text-base leading-relaxed text-muted"
             >
-              It is the quietest leak in the funnel, because a call that never
-              connected leaves no record to report on. We close it: an AI
-              receptionist answers around the clock in your business&apos;s own
-              language, and every call that still gets away is texted back within
-              seconds.
+              Search earns the enquiry. It does not answer the phone. When your
+              line is busy, it is after hours, or the whole team is on a job, the
+              caller rarely leaves a voicemail — they dial the next result on the
+              list.
             </motion.p>
 
             <motion.ul

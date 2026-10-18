@@ -152,7 +152,7 @@ export default function ServicesGrid() {
                 key={service.title}
                 variants={cardVariants}
                 whileHover={{ y: -6, scale: 1.02 }}
-                className={`glass-card rounded-2xl p-6 border ${service.border} cursor-pointer group transition-all duration-300 hover:shadow-xl`}
+                className={`glass-card ring-glow rounded-2xl p-6 border ${service.border} cursor-pointer group transition-all duration-300 hover:shadow-xl`}
               >
                 <div
                   className={`w-12 h-12 ${service.bg} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}

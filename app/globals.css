@@ -111,6 +111,86 @@ body::after {
     0 28px 60px -24px rgba(140, 60, 30, 0.34);
 }
 
+/* ── Travelling border light ──
+   A single highlight that runs around the edge of a tile while the pointer is
+   on it, the way an edge-lit sign or a phone's notification ring reads.
+
+   Built as a conic gradient on a pseudo-element that is masked down to a 1px
+   frame, rather than by animating `border-color` (which can only ever change
+   the whole edge at once — no travel) or by drawing four sides (which cannot
+   handle the corners without a rotation). Because the element is masked to the
+   frame, the gradient underneath costs nothing to look at: the card's own fill
+   and text are untouched.
+
+   `@property` registers the angle so the browser can interpolate it; without
+   the registration a custom property animates in steps and the light jumps
+   round instead of sliding. Where `@property` is unsupported the ring still
+   appears on hover, it just does not travel — a static highlight, not a broken
+   one.
+
+   It is opt-in per tile and runs only on :hover / :focus-within, so at most one
+   ring is ever animating. Nothing is painted at rest. */
+@property --ring-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes ring-travel {
+  to {
+    --ring-angle: 360deg;
+  }
+}
+
+:where(.ring-glow) {
+  position: relative;
+}
+
+.ring-glow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Follows whatever radius the tile asked for, so the highlight sits exactly
+     on the tile's own edge instead of a guessed radius. */
+  border-radius: inherit;
+  /* 1.5px, not 1px: at 1px the arc is a single device pixel on a non-retina
+     display and reads as a rendering artefact rather than as a light. */
+  padding: 1.5px;
+  background: conic-gradient(
+    from var(--ring-angle),
+    rgba(252, 72, 18, 0) 0%,
+    rgba(252, 72, 18, 0) 52%,
+    rgba(252, 72, 18, 0.45) 74%,
+    rgba(252, 72, 18, 0.9) 91%,
+    #ffb08a 96%,
+    rgba(252, 72, 18, 0.75) 99%,
+    rgba(252, 72, 18, 0) 100%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.ring-glow:hover::after,
+.ring-glow:focus-within::after {
+  opacity: 1;
+  animation: ring-travel 2.6s linear infinite;
+}
+
+/* The light stops, the highlight stays: a moving edge is exactly the kind of
+   ambient motion this setting is asking us not to make. */
+@media (prefers-reduced-motion: reduce) {
+  .ring-glow:hover::after,
+  .ring-glow:focus-within::after {
+    animation: none;
+  }
+}
+
 /* Sticky surfaces may blur — they do not scroll with the content. */
 .glass-nav {
   background: rgba(255, 255, 255, 0.72);
