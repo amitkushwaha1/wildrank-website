@@ -66,7 +66,7 @@ export default function WhiteLabelPage({ badge, title, highlight, description, i
               <a href="/contact" className="flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-7 py-3.5 rounded-xl transition-all hover:scale-[1.03]">
                 Become a Partner <ArrowRight className="w-4 h-4" />
               </a>
-              <a href="/white-label-pricing" className="flex items-center gap-2 border border-hairline/10 hover:border-hairline/30 text-ink font-semibold px-7 py-3.5 rounded-xl transition-all">
+              <a href="/contact" className="flex items-center gap-2 border border-hairline/10 hover:border-hairline/30 text-ink font-semibold px-7 py-3.5 rounded-xl transition-all">
                 View Pricing
               </a>
             </div>

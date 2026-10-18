@@ -45,7 +45,8 @@ const nextConfig = {
       { source: "/pricing/social-media", destination: "/social-media-pricing", permanent: true },
       { source: "/pricing/web-development", destination: "/web-development-pricing", permanent: true },
       { source: "/pricing/mobile-app", destination: "/mobile-app-pricing", permanent: true },
-      { source: "/pricing/white-label", destination: "/white-label-pricing", permanent: true },
+      { source: "/pricing/white-label", destination: "/contact", permanent: true },
+{ source: "/white-label-pricing", destination: "/contact", permanent: true },
 
       // ── White Label: old /white-label/* → flat URLs ──
       { source: "/white-label/social-media", destination: "/white-label-social-media", permanent: true },

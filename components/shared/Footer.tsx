@@ -109,9 +109,9 @@ export default function Footer() {
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="inline-block">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 border border-hairline/20 hover:border-accent text-ink text-xs font-semibold tracking-widest uppercase px-5 py-3 rounded transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-bold px-6 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-accent/30"
               >
-                Book Strategy Call <ArrowRight className="w-3.5 h-3.5" />
+                Book Strategy Call <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
             <div className="flex items-center gap-2 mt-6">
