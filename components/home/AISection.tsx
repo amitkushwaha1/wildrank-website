@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Cpu, Search, Sparkles, Brain, TrendingUp, ArrowRight } from "lucide-react";
+import { Search, Sparkles, Brain, TrendingUp, ArrowRight } from "lucide-react";
 
 import {
   OpenAILogo,
@@ -57,9 +57,9 @@ export default function AISection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary-light text-xs font-semibold px-4 py-2 rounded-full mb-6"
+              className="inline-flex items-center gap-2 bg-primary text-white text-xs font-bold px-4 py-2 rounded-full mb-6 shadow-lg shadow-primary/25"
             >
-              <Cpu className="w-3.5 h-3.5" /> Leveraging AI for SEO
+              Leveraging AI for SEO
             </motion.div>
 
             <motion.h2
