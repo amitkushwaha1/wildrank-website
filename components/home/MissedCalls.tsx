@@ -40,7 +40,7 @@ export default function MissedCalls() {
   return (
     <section className="py-24 lg:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-14 lg:grid-cols-2">
+        <div className="grid items-start gap-14 lg:grid-cols-2">
           {/* ── Left — what it is, then why it matters ── */}
           <div>
             <motion.div
@@ -145,16 +145,15 @@ export default function MissedCalls() {
               className="glass-card ring-glow rounded-3xl border border-hairline/10 p-3"
               style={{ "--ring-hue": "205" } as React.CSSProperties}
             >
-              {/* Capped to one screen height so the whole four-step artwork is
-                  visible without scrolling; the portrait artwork letterboxes
-                  inside the panel on short viewports. */}
+              {/* Fills the tile width so there are no side gaps; the transparent
+                  background lets the image blend into the page. */}
               <img
                 src="/images/missed-call-process.webp"
                 alt="How the AI receptionist missed call recovery process works: a busy line sends an automated text, the caller replies, and the booking lands in the CRM."
                 width={768}
                 height={1376}
                 decoding="async"
-                className="mx-auto h-auto max-h-[min(78vh,1100px)] w-auto max-w-full rounded-2xl object-contain"
+                className="h-auto w-full rounded-2xl"
               />
             </div>
           </motion.div>
