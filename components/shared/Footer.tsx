@@ -5,7 +5,6 @@ import Link from "next/link";
 import { ArrowRight, Phone, PhoneCall } from "lucide-react";
 import Logo from "@/components/shared/Logo";
 import { socialLinks } from "@/lib/socialLinks";
-import { confirmedCredentials } from "@/lib/credentials";
 import { PHONE_DISPLAY, PHONE_E164 } from "@/lib/site";
 
 const services = [
@@ -83,40 +82,6 @@ export default function Footer() {
                 Subscribe <ArrowRight className="w-4 h-4" />
               </motion.button>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Trusted-partner strip. Built from the confirmed list only, not
-          everything in lib/credentials — the provisional entries in that file
-          are layout placeholders, and the footer is on every page of the site,
-          so it is the last place a claim nobody has verified should appear.
-          The badge artwork is shown large enough to read, like a partner wall. */}
-      <div className="border-b border-hairline/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-subtle">
-              Certified &amp; Partnered With
-            </span>
-            {confirmedCredentials.map(({ name, icon: Icon, logo }) => (
-              <span
-                key={name}
-                className="inline-flex items-center gap-2.5"
-              >
-                {logo ? (
-                  <img
-                    src={logo}
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                    className="h-10 w-auto max-w-[5rem] object-contain"
-                  />
-                ) : (
-                  <Icon className="h-4 w-4 text-accent" />
-                )}
-                <span className="text-sm font-semibold text-muted">{name}</span>
-              </span>
-            ))}
           </div>
         </div>
       </div>
