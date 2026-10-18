@@ -108,6 +108,7 @@ export default function Industries() {
                 transition={{ duration: 0.4, delay: (i % 4) * 0.06 }}
                 whileHover={{ y: -6 }}
                 className="glass-card ring-glow group flex h-full flex-col rounded-2xl border border-dark-border p-5 transition-colors hover:border-primary/30"
+                  style={{ "--ring-hue": String(i * 137.508 % 360) } as React.CSSProperties}
               >
                 <span
                   className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl ${style.bg}`}

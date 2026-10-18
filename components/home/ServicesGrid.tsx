@@ -145,7 +145,7 @@ export default function ServicesGrid() {
           animate={inView ? "visible" : "hidden"}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
         >
-          {services.map((service) => {
+          {services.map((service, i) => {
             const Icon = service.icon;
             return (
               <motion.div
@@ -153,6 +153,7 @@ export default function ServicesGrid() {
                 variants={cardVariants}
                 whileHover={{ y: -6, scale: 1.02 }}
                 className={`glass-card ring-glow rounded-2xl p-6 border ${service.border} cursor-pointer group transition-all duration-300 hover:shadow-xl`}
+                style={{ "--ring-hue": String(i * 137.508 % 360) } as React.CSSProperties}
               >
                 <div
                   className={`w-12 h-12 ${service.bg} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}

@@ -104,11 +104,12 @@ const initials = (name: string) =>
 
 const COPIES = 3;
 
-function Card({ t, decorative }: { t: Testimonial; decorative?: boolean }) {
+function Card({ t, decorative, hue }: { t: Testimonial; decorative?: boolean; hue: number }) {
   return (
     <article
       aria-hidden={decorative || undefined}
       className="glass-card ring-glow relative flex w-[315px] shrink-0 flex-col rounded-2xl border border-dark-border p-6 sm:w-[380px] sm:p-7"
+      style={{ "--ring-hue": String(hue) } as React.CSSProperties}
     >
       <Quote className="absolute right-6 top-5 h-9 w-9 text-primary/15" />
 
@@ -191,6 +192,7 @@ export default function Testimonials() {
               key={`${t.name}-${i}`}
               t={t}
               decorative={i >= testimonials.length}
+              hue={(i % testimonials.length) * 137.508 % 360}
             />
           ))}
         </div>

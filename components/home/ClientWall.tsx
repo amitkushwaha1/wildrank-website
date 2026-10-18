@@ -43,11 +43,12 @@ import { clientMarks, type ClientMark } from "@/lib/clientMarks";
 const rowA = clientMarks.filter((_, i) => i % 2 === 0);
 const rowB = clientMarks.filter((_, i) => i % 2 === 1);
 
-function Mark({ mark, decorative }: { mark: ClientMark; decorative?: boolean }) {
+function Mark({ mark, decorative, hue }: { mark: ClientMark; decorative?: boolean; hue: number }) {
   return (
     <div
       aria-hidden={decorative || undefined}
       className="group/tile ring-glow flex h-14 min-w-[8.5rem] shrink-0 items-center justify-center rounded-xl border border-hairline/10 bg-tint/[0.03] px-4"
+      style={{ "--ring-hue": String(hue) } as React.CSSProperties}
     >
       {/* The name is not printed beside the mark, and that is the whole point of
           this tile: at least a third of the marks in the set ARE the wordmark —
@@ -99,6 +100,7 @@ function Row({ marks, reverse }: { marks: ClientMark[]; reverse?: boolean }) {
             key={`${mark.name}-${i}`}
             mark={mark}
             decorative={i >= marks.length}
+            hue={(i % marks.length) * 137.508 % 360}
           />
         ))}
       </div>

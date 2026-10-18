@@ -165,7 +165,7 @@ export default function Hero() {
           transition={{ staggerChildren: 0.1 }}
           className="pb-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"
         >
-          {stats.map((stat) => {
+          {stats.map((stat, i) => {
             const Icon = stat.icon;
             return (
               <motion.div
@@ -173,6 +173,7 @@ export default function Hero() {
                 variants={cardVariants}
                 whileHover={{ y: -6, scale: 1.02 }}
                 className="glass-card ring-glow rounded-2xl p-5 group cursor-default"
+                style={{ "--ring-hue": String(i * 137.508 % 360) } as React.CSSProperties}
               >
                 <div className={`w-10 h-10 ${stat.bg} rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>
                   <Icon className={`w-5 h-5 ${stat.color}`} />
