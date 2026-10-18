@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Cpu, Search, Sparkles, Globe, Brain, TrendingUp } from "lucide-react";
+import Link from "next/link";
+import { Cpu, Search, Sparkles, Globe, Brain, TrendingUp, ArrowRight } from "lucide-react";
 
 import {
   OpenAILogo,
@@ -26,8 +27,8 @@ import {
  */
 const aiPlatforms = [
   { name: "ChatGPT",             Logo: OpenAILogo,     note: "Cited in answers and recommendations",  bg: "bg-[#10A37F]/10" },
-  { name: "Google Gemini",       Logo: GeminiLogo,     note: "Surfaced in Gemini responses",          bg: "bg-[#8E75B2]/10" },
-  { name: "Perplexity",          Logo: PerplexityLogo, note: "Quoted as a cited source",              bg: "bg-[#1FB8CD]/10" },
+  { name: "Google Gemini",       Logo: GeminiLogo,     note: "Surfaced in Gemini responses",          bg: "bg-[#9B72CB]/10" },
+  { name: "Perplexity",          Logo: PerplexityLogo, note: "Quoted as a cited source",              bg: "bg-[#20808D]/10" },
   { name: "Claude",              Logo: ClaudeLogo,     note: "Referenced in research answers",        bg: "bg-[#D97757]/10" },
   { name: "DeepSeek",            Logo: DeepSeekLogo,   note: "Present in DeepSeek answers",           bg: "bg-[#5786FE]/10" },
   { name: "Google AI Overviews", Logo: GoogleAILogo,   note: "Included in AI Overviews and SGE",      bg: "bg-[#4285F4]/10" },
@@ -126,6 +127,59 @@ export default function AISection() {
                   {text}
                 </div>
               ))}
+            </motion.div>
+
+            {/* The method. The right column is roughly twice the height of this
+                one — a portrait plus a six-row platform card — so the column
+                ended a screen above it and left the space beside the portrait
+                empty. This fills it with the question the section raises and
+                does not answer: how does any of that actually happen? */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.24 }}
+              className="mt-9 border-t border-hairline/10 pt-8"
+            >
+              <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">
+                How we get you cited
+              </p>
+              <ol className="space-y-4">
+                {[
+                  {
+                    n: "01",
+                    t: "Map the entity",
+                    d: "We establish the verifiable facts about your business — services, locations, credentials — that a model can safely rely on.",
+                  },
+                  {
+                    n: "02",
+                    t: "Structure the pages",
+                    d: "Schema, FAQ markup and definitional copy, written so an answer engine can lift a sentence and still be correct.",
+                  },
+                  {
+                    n: "03",
+                    t: "Measure the answers",
+                    d: "We track the prompts that matter across six platforms every month, and report which ones now name you.",
+                  },
+                ].map((step) => (
+                  <li key={step.n} className="flex gap-4">
+                    <span className="pt-0.5 font-mono text-xs font-bold text-primary-light">
+                      {step.n}
+                    </span>
+                    <span>
+                      <span className="block text-sm font-bold text-ink">{step.t}</span>
+                      <span className="block text-sm leading-relaxed text-muted">{step.d}</span>
+                    </span>
+                  </li>
+                ))}
+              </ol>
+              <Link
+                href="/geo-aeo-services"
+                className="group mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent transition-colors hover:text-primary-light"
+              >
+                How GEO and AEO work
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
             </motion.div>
           </div>
 

@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
+import FallingStars from "@/components/shared/FallingStars";
 
 // Plus Jakarta Sans replaces Inter. Inter was the single most "default tech
 // template" tell on the site; Jakarta has the same neutral readability with
@@ -125,6 +126,12 @@ export default function RootLayout({
         />
       </head>
       <body className={`${jakarta.className} antialiased`}>
+        {/* One ambient star field for the whole site. Fixed and non-interactive,
+            z-30: above section content (which tops out at z-10 and would
+            otherwise paint over it, since almost every section carries an
+            opaque background) and below the sticky navbar at z-50 and the film
+            grain at z-70, so the chrome stays crisp. */}
+        <FallingStars variant="ambient" fixed className="z-30" />
         <Navbar />
         <main>{children}</main>
         <Footer />

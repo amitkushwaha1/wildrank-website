@@ -39,6 +39,11 @@ const capabilities = [
     note: "Automate the acquisition loop",
   },
   {
+    href: "/ai-receptionist",
+    label: "AI Receptionist",
+    note: "Recover the calls you miss",
+  },
+  {
     href: "/white-label-ai-services",
     label: "White-Label AI Services",
     note: "Deliver GEO under your own brand",

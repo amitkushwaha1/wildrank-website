@@ -36,6 +36,7 @@ const ServicesGrid  = dynamic(() => import("@/components/home/ServicesGrid"), { 
 const Stats         = dynamic(() => import("@/components/home/Stats"),        { ssr: true });
 const Industries    = dynamic(() => import("@/components/home/Industries"),   { ssr: true });
 const Testimonials  = dynamic(() => import("@/components/home/Testimonials"), { ssr: true });
+const MissedCalls   = dynamic(() => import("@/components/home/MissedCalls"),   { ssr: true });
 const FAQ           = dynamic(() => import("@/components/home/FAQ"),          { ssr: true });
 const CTA           = dynamic(() => import("@/components/home/CTA"),          { ssr: true });
 
@@ -69,6 +70,7 @@ export default function HomePage() {
       <Stats />
       <Industries />
       <Testimonials />
+      <MissedCalls />
       <FAQ />
       <CTA />
     </>

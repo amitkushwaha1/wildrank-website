@@ -1,6 +1,14 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import {
+  OpenAILogo,
+  GeminiLogo,
+  PerplexityLogo,
+  ClaudeLogo,
+  DeepSeekLogo,
+  GoogleAILogo,
+} from "@/components/shared/AIPlatformLogos";
 
 /**
  * NeuralOrb — the hero globe.
@@ -22,12 +30,12 @@ import { useEffect, useRef } from "react";
  * both prettier and cheaper.
  */
 const PLATFORMS = [
-  { name: "ChatGPT", rgb: "16, 163, 127", pos: "left-[1%] top-[15%]", delay: "0s" },
-  { name: "Gemini", rgb: "66, 133, 244", pos: "right-[0%] top-[7%]", delay: "0.9s" },
-  { name: "Perplexity", rgb: "32, 184, 205", pos: "right-[3%] top-[45%]", delay: "1.7s" },
-  { name: "DeepSeek", rgb: "207, 59, 15", pos: "right-[8%] bottom-[14%]", delay: "0.5s" },
-  { name: "Claude", rgb: "204, 155, 122", pos: "left-[6%] bottom-[9%]", delay: "1.3s" },
-  { name: "Google AI", rgb: "234, 67, 53", pos: "left-[0%] top-[45%]", delay: "2.1s" },
+  { name: "ChatGPT",    Logo: OpenAILogo,     pos: "left-[1%] top-[15%]",     delay: "0s" },
+  { name: "Gemini",     Logo: GeminiLogo,     pos: "right-[0%] top-[7%]",     delay: "0.9s" },
+  { name: "Perplexity", Logo: PerplexityLogo, pos: "right-[3%] top-[45%]",    delay: "1.7s" },
+  { name: "DeepSeek",   Logo: DeepSeekLogo,   pos: "right-[8%] bottom-[14%]", delay: "0.5s" },
+  { name: "Claude",     Logo: ClaudeLogo,     pos: "left-[6%] bottom-[9%]",   delay: "1.3s" },
+  { name: "Google AI",  Logo: GoogleAILogo,   pos: "left-[0%] top-[45%]",     delay: "2.1s" },
 ];
 
 const ORANGE = "207, 59, 15";
@@ -349,15 +357,19 @@ export default function NeuralOrb({ className = "" }: { className?: string }) {
         onClick={() => { stateRef.current.pulse = 1; }}
       />
 
-      {/* Real DOM labels — visible to crawlers, screen readers and users. */}
-      {PLATFORMS.map((p) => (
+      {/* Real DOM labels — visible to crawlers, screen readers and users.
+          The marks are the vendors' own, on a small neutral badge: a coloured
+          dot said "something of this brand" where the logo says which. */}
+      {PLATFORMS.map(({ name, Logo, pos, delay }) => (
         <span
-          key={p.name}
-          className={`animate-float absolute ${p.pos} flex items-center gap-1.5 rounded-full border border-hairline/10 bg-canvas/70 px-2.5 py-1 text-[11px] font-semibold text-ink shadow-[0_6px_20px_rgba(140,60,30,0.10)] backdrop-blur-md`}
-          style={{ animationDelay: p.delay }}
+          key={name}
+          className={`animate-float absolute ${pos} flex items-center gap-1.5 rounded-full border border-hairline/10 bg-canvas/70 py-1 pl-1.5 pr-2.5 text-[11px] font-semibold text-ink shadow-[0_6px_20px_rgba(140,60,30,0.10)] backdrop-blur-md`}
+          style={{ animationDelay: delay }}
         >
-          <span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: `rgb(${p.rgb})` }} />
-          {p.name}
+          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-tint/10">
+            <Logo className="h-3.5 w-3.5" />
+          </span>
+          {name}
         </span>
       ))}
 

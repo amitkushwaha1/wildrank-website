@@ -253,6 +253,17 @@ export default function GeoAeoServicesPage() {
           <p className="text-subtle text-sm mt-6">
             Prefer to talk? {PHONE_E164}
           </p>
+          <p className="mt-10 text-sm leading-relaxed text-muted">
+            Being cited in an answer is half of it. If the enquiry arrives as a
+            phone call,{" "}
+            <Link
+              href="/ai-receptionist"
+              className="font-semibold text-accent underline-offset-4 transition-colors hover:text-primary-light hover:underline"
+            >
+              an AI receptionist answers the ones your team cannot
+            </Link>
+            .
+          </p>
         </div>
       </section>
     </>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const results = [
   { metric: "Faster Campaign Optimization", value: "10x", desc: "vs. manual management", color: "text-yellow-700" },
@@ -29,6 +30,27 @@ export default function AIResults() {
             </motion.div>
           ))}
         </div>
+
+        {/* Where this loop still breaks. These campaigns earn the enquiries; the
+            section below the fold that callers actually reach is the phone. One
+            contextual link out to the page that handles it. */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mx-auto mt-10 max-w-2xl text-center text-sm leading-relaxed text-muted"
+        >
+          AI marketing earns the enquiry. If it arrives as a phone call and nobody
+          is free to pick up, it is gone —{" "}
+          <Link
+            href="/ai-receptionist"
+            className="font-semibold text-accent underline-offset-4 transition-colors hover:text-primary-light hover:underline"
+          >
+            an AI receptionist answers it and texts the caller back
+          </Link>
+          .
+        </motion.p>
       </div>
     </section>
   );

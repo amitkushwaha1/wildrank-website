@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const SITE = "https://wildranktechnologies.com";
 
@@ -138,6 +139,66 @@ export default function HermesAISystemPage() {
                 <p className="text-sm text-muted leading-relaxed">{desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Adoption — the order to do this in */}
+      <section className="py-20 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-ink mb-4">Where AI adoption actually starts</h2>
+          <p className="text-muted leading-relaxed max-w-3xl mb-10">
+            Most businesses do not need an AI strategy. They need the two or three
+            places where a person is currently the bottleneck and a machine would
+            do the job well enough. The order below is the order that tends to pay
+            for itself fastest.
+          </p>
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="glass-card rounded-2xl p-6 border border-dark-border">
+              <p className="text-primary-light font-mono text-xs font-bold mb-3">01</p>
+              <h3 className="text-lg font-bold text-ink mb-2">The phone</h3>
+              <p className="text-sm text-muted leading-relaxed mb-4">
+                Answer the calls you are already being sent. This is the cheapest
+                win on the list, because the demand exists — the only question is
+                whether somebody is free the moment it arrives. A call that rings
+                out is not a lead you can rank back later.
+              </p>
+              <Link
+                href="/ai-receptionist"
+                className="group inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-colors hover:text-primary-light"
+              >
+                AI receptionist and missed call recovery
+                <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </div>
+
+            <div className="glass-card rounded-2xl p-6 border border-dark-border">
+              <p className="text-primary-light font-mono text-xs font-bold mb-3">02</p>
+              <h3 className="text-lg font-bold text-ink mb-2">The follow-up</h3>
+              <p className="text-sm text-muted leading-relaxed mb-4">
+                Once nothing is lost at first contact, the second one is where the
+                leak moves: an enquiry that waits until tomorrow has usually
+                already rung somebody else. This is the part AI marketing carries.
+              </p>
+              <Link
+                href="/ai-marketing"
+                className="group inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-colors hover:text-primary-light"
+              >
+                AI marketing and campaign automation
+                <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </div>
+
+            <div className="glass-card rounded-2xl p-6 border border-dark-border">
+              <p className="text-primary-light font-mono text-xs font-bold mb-3">03</p>
+              <h3 className="text-lg font-bold text-ink mb-2">The record</h3>
+              <p className="text-sm text-muted leading-relaxed">
+                Every call, text and form lands in the CRM you already use, so the
+                next decision is made on data rather than on what somebody
+                remembers. Hermes is wired to your stack in the deployment step
+                above — it does not ask you to adopt a new dashboard.
+              </p>
+            </div>
           </div>
         </div>
       </section>
