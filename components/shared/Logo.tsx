@@ -72,7 +72,7 @@ export default function Logo({ size = "md", on = "light", className = "", threeD
       <span
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-[-6px] w-[90%] h-3 rounded-[50%] blur-md opacity-90 group-hover:opacity-100 transition-opacity duration-500"
-        style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 40%, transparent 70%)" }}
+        style={{ background: "radial-gradient(ellipse at center, rgba(252,72,18,0.85) 0%, rgba(252,72,18,0.4) 40%, transparent 70%)" }}
       />
     </span>
   );
