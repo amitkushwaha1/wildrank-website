@@ -9,22 +9,28 @@ $src = New-Object System.Drawing.Bitmap($srcPath)
 $crop = $src.Clone((New-Object System.Drawing.Rectangle(12,16,40,28)), $src.PixelFormat)
 $src.Dispose()
 
-# $bgColor = $null => transparent; otherwise a solid System.Drawing.Color.
-function New-IconBitmap([int]$size, [double]$padPct, $bgColor) {
-  $fmt = [System.Drawing.Imaging.PixelFormat]::Format32bppArgb
-  $b = New-Object System.Drawing.Bitmap($size, $size, $fmt)
+function New-IconBitmap([int]$size, [double]$padPct) {
+  $b = New-Object System.Drawing.Bitmap($size, $size, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
   $g = [System.Drawing.Graphics]::FromImage($b)
   $g.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
   $g.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
   $g.PixelOffsetMode = [System.Drawing.Drawing2D.PixelOffsetMode]::HighQuality
 
-  if ($null -ne $bgColor) {
-    # solid background (used for app/home-screen icons so they don't turn black)
-    $brush = New-Object System.Drawing.SolidBrush($bgColor)
-    $g.FillRectangle($brush, 0, 0, $size, $size)
-    $brush.Dispose()
-  }
-  # else: leave fully transparent (browser-tab favicons adapt to light/dark toolbars)
+  # rounded dark brand background (#18181b -> #0a0a0a), matching site theme
+  $rad = [int]($size * 0.18)
+  $w = $size; $h = $size; $d = $rad * 2
+  $p = New-Object System.Drawing.Drawing2D.GraphicsPath
+  $p.AddArc(0, 0, $d, $d, 180, 90)
+  $p.AddArc($w - $d, 0, $d, $d, 270, 90)
+  $p.AddArc($w - $d, $h - $d, $d, $d, 0, 90)
+  $p.AddArc(0, $h - $d, $d, $d, 90, 90)
+  $p.CloseFigure()
+
+  $rect = New-Object System.Drawing.Rectangle(0, 0, $size, $size)
+  $c1 = [System.Drawing.Color]::FromArgb(255, 26, 26, 30)
+  $c2 = [System.Drawing.Color]::FromArgb(255, 8, 8, 8)
+  $brush = New-Object System.Drawing.Drawing2D.LinearGradientBrush($rect, $c1, $c2, [single]45)
+  $g.FillPath($brush, $p)
 
   # centered W mark with padding
   $inner = $size * (1 - $padPct / 100.0)
@@ -48,14 +54,10 @@ function Save-Png([System.Drawing.Bitmap]$bmp, [string]$path) {
   "OK  $($f.Name)  $($f.Length) bytes"
 }
 
-$white = [System.Drawing.Color]::FromArgb(255, 255, 255, 255)
-
 # --- PNG assets ---
-# Browser-tab favicon: transparent background (no dark tile).
-Save-Png (New-IconBitmap 64 26 $null)  (Join-Path $root "app\icon.png")
-# App/home-screen icons: solid white background so iOS doesn't render them on black.
-Save-Png (New-IconBitmap 180 24 $white) (Join-Path $root "app\apple-icon.png")
-Save-Png (New-IconBitmap 512 24 $white) (Join-Path $root "public\icon-512.png")
+Save-Png (New-IconBitmap 64 26)  (Join-Path $root "app\icon.png")
+Save-Png (New-IconBitmap 180 24) (Join-Path $root "app\apple-icon.png")
+Save-Png (New-IconBitmap 512 24) (Join-Path $root "public\icon-512.png")
 
-# favicon.ico is generated separately (multi-size) from the transparent mark;
-# see scripts or regenerate with ImageMagick from app\icon.png at 16/32/48.
+# favicon.ico (16/32/48) is generated separately, e.g. with ImageMagick
+# from app\icon.png, or by extending this script with a multi-size ICO writer.
