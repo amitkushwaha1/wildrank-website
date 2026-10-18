@@ -64,7 +64,7 @@ export default function Logo({ size = "md", on = "light", className = "", threeD
           alt="Wildrank Technologies"
           width={d.width}
           height={d.height}
-          className={`${d.className} object-contain drop-shadow-[0_12px_24px_rgba(207,59,15,0.4)] transition-all duration-500 group-hover:drop-shadow-[0_28px_48px_rgba(207,59,15,0.65)]`}
+          className={`${d.className} object-contain drop-shadow-[0_6px_12px_rgba(0,0,0,0.3)] transition-all duration-500 group-hover:drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)]`}
           priority
         />
       </span>
