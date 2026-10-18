@@ -4,11 +4,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import {
   ArrowRight,
-  BellRing,
-  CalendarCheck,
-  MessageSquare,
-  PhoneMissed,
-  type LucideIcon,
 } from "lucide-react";
 
 /**
@@ -30,44 +25,11 @@ import {
  * for its own argument; this section makes the argument without repeating a
  * figure that has no source, so the two pages cannot contradict each other.
  *
- * The panel on the right is a description of the mechanism, not a screenshot or
- * a claim about results. Each step matches what /ai-receptionist says the system
- * does, and the timings come from the same place.
+ * The panel on the right is the process rendered as its own artwork — a phone
+ * mock-up that walks the four steps. It describes the mechanism, not a
+ * screenshot or a claim about results. Each step matches what /ai-receptionist
+ * says the system does, and the timings come from the same place.
  */
-const TIMELINE: {
-  icon: LucideIcon;
-  time: string;
-  title: string;
-  detail: string;
-  strong?: boolean;
-}[] = [
-  {
-    icon: PhoneMissed,
-    time: "2:14 PM",
-    title: "Missed call",
-    detail: "Line busy — nobody free to pick up.",
-  },
-  {
-    icon: MessageSquare,
-    time: "2:14 PM",
-    title: "Text sent",
-    detail: "\u201CSorry we missed you — reply here and we will get you booked in.\u201D",
-  },
-  {
-    icon: BellRing,
-    time: "2:15 PM",
-    title: "Caller replies",
-    detail: "\u201CCan someone come out on Thursday?\u201D",
-  },
-  {
-    icon: CalendarCheck,
-    time: "2:16 PM",
-    title: "Booked",
-    detail: "Thursday, 9:00 AM — job details land in your CRM.",
-    strong: true,
-  },
-];
-
 const CAPABILITIES = [
   ["Answers outside hours", "Nights, weekends, peak and the busy line."],
   ["Texts back in seconds", "Voicemail or a hang-up triggers an SMS to the caller's own number."],
@@ -171,65 +133,27 @@ export default function MissedCalls() {
             </motion.div>
           </div>
 
-          {/* ── Right — what the system does with the call ── */}
+          {/* ── Right — the process as its own artwork, matching the steps on
+              /ai-receptionist so the two pages cannot contradict each other. ── */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.12 }}
           >
-            <div className="glass-card rounded-3xl border border-hairline/10 p-6 sm:p-8">
-              <div className="mb-6 flex items-center justify-between border-b border-hairline/10 pb-5">
-                <div className="flex items-center gap-2.5">
-                  <span className="relative flex h-2 w-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary/60 motion-reduce:animate-none" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
-                  </span>
-                  <p className="text-sm font-semibold text-ink">
-                    Missed call recovery
-                  </p>
-                </div>
-                <span className="font-mono text-[11px] uppercase tracking-widest text-subtle">
-                  Live
-                </span>
-              </div>
-
-              <ol className="relative">
-                {TIMELINE.map(({ icon: Icon, time, title, detail, strong }, i) => (
-                  <li key={title} className="relative flex gap-4">
-                    <div className="flex flex-col items-center">
-                      <span
-                        className={`z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${
-                          strong
-                            ? "bg-primary text-white"
-                            : "bg-primary/10 text-primary-light"
-                        }`}
-                      >
-                        <Icon className="h-4 w-4" />
-                      </span>
-                      {i < TIMELINE.length - 1 && (
-                        <span className="w-px flex-1 bg-hairline/15" />
-                      )}
-                    </div>
-                    <div className="pb-6 last:pb-0">
-                      <div className="flex items-baseline gap-3">
-                        <p className="text-sm font-bold text-ink">{title}</p>
-                        <span className="font-mono text-[11px] text-subtle">
-                          {time}
-                        </span>
-                      </div>
-                      <p className="mt-0.5 text-sm leading-relaxed text-muted">
-                        {detail}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
+            <div
+              className="glass-card ring-glow rounded-3xl border border-hairline/10 p-3"
+              style={{ "--ring-hue": "205" } as React.CSSProperties}
+            >
+              <img
+                src="/images/missed-call-process.webp"
+                alt="How the AI receptionist missed call recovery process works: a busy line sends an automated text, the caller replies, and the booking lands in the CRM."
+                width={768}
+                height={1376}
+                decoding="async"
+                className="h-auto w-full rounded-2xl"
+              />
             </div>
-
-            <p className="mt-4 text-center text-xs text-subtle">
-              What happens on a call your team cannot answer.
-            </p>
           </motion.div>
         </div>
       </div>

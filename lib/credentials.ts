@@ -102,6 +102,7 @@ const provisionalCredentials: Credential[] = [
     name: "Clutch",
     note: "A B2B review platform that ranks agencies on verified client reviews.",
     icon: Award,
+    logo: "/awards/badge-Clutch.png",
   },
   {
     name: "GoodFirms",
@@ -113,6 +114,7 @@ const provisionalCredentials: Credential[] = [
     name: "DesignRush",
     note: "A directory that ranks agencies by category, location and client feedback.",
     icon: Sparkles,
+    logo: "/awards/badge-DesignRush.png",
   },
   {
     name: "Semrush Certified",
