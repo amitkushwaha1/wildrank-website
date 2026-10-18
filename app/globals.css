@@ -37,7 +37,7 @@ body {
 
 /* Optical typography: `balance` stops headings orphaning their last word,
    `pretty` stops paragraphs ending on a lone short word. No-ops if unsupported. */
-h1, h2 { text-shadow: 0 6px 24px rgba(0, 0, 0, 0.375); }
+h1, h2 { text-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.3); }
 h1, h2, h3, h4 { text-wrap: balance; }
 p, li { text-wrap: pretty; }
 
