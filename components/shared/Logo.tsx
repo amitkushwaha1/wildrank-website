@@ -52,8 +52,8 @@ export default function Logo({ size = "md", on = "light", className = "", threeD
 
   return (
     <span
-      className={`logo-3d group inline-block ${className}`}
-      style={{ perspective: "900px" }}
+      className={`logo-3d group relative inline-block ${className}`}
+      style={{ perspective: "600px" }}
     >
       <span
         className="logo-3d-inner relative inline-block transition-transform duration-500 ease-out"
@@ -64,10 +64,16 @@ export default function Logo({ size = "md", on = "light", className = "", threeD
           alt="Wildrank Technologies"
           width={d.width}
           height={d.height}
-          className={`${d.className} object-contain drop-shadow-[0_6px_12px_rgba(0,0,0,0.3)] transition-all duration-500 group-hover:drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)]`}
+          className={`${d.className} object-contain`}
           priority
         />
       </span>
+      {/* Spherical shadow beneath the logo — radial ellipse, like a ball on a surface */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-[-6px] w-[90%] h-3 rounded-[50%] blur-md opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+        style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 40%, transparent 70%)" }}
+      />
     </span>
   );
 }
