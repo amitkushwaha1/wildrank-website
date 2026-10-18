@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PHONE_E164 } from "@/lib/site";
-
-const SITE = "https://wildranktechnologies.com";
+import FaqAccordion from "@/components/shared/FaqAccordion";
+import { PHONE_E164, SITE_URL as SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Generative Engine Optimization (GEO) & AEO | WildRank",
@@ -228,20 +227,16 @@ export default function GeoAeoServicesPage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-20 lg:py-16 bg-dark-card border-y border-dark-border">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-ink mb-10">Questions</h2>
-          <div className="space-y-8">
-            {FAQS.map((f) => (
-              <div key={f.q} className="border-b border-dark-border pb-6">
-                <h3 className="text-lg font-bold text-ink mb-2">{f.q}</h3>
-                <p className="text-muted leading-relaxed">{f.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* FAQ — the same shared accordion the homepage renders. This was a flat
+          list of always-open answers under a bare "Questions" heading, so the
+          same standard of answer arrived looking like a different website. */}
+      <FaqAccordion
+        items={FAQS}
+        heading="GEO & AEO"
+        accent="Questions"
+        intro="What clients ask us before they commit to a generative-search programme."
+        className="bg-dark-card border-y border-dark-border"
+      />
 
       <section className="py-20 lg:py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

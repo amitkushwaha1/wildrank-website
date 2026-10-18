@@ -79,8 +79,19 @@ body::after {
    them is flat, so a near-opaque fill looks identical for a fraction of the
    cost. The inset highlight is what makes it read as a machined surface
    rather than a flat rounded rectangle. */
-.glass-card {
+/* `position: relative` is declared through `:where()` so it carries zero
+   specificity. Everything else in this block needs to keep beating utilities
+   (that is what makes the card look like a card), but position is the one
+   property utilities legitimately need to override: a badge written as
+   `absolute -top-6 -left-6 glass-card` was silently laying out in normal flow,
+   because this file loads after `@tailwind utilities` and a bare `.glass-card`
+   selector outranks `.absolute`. `:where()` drops it below any utility, so the
+   card still creates a containing block by default and a positioning utility
+   still wins when one is asked for. */
+:where(.glass-card) {
   position: relative;
+}
+.glass-card {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.87) 100%);
   border: 1px solid rgb(var(--hairline) / 0.07);
   border-radius: 1rem;

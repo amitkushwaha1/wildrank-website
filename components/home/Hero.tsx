@@ -1,38 +1,36 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Award, Handshake, Activity, TrendingUp, ShieldCheck } from "lucide-react";
+import { ArrowRight, Award, Activity, TrendingUp, ShieldCheck, Bot } from "lucide-react";
 import NeuralOrb from "@/components/home/NeuralOrb";
 import FallingStars from "@/components/shared/FallingStars";
 
 /**
  * The five hero figures.
  *
- * The first card is deliberately not a number. "500+" appeared twice in a
- * five-card row and claimed nothing a visitor could check; the sentence below
- * carries the same claim and reads as a fact rather than a boast, so it is set
- * small in ink instead of large in colour. The four cards beside it are the
- * figures a buyer in 2026 screens for — entity age, AI citation lift, the
- * guarantee, edge latency — which is also the vocabulary that gets a brand
- * quoted by ChatGPT, Gemini and Perplexity rather than merely indexed by them.
+ * Deliberately no "500+ clients" card. That claim already heads the proof band
+ * one section below, and it used to appear in both places — a visitor met the
+ * same sentence twice before scrolling past two sections. These five are the
+ * figures a buyer in 2026 screens for: entity age, AI citation lift, the
+ * guarantee, edge latency, and how many answer engines are actually watched.
+ * That is also the vocabulary that gets a brand quoted by ChatGPT and Gemini
+ * rather than merely indexed by them.
  */
 type Stat = {
-  icon: typeof Handshake;
+  icon: typeof Award;
   value: string;
   title: string;
   desc: string;
   color: string;
   bg: string;
-  /** Render the value as running text rather than as a large numeral. */
-  small?: boolean;
 };
 
 const stats: Stat[] = [
-  { icon: Handshake,   value: "A Track Record Built Nationwide", small: true, title: "500+ Clients Company-Wide",  desc: "From single-location businesses to enterprise teams across the USA and worldwide.",        color: "text-primary", bg: "bg-primary/10" },
-  { icon: Award,       value: "2006",     title: "Founded & Proven",       desc: "Two decades of performance marketing and software engineering, still operator-led.",        color: "text-primary", bg: "bg-primary/10" },
-  { icon: TrendingUp,  value: "+340%",    title: "Avg. AI Citation Lift",  desc: "Average lift in citations across ChatGPT, Gemini, Perplexity and Google AI Overviews.",     color: "text-primary", bg: "bg-primary/10" },
-  { icon: ShieldCheck, value: "90-Day",   title: "Results Guarantee",      desc: "Agreed traffic, citation or pipeline milestones met in 90 days, or advisory fees refunded.", color: "text-primary", bg: "bg-primary/10" },
-  { icon: Activity,    value: "< 300ms",  title: "Next.js Edge Latency",   desc: "Sub-second web systems on edge infrastructure — fast for buyers and for AI crawlers.",      color: "text-primary", bg: "bg-primary/10" },
+  { icon: Award,       value: "2006",    title: "Founded & Proven",       desc: "Two decades of performance marketing and software engineering, still operator-led.",        color: "text-primary", bg: "bg-primary/10" },
+  { icon: TrendingUp,  value: "+340%",   title: "Avg. AI Citation Lift",  desc: "Average lift in citations across ChatGPT, Gemini, Perplexity and Google AI Overviews.",     color: "text-primary", bg: "bg-primary/10" },
+  { icon: ShieldCheck, value: "90-Day",  title: "Results Guarantee",      desc: "Agreed traffic, citation or pipeline milestones met in 90 days, or advisory fees refunded.", color: "text-primary", bg: "bg-primary/10" },
+  { icon: Activity,    value: "< 300ms", title: "Next.js Edge Latency",   desc: "Sub-second web systems on edge infrastructure — fast for buyers and for AI crawlers.",      color: "text-primary", bg: "bg-primary/10" },
+  { icon: Bot,         value: "6",       title: "AI Platforms Monitored", desc: "ChatGPT, Gemini, Perplexity, Claude, DeepSeek and Google AI Overviews, checked monthly.",   color: "text-primary", bg: "bg-primary/10" },
 ];
 
 const cardVariants = {
@@ -90,7 +88,7 @@ export default function Hero() {
             >
               <span className="text-ink">Be the Brand Google Ranks</span>
               <br />
-              <span className="gradient-text">and AI Recommends First</span>
+              <span className="gradient-text">AI Recommends First</span>
             </motion.h1>
 
             {/* Sub */}
@@ -168,11 +166,7 @@ export default function Hero() {
                 <div className={`w-10 h-10 ${stat.bg} rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>
                   <Icon className={`w-5 h-5 ${stat.color}`} />
                 </div>
-                {stat.small ? (
-                  <p className="mb-1 text-[13px] font-bold leading-snug text-ink">{stat.value}</p>
-                ) : (
-                  <p className={`text-2xl font-extrabold ${stat.color} mb-0.5`}>{stat.value}</p>
-                )}
+                <p className={`text-2xl font-extrabold ${stat.color} mb-0.5`}>{stat.value}</p>
                 <p className="text-ink font-semibold text-sm mb-1">{stat.title}</p>
                 <p className="text-faint text-xs leading-relaxed">{stat.desc}</p>
               </motion.div>

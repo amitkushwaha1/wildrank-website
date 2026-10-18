@@ -41,7 +41,14 @@ export default function AISection() {
       <div className="absolute bottom-1/4 -left-20 w-60 h-60 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-14 items-center">
+        {/* items-start, not items-center. The text column is shorter than the
+            image column, so centring it pushed its first 225px below the top of
+            the image: scrolling to this section showed the photograph and a
+            blank column beside it, with the heading fading in only once the
+            column itself reached the viewport. Top-aligning puts the eyebrow
+            level with the image, and the entrance delays are now short enough
+            that the text arrives with the picture rather than after it. */}
+        <div className="grid items-start gap-14 lg:grid-cols-2">
           {/* Left Content */}
           <div>
             <motion.div
@@ -58,7 +65,7 @@ export default function AISection() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.05 }}
               className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink leading-tight mb-6"
             >
               The Best AI SEO{" "}
@@ -69,7 +76,7 @@ export default function AISection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.15 }}
+              transition={{ duration: 0.6, delay: 0.06 }}
               className="w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mb-6"
             />
 
@@ -77,27 +84,33 @@ export default function AISection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.08 }}
               className="text-muted text-base leading-relaxed mb-6"
             >
-              Search is evolving faster. With the rise of LLMs and Generative Engine Optimization (GEO), the way people search information is changing, and traditional SEO alone may not be enough. AI-powered SEO is smarter and more adaptive, ensuring your business stays visible across emerging AI-driven platforms.
+              Search has transformed. We engineer Generative Engine Optimization
+              (GEO) so your brand is cited as the definitive answer across
+              ChatGPT, Perplexity, Gemini and Google AI Overviews — powered by
+              sub-second Next.js web applications.
             </motion.p>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.12 }}
               className="text-muted text-base leading-relaxed mb-8"
             >
-              At Wildrank, our AI SEO experts combine user data, search intent, keyword prediction, and intelligent content optimization to keep your brand future-proof in this new era of search.
+              At Wildrank, our AI SEO strategists combine entity mapping,
+              structured markup and search-intent modelling to keep your brand
+              visible in a market where being indexed is no longer the same as
+              being recommended.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.18 }}
               className="grid grid-cols-2 gap-3"
             >
               {[

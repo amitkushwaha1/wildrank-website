@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
 import dynamic from "next/dynamic";
+import { homeFaqs } from "@/lib/homeFaqs";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Digital Marketing Agency in USA | SEO, Social Media, PPC, Web Design - Wildrank Technologies",
@@ -37,9 +39,30 @@ const Testimonials  = dynamic(() => import("@/components/home/Testimonials"), { 
 const FAQ           = dynamic(() => import("@/components/home/FAQ"),          { ssr: true });
 const CTA           = dynamic(() => import("@/components/home/CTA"),          { ssr: true });
 
+/**
+ * The homepage FAQ had no markup behind it at all. Fifty-one other pages ship
+ * FAQPage; the page most likely to be quoted in an AI answer was the one page
+ * whose answers a machine could not read. Built from the same array the
+ * accordion renders, so the two can never disagree.
+ */
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `${SITE_URL}/#faq`,
+  mainEntity: homeFaqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Hero />
       <AISection />
       <ServicesGrid />
