@@ -85,15 +85,21 @@ export default function Hero() {
 
             {/* Badge */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
+              initial={{ y: 20 }} animate={{ y: 0 }} transition={{ duration: 0.5 }}
               className="inline-flex w-fit items-center gap-2 bg-primary text-white text-xs font-bold px-4 py-2 rounded-full mb-6 shadow-lg shadow-primary/25"
             >
               AI-Powered Digital Marketing
             </motion.div>
 
-            {/* Headline */}
+            {/* Headline.
+                Entrances above the fold animate transform only — never opacity.
+                This <h1> is the Largest Contentful Paint element; starting it at
+                opacity:0 leaves the biggest text on the page invisible until
+                React hydrates and framer-motion runs, which measured ~2.2 s of
+                LCP element-render delay on mobile. A translate-only entrance
+                paints immediately, so the LCP fires with the first frame. */}
             <motion.h1
-              initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              initial={{ y: 40 }} animate={{ y: 0 }} transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="text-5xl sm:text-6xl lg:text-[4.5rem] font-extrabold leading-[1.04] mb-6"
             >
               <span className="text-ink">Be the Brand Google Ranks</span>
@@ -103,7 +109,7 @@ export default function Hero() {
 
             {/* Sub */}
             <motion.p
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.25 }}
+              initial={{ y: 20 }} animate={{ y: 0 }} transition={{ duration: 0.6, delay: 0.25 }}
               className="text-muted text-lg leading-relaxed max-w-lg mb-4"
             >
               From Google to Gemini, Perplexity to voice — we engineer your brand&apos;s visibility across every AI and search surface that your customers use.
@@ -111,7 +117,7 @@ export default function Hero() {
 
             {/* Trust logos */}
             <motion.div
-              initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.35 }}
+              initial={{ y: 16 }} animate={{ y: 0 }} transition={{ duration: 0.5, delay: 0.35 }}
               className="flex flex-wrap gap-x-6 gap-y-2 mb-8"
             >
               {trustLogos.map(l => (
@@ -121,7 +127,7 @@ export default function Hero() {
 
             {/* CTAs */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.45 }}
+              initial={{ y: 20 }} animate={{ y: 0 }} transition={{ duration: 0.6, delay: 0.45 }}
               className="flex flex-wrap gap-4"
             >
               <motion.a

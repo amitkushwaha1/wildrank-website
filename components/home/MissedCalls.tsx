@@ -149,8 +149,9 @@ export default function MissedCalls() {
               <img
                 src="/images/missed-call-process.webp"
                 alt="How the AI receptionist missed call recovery process works: a busy line sends an automated text, the caller replies, and the booking lands in the CRM."
-                width={1808}
-                height={2400}
+                width={760}
+                height={1009}
+                loading="lazy"
                 decoding="async"
                 className="h-auto w-full rounded-2xl"
               />

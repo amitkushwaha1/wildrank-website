@@ -59,7 +59,9 @@ export default function Awards() {
                     <img
                       src={c.logo}
                       alt=""
-                      loading="eager"
+                      width={c.w ?? 64}
+                      height={c.h ?? 64}
+                      loading="lazy"
                       decoding="async"
                       className="max-h-16 w-auto max-w-[6rem] object-contain drop-shadow-md"
                     />

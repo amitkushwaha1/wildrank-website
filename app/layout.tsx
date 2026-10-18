@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import FallingStars from "@/components/shared/FallingStars";
@@ -117,13 +118,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${jakarta.variable} ${mono.variable}`}>
-      {/* Head scripts: Google Analytics + Organization/WebSite JSON-LD */}
+      {/* Head: Organization/WebSite JSON-LD only.
+          Google Analytics used to sit here as a plain async <script>, which
+          put a 180 KB third-party script (73 KB of it unused) in the critical
+          path and produced long main-thread tasks during load. It now loads
+          via next/script with strategy="lazyOnload" (end of body), so it runs
+          after the page is interactive and no longer competes with the LCP. */}
       <head>
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        />
-        <script dangerouslySetInnerHTML={{ __html: GA_INIT_SCRIPT }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -139,6 +140,15 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="lazyOnload"
+        />
+        <Script
+          id="ga-init"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{ __html: GA_INIT_SCRIPT }}
+        />
       </body>
     </html>
   );
