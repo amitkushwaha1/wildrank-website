@@ -707,6 +707,394 @@ export const POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "how-to-lower-cost-per-lead-with-ppc",
+    title: "How to Lower Cost Per Lead with PPC",
+    description:
+      "Cost per lead is the only paid-media number that matters. Here is how to bring it down without cutting the volume that feeds the pipeline.",
+    date: "2026-10-20",
+    category: "Paid Media",
+    readingMinutes: 7,
+    related: { href: "/ppc-services", label: "PPC management services" },
+    sections: [
+      {
+        type: "p",
+        text: "Cost per lead is the number that decides whether paid media is worth running. Clicks, impressions and click-through rate are inputs. Cost per lead is the output. Optimising the inputs without watching the output is how budgets get spent on traffic that never becomes revenue.",
+      },
+      {
+        type: "p",
+        text: "This article covers the levers that actually move cost per lead, in the order they should be pulled.",
+      },
+      { type: "h2", text: "1. Stop paying for the wrong clicks" },
+      {
+        type: "p",
+        text: "The fastest way to lower cost per lead is to stop paying for clicks that were never going to convert. Most accounts have a long tail of search terms that look relevant and produce nothing.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Pull the search terms report and look for terms with spend and zero conversions. Add the irrelevant ones as negatives.",
+          "Look for terms that convert but at three or four times your target cost per lead. Either the bid is too high, the landing page is wrong, or the intent is weaker than it looked.",
+          "Check your match types. Broad match without a well-maintained negative list is the single most common cause of a high cost per lead.",
+          "Separate branded from non-branded campaigns. Branded traffic is cheap and converts well; mixing it in flatters the blended number and hides the real cost of acquisition.",
+        ],
+      },
+      { type: "h2", text: "2. Fix the landing page before the bid" },
+      {
+        type: "p",
+        text: "A higher conversion rate lowers cost per lead without touching the bid. If your landing page converts at half the rate it should, no bid adjustment will fix it.",
+      },
+      {
+        type: "ul",
+        items: [
+          "One page per intent. A page that tries to serve every keyword converts for none of them.",
+          "The headline should match the search term. If the ad says \"emergency plumber\" and the page says \"plumbing services\", the visitor has to work out whether they are in the right place.",
+          "The form should ask for the minimum information needed to qualify. Every extra field costs conversions.",
+          "Speed matters more than design. A slow page loses the click you paid for before the visitor reads a word.",
+          "Test one change at a time, with enough volume to be meaningful. Testing five things at once tells you nothing.",
+        ],
+      },
+      { type: "h2", text: "3. Bid on the right things" },
+      {
+        type: "p",
+        text: "Bidding strategy is the last lever, not the first, because it optimises whatever you feed it. Feeding it bad clicks and a poor landing page just makes it efficient at wasting money.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Start with manual or enhanced CPC while you learn what converts, then move to target CPA or target ROAS once you have enough conversion data.",
+          "Set the target based on what a lead is worth, not on what you want to pay. A target that is too low starves the campaign of volume.",
+          "Use bid adjustments for location, device and time of day based on actual conversion data, not assumptions.",
+          "Review bids after a full week, not daily. Daily changes chase noise.",
+        ],
+      },
+      { type: "h2", text: "4. The measurement that actually matters" },
+      {
+        type: "p",
+        text: "Cost per lead is only useful if the lead is real. A cheap lead that never answers the phone or books a job is not a lead, it is a cost.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Track calls, not just form submissions. If phone calls are your main conversion, measure them.",
+          "Track which leads become jobs. Cost per qualified lead is the number worth optimising.",
+          "Report on revenue influenced, not just leads generated. A channel that produces cheap leads that never close is losing money.",
+          "Separate branded from non-branded in reporting. Branded search is cheap and high-converting; it flatters the blended figure.",
+        ],
+      },
+      { type: "h2", text: "The order to pull them" },
+      {
+        type: "ol",
+        items: [
+          "Negatives and match types first. This is the fastest, cheapest improvement.",
+          "Landing page second. This is the highest-leverage change but takes longer.",
+          "Bidding third. Only after the clicks are clean and the page converts.",
+          "Measurement last, but continuously. Without it you are optimising blind.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Cost per lead is not a number you set. It is a number you earn by doing the unglamorous work in the right order.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What is a good cost per lead?",
+        a: "There is no universal figure. It depends on your market, your service value and your conversion rate. The useful benchmark is your own cost per qualified lead over time: if it is falling and the leads are closing, the campaigns are working.",
+      },
+      {
+        q: "Why is my cost per lead so high?",
+        a: "The usual causes, in order of frequency: broad match without negatives, a landing page that does not match the ad, bidding on terms you already rank for organically, and measuring clicks instead of qualified leads.",
+      },
+      {
+        q: "How long does it take to lower cost per lead?",
+        a: "Negative keywords and match-type changes show results within days. Landing page changes take weeks to gather enough data. Bidding changes take a month. The full improvement is usually visible within one quarter.",
+      },
+    ],
+  },
+  {
+    slug: "content-strategy-that-earns-its-traffic",
+    title: "Content Strategy That Earns Its Traffic",
+    description:
+      "A content calendar built around search intent, topical clusters and commercial pages — not around what the team feels like writing.",
+    date: "2026-10-20",
+    category: "Social & Content",
+    readingMinutes: 8,
+    related: { href: "/content-marketing-services", label: "content marketing services" },
+    sections: [
+      {
+        type: "p",
+        text: "Most content strategies fail before a word is written. They start with a list of topics the team finds interesting, produce articles that nobody searches for, and then wonder why traffic does not arrive.",
+      },
+      {
+        type: "p",
+        text: "The fix is not better writing. It is a different starting point.",
+      },
+      { type: "h2", text: "Start with search intent, not topics" },
+      {
+        type: "p",
+        text: "Every piece of content should answer a question someone is actually asking. The question comes from search data, customer conversations and sales calls — not from a brainstorming session.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Pull the queries your site already ranks for and the ones your competitors rank for. These are proven demand.",
+          "Read your sales call notes and support tickets. The questions prospects ask before buying are the questions worth answering.",
+          "Look at the People Also Ask boxes and related searches for your main terms. These are the sub-questions Google has already identified.",
+          "Prioritise by intent. A query with buying intent is worth more than a query with informational intent, even at lower volume.",
+        ],
+      },
+      { type: "h2", text: "Build topical clusters" },
+      {
+        type: "p",
+        text: "A single article on a topic is a leaf. A cluster of articles around a topic, linked to a pillar page, is a tree. Google and AI assistants both prefer trees, because a tree demonstrates depth and authority.",
+      },
+      {
+        type: "ol",
+        items: [
+          "Pick a pillar topic that matches a service you sell. This becomes a long, comprehensive page.",
+          "List the sub-questions a buyer would ask about it. Each becomes a supporting article.",
+          "Link every supporting article to the pillar and back. Internal linking is what turns separate pages into a cluster.",
+          "Add new articles as the cluster grows. The pillar page does not need to be rewritten each time.",
+        ],
+      },
+      { type: "h2", text: "Write for the question, not the keyword" },
+      {
+        type: "p",
+        text: "A keyword is a search term. A question is what the searcher is trying to solve. Content written for the keyword announces a topic. Content written for the question answers it.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Put the answer in the first sentence after the heading.",
+          "Use the question as the heading, or close to it. \"How much does SEO cost\" outranks \"SEO Pricing Guide\" for the query \"how much does SEO cost\".",
+          "Make each section self-contained. A reader arriving from a search result should get their answer without reading the rest of the page.",
+          "Use the words the searcher uses, not your internal terminology. If customers say \"Google Ads\" and you say \"paid search\", write \"Google Ads\".",
+        ],
+      },
+      { type: "h2", text: "What not to publish" },
+      {
+        type: "ul",
+        items: [
+          "Articles that exist only to target a keyword with no genuine answer behind them.",
+          "Listicles of other people's content with no original perspective.",
+          "Content that rewrites what is already ranking without adding anything. If you cannot say something new, do not publish.",
+          "Pages that announce a service without explaining how it works.",
+          "Fabricated statistics, invented authors and unverifiable claims. These are E-E-A-T liabilities.",
+        ],
+      },
+      { type: "h2", text: "Measure what matters" },
+      {
+        type: "ul",
+        items: [
+          "Organic traffic to the article, not page views from social.",
+          "Whether the article ranks for its target query, and at what position.",
+          "Whether visitors from the article go on to a service page or contact page.",
+          "Whether the article earns links or citations over time.",
+          "Not: word count, time on page, or how many articles were published.",
+        ],
+      },
+      {
+        type: "p",
+        text: "A content strategy is a bet on which questions your ideal customer is asking, answered well enough that they trust you before they have spoken to you. Everything else is publishing.",
+      },
+    ],
+    faqs: [
+      {
+        q: "How often should I publish content?",
+        a: "Consistently, at a pace you can sustain with quality. One well-researched article a month that ranks and earns links is worth more than four thin articles that do not.",
+      },
+      {
+        q: "How long should a blog post be?",
+        a: "As long as the question requires. A short answer to a simple question is better than a padded article. A complex topic needs depth. Let the question set the length, not a target.",
+      },
+      {
+        q: "Does content marketing still work for SEO?",
+        a: "Yes, but the bar has risen. Generic content no longer ranks because there is too much of it. Content that answers a specific question better than anything else still ranks, and it is also what AI assistants cite.",
+      },
+    ],
+  },
+  {
+    slug: "email-and-lifecycle-marketing-that-converts",
+    title: "Email and Lifecycle Marketing That Converts",
+    description:
+      "Email that earns the open: segmentation, automation and copywriting that turn subscribers into repeat revenue, not noise.",
+    date: "2026-10-20",
+    category: "Social & Content",
+    readingMinutes: 7,
+    related: { href: "/email-marketing-services", label: "email marketing services" },
+    sections: [
+      {
+        type: "p",
+        text: "Email marketing is the highest-return channel most businesses underuse. The reason is not a lack of tools. It is that most email programmes send the same message to everyone, measure opens, and call it a day.",
+      },
+      {
+        type: "p",
+        text: "This is the version that works: segmentation, automation and copywriting that move a subscriber from first contact to repeat purchase.",
+      },
+      { type: "h2", text: "Segmentation comes first" },
+      {
+        type: "p",
+        text: "A single list with a single message is broadcasting. Segmentation is what turns broadcasting into conversation.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Segment by behaviour, not just demographics. What someone did tells you more than who they are.",
+          "Separate leads from customers. The message to someone who has not bought is different from the message to someone who has.",
+          "Separate recent from dormant. A subscriber who opened last week is not the same as one who has not opened in six months.",
+          "Keep segments simple. Five segments you use are better than fifty you cannot manage.",
+        ],
+      },
+      { type: "h2", text: "Automation does the work you cannot" },
+      {
+        type: "p",
+        text: "Automation is not about sending more email. It is about sending the right email at the right moment without someone having to remember.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Welcome sequence: the first few emails a new subscriber receives. This is where you set expectations and deliver the thing you promised.",
+          "Abandoned cart or enquiry: a follow-up when someone starts but does not finish. Timing matters more than copy here.",
+          "Post-purchase: onboarding, delivery updates, review requests and cross-sell, in that order.",
+          "Re-engagement: a sequence for subscribers who have gone quiet, before you remove them.",
+          "Renewal or repurchase: triggered by time or behaviour, not by a calendar.",
+        ],
+      },
+      { type: "h2", text: "Copy that earns the open" },
+      {
+        type: "p",
+        text: "The subject line decides whether the email is read. The first sentence decides whether it is finished. Both are worth more effort than the rest of the email combined.",
+      },
+      {
+        type: "ul",
+        items: [
+          "The subject line should say what is inside, not tease it. Curiosity gets one open; clarity gets many.",
+          "The first sentence should not repeat the subject line. It should continue the thought.",
+          "One email, one idea. If you have two things to say, send two emails.",
+          "Write like a person, not a brand. The emails people read are the ones that sound like they were written by someone.",
+          "The call to action should be obvious and singular. Three buttons is the same as none.",
+        ],
+      },
+      { type: "h2", text: "What to measure" },
+      {
+        type: "ul",
+        items: [
+          "Revenue per email, not open rate. Opens are a vanity metric; revenue is the point.",
+          "Click-through rate on the primary call to action.",
+          "Conversion rate from email to purchase or enquiry.",
+          "Unsubscribe rate, which tells you when you are sending too much or the wrong thing.",
+          "Deliverability: are your emails reaching the inbox or the spam folder?",
+        ],
+      },
+      { type: "h2", text: "What to stop doing" },
+      {
+        type: "ul",
+        items: [
+          "Sending the same newsletter to everyone regardless of where they are in the customer journey.",
+          "Buying lists. The deliverability damage lasts longer than the send.",
+          "Measuring success by list size. A smaller list of engaged subscribers outperforms a large list of people who do not read.",
+          "Ignoring deliverability until it breaks. By then, fixing it takes months.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Email works when it is useful to the person receiving it. Everything else — segmentation, automation, testing — is in service of that.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What is a good email open rate?",
+        a: "Open rates vary by industry and list quality, and they have become less reliable since privacy changes stopped automatic image loading. A useful benchmark is your own trend over time: if it is falling, either the content or the list quality is degrading.",
+      },
+      {
+        q: "How often should I email my list?",
+        a: "As often as you have something worth saying. For most businesses that is weekly or fortnightly. More frequent than that requires genuinely useful content each time; less frequent and subscribers forget who you are.",
+      },
+      {
+        q: "What is lifecycle email marketing?",
+        a: "Lifecycle email marketing sends different messages based on where a subscriber is in their relationship with you: welcome, onboarding, engagement, repeat purchase and re-engagement. Each stage has a different goal and a different message.",
+      },
+    ],
+  },
+  {
+    slug: "ai-marketing-and-workflow-automation",
+    title: "AI Marketing and Workflow Automation: Where It Helps",
+    description:
+      "Where AI genuinely saves time in a marketing operation, where it does not, and how to tell the difference before you commit to a tool.",
+    date: "2026-10-20",
+    category: "AI Search",
+    readingMinutes: 7,
+    related: { href: "/ai-marketing", label: "AI marketing" },
+    sections: [
+      {
+        type: "p",
+        text: "AI marketing is two different things wearing the same name. One is the use of machine learning to improve targeting, bidding and content decisions. The other is a chatbot that writes blog posts. The first works. The second is what most people mean, and it mostly does not.",
+      },
+      {
+        type: "p",
+        text: "This article separates the two, covers where automation genuinely helps, and lists the places where it quietly makes things worse.",
+      },
+      { type: "h2", text: "Where AI genuinely helps" },
+      {
+        type: "ul",
+        items: [
+          "Bid management and budget allocation. Machines are better than humans at adjusting bids across thousands of keywords in real time.",
+          "Audience segmentation at scale. Finding patterns in customer data that a human would not spot.",
+          "Content variation testing. Generating and testing multiple versions of headlines, emails or ad copy to find what works.",
+          "Lead scoring and routing. Prioritising incoming leads by likelihood to convert, so the sales team works the right ones first.",
+          "Call answering and qualification. Responding to inbound calls and messages when no human is available, without losing the lead.",
+        ],
+      },
+      { type: "h2", text: "Where it does not help" },
+      {
+        type: "ul",
+        items: [
+          "Strategy. AI can execute a strategy faster than a person, but it cannot decide what the strategy should be. That requires understanding the business, the market and the customer.",
+          "Brand voice. AI writes competent prose. It does not write prose that sounds like your company, because it has not lived in your company.",
+          "Original research. AI summarises what exists. It does not produce new data, new insight or new perspective.",
+          "Relationship building. The messages that win clients are specific, personal and earned. Automated outreach at scale is spam with better grammar.",
+          "Judgement on edge cases. AI handles the common case well and fails on the unusual one. The unusual ones are often the most valuable.",
+        ],
+      },
+      { type: "h2", text: "The test before you buy" },
+      {
+        type: "p",
+        text: "Before adopting any AI tool, ask three questions.",
+      },
+      {
+        type: "ol",
+        items: [
+          "What specific task does it remove from a person's day? If the answer is vague, the tool is vague.",
+          "What happens when it is wrong? If the answer is \"nothing, because it is never wrong\", do not buy it.",
+          "Can you measure the difference? If you cannot measure before and after, you cannot know whether it helped.",
+        ],
+      },
+      { type: "h2", text: "How to start" },
+      {
+        type: "p",
+        text: "Pick one process that is repetitive, rule-based and measurable. Automate that. Measure the result. Then decide whether to expand.",
+      },
+      {
+        type: "p",
+        text: "The businesses that get value from AI are the ones that automate one thing at a time and measure each one. The businesses that do not are the ones that buy a platform and expect it to transform everything.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Will AI replace marketing teams?",
+        a: "No. AI replaces tasks, not roles. The tasks it replaces well are repetitive and data-heavy. The tasks it does not replace are strategic, creative and relational. A marketing team that uses AI well will be smaller and more effective. One that expects AI to do the thinking will produce generic work.",
+      },
+      {
+        q: "What is the best AI tool for marketing?",
+        a: "There is no single best tool. The right tool depends on the specific task: bid management, content variation, lead scoring, call handling. Start with the task, then find the tool that does it well, rather than starting with the tool and finding a use for it.",
+      },
+      {
+        q: "How do I avoid AI-generated content that sounds generic?",
+        a: "Use AI for research, structure and variation, not for the final voice. The perspective, the examples and the judgement should come from a person who knows the subject. AI can draft; a person should edit for voice and accuracy.",
+      },
+    ],
+  },
 ];
 export function getPost(slug: string): BlogPost | undefined {
   return POSTS.find((p) => p.slug === slug);
