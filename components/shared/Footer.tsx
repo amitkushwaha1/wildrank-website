@@ -250,7 +250,7 @@ export default function Footer() {
       <div className="border-t border-hairline/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs text-faint">
-              &copy; {new Date().getFullYear()} Wildrank Technologies. All rights reserved.
+              &copy; {new Date().getFullYear()} Wildrank Technologies Pvt Ltd. All rights reserved.
             </p>
             <div className="flex items-center gap-2">
               {socials.map(({ icon: Icon, href, label, external }) => (

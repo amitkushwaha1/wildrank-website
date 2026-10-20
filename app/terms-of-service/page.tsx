@@ -18,10 +18,15 @@ export default function TermsOfServicePage() {
       <div>
         <h2>The agreement</h2>
         <p>
-          By using wildranktechnologies.com, or by engaging Wildrank Technologies
+          By using wildranktechnologies.com, or by engaging Wildrank Technologies Pvt Ltd
           (&quot;Wildrank Technologies&quot;, &quot;we&quot;, &quot;us&quot;) to provide services, you agree to
           these terms. If you are agreeing on behalf of a company, you confirm you are authorised to
           do so.
+        </p>
+        <p>
+          Wildrank Technologies is the trading name of Wildrank Technologies Pvt Ltd, a private
+          limited company founded in 2006. Our US office is at 30 N Gould St, Sheridan, WY 82801,
+          United States. You can reach us at info@wildranktechnologies.com or +1 775-471-5295.
         </p>
       </div>
 
@@ -148,8 +153,8 @@ export default function TermsOfServicePage() {
         <h2>Governing law</h2>
         <p>
           Unless your proposal or master services agreement says otherwise, these terms are governed
-          by the laws of the jurisdiction in which the Wildrank Technologies entity that contracts with you is
-          registered, and disputes are subject to the courts of that jurisdiction.
+          by the laws of the jurisdiction in which Wildrank Technologies Pvt Ltd is registered, and
+          disputes are subject to the courts of that jurisdiction.
         </p>
       </div>
 

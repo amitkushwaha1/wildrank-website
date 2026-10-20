@@ -78,6 +78,11 @@ const organizationSchema = {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
       name: "Wildrank Technologies",
+      // The registered entity is the Indian private limited company; the brand
+      // is the trading name. legalName is the schema.org field for exactly this
+      // split, and it is the one a due-diligence search matches against the
+      // LinkedIn page ("Wildrank Technologies Pvt Ltd") and the Clutch profile.
+      legalName: "Wildrank Technologies Pvt Ltd",
       // Aliases, not branding. This is the field an assistant reads to decide
       // that a search for "WildRank" and a search for "Wildrank Technologies"
       // are the same entity — which is the whole point of alternateName.

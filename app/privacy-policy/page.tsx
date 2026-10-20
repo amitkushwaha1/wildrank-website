@@ -18,9 +18,10 @@ export default function PrivacyPolicyPage() {
       <div>
         <h2>Who we are</h2>
         <p>
-          Wildrank Technologies (&quot;Wildrank Technologies&quot;, &quot;we&quot;, &quot;us&quot;) is a digital
-          marketing and IT services company. We are the controller of the personal data described in
-          this policy. For any privacy question or request, write to{" "}
+          Wildrank Technologies Pvt Ltd (&quot;Wildrank Technologies&quot;, &quot;we&quot;, &quot;us&quot;) is a
+          digital marketing and IT services company founded in 2006, with its US office at 30 N Gould
+          St, Sheridan, WY 82801, United States. We are the controller of the personal data described
+          in this policy. For any privacy question or request, write to{" "}
           <a href="mailto:gupta@wildranktechnologies.com">gupta@wildranktechnologies.com</a> or call{" "}
           <a href="tel:+17754715295">+1 775 471 5295</a>.
         </p>
