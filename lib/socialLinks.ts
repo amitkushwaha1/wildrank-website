@@ -17,9 +17,9 @@ type IconComponent = LucideIcon | (({ className }: { className?: string }) => JS
  * filters placeholders out as a backstop, which is why the entry that used to
  * sit here as href="#" never rendered; the URL has since been supplied.
  *
- * The Facebook and YouTube pages were created from the company Workspace
- * account (wildranktechnologies@gmail.com) rather than a personal one, which is
- * what makes them safe to publish as the company's own.
+ * YouTube's official channel is @wildranktechnologiesofficial, created under
+ * the company Workspace account on 2026-10-20. Keep this link synchronized with
+ * lib/site.ts so the footer and Organization.sameAs identify the same channel.
  */
 export interface SocialLink {
   icon: IconComponent;
@@ -38,7 +38,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     icon: Youtube,
-    href: "https://www.youtube.com/@WildRankTechnologies",
+    href: "https://www.youtube.com/@wildranktechnologiesofficial",
     label: "YouTube",
     external: true,
   },

@@ -26,8 +26,8 @@ export const BRAND_NAME = "Wildrank Technologies";
  * page serves its real name: "Wildrank Technologies Pvt Ltd | LinkedIn".
  *
  *   LinkedIn  200  real company title                          confirmed
- *   YouTube   200  real channel title + channel id UCK88wsOnGdC855FGuk-Nuug
- *                                                              confirmed
+ *   YouTube   200  Wildrank Technologies; official channel selected by the
+ *                  owner on 2026-10-20: @wildranktechnologiesofficial
  *   Facebook  ---  Facebook answers every non-browser request with 400, so a
  *                  command-line check cannot confirm or deny it. Included
  *                  because the owner supplied the URL directly, which is
@@ -43,7 +43,7 @@ export const BRAND_NAME = "Wildrank Technologies";
  */
 export const SOCIAL_PROFILES: string[] = [
   "https://www.linkedin.com/company/wildrank-technologies-pvt-ltd",
-  "https://www.youtube.com/@WildRankTechnologies",
+  "https://www.youtube.com/@wildranktechnologiesofficial",
   "https://www.instagram.com/wildranktechnologies/",
   "https://www.facebook.com/wildranktechnologies/",
   "https://x.com/wildranktech",
