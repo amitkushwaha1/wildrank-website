@@ -145,13 +145,72 @@ const organizationSchema = {
         areaServed: ["US", "GB", "IN"],
         availableLanguage: ["en"],
       },
+      // Knowledge-panel / AI-answer image. This used to point at
+      // logo-on-light.png, the 400x80 wordmark. Google's logo guidance wants a
+      // square image (>=112px) for the entity card, and AI answer surfaces
+      // reuse the same field, so a wide wordmark rendered as nothing or as a
+      // sliver. icon-512.png is the square 512x512 brand mark, declared here
+      // with its real dimensions.
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/logo-on-light.png`,
-        width: 163,
-        height: 60,
+        url: `${SITE_URL}/icon-512.png`,
+        width: 512,
+        height: 512,
+        caption: "Wildrank Technologies",
       },
-      image: `${SITE_URL}/og-default.jpg`,
+      // Square mark first: it is the image an assistant or knowledge card
+      // should pick. The OG banner is the fallback for link previews.
+      image: [`${SITE_URL}/icon-512.png`, `${SITE_URL}/og-default.jpg`],
+      // What the company knows about. An assistant answering "who can do X for
+      // me" matches on these terms, so they are listed in the words a buyer
+      // would use, not in marketing language.
+      knowsAbout: [
+        "Search engine optimization",
+        "Local SEO",
+        "Google Business Profile optimization",
+        "Pay-per-click advertising",
+        "Google Ads management",
+        "Social media marketing",
+        "Content marketing",
+        "Email marketing",
+        "Web development",
+        "Mobile app development",
+        "Custom software development",
+        "Generative engine optimization",
+        "Answer engine optimization",
+        "AI receptionist and missed-call recovery",
+        "White label digital marketing for agencies",
+      ],
+      // The service catalogue in machine-readable form. Without this, an
+      // answer engine has to infer the offering from prose on the site.
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Wildrank Technologies services",
+        itemListElement: [
+          "Search Engine Optimization Services",
+          "Local SEO Services",
+          "PPC Services",
+          "Social Media Marketing Services",
+          "Content Marketing Services",
+          "Email Marketing Services",
+          "Mobile Marketing Services",
+          "Digital Marketing Services",
+          "GEO and AEO Services",
+          "AI Receptionist",
+          "Hermes AI System",
+          "White Label SEO Services",
+          "White Label PPC Services",
+          "White Label Social Media",
+          "Web Development",
+        ].map((name) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name },
+        })),
+      },
+      areaServed: [
+        { "@type": "Country", name: "United States" },
+        { "@type": "Country", name: "India" },
+      ],
       // Social profiles. This array existed in lib/site.ts and was imported
       // by nothing, so the Organization node declared no sameAs at all and the
       // profiles were unreachable to anything trying to resolve the entity.
