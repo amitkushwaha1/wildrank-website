@@ -97,6 +97,9 @@ Local SEO pages are published for these metros:
 - [How to Get Cited by ChatGPT, Perplexity and Google AI Overviews](https://wildranktechnologies.com/blog/how-to-get-cited-by-chatgpt-and-ai-overviews): what answer engines retrieve, how they resolve an entity, and the changes that make a business quotable.
 - [What a Missed Call Actually Costs a Service Business](https://wildranktechnologies.com/blog/what-a-missed-call-costs-a-service-business): the arithmetic of missed calls, why the loss is larger than the call count, and what fixes it.
 - [Local SEO Checklist for Service Businesses](https://wildranktechnologies.com/blog/local-seo-checklist-for-service-businesses): the order that matters — map listing, location pages, consistent citations, reviews, then measurement.
+- [Technical SEO Audit: What Actually Matters](https://wildranktechnologies.com/blog/technical-seo-audit-what-actually-matters): the checks that move rankings, in order, and what to ignore.
+- [How to Budget Paid Media Across Channels](https://wildranktechnologies.com/blog/how-to-budget-paid-media-across-channels): search, social and retargeting do different jobs; a practical split and when to move money.
+- [White Label SEO for Agencies](https://wildranktechnologies.com/blog/white-label-seo-for-agencies): when reselling SEO makes sense, when it does not, and what to check before signing.
 
 ## Optional
 

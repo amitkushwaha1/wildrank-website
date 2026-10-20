@@ -16,9 +16,7 @@
  *    assumptions stated, so a reader can check the arithmetic.
  *  - No personal bylines. The author is the company.
  *  - Each article links to the service page it belongs to. The reverse links
- *    (service page → its articles) are not in yet; adding them is the next
- *    step for the cluster, since a hub that links out but is never linked back
- *    from its own service pages passes less strength than it should.
+ *    (service page -> its articles) are added separately per page.
  */
 
 export type Block =
@@ -77,10 +75,10 @@ export const POSTS: BlogPost[] = [
       { type: "h2", text: "Be retrievable" },
       {
         type: "h3", text: "Let the crawlers in" },
-        {
-          type: "p",
-          text: "Check your robots.txt actually allows the crawlers that feed assistants, not just Googlebot. GPTBot and OAI-SearchBot for OpenAI, PerplexityBot, ClaudeBot, Google-Extended for Gemini and AI Overviews, and Applebot-Extended for Apple Intelligence. A file that blocks them makes every other step pointless. Ours lists them explicitly.",
-        },
+      {
+        type: "p",
+        text: "Check your robots.txt actually allows the crawlers that feed assistants, not just Googlebot. GPTBot and OAI-SearchBot for OpenAI, PerplexityBot, ClaudeBot, Google-Extended for Gemini and AI Overviews, and Applebot-Extended for Apple Intelligence. A file that blocks them makes every other step pointless. Ours lists them explicitly.",
+      },
       { type: "h3", text: "Answer in the language people use" },
       {
         type: "p",
@@ -710,7 +708,6 @@ export const POSTS: BlogPost[] = [
     ],
   },
 ];
-
 export function getPost(slug: string): BlogPost | undefined {
   return POSTS.find((p) => p.slug === slug);
 }
