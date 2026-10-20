@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContentMarketingServicesClient from "./client";
+import ServiceSchema from "@/components/shared/ServiceSchema";
 
 // This page was originally a single "use client" component, which cannot export
 // metadata. The server shell owns the SEO surface; the client component owns
@@ -11,5 +12,19 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <ContentMarketingServicesClient />;
+  return (
+    <>
+      <ServiceSchema
+        path="/content-marketing-services"
+        name="Content Marketing Services"
+        serviceType={[
+          "Content Marketing",
+          "Content Strategy",
+          "Thought Leadership",
+        ]}
+        description="Research-led articles, landing pages and thought leadership built around what people actually search for."
+      />
+      <ContentMarketingServicesClient />
+    </>
+  );
 }

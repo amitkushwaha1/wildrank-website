@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import DigitalMarketingServicesClient from "./client";
+import ServiceSchema from "@/components/shared/ServiceSchema";
 
 // This page was originally a single "use client" component, which cannot export
 // metadata. The server shell owns the SEO surface; the client component owns
@@ -11,5 +12,19 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <DigitalMarketingServicesClient />;
+  return (
+    <>
+      <ServiceSchema
+        path="/digital-marketing-services"
+        name="Digital Marketing Services"
+        serviceType={[
+          "Digital Marketing",
+          "Integrated Marketing",
+          "Performance Marketing",
+        ]}
+        description="Paid and organic digital marketing managed as one system, with campaigns, content and analytics aligned to revenue."
+      />
+      <DigitalMarketingServicesClient />
+    </>
+  );
 }

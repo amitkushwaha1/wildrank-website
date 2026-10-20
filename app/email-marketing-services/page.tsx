@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import EmailMarketingServicesClient from "./client";
+import ServiceSchema from "@/components/shared/ServiceSchema";
 
 // This page was originally a single "use client" component, which cannot export
 // metadata. The server shell owns the SEO surface; the client component owns
@@ -11,5 +12,19 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <EmailMarketingServicesClient />;
+  return (
+    <>
+      <ServiceSchema
+        path="/email-marketing-services"
+        name="Email Marketing Services"
+        serviceType={[
+          "Email Marketing",
+          "Marketing Automation",
+          "Lifecycle Email",
+        ]}
+        description="Segmented lifecycle email campaigns, automations and copywriting that turn subscribers into repeat revenue."
+      />
+      <EmailMarketingServicesClient />
+    </>
+  );
 }

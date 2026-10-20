@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LocalSeoServicesClient from "./client";
+import ServiceSchema from "@/components/shared/ServiceSchema";
 
 // This page was originally a single "use client" component, which cannot export
 // metadata. The server shell owns the SEO surface; the client component owns
@@ -11,5 +12,19 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <LocalSeoServicesClient />;
+  return (
+    <>
+      <ServiceSchema
+        path="/local-seo-services"
+        name="Local SEO and Google Business Profile Services"
+        serviceType={[
+          "Local SEO",
+          "Google Business Profile Optimization",
+          "Local Citation Building",
+        ]}
+        description="Local SEO that puts your business in the map pack: Google Business Profile optimisation, reviews, local landing pages and citations."
+      />
+      <LocalSeoServicesClient />
+    </>
+  );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SearchEngineOptimizationServicesClient from "./client";
+import ServiceSchema from "@/components/shared/ServiceSchema";
 
 // This page was originally a single "use client" component, which cannot export
 // metadata. The server shell owns the SEO surface; the client component owns
@@ -11,5 +12,21 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <SearchEngineOptimizationServicesClient />;
+  return (
+    <>
+      <ServiceSchema
+        path="/search-engine-optimization-services"
+        name="Search Engine Optimization (SEO) Services"
+        alternateName={["SEO agency", "SEO company", "SEO services USA"]}
+        serviceType={[
+          "Search Engine Optimization",
+          "Technical SEO",
+          "On-Page SEO",
+          "Content SEO",
+        ]}
+        description="SEO that pays for itself: technical fixes, on-page optimisation and content built for Google, ChatGPT and Perplexity, delivered in one plan."
+      />
+      <SearchEngineOptimizationServicesClient />
+    </>
+  );
 }

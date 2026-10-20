@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import MobileMarketingServicesClient from "./client";
+import ServiceSchema from "@/components/shared/ServiceSchema";
 
 // This page was originally a single "use client" component, which cannot export
 // metadata. The server shell owns the SEO surface; the client component owns
@@ -11,5 +12,19 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <MobileMarketingServicesClient />;
+  return (
+    <>
+      <ServiceSchema
+        path="/mobile-marketing-services"
+        name="Mobile Marketing Services"
+        serviceType={[
+          "Mobile Marketing",
+          "SMS Marketing",
+          "App Promotion",
+        ]}
+        description="Mobile-first campaigns, app promotion and SMS that turn attention on the device customers carry into action."
+      />
+      <MobileMarketingServicesClient />
+    </>
+  );
 }
