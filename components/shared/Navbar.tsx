@@ -58,6 +58,7 @@ const navLinks = [
     ],
   },
   { label: "AI Marketing Agency", href: "/ai-marketing" },
+  { label: "Free Schema Generator", href: "/tools/schema-generator" },
   { label: "Blog",                href: "/blog" },
 ];
 

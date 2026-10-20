@@ -44,6 +44,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Other
     "/ai-marketing",
     "/blog",
+    // Free tools — linkable assets.
+    "/tools/schema-generator",
     // Legal — required for E-E-A-T and for advertising platform reviews. Both
     // were missing entirely, while the footer linked to them with href="#".
     "/privacy-policy",
