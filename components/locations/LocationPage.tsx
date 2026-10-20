@@ -6,6 +6,7 @@ import { ArrowRight, CheckCircle, MapPin, TrendingUp, Search, Users, BarChart3 }
 import CTA from "@/components/home/CTA";
 import IndustriesSection from "@/components/shared/IndustriesSection";
 import { buildFaqEntries } from "./faqs";
+import { CITY_FACTS } from "@/data/cities";
 
 interface Props {
   city: string;
@@ -18,6 +19,7 @@ export default function LocationPage({ city, state }: Props) {
 
   const FAQS = buildFaqEntries(city, location);
   const SITE = "https://wildranktechnologies.com";
+  const cityFacts = CITY_FACTS[slug];
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
@@ -143,6 +145,45 @@ export default function LocationPage({ city, state }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Local context — unique per city. The audit flagged the 20 city pages as
+          84-97% identical doorway pages; this section is what makes each one
+          different. Content comes from data/cities.ts and is factual about the
+          market, not marketing claims about Wildrank. */}
+      {cityFacts && (
+      <section className="py-20 lg:py-16 section-gradient">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mb-10">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">{city} as a search market</h2>
+            <p className="text-muted text-lg leading-relaxed">{cityFacts.note}</p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="glass-card rounded-2xl p-6">
+              <h3 className="text-ink font-bold text-base mb-3">Industries we work in around {city}</h3>
+              <ul className="space-y-2">
+                {cityFacts.industries.map((ind) => (
+                  <li key={ind} className="flex items-start gap-2 text-sm text-muted">
+                    <CheckCircle className="w-4 h-4 text-green-700 flex-shrink-0 mt-0.5" />
+                    <span className="capitalize">{ind}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="glass-card rounded-2xl p-6">
+              <h3 className="text-ink font-bold text-base mb-3">Areas we cover</h3>
+              <ul className="space-y-2">
+                {cityFacts.areas.map((a) => (
+                  <li key={a} className="flex items-start gap-2 text-sm text-muted">
+                    <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                    <span>{a}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      )}
 
       {/* What local SEO actually involves */}
       <section className="py-20 lg:py-16 section-gradient">
