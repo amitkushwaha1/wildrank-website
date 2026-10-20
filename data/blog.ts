@@ -15,8 +15,10 @@
  *  - No invented statistics. Numbers appear only as worked examples with their
  *    assumptions stated, so a reader can check the arithmetic.
  *  - No personal bylines. The author is the company.
- *  - Every article links to the service page it belongs to, and those pages
- *    link back, so the cluster is crawlable in both directions.
+ *  - Each article links to the service page it belongs to. The reverse links
+ *    (service page → its articles) are not in yet; adding them is the next
+ *    step for the cluster, since a hub that links out but is never linked back
+ *    from its own service pages passes less strength than it should.
  */
 
 export type Block =
