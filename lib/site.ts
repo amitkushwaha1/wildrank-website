@@ -47,4 +47,8 @@ export const SOCIAL_PROFILES: string[] = [
   "https://www.instagram.com/wildranktechnologies/",
   "https://www.facebook.com/wildranktechnologies/",
   "https://x.com/wildranktech",
+  "https://www.wikidata.org/wiki/Q141797050",
+  "https://clutch.co/profile/wildrank-technologies",
+  "https://www.goodfirms.co/company/wildrank-technologies-pvt-ltd",
+  "https://www.hotfrog.com/company/AaFZT5OXcV6YhsNp5327ew/wildrank-technologies/sheridan/marketing-sales",
 ];
