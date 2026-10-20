@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RelatedReading from "@/components/shared/RelatedReading";
 import DigitalMarketingServicesClient from "./client";
 import ServiceSchema from "@/components/shared/ServiceSchema";
 
@@ -25,6 +26,7 @@ export default function Page() {
         description="Paid and organic digital marketing managed as one system, with campaigns, content and analytics aligned to revenue."
       />
       <DigitalMarketingServicesClient />
+      <RelatedReading slug="how-to-get-cited-by-chatgpt-and-ai-overviews" title="How to Get Cited by ChatGPT, Perplexity and Google AI Overviews" />
     </>
   );
 }

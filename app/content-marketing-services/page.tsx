@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RelatedReading from "@/components/shared/RelatedReading";
 import ContentMarketingServicesClient from "./client";
 import ServiceSchema from "@/components/shared/ServiceSchema";
 
@@ -25,6 +26,7 @@ export default function Page() {
         description="Research-led articles, landing pages and thought leadership built around what people actually search for."
       />
       <ContentMarketingServicesClient />
+      <RelatedReading slug="how-to-get-cited-by-chatgpt-and-ai-overviews" title="How to Get Cited by ChatGPT, Perplexity and Google AI Overviews" />
     </>
   );
 }

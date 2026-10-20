@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RelatedReading from "@/components/shared/RelatedReading";
 import PpcServicesClient from "./client";
 import ServiceSchema from "@/components/shared/ServiceSchema";
 
@@ -25,6 +26,7 @@ export default function Page() {
         description="Pay-per-click managed for profit, not clicks: Google and Meta campaigns with continuous testing and transparent spend reporting."
       />
       <PpcServicesClient />
+      <RelatedReading slug="how-to-get-cited-by-chatgpt-and-ai-overviews" title="How to Get Cited by ChatGPT, Perplexity and Google AI Overviews" />
     </>
   );
 }

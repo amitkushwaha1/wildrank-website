@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RelatedReading from "@/components/shared/RelatedReading";
 import LocalSeoServicesClient from "./client";
 import ServiceSchema from "@/components/shared/ServiceSchema";
 
@@ -25,6 +26,7 @@ export default function Page() {
         description="Local SEO that puts your business in the map pack: Google Business Profile optimisation, reviews, local landing pages and citations."
       />
       <LocalSeoServicesClient />
+      <RelatedReading slug="local-seo-checklist-for-service-businesses" title="Local SEO Checklist for Service Businesses" />
     </>
   );
 }

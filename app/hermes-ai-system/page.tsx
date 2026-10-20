@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import IndustriesSection from "@/components/shared/IndustriesSection";
+import RelatedReading from "@/components/shared/RelatedReading";
 
 const SITE = "https://wildranktechnologies.com";
 
@@ -245,6 +246,7 @@ export default function HermesAISystemPage() {
         </div>
       </section>
 
+      <RelatedReading slug="what-a-missed-call-costs-a-service-business" title="What a Missed Call Actually Costs a Service Business" />
       <IndustriesSection />
 
       {/* CTA */}

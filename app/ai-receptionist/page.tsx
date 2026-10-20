@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PHONE_E164 } from "@/lib/site";
 import IndustriesSection from "@/components/shared/IndustriesSection";
+import RelatedReading from "@/components/shared/RelatedReading";
 
 const SITE = "https://wildranktechnologies.com";
 
@@ -184,6 +185,7 @@ export default function AIReceptionistPage() {
         </div>
       </section>
 
+      <RelatedReading slug="what-a-missed-call-costs-a-service-business" title="What a Missed Call Actually Costs a Service Business" />
       <IndustriesSection />
 
       <section className="py-20 lg:py-16 bg-dark-card border-t border-dark-border">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RelatedReading from "@/components/shared/RelatedReading";
 import SearchEngineOptimizationServicesClient from "./client";
 import ServiceSchema from "@/components/shared/ServiceSchema";
 
@@ -27,6 +28,7 @@ export default function Page() {
         description="SEO that pays for itself: technical fixes, on-page optimisation and content built for Google, ChatGPT and Perplexity, delivered in one plan."
       />
       <SearchEngineOptimizationServicesClient />
+      <RelatedReading slug="how-to-get-cited-by-chatgpt-and-ai-overviews" title="How to Get Cited by ChatGPT, Perplexity and Google AI Overviews" />
     </>
   );
 }

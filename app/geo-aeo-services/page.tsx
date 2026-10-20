@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import FaqAccordion from "@/components/shared/FaqAccordion";
 import IndustriesSection from "@/components/shared/IndustriesSection";
+import RelatedReading from "@/components/shared/RelatedReading";
 import { PHONE_E164, SITE_URL as SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -239,6 +240,7 @@ export default function GeoAeoServicesPage() {
         className="bg-dark-card border-y border-dark-border"
       />
 
+      <RelatedReading slug="how-to-get-cited-by-chatgpt-and-ai-overviews" title="How to Get Cited by ChatGPT, Perplexity and Google AI Overviews" />
       <IndustriesSection />
 
       <section className="py-20 lg:py-16">
