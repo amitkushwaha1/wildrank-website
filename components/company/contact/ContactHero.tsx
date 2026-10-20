@@ -6,7 +6,7 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 const contactInfo = [
   { icon: Mail, label: "Email Us", value: "info@wildranktechnologies.com", href: "mailto:info@wildranktechnologies.com" },
   { icon: Phone, label: "Call Us", value: "+1 (775) 471-5295", href: "tel:+17754715295" },
-  { icon: MapPin, label: "Our Office", value: "Noida, India & USA", href: "#" },
+  { icon: MapPin, label: "Our Offices", value: "Sheridan, USA & Ghaziabad, India", href: "#" },
   { icon: Clock, label: "Response Time", value: "Within 24 hours", href: "#" },
 ];
 

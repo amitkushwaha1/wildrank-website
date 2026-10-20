@@ -174,9 +174,8 @@ export default function ContactForm() {
               <h3 className="text-ink font-bold mb-4">Office Locations</h3>
               <div className="space-y-4">
                 {[
-                  { city: "Noida, India", address: "Sector 63, Noida, UP 201301", flag: "🇮🇳" },
                   { city: "Sheridan, USA", address: "30 N Gould St, WY 82801", flag: "🇺🇸" },
-                  { city: "London, UK", address: "71-75 Shelton Street, WC2H 9JQ", flag: "🇬🇧" },
+                  { city: "Ghaziabad, India", address: "Uttar Pradesh, India", flag: "🇮🇳" },
                 ].map((loc) => (
                   <div key={loc.city} className="flex items-start gap-3">
                     <span className="text-xl">{loc.flag}</span>
@@ -200,7 +199,7 @@ export default function ContactForm() {
                   <Phone className="w-4 h-4 text-accent" /> +1 (775) 471-5295
                 </a>
                 <div className="flex items-center gap-3 text-sm text-muted">
-                  <MapPin className="w-4 h-4 text-accent" /> Noida, India & USA
+                  <MapPin className="w-4 h-4 text-accent" /> Sheridan, USA & Ghaziabad, India
                 </div>
               </div>
             </motion.div>

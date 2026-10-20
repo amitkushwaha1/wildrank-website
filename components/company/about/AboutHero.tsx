@@ -21,7 +21,7 @@ export default function AboutHero() {
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
             className="text-muted text-xl leading-relaxed mb-8">
-            We started as a small SEO team in Noida, India. Today we&apos;re a global digital marketing and IT services company trusted by brands across 30+ countries.
+            We started as a small SEO team in Ghaziabad, India. Today we&apos;re a US-based global digital marketing and IT services company, with offices in Sheridan, Wyoming and Ghaziabad, trusted by brands across 30+ countries.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-wrap gap-4">

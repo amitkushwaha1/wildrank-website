@@ -108,6 +108,35 @@ const organizationSchema = {
         postalCode: "82801",
         addressCountry: "US",
       },
+      // Two offices, and only two. The US address is the headquarters; the
+      // Indian office is where delivery happens. Earlier drafts of this file
+      // and of /contact listed a Noida and a London office that the company
+      // does not have, which is exactly the kind of mismatch a researcher
+      // notices. Keep location[] and /contact in step.
+      location: [
+        {
+          "@type": "Place",
+          name: "Wildrank Technologies — Sheridan (headquarters)",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "30 N Gould St",
+            addressLocality: "Sheridan",
+            addressRegion: "WY",
+            postalCode: "82801",
+            addressCountry: "US",
+          },
+        },
+        {
+          "@type": "Place",
+          name: "Wildrank Technologies — Ghaziabad",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Ghaziabad",
+            addressRegion: "Uttar Pradesh",
+            addressCountry: "IN",
+          },
+        },
+      ],
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer service",
