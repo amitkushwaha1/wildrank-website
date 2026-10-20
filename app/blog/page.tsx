@@ -1,4 +1,5 @@
 import BlogHero from "@/components/blog/BlogHero";
+import ArticleList from "@/components/blog/ArticleList";
 import BlogGrid from "@/components/blog/BlogGrid";
 import CTA from "@/components/home/CTA";
 import type { Metadata } from "next";
@@ -7,13 +8,14 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog" },
   title: "Marketing Guides & Insights | Wildrank Technologies",
   description:
-    "Browse the topics our team works in — SEO, local search, paid media, content, social, AI search and white label growth — and how we approach each one.",
+    "Practical guides on SEO, AI search visibility, local search and AI systems — written by the Wildrank Technologies team, with worked examples instead of invented statistics.",
 };
 
 export default function BlogPage() {
   return (
     <>
       <BlogHero />
+      <ArticleList />
       <BlogGrid />
       <CTA />
     </>

@@ -56,8 +56,8 @@ export default function BlogGrid() {
           </p>
           <h2 className="text-3xl font-extrabold tracking-tight text-ink">Browse by subject</h2>
           <p className="mt-4 text-muted">
-            Every subject below links to the page where we explain how we approach it. When an
-            article is published on one of them, it will appear here.
+            Every subject below links to the page where we explain how we approach it. Articles on
+            these subjects are published above.
           </p>
         </div>
 

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { INDUSTRIES, SERVICES } from "@/data/industries";
+import { POSTS } from "@/data/blog";
 
 const BASE_URL = "https://wildranktechnologies.com";
 
@@ -91,5 +92,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  return [...staticRoutes, ...industryRoutes];
+  // Published articles. These carry their own lastModified rather than "now",
+  // so a rebuild does not tell Google every post changed when none did.
+  const articleRoutes: MetadataRoute.Sitemap = POSTS.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.updated ?? post.date),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...industryRoutes, ...articleRoutes];
 }

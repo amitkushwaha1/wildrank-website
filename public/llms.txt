@@ -88,6 +88,12 @@ Local SEO pages are published for these metros:
 - [Blog](https://wildranktechnologies.com/blog)
 - [Sitemap](https://wildranktechnologies.com/sitemap.xml)
 
+## Articles
+
+- [How to Get Cited by ChatGPT, Perplexity and Google AI Overviews](https://wildranktechnologies.com/blog/how-to-get-cited-by-chatgpt-and-ai-overviews): what answer engines retrieve, how they resolve an entity, and the changes that make a business quotable.
+- [What a Missed Call Actually Costs a Service Business](https://wildranktechnologies.com/blog/what-a-missed-call-costs-a-service-business): the arithmetic of missed calls, why the loss is larger than the call count, and what fixes it.
+- [Local SEO Checklist for Service Businesses](https://wildranktechnologies.com/blog/local-seo-checklist-for-service-businesses): the order that matters — map listing, location pages, consistent citations, reviews, then measurement.
+
 ## Optional
 
 - [Privacy Policy](https://wildranktechnologies.com/privacy-policy)
