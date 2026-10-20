@@ -88,6 +88,29 @@ const organizationSchema = {
         "Digital marketing and IT services company providing SEO, PPC, social media, web development, mobile apps and white label services.",
       email: "gupta@wildranktechnologies.com",
       telephone: PHONE_E164,
+      // Entity facts declared here and nowhere else in machine-readable form.
+      // A researcher verifying the company reads /contact for the address and
+      // the footer for the founding year; without them in the Organization
+      // node Google has to guess, and an assistant answering "is this company
+      // real?" has nothing structured to cite. Keep these in sync with
+      // /contact and with the LinkedIn headquarters (Sheridan, WY).
+      foundingDate: "2006",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "30 N Gould St",
+        addressLocality: "Sheridan",
+        addressRegion: "WY",
+        postalCode: "82801",
+        addressCountry: "US",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: PHONE_E164,
+        email: "info@wildranktechnologies.com",
+        areaServed: ["US", "GB", "IN"],
+        availableLanguage: ["en"],
+      },
       logo: {
         "@type": "ImageObject",
         url: `${SITE_URL}/logo-on-light.png`,
