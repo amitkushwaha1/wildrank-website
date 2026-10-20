@@ -131,6 +131,17 @@ const nextConfig = {
 
       // ── Misc legacy ──
       { source: "/case-studies", destination: "/", permanent: true },
+
+      // Bare /services and /software-marketing were the last two legacy paths
+      // still returning 404 while Google kept them indexed. /services is the
+      // worse of the two: the cached snippet is the old WordPress theme demo
+      // copy, complete with a "684 West College St. Sun City, USA" placeholder
+      // address and links to themexriver.com. That snippet is what a prospect
+      // sees when they search the brand, so leaving it on a 404 means Google
+      // keeps showing the demo text until it re-crawls and drops the URL.
+      // Both now point at real pages that cover the same subject.
+      { source: "/services", destination: "/", permanent: true },
+      { source: "/software-marketing", destination: "/digital-marketing-services", permanent: true },
     ];
   },
 };
