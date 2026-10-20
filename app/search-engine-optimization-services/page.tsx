@@ -28,7 +28,7 @@ export default function Page() {
         description="SEO that pays for itself: technical fixes, on-page optimisation and content built for Google, ChatGPT and Perplexity, delivered in one plan."
       />
       <SearchEngineOptimizationServicesClient />
-      <RelatedReading slug="how-to-get-cited-by-chatgpt-and-ai-overviews" title="How to Get Cited by ChatGPT, Perplexity and Google AI Overviews" />
+      <RelatedReading slug="technical-seo-audit-what-actually-matters" title="Technical SEO Audit: What Actually Matters (And What Is Theatre)" />
     </>
   );
 }

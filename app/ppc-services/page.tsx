@@ -26,7 +26,7 @@ export default function Page() {
         description="Pay-per-click managed for profit, not clicks: Google and Meta campaigns with continuous testing and transparent spend reporting."
       />
       <PpcServicesClient />
-      <RelatedReading slug="how-to-get-cited-by-chatgpt-and-ai-overviews" title="How to Get Cited by ChatGPT, Perplexity and Google AI Overviews" />
+      <RelatedReading slug="how-to-budget-paid-media-across-channels" title="How to Budget Paid Media Across Channels Without Cannibalising Either" />
     </>
   );
 }

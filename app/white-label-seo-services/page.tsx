@@ -1,4 +1,5 @@
 import WhiteLabelPage from "@/components/white-label/WhiteLabelPage";
+import RelatedReading from "@/components/shared/RelatedReading";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -24,8 +25,13 @@ const faqs = [
 ];
 
 export default function Page() {
-  return <WhiteLabelPage badge="White Label SEO Services" title="White Label" highlight="SEO Services"
-    description="Offer enterprise-grade SEO to your clients without hiring a single in-house specialist. We do the work, you take the credit."
-    intro="Your clients demand SEO results, but building an in-house team is expensive and slow. Our white-label SEO service gives you a full team of strategists, content writers, and link builders — all working invisibly under your brand. You sell and manage the relationship; we deliver the rankings."
-    features={features} faqs={faqs} />;
+  return (
+    <>
+      <WhiteLabelPage badge="White Label SEO Services" title="White Label" highlight="SEO Services"
+        description="Offer enterprise-grade SEO to your clients without hiring a single in-house specialist. We do the work, you take the credit."
+        intro="Your clients demand SEO results, but building an in-house team is expensive and slow. Our white-label SEO service gives you a full team of strategists, content writers, and link builders — all working invisibly under your brand. You sell and manage the relationship; we deliver the rankings."
+        features={features} faqs={faqs} />
+      <RelatedReading slug="white-label-seo-for-agencies" title="White Label SEO for Agencies: When It Makes Sense" />
+    </>
+  );
 }
