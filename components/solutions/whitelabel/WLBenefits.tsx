@@ -9,7 +9,7 @@ const benefits = [
   { icon: Clock, title: "Fast Turnaround", description: "Dedicated teams mean faster delivery. Most projects start within 48 hours of onboarding.", color: "text-orange-700", bg: "bg-orange-500/10" },
   { icon: DollarSign, title: "Higher Margins", description: "Our wholesale pricing lets you mark up 2–3x and still be competitive in your market.", color: "text-yellow-700", bg: "bg-yellow-500/10" },
   { icon: Users, title: "Scalable Capacity", description: "Take on 10 clients or 100 — our team scales with your pipeline without any hiring delays.", color: "text-purple-600", bg: "bg-purple-500/10" },
-  { icon: Award, title: "Award-Winning Quality", description: "Google Partner recognized. Your clients get enterprise-grade work at agency pricing.", color: "text-cyan-700", bg: "bg-cyan-500/10" },
+  { icon: Award, title: "Enterprise-Grade Quality", description: "Enterprise-grade work delivered at agency pricing.", color: "text-cyan-700", bg: "bg-cyan-500/10" },
 ];
 
 export default function WLBenefits() {

@@ -21,14 +21,14 @@ export default function AboutHero() {
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
             className="text-muted text-xl leading-relaxed mb-8">
-            We started as a small SEO team in Ghaziabad, India. Today we&apos;re a US-based global digital marketing and IT services company, with offices in Sheridan, Wyoming and Ghaziabad, trusted by brands across 30+ countries.
+            We&apos;re a digital marketing and IT services company that spent two decades delivering behind the scenes for B2B clients and agency partners. We&apos;re now opening our doors to direct clients too.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-wrap gap-4">
             {[
-              { icon: Award, text: "Google Partner India" },
-              { icon: Shield, text: "ISO 9001:2008 Certified" },
-              { icon: TrendingUp, text: "Google Partner" },
+              { icon: Award, text: "B2B Since 2006" },
+              { icon: TrendingUp, text: "AI-Powered SEO" },
+              { icon: Shield, text: "Results-Driven" },
             ].map(({ icon: Icon, text }) => (
               <div key={text} className="flex items-center gap-2 text-sm text-muted">
                 <Icon className="w-4 h-4 text-accent" />{text}

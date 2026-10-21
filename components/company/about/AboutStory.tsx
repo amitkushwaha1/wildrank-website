@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 
 const milestones = [
-  { year: "2006", title: "Founded in Ghaziabad", desc: "Started as a small SEO consultancy with a team of 5, focused on helping local businesses rank on Google." },
-  { year: "2010", title: "100+ Team Members", desc: "Expanded into PPC, social media, and web development. Crossed 100 team members and launched our white-label program." },
-  { year: "2014", title: "Google Partner Status", desc: "Achieved Google AdWords Certified Partner status and ISO 9001:2008 certification, validating our quality standards." },
-  { year: "2018", title: "Google Partner", desc: "Recognized by Deloitte as one of the fastest-growing technology companies in India. Expanded to US and UK markets." },
+  { year: "2006", title: "Founded (B2B)", desc: "Started as a B2B digital marketing and software delivery partner. We worked behind the scenes for brands and agencies — our clients were our only storefront, so there was no public website." },
+  { year: "2010", title: "100+ Team Members", desc: "Expanded into PPC, social media, web and software development. Crossed 100 team members and launched our white-label program for agency partners." },
+  { year: "2014", title: "Expanded Services", desc: "Grew into full-spectrum digital marketing and IT services, serving B2B clients across multiple industries and markets." },
+  { year: "2018", title: "US & UK Markets", desc: "Expanded beyond India to serve clients in the US and UK, while continuing to operate as a B2B delivery partner." },
   { year: "2022", title: "AI-Powered Platform", desc: "Launched our proprietary AI marketing platform, enabling smarter targeting, faster optimization, and better results." },
-  { year: "2024", title: "Milestone", desc: "Today we serve clients across 30+ countries with a focused team and verified project delivery. Specific results vary by client sector and campaign execution." },
+  { year: "2026", title: "Public Launch", desc: "Launched our first public website and opened direct B2B + B2C services, after two decades of behind-the-scenes delivery. That is why everything here is new." },
 ];
 
 export default function AboutStory() {

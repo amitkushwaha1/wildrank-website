@@ -37,7 +37,7 @@ type Stat = {
 };
 
 const stats: Stat[] = [
-  { icon: Award,       value: "2006",    title: "Founded & Proven",       desc: "Two decades of performance marketing and software engineering, still operator-led.",        color: "text-primary", bg: "bg-primary/10" },
+  { icon: Award,       value: "2006",    title: "Founded & Proven",       desc: "Founded 2006. Two decades delivering behind the scenes for B2B clients and agency partners — no public website needed until now.",        color: "text-primary", bg: "bg-primary/10" },
   { icon: TrendingUp,  value: "+340%",   title: "Avg. AI Citation Lift",  desc: "Average lift in citations across ChatGPT, Gemini, Perplexity and Google AI Overviews.",     color: "text-primary", bg: "bg-primary/10" },
   { icon: ShieldCheck, value: "90-Day",  title: "Results Guarantee",      desc: "Agreed traffic, citation or pipeline milestones met in 90 days, or advisory fees refunded.", color: "text-primary", bg: "bg-primary/10" },
   { icon: PhoneCall,   value: "24/7",    title: "Calls Answered",         desc: "An AI receptionist picks up nights, weekends and the busy line, so an enquiry is not lost.", color: "text-primary", bg: "bg-primary/10" },
@@ -50,7 +50,7 @@ const cardVariants = {
 };
 
 export default function Hero() {
-  const trustLogos = ["Google Partner", "AI-Powered SEO", "ISO 9001 Certified", "GEO & AEO Ready"];
+  const trustLogos = ["AI-Powered SEO", "GEO & AEO Ready", "Results-Driven"];
   return (
     <section className="relative min-h-screen overflow-hidden bg-band pt-20">
 

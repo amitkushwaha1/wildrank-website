@@ -106,8 +106,9 @@ export default function Stats() {
               A Track Record Built Nationwide
             </h2>
             <p className="mt-3 leading-relaxed text-muted">
-              Two decades of performance marketing and software engineering, for
-              single-location businesses and enterprise teams alike.
+              Two decades of performance marketing and software engineering delivered behind
+              the scenes for B2B clients and agency partners — now open to direct
+              clients too.
             </p>
 
             {stats.map((stat, i) => {
