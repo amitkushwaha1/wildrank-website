@@ -67,28 +67,12 @@ export interface Credential {
 
 export const credentials: Credential[] = [
   {
-    name: "Google Partner",
-    note: "Google's partner programme for agencies that manage Google Ads and Analytics accounts on behalf of clients.",
-    icon: BadgeCheck,
-    logo: "/awards/badge-Google.webp",
-    w: 128,
-    h: 128,
-  },
-  {
     name: "Red Herring Top 100",
     note: "Red Herring's annual list of the most promising private technology companies.",
     icon: Trophy,
     logo: "/awards/badge-RedHerring.webp",
     w: 128,
     h: 127,
-  },
-  {
-    name: "ISO 9001",
-    note: "The international standard for quality management systems.",
-    icon: ShieldCheck,
-    logo: "/awards/iso.webp",
-    w: 128,
-    h: 128,
   },
   {
     name: "Meta Business Partner",

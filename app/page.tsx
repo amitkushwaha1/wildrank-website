@@ -82,7 +82,9 @@ export default function HomePage() {
           trusts you?" and this answers "what do you actually do?", and the
           second question is the one a reader arrives with. */}
       <MissedCalls />
-      <ClientWall />
+      {/* ClientWall removed: the previous client list was unverified placeholder
+          logos (Google, Tata, Cisco, NVIDIA, etc.) and must not be published
+          until real, verified client references exist. See lib/clientMarks.ts. */}
       <AISection />
       <ServicesGrid />
       <Stats />
