@@ -26,7 +26,7 @@ export default function TermsOfServicePage() {
         <p>
           Wildrank Technologies is the trading name of Wildrank Technologies Pvt Ltd, a private
           limited company founded in 2006. Our US office is at 30 N Gould St, Sheridan, WY 82801,
-          United States. You can reach us at info@wildranktechnologies.com or +1 775-471-5295.
+          United States. You can reach us at info@wildranktechnologies.com or +1 363-222-1815.
         </p>
       </div>
 
@@ -172,7 +172,7 @@ export default function TermsOfServicePage() {
         <p>
           Questions about these terms:{" "}
           <a href="mailto:gupta@wildranktechnologies.com">gupta@wildranktechnologies.com</a> or{" "}
-          <a href="tel:+17754715295">+1 775 471 5295</a>.
+          <a href="tel:+13632221815">+1 363 222 1815</a>.
         </p>
       </div>
     </LegalPage>

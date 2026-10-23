@@ -195,8 +195,8 @@ export default function ContactForm() {
                 <a href="mailto:info@wildranktechnologies.com" className="flex items-center gap-3 text-sm text-muted hover:text-ink transition-colors">
                   <Mail className="w-4 h-4 text-accent" /> info@wildranktechnologies.com
                 </a>
-                <a href="tel:+17754715295" className="flex items-center gap-3 text-sm text-muted hover:text-ink transition-colors">
-                  <Phone className="w-4 h-4 text-accent" /> +1 (775) 471-5295
+                <a href="tel:+13632221815" className="flex items-center gap-3 text-sm text-muted hover:text-ink transition-colors">
+                  <Phone className="w-4 h-4 text-accent" /> +1 (363) 222-1815
                 </a>
                 <div className="flex items-center gap-3 text-sm text-muted">
                   <MapPin className="w-4 h-4 text-accent" /> Sheridan, USA & Ghaziabad, India

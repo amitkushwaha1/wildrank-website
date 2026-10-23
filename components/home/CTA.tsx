@@ -109,11 +109,11 @@ export default function CTA() {
 
             <div className="flex flex-wrap gap-4">
               <a
-                href="tel:+17754715295"
+                href="tel:+13632221815"
                 className="flex items-center gap-2 text-sm text-muted hover:text-ink transition-colors"
               >
                 <Phone className="w-4 h-4 text-accent" />
-                +1 (775) 471-5295
+                +1 (363) 222-1815
               </a>
               <a
                 href="mailto:info@wildranktechnologies.com"

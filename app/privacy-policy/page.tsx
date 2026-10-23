@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
           St, Sheridan, WY 82801, United States. We are the controller of the personal data described
           in this policy. For any privacy question or request, write to{" "}
           <a href="mailto:gupta@wildranktechnologies.com">gupta@wildranktechnologies.com</a> or call{" "}
-          <a href="tel:+17754715295">+1 775 471 5295</a>.
+          <a href="tel:+13632221815">+1 363 222 1815</a>.
         </p>
       </div>
 

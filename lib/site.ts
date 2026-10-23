@@ -10,8 +10,8 @@
 export const SITE_URL = "https://wildranktechnologies.com";
 
 /** Public contact number. Keep in E.164 so schema.org parses it cleanly. */
-export const PHONE_E164 = "+1-775-471-5295";
-export const PHONE_DISPLAY = "775-471-5295";
+export const PHONE_E164 = "+1-363-222-1815";
+export const PHONE_DISPLAY = "363-222-1815";
 
 export const BRAND_NAME = "Wildrank Technologies";
 
