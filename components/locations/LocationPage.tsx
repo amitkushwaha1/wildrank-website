@@ -28,7 +28,7 @@ export default function LocationPage({ city, state }: Props) {
     name: `Wildrank Technologies - ${city} SEO`,
     url: `${SITE}/${slug}-seo-company`,
     description: `Local SEO and AI-visibility services for businesses in ${location}.`,
-    email: "gupta@wildranktechnologies.com",
+    email: "info@wildranktechnologies.com",
     telephone: PHONE_E164,
     areaServed: { "@type": "City", name: city },
     parentOrganization: { "@id": `${SITE}/#organization` },

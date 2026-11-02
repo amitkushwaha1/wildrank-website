@@ -91,7 +91,7 @@ const organizationSchema = {
       url: SITE_URL,
       description:
         "Digital marketing and IT services company providing SEO, PPC, social media, web development, mobile apps and white label services.",
-      email: "gupta@wildranktechnologies.com",
+      email: "info@wildranktechnologies.com",
       telephone: PHONE_E164,
       // Entity facts declared here and nowhere else in machine-readable form.
       // A researcher verifying the company reads /contact for the address and
