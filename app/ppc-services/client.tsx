@@ -36,12 +36,31 @@ const faqs = [
   { q: "Do I own my ad accounts?", a: "Yes, always. Your Google Ads, Meta, and Bing accounts belong to you. We request manager access and never hold your accounts hostage if you leave." },
   { q: "What's your management fee structure?", a: "We charge flat monthly fees based on your plan tier — not a percentage of ad spend. This means as your budget grows, your management costs don't balloon with it." },
   { q: "Can you fix my underperforming campaigns?", a: "Absolutely. We regularly take over poorly performing accounts and turn them around within 30–60 days through proper structure, targeting, and bid optimization." },
+  { q: "PPC vs SEO — which should come first?", a: "PPC captures demand now; SEO builds compounding visibility and organic demand over time. Budget and sales-cycle requirements should determine starting allocation." },
+  { q: "Can I run my PPC campaign myself?", a: "Possible, but tracking gaps, match-type mistakes, and landing-page friction often waste spend; dedicated review usually improves efficiency." },
+  { q: "Will PPC work without a good landing page?", a: "Not reliably. Conversion depends on speed, form clarity, and attribution." },
+  { q: "How long does PPC take to generate results?", a: "PPC can generate leads quickly. Full optimization typically depends on gathering enough conversion data, often over the first several weeks." },
+  { q: "Can I get a free PPC audit or quote?", a: "Yes. The audit form is available and the PPC pricing route exists." },
 ];
 
 export default function PpcServicesClient() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((item) => ({
+              "@type": "Question",
+              name: item.q,
+              acceptedAnswer: { "@type": "Answer", text: item.a },
+            })),
+          }),
+        }}
+      />
       {/* Hero */}
       <section className="relative min-h-[75vh] hero-gradient flex items-center overflow-hidden pt-20">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />

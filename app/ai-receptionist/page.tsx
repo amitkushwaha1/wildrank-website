@@ -46,6 +46,22 @@ const FAQS = [
     q: "Does it replace our receptionist?",
     a: "No. It covers the hours and the overflow where calls are currently lost. Most clients keep their staff and stop losing the calls that fall through.",
   },
+  {
+    q: "Can missed-call recovery work when the office is closed?",
+    a: "Yes, that is the core use case: 24/7 recovery by text-back with a direct route to booking or a human handoff whenever available based on office rules.",
+  },
+  {
+    q: "Why do missed calls cost revenue?",
+    a: "A missed call is an inquiry that usually does not leave a voicemail, and the caller often moves to the next result. Recovery converts that silent loss into a second contact attempt.",
+  },
+  {
+    q: "Should I fix call overflow myself?",
+    a: "Basic triage is possible, but scaling across queues, texts, CRM sync and human routing is usually an operations problem rather than a phone-line problem alone.",
+  },
+  {
+    q: "Can this route urgent calls to a human?",
+    a: "Yes, urgent intents should be handled by escalation rules based on caller intent and business thresholds, not only blanket AI replies.",
+  },
 ];
 
 const faqSchema = {

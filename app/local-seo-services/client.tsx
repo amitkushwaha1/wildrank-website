@@ -71,6 +71,11 @@ const faqs = [
   { q: "How do you handle businesses with multiple locations?", a: "We create individual strategies for each location while maintaining a centralized management system. Each location gets its own optimized GBP, location landing page, citation profile, and performance reporting — all visible in one dashboard." },
   { q: "What's the difference between local SEO and regular SEO?", a: "Local SEO focuses on geographic visibility — appearing in Google Maps, the local pack, and for 'near me' searches. Regular SEO targets organic results nationally. Most local businesses need both, and we integrate them into one cohesive strategy." },
   { q: "Can you help recover a suspended Google Business Profile?", a: "Absolutely. We've successfully reinstated hundreds of GBP listings. We identify the suspension cause, fix violations, submit proper reinstatement requests, and implement safeguards to prevent future issues." },
+  { q: "Is local SEO connected to broader search visibility?", a: "Local SEO improves local-package placement, while consistent broader search/quality signals support both. Service areas, citation accuracy, and authoritative links all reinforce each other." },
+  { q: "What is Google Business Profile content included?", a: "We can optimize categories, service areas, attributes, photos, updates, descriptions, Q&A, offer presentation, and response workflows." },
+  { q: "Do you manage local citations?", a: "NAP-changing errors across aggregator maps can waste citations; we audit and align name/address/phone/email before adding links." },
+  { q: "Why do NAP mismatches matter?", a: "Mismatched name/address/phone makes it harder for search engines and answer engines to trust the business entity." },
+  { q: "Do you report local ranking movement?", a: "Track local keyword movement, maps visibility signals, site form submissions or calls/leads to individual markets." },
 ];
 
 export default function LocalSeoServicesClient() {
@@ -78,6 +83,20 @@ export default function LocalSeoServicesClient() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((item) => ({
+              "@type": "Question",
+              name: item.q,
+              acceptedAnswer: { "@type": "Answer", text: item.a },
+            })),
+          }),
+        }}
+      />
       {/* Hero */}
       <section className="relative min-h-[75vh] hero-gradient flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.1) 1px,transparent 1px)", backgroundSize: "60px 60px" }} />

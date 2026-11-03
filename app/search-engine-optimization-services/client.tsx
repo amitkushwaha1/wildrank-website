@@ -72,6 +72,11 @@ const faqs = [
   { q: "Do you guarantee first-page rankings?", a: "No ethical SEO agency can guarantee specific rankings because Google's algorithm is constantly evolving. What we do guarantee: white-hat techniques, transparent reporting, and a proven process that has delivered first-page results for 90%+ of our client keywords." },
   { q: "What's included in an SEO engagement?", a: "Every package includes technical audits, keyword research, on-page optimization, link building, content strategy, monthly ranking reports, and dedicated support. The scope and intensity scale with your plan level." },
   { q: "Can you help with AI search and Answer Engines?", a: "Absolutely. Our AEO (Answer Engine Optimization) service ensures your content appears in AI-generated answers, featured snippets, and voice search results — the formats that are rapidly becoming the primary way people consume search results." },
+  { q: "Is AEO/GEO a separate service from SEO?", a: "It is usually not separate. AEO/GEO adds answer-focused structure, entity clarity, schema, and source consistency on top of SEO fundamentals rather than a parallel discipline." },
+  { q: "How do you measure AI visibility if there is no ranking position?", a: "We track a fixed set of buyer prompts, whether your brand is mentioned, whether it is cited with a link, and what each engine says about it across repeated runs." },
+  { q: "What is an entity and Knowledge Graph optimization deliverable?", a: "It improves how a business is defined in schema and profile references so engines and assistants can associate the correct services, office locations, contact details, and sameAs profiles." },
+  { q: "How long do technical SEO fixes usually take?", a: "Initial audit and technical roadmap timing depends on site size. Fixes should be prioritized by indexation and traffic impact instead of treated as an all-at-once rebuild." },
+  { q: "What are SERP feature optimizations?", a: "They are page updates that make content easier to quote: clear headings, definitions, tables, FAQs, answer-first blocks, and accurate entity details." },
 ];
 
 export default function SearchEngineOptimizationServicesClient() {
@@ -79,6 +84,20 @@ export default function SearchEngineOptimizationServicesClient() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((item) => ({
+              "@type": "Question",
+              name: item.q,
+              acceptedAnswer: { "@type": "Answer", text: item.a },
+            })),
+          }),
+        }}
+      />
       {/* Hero */}
       <section className="relative min-h-[75vh] hero-gradient flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.1) 1px,transparent 1px)", backgroundSize: "60px 60px" }} />

@@ -56,6 +56,26 @@ const FAQS = [
     q: "How long before it shows results?",
     a: "Entity and schema fixes show up within weeks because they are things Google and the model providers read directly. Citation gains take longer, since they depend on the sources the assistants choose to pull from. We report both separately rather than blurring them into one number.",
   },
+  {
+    q: "Is SEO still needed if I do GEO/AEO?",
+    a: "Yes. GEO/AEO and SEO share eligibility, entity clarity, structured data, and answer-first content. Google treats AI search as an extension of core search fundamentals rather than a separate indexing system.",
+  },
+  {
+    q: "Does GEO/AEO guaranteed AI citations?",
+    a: "No. Wildrank cannot control model outputs, but it can improve entity clarity, structured pages, and the chances assistants name the brand in supported answer surfaces.",
+  },
+  {
+    q: "Can content refresh support AEO over time?",
+    a: "Yes. Refreshing definitions, answer blocks, and citations keeps pages technically fresh and more likely to be read and quoted without mass rewriting or unsafe claims.",
+  },
+  {
+    q: "What are entity and Knowledge Graph optimizations?",
+    a: "They make it easier for engines to associate a brand with its services, offices, contacts, profiles, sameAs identifiers, and location relationships, reducing ambiguity.",
+  },
+  {
+    q: "How should you measure AI visibility?",
+    a: "Use a fixed set of buyer prompts, record mention and citation status, capture how answers vary by run, and track both entity-read changes and external source references.",
+  },
 ];
 
 const faqSchema = {
