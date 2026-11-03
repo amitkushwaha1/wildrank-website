@@ -39,6 +39,20 @@ const services = [
   { icon: Layers, title: "Content Marketing", description: "Blog posts, landing pages, case studies, and video content designed to attract, nurture, and convert your ideal customers.", color: "text-green-700", bg: "bg-green-500/10", border: "border-green-500/20" },
   { icon: Globe, title: "Email & Automation", description: "Drip sequences, newsletter campaigns, and behavioral triggers that keep your pipeline warm and moving toward purchase.", color: "text-purple-600", bg: "bg-purple-500/10", border: "border-purple-500/20" },
   { icon: PieChart, title: "Analytics & CRO", description: "Conversion rate optimization, A/B testing, and attribution modeling so you know exactly what's working and why.", color: "text-cyan-700", bg: "bg-cyan-500/10", border: "border-cyan-500/20" },
+
+  { icon: Zap, title: "Technical SEO Audit & Roadmap", description: "Crawl, indexation, performance, schema, and internal-link audits translated into a prioritized technical roadmap.", color: "text-blue-600", bg: "bg-blue-500/10", border: "border-blue-500/20" },
+  { icon: Shield, title: "Entity & Knowledge Graph SEO", description: "Entity clarity, sameAs consistency, organization schema, author signals, local location signals, and knowledge-graph readiness across owned plus third-party surfaces.", color: "text-purple-600", bg: "bg-purple-500/10", border: "border-purple-500/20" },
+  { icon: Lightbulb, title: "GEO & AEO Visibility", description: "Generative and answer-engine optimization using exact query answers, structured data, citation-grade definitions, and entity consistency.", color: "text-pink-700", bg: "bg-pink-500/10", border: "border-pink-500/20" },
+  { icon: Globe, title: "SERP Feature & Snippet Optimization", description: "Featured snippets, People Also Ask aligned content, zero-click visibility support, and answer-first page blocks tuned for search intent.", color: "text-cyan-700", bg: "bg-cyan-500/10", border: "border-cyan-500/20" },
+  { icon: Target, title: "Voice Search Optimization", description: "Answer-first structure, local voice-intent coverage, and consistency for answer devices, assistants and voice-surface discovery paths.", color: "text-orange-700", bg: "bg-orange-500/10", border: "border-orange-500/20" },
+  { icon: Layers, title: "Content Refresh & AEO Editing", description: "Updating, strengthening and repurposing approved content so pages keep answer-first citations, references, schema, and measurement accuracy.", color: "text-green-700", bg: "bg-green-500/10", border: "border-green-500/20" },
+  { icon: Users, title: "Digital PR & Authority Building", description: "Per-project or monthly link-earning, relationship outreach, content assets, and trustworthy third-party citations with documented evidence only.", color: "text-purple-600", bg: "bg-purple-500/10", border: "border-purple-500/20" },
+  { icon: CheckCircle, title: "Reputation & Reviews", description: "Directory claim/monitoring, NAP hygiene, review-response process, and local/global trust snapshot support.", color: "text-blue-600", bg: "bg-blue-500/10", border: "border-blue-500/20" },
+  { icon: Globe, title: "Local Citation & GBP Management", description: "Google Business Profile accuracy, listing hygiene, citations and location-level authority consistency.", color: "text-cyan-700", bg: "bg-cyan-500/10", border: "border-cyan-500/20" },
+  { icon: Globe, title: "Multi-Location SEO", description: "Markets and locations served in a repeatable template with location-specific entities and intent coverage support.", color: "text-orange-700", bg: "bg-orange-500/10", border: "border-orange-500/20" },
+  { icon: Zap, title: "AI Workflow Automation / Operations Layer", description: "Hermes-style AI workflows are part of operations support: missed calls, lead handling, qualification and hand-off flows, plus 24/7 recovery handling.", color: "text-pink-700", bg: "bg-pink-500/10", border: "border-pink-500/20" },
+  { icon: Globe, title: "YouTube & Community Presence", description: "Official channel optimization and evidence-backed community presence rather than unverified participation claims.", color: "text-red-700", bg: "bg-red-500/10", border: "border-red-500/20" },
+  { icon: Globe, title: "Website Care & Reliability Support", description: "Technical hygiene, updates, and reliability assistance scoped by written SLA, not vague maintenance promises.", color: "text-green-700", bg: "bg-green-500/10", border: "border-green-500/20" },
 ];
 
 const process = [
@@ -71,6 +85,16 @@ const faqs = [
   { q: "What's your minimum budget recommendation?", a: "For a multi-channel strategy to be effective, we typically recommend a minimum of $5,000/month in ad spend plus management fees. However, we can start with focused single-channel campaigns and scale as we prove ROI." },
   { q: "How quickly can you launch campaigns?", a: "Most clients are fully live within 2-3 weeks of kickoff. The first week is dedicated to audit and strategy, the second to asset creation and setup, and week three is launch with monitoring. Quick wins often start appearing within the first 30 days." },
   { q: "Do you work with businesses in specific industries?", a: "We serve B2B and B2C companies across e-commerce, SaaS, healthcare, professional services, real estate, and manufacturing. Our process adapts to your industry, but the data-driven methodology stays consistent." },
+  { q: "What connected services can be bundled under digital marketing?", a: "In addition to SEO, PPC, social, email, content, and web development, Wildrank also supports technical SEO audits, entity-focused search visibility, GEO and AEO answer readiness, SERP feature and snippet alignment, content refresh, conversion-focused landing pages, digital PR and authority-building, local citation support, and AI workflow/operational tooling when the workflow is verified and signed off." },
+  { q: "Can I do SEO, GEO/AEO, or digital marketing myself?", a: "Some foundations are owner-doable, but clustered technical, authority, entity clarity, schema, and answer-first content work require a dedicated workflow. Use a free audit to identify what you can fix first." },
+  { q: "How long does a technical SEO audit take?", a: "A complete technical audit is typically delivered as a scoped roadmap, with repair timing based on the size and condition of the site. Deliverables and schedule are confirmed in the engagement scope." },
+  { q: "Is GEO/AEO different from SEO?", a: "They are closely related, but AEO/GEO specifically targets assistant answer surfaces, while traditional SEO targets broader search visibility. The underlying work—eligibility, clear entity data, strong content, and safe markup—overlaps significantly." },
+  { q: "What is SERP feature and snippet optimization?", a: "It means creating answer-first blocks and page structure that align with query intent and known SERP patterns, without promising a specific snippet position." },
+  { q: "How much does digital marketing cost?", a: "Costs vary by channel, ad spend, scope, and tier. Wildrank uses tiered planning rather than one flat package, and exact ranges come from the relevant pricing page or a quoted scope." },
+  { q: "Is Wildrank's digital marketing safe and white-hat?", a: "Wildrank states a white-hat methodology—guideline-aligned SEO, transparent reporting, and no PBNs or exploitative shortcuts. Reviews or testimonials are not published as unverified statistics." },
+  { q: "What reporting do you provide?", a: "Monthly reporting and live dashboards include traffic, channel contribution, CAC, lead quality, and revenue attribution metrics, based on the data collected from approved analytics tooling." },
+  { q: "How do we know your company is legitimate?", a: "Evidence includes the legal entity (Wildrank Technologies Pvt Ltd), Sheridan and Ghaziabad locations, official LinkedIn/YouTube/Instagram/Facebook/X profiles, Wikidata reference, public registry or profiling references, and a client-reference conversation model instead of fabricated public testimonials." },
+  { q: "Can you publish a FAQPage schema for this page?", a: "Yes, but only if the same questions and answers are visible on the page and updated before any public answer claim is made." },
 ];
 
 export default function DigitalMarketingServicesClient() {
@@ -78,6 +102,21 @@ export default function DigitalMarketingServicesClient() {
 
   return (
     <>
+      {/* Structured answer data, kept synchronized with the visible FAQ section */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.q,
+              acceptedAnswer: { "@type": "Answer", text: faq.a },
+            })),
+          }),
+        }}
+      />
       {/* Hero */}
       <section className="relative min-h-[75vh] hero-gradient flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.1) 1px,transparent 1px)", backgroundSize: "60px 60px" }} />
