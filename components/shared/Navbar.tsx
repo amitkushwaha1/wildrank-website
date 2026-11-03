@@ -101,10 +101,34 @@ export default function Navbar() {
                 className="relative"
                 onMouseEnter={() => link.children && setActiveDropdown(link.label)}
                 onMouseLeave={() => setActiveDropdown(null)}
+                onFocusCapture={() => link.children && setActiveDropdown(link.label)}
+                onBlur={(event) => {
+                  if (link.children && !event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                    setActiveDropdown(null);
+                  }
+                }}
               >
                 <a
                   href={link.href}
                   className="flex items-center gap-1 px-3 py-1.5 text-sm font-medium text-muted hover:text-ink transition-colors rounded-lg hover:bg-tint/5 whitespace-nowrap"
+                  aria-haspopup={link.children ? "menu" : undefined}
+                  aria-expanded={link.children ? activeDropdown === link.label : undefined}
+                  onClick={(event) => {
+                    if (link.children) {
+                      event.preventDefault();
+                      setActiveDropdown((current) => (current === link.label ? null : link.label));
+                    }
+                  }}
+                  onKeyDown={(event) => {
+                    if (link.children && (event.key === "Enter" || event.key === " ")) {
+                      event.preventDefault();
+                      setActiveDropdown((current) => (current === link.label ? null : link.label));
+                    }
+                    if (link.children && event.key === "Escape") {
+                      event.preventDefault();
+                      setActiveDropdown(null);
+                    }
+                  }}
                 >
                   {link.label}
                   {link.children && (
@@ -115,6 +139,14 @@ export default function Navbar() {
                 <AnimatePresence>
                   {link.children && activeDropdown === link.label && (
                     <motion.div
+                      role="menu"
+                      aria-label={link.label}
+                      onKeyDown={(event) => {
+                        if (event.key === "Escape") {
+                          event.preventDefault();
+                          setActiveDropdown(null);
+                        }
+                      }}
                       initial={{ opacity: 0, y: 10, scale: 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
@@ -126,6 +158,7 @@ export default function Navbar() {
                           <motion.a
                             key={child.label}
                             href={child.href}
+                            role="menuitem"
                             initial={{ opacity: 0, x: -8 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: ci * 0.03 }}
