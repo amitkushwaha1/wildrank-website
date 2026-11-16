@@ -2915,25 +2915,6 @@ cityAreas.push(
     competitors: ["SmartSites", "Thrive", "WebFX", "Coalition Technologies"],
     searchVolume: "High (austin seo, austin seo company, austin seo services)",
     conversionRate: "Medium-High (less competition than coastal cities, growing market)",
-  },
-{
-    citySlug: "austin", cityName: "Austin", areaSlug: "south-congress", areaName: "South Congress", borough: "South Austin", tier: 2,
-    primaryKeyword: "south congress seo",
-    title: "South Congress SEO Company | Austin SEO | Wildrank Technologies",
-    description: "Wildrank Technologies is a South Congress SEO company. AI-powered SEO, local SEO, PPC for SoCo businesses. Targeting retail, hospitality, and creative industries. 500+ clients.",
-    h1: "South Congress SEO Company",
-    intro: "South Congress (SoCo) is Austin's iconic shopping and dining district, known for its indie boutiques, restaurants, and live music venues. SEO in South Congress requires understanding the retail and hospitality industries' search behavior. Wildrank Technologies builds South Congress-specific SEO campaigns.",
-    landmarks: ["South Congress Avenue", "Continental Club", "Hotel San Jose", "Jo's Coffee", "Allen's Boots", "Big Top Candy Shop"],
-    industries: ["Retail", "Hospitality", "Food & Beverage", "Creative", "Real Estate", "Professional Services", "Arts", "Music", "Fashion", "Technology"],
-    transit: "Capital Metro (MetroRapid 801, MetroBus), bike lanes",
-    zipCodes: ["78704"],
-    faqs: [
-      { q: "Why is South Congress different from other Austin areas for SEO?", a: "South Congress has a unique indie retail and hospitality culture. Search terms include 'restaurant south congress austin', 'boutique south congress', 'hotel south congress'. The keyword mix reflects the area's creative character." },
-      { q: "How competitive is South Congress for SEO?", a: "Moderately competitive. Retail and hospitality keywords are competitive, but niche terms have lower competition." },
-    ],
-    competitors: ["SmartSites", "Thrive", "WebFX"],
-    searchVolume: "Low (south congress seo, south congress seo company)",
-    conversionRate: "Medium-High (creative market, moderate competition)",
   }
 );
 
