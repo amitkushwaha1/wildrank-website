@@ -55,6 +55,54 @@ const services = [
   { icon: Globe, title: "Website Care & Reliability Support", description: "Technical hygiene, updates, and reliability assistance scoped by written SLA, not vague maintenance promises.", color: "text-green-700", bg: "bg-green-500/10", border: "border-green-500/20" },
 ];
 
+const serviceCatalog = [
+  "Digital Marketing",
+  "Digital Marketing Strategy",
+  "Digital Marketing Audit",
+  "Content Marketing",
+  "Reputation Management",
+  "Franchise Digital Marketing",
+  "Local SEO Services",
+  "Small Business SEO",
+  "GBP Optimization",
+  "Social Media Marketing",
+  "Social Media Optimization",
+  "Social Media Management",
+  "Social Media Advertising",
+  "Website Design & Development",
+  "WordPress Development",
+  "Custom Website Design",
+  "Magento Development",
+  "Mobile App Development",
+  "Joomla Website Development",
+  "Website Hosting Services",
+  "SEO",
+  "Ecommerce SEO Services",
+  "Link Building Services",
+  "Technical SEO Services",
+  "Franchise SEO Services",
+  "Voice Search Optimization",
+  "App Store Optimization",
+  "White Label SEO",
+  "Generative Engine Optimization",
+  "Answer Engine Optimization",
+  "Video SEO",
+  "YouTube Optimization",
+  "Customer Testimonial Videos",
+  "Vlog Video Production Services",
+  "Digital Advertising",
+  "Facebook",
+  "Instagram",
+  "X",
+  "LinkedIn",
+  "Pinterest",
+  "Conversion Rate Optimization",
+  "Ecommerce Development",
+  "Shopify Web Development",
+  "Woocommerce Development",
+  "Payment Gateway",
+];
+
 const process = [
   { step: "01", title: "Discovery & Audit", description: "We analyze your current marketing ecosystem — what's working, what's leaking budget, where the biggest opportunities hide.", color: "text-blue-600", bg: "bg-blue-500/10" },
   { step: "02", title: "Strategy Development", description: "A custom multi-channel blueprint aligned to your revenue goals, audience personas, and competitive landscape.", color: "text-orange-700", bg: "bg-orange-500/10" },
@@ -271,6 +319,30 @@ export default function DigitalMarketingServicesClient() {
                 </motion.div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Full service directory */}
+      <section className="py-20 lg:py-12 bg-canvas">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-10 text-center"
+          >
+            <span className="inline-block text-accent text-sm font-semibold tracking-widest uppercase mb-3">Service Directory</span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-ink mb-4">Full-Scope <span className="gradient-text">Capability Catalog</span></h2>
+            <p className="text-muted text-lg max-w-3xl mx-auto">Wildrank also delivers these coordinated capabilities via scoped discovery, market fit, ownership and client-approved proof. Items may be standalone, bundled, or delivered as white-label services.</p>
+          </motion.div>
+          <div className="flex flex-wrap gap-2 justify-center gap-y-2">
+            {serviceCatalog.map((item) => (
+              <span key={item} className="rounded-full border px-3 py-1 text-sm text-muted border-hairline/10">
+                {item}
+              </span>
+            ))}
           </div>
         </div>
       </section>
