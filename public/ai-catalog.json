@@ -1,0 +1,137 @@
+{
+  "site": {
+    "name": "Wildrank Technologies",
+    "url": "https://wildranktechnologies.com",
+    "description": "Digital marketing and AI systems agency. SEO, PPC, social media, content, web development and white-label delivery — plus a 24/7 AI receptionist that recovers missed calls before the next competitor answers.",
+    "founded": 2006,
+    "headquarters": "30 N Gould St, Sheridan, WY 82801, United States",
+    "delivery_office": "Ghaziabad, Uttar Pradesh, India",
+    "email": "info@wildranktechnologies.com",
+    "phone": "+1-363-222-1815",
+    "wikidata": "https://www.wikidata.org/wiki/Q141797050"
+  },
+  "categories": [
+    {
+      "name": "Marketing Services",
+      "pages": [
+        { "title": "Search Engine Optimization Services", "url": "https://wildranktechnologies.com/search-engine-optimization-services", "description": "Organic search strategy, technical SEO, on-page optimisation and content built to rank on Google and be cited by AI answer engines." },
+        { "title": "Digital Marketing Services", "url": "https://wildranktechnologies.com/digital-marketing-services", "description": "Full-funnel programmes that combine SEO, paid, content and conversion work under one strategy." },
+        { "title": "Social Media Marketing Services", "url": "https://wildranktechnologies.com/social-media-marketing-services", "description": "Organic social strategy, content calendars and community management." },
+        { "title": "Mobile Marketing Services", "url": "https://wildranktechnologies.com/mobile-marketing-services", "description": "SMS, in-app and mobile-first campaign execution." },
+        { "title": "Local SEO Services", "url": "https://wildranktechnologies.com/local-seo-services", "description": "Google Business Profile optimisation, geo-tagged content and local map visibility." },
+        { "title": "Email Marketing Services", "url": "https://wildranktechnologies.com/email-marketing-services", "description": "Lifecycle email, automation flows and list segmentation." },
+        { "title": "Content Marketing Services", "url": "https://wildranktechnologies.com/content-marketing-services", "description": "Editorial strategy, long-form content and topical authority." },
+        { "title": "PPC Services", "url": "https://wildranktechnologies.com/ppc-services", "description": "Google Ads and paid search management built around cost per qualified lead, not clicks." }
+      ]
+    },
+    {
+      "name": "AI Systems",
+      "pages": [
+        { "title": "Hermes AI System", "url": "https://wildranktechnologies.com/hermes-ai-system", "description": "An AI operations layer for marketing and sales, including the missed-call recovery workflow." },
+        { "title": "AI Receptionist — Missed Call Recovery", "url": "https://wildranktechnologies.com/ai-receptionist", "description": "Answers or immediately texts back every missed call, qualifies the caller and books the job into the CRM, 24/7." },
+        { "title": "Generative Engine Optimization (GEO) & AEO", "url": "https://wildranktechnologies.com/geo-aeo-services", "description": "Optimisation so a brand is quoted and cited by ChatGPT, Perplexity, Google AI Overviews and other answer engines." },
+        { "title": "AI Marketing", "url": "https://wildranktechnologies.com/ai-marketing", "description": "How AI is applied across targeting, content and measurement." }
+      ]
+    },
+    {
+      "name": "White Label for Agencies",
+      "pages": [
+        { "title": "White Label SEO Services", "url": "https://wildranktechnologies.com/white-label-seo-services" },
+        { "title": "White Label PPC Services", "url": "https://wildranktechnologies.com/white-label-ppc-services" },
+        { "title": "White Label Social Media", "url": "https://wildranktechnologies.com/white-label-social-media" },
+        { "title": "White Label Digital Marketing", "url": "https://wildranktechnologies.com/white-label-digital-marketing" },
+        { "title": "White Label AI Services", "url": "https://wildranktechnologies.com/white-label-ai-services" },
+        { "title": "White Label Website Development", "url": "https://wildranktechnologies.com/white-label-website-development" },
+        { "title": "White Label Virtual Assistant", "url": "https://wildranktechnologies.com/white-label-virtual-assistant" },
+        { "title": "White Label Link Building", "url": "https://wildranktechnologies.com/white-label-link-building" },
+        { "title": "White Label Guest Post Services", "url": "https://wildranktechnologies.com/white-label-guest-post-services" }
+      ]
+    },
+    {
+      "name": "Hire an Expert",
+      "pages": [
+        { "title": "Hire an SEO Expert", "url": "https://wildranktechnologies.com/hire-seo-expert" },
+        { "title": "Hire a PPC Expert", "url": "https://wildranktechnologies.com/hire-ppc-expert" }
+      ]
+    },
+    {
+      "name": "Pricing",
+      "pages": [
+        { "title": "SEO Pricing", "url": "https://wildranktechnologies.com/seo-pricing", "description": "Basic $499/mo, Silver $699/mo, Gold $999/mo, Premium $1,799/mo" },
+        { "title": "PPC Pricing", "url": "https://wildranktechnologies.com/ppc-pricing", "description": "Basic $299/mo, Silver $399/mo, Gold $599/mo, Premium $799/mo" },
+        { "title": "Social Media Pricing", "url": "https://wildranktechnologies.com/social-media-pricing", "description": "Basic $899/mo, Silver $1,299/mo, Gold $1,599/mo, Premium $2,499/mo" },
+        { "title": "Web Development Pricing", "url": "https://wildranktechnologies.com/web-development-pricing", "description": "Landing Page $799, Business Site $2,499, E-Commerce $4,999, Custom App $9,999" },
+        { "title": "Mobile App Pricing", "url": "https://wildranktechnologies.com/mobile-app-pricing", "description": "MVP App $4,999, Standard App $9,999, Full-Featured $19,999, Enterprise: custom" }
+      ]
+    },
+    {
+      "name": "Industries",
+      "pages": [
+        { "title": "Roofing Contractors", "url": "https://wildranktechnologies.com/industries/roofing/ai-receptionist" },
+        { "title": "HVAC & Plumbing Services", "url": "https://wildranktechnologies.com/industries/hvac-plumbing/ai-receptionist" },
+        { "title": "Law Firms & Legal Intake", "url": "https://wildranktechnologies.com/industries/legal/ai-receptionist" },
+        { "title": "Dental & Medical Clinics", "url": "https://wildranktechnologies.com/industries/dental-medical/ai-receptionist" },
+        { "title": "Real Estate & Property Management", "url": "https://wildranktechnologies.com/industries/real-estate/ai-receptionist" },
+        { "title": "Auto Repair & Dealerships", "url": "https://wildranktechnologies.com/industries/auto-repair/ai-receptionist" },
+        { "title": "B2B SaaS & Tech Companies", "url": "https://wildranktechnologies.com/industries/b2b-saas/ai-receptionist" }
+      ]
+    },
+    {
+      "name": "Locations",
+      "pages": [
+        { "title": "Austin SEO Company", "url": "https://wildranktechnologies.com/austin-seo-company" },
+        { "title": "Boston SEO Company", "url": "https://wildranktechnologies.com/boston-seo-company" },
+        { "title": "Charlotte SEO Company", "url": "https://wildranktechnologies.com/charlotte-seo-company" },
+        { "title": "Chicago SEO Company", "url": "https://wildranktechnologies.com/chicago-seo-company" },
+        { "title": "Columbus SEO Company", "url": "https://wildranktechnologies.com/columbus-seo-company" },
+        { "title": "Dallas SEO Company", "url": "https://wildranktechnologies.com/dallas-seo-company" },
+        { "title": "Denver SEO Company", "url": "https://wildranktechnologies.com/denver-seo-company" },
+        { "title": "Houston SEO Company", "url": "https://wildranktechnologies.com/houston-seo-company" },
+        { "title": "Indianapolis SEO Company", "url": "https://wildranktechnologies.com/indianapolis-seo-company" },
+        { "title": "Jacksonville SEO Company", "url": "https://wildranktechnologies.com/jacksonville-seo-company" },
+        { "title": "Los Angeles SEO Company", "url": "https://wildranktechnologies.com/los-angeles-seo-company" },
+        { "title": "Miami SEO Company", "url": "https://wildranktechnologies.com/miami-seo-company" },
+        { "title": "New York SEO Company", "url": "https://wildranktechnologies.com/new-york-seo-company" },
+        { "title": "Philadelphia SEO Company", "url": "https://wildranktechnologies.com/philadelphia-seo-company" },
+        { "title": "Phoenix SEO Company", "url": "https://wildranktechnologies.com/phoenix-seo-company" },
+        { "title": "San Antonio SEO Company", "url": "https://wildranktechnologies.com/san-antonio-seo-company" },
+        { "title": "San Diego SEO Company", "url": "https://wildranktechnologies.com/san-diego-seo-company" },
+        { "title": "San Francisco SEO Company", "url": "https://wildranktechnologies.com/san-francisco-seo-company" },
+        { "title": "Seattle SEO Company", "url": "https://wildranktechnologies.com/seattle-seo-company" },
+        { "title": "Toronto SEO Company", "url": "https://wildranktechnologies.com/toronto-seo-company" }
+      ]
+    },
+    {
+      "name": "Knowledge Base",
+      "pages": [
+        { "title": "FAQ", "url": "https://wildranktechnologies.com/faq", "description": "538+ questions and answers covering SEO, digital marketing, PPC, social media, AI search, white label, web development, and agency pricing." }
+      ]
+    },
+    {
+      "name": "Company",
+      "pages": [
+        { "title": "About", "url": "https://wildranktechnologies.com/about" },
+        { "title": "Contact", "url": "https://wildranktechnologies.com/contact" },
+        { "title": "Blog", "url": "https://wildranktechnologies.com/blog" },
+        { "title": "Sitemap", "url": "https://wildranktechnologies.com/sitemap.xml" }
+      ]
+    },
+    {
+      "name": "Legal",
+      "pages": [
+        { "title": "Privacy Policy", "url": "https://wildranktechnologies.com/privacy-policy" },
+        { "title": "Terms of Service", "url": "https://wildranktechnologies.com/terms-of-service" }
+      ]
+    }
+  ],
+  "tools": [
+    { "title": "Schema Generator", "url": "https://wildranktechnologies.com/tools/schema-generator", "description": "Free tool to generate JSON-LD structured data." }
+  ],
+  "social_profiles": [
+    { "platform": "LinkedIn", "url": "https://www.linkedin.com/company/wildrank-technologies-pvt-ltd" },
+    { "platform": "YouTube", "url": "https://www.youtube.com/@wildranktechnologiesofficial" },
+    { "platform": "X (Twitter)", "url": "https://x.com/wildranktech" },
+    { "platform": "Instagram", "url": "https://www.instagram.com/wildranktechnologies/" },
+    { "platform": "Facebook", "url": "https://www.facebook.com/wildranktechnologies/" }
+  ]
+}

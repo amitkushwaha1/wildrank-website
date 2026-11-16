@@ -27,6 +27,7 @@ const mono = JetBrains_Mono({
 // Absolute base for canonical/OG URLs. Must match app/sitemap.ts BASE_URL.
 // wildrank.com is a parked third-party domain and must never be declared here.
 import { PHONE_E164, SOCIAL_PROFILES } from "@/lib/site";
+import BreadcrumbJsonLd from "@/components/shared/BreadcrumbJsonLd";
 
 const SITE_URL = "https://wildranktechnologies.com";
 
@@ -264,6 +265,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <Navbar />
+        <BreadcrumbJsonLd />
         <main id="main">{children}</main>
         <Footer />
         <Script
