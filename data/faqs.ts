@@ -50,7 +50,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
   "Agency & Pricing",
 ];
 
-export const FAQS: FaqEntry[] = [
+const BASE_FAQS: FaqEntry[] = [
   // ═══════════════════════════════════════════════════════
   // SEO
   // ═══════════════════════════════════════════════════════
@@ -613,7 +613,42 @@ export const FAQS: FaqEntry[] = [
   },
 ];
 
-// Helper functions
+// Import additional FAQ entries
+import { TECHNICAL_SEO_FAQS } from "@/data/faq/technical-seo";
+import { EMAIL_MARKETING_FAQS } from "@/data/faq/email-marketing";
+import { MOBILE_MARKETING_FAQS } from "@/data/faq/mobile-marketing";
+import { ECOMMERCE_SEO_FAQS } from "@/data/faq/ecommerce-seo";
+import { LINK_BUILDING_FAQS } from "@/data/faq/link-building";
+
+// Merge all FAQ entries
+import { ANALYTICS_REPORTING_FAQS } from "@/data/faq/analytics-reporting";
+import { INFLUENCER_MARKETING_FAQS, CRO_ADDITIONAL_FAQS } from "@/data/faq/influencer-cro";
+import { BRAND_STRATEGY_FAQS } from "@/data/faq/brand-strategy";
+import { VIDEO_MARKETING_FAQS } from "@/data/faq/video-marketing";
+import { CRO_FAQS } from "@/data/faq/cro";
+import { ADVANCED_SEO_FAQS } from "@/data/faq/advanced-seo";
+import { WEB_DESIGN_FAQS } from "@/data/faq/web-design";
+import { MORE_SEO_FAQS } from "@/data/faq/more-seo";
+import { MORE_DIGITAL_MARKETING_FAQS } from "@/data/faq/more-digital-marketing";
+import { MORE_PPC_FAQS } from "@/data/faq/more-ppc";
+import { MORE_SOCIAL_MEDIA_FAQS } from "@/data/faq/more-social-media";
+import { MORE_CONTENT_MARKETING_FAQS } from "@/data/faq/more-content-marketing";
+import { MORE_LOCAL_SEO_FAQS } from "@/data/faq/more-local-seo";
+import { MORE_WHITE_LABEL_FAQS } from "@/data/faq/more-white-label";
+import { MORE_AI_SEO_FAQS } from "@/data/faq/more-ai-seo";
+import { MORE_AI_SEO_2_FAQS } from "@/data/faq/more-ai-seo-2";
+import { MORE_CRO_FAQS } from "@/data/faq/more-cro";
+import { MORE_AGENCY_PRICING_FAQS } from "@/data/faq/more-agency-pricing";
+import { MORE_WEB_DEV_FAQS } from "@/data/faq/more-web-dev";
+import { MORE_WEB_DEV_2_FAQS } from "@/data/faq/more-web-dev-2";
+import { MORE_WEB_DEV_3_FAQS } from "@/data/faq/more-web-dev-3";
+import { MORE_AGENCY_PRICING_2_FAQS } from "@/data/faq/more-agency-pricing-2";
+
+const ALL_FAQS = [...BASE_FAQS, ...TECHNICAL_SEO_FAQS, ...EMAIL_MARKETING_FAQS, ...MOBILE_MARKETING_FAQS, ...ECOMMERCE_SEO_FAQS, ...LINK_BUILDING_FAQS, ...ANALYTICS_REPORTING_FAQS, ...INFLUENCER_MARKETING_FAQS, ...CRO_ADDITIONAL_FAQS, ...BRAND_STRATEGY_FAQS, ...VIDEO_MARKETING_FAQS, ...CRO_FAQS, ...ADVANCED_SEO_FAQS, ...WEB_DESIGN_FAQS, ...MORE_SEO_FAQS, ...MORE_DIGITAL_MARKETING_FAQS, ...MORE_PPC_FAQS, ...MORE_SOCIAL_MEDIA_FAQS, ...MORE_CONTENT_MARKETING_FAQS, ...MORE_LOCAL_SEO_FAQS, ...MORE_WHITE_LABEL_FAQS, ...MORE_AI_SEO_FAQS, ...MORE_AGENCY_PRICING_FAQS, ...MORE_WEB_DEV_FAQS, ...MORE_WEB_DEV_2_FAQS, ...MORE_AI_SEO_2_FAQS, ...MORE_CRO_FAQS, ...MORE_WEB_DEV_3_FAQS, ...MORE_AGENCY_PRICING_2_FAQS];
+
+// Replace FAQS with merged array
+export const FAQS = ALL_FAQS;
+
 export function getFaqByCategory(category: FaqCategory): FaqEntry[] {
   return FAQS.filter(f => f.category === category);
 }
