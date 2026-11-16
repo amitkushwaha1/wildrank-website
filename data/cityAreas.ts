@@ -2383,25 +2383,6 @@ cityAreas.push(
     competitors: ["SmartSites", "Thrive", "WebFX"],
     searchVolume: "Low (east austin seo, east austin seo company)",
     conversionRate: "High (tech market, high-value clients)",
-  },
-{
-    citySlug: "austin", cityName: "Austin", areaSlug: "the-domain", areaName: "The Domain", borough: "North Austin", tier: 2,
-    primaryKeyword: "domain austin seo",
-    title: "Domain Austin SEO Company | Austin SEO | Wildrank Technologies",
-    description: "Wildrank Technologies is a Domain Austin SEO company. AI-powered SEO, local SEO, PPC for Domain businesses. Targeting tech, retail, and professional services. 500+ clients.",
-    h1: "The Domain SEO Company",
-    intro: "The Domain is Austin's premier mixed-use development, known for its tech offices, retail, and upscale dining. SEO in The Domain requires targeting high-value commercial keywords for tech, retail, and professional services. Wildrank Technologies builds Domain-specific SEO campaigns.",
-    landmarks: ["The Domain (mixed-use)", "Domain NORTHSIDE", "Rock Rose", "Burnet Road", "Arboretum"],
-    industries: ["Technology", "Retail", "Professional Services", "Real Estate", "Hospitality", "Food & Beverage", "Healthcare", "Finance", "Fitness", "Beauty"],
-    transit: "Capital Metro (MetroRail, MetroRapid 803, MetroBus)",
-    zipCodes: ["78758", "78759"],
-    faqs: [
-      { q: "Why is The Domain different from other Austin areas for SEO?", a: "The Domain is Austin's premier tech and retail district. Search terms include 'tech company domain austin', 'restaurant domain austin', 'retail domain austin'. The keyword mix reflects the area's upscale commercial character." },
-      { q: "How competitive is The Domain for SEO?", a: "Competitive for tech and retail keywords. But niche terms like 'dentist domain austin' or 'accountant domain austin' have lower competition." },
-    ],
-    competitors: ["SmartSites", "Thrive", "WebFX"],
-    searchVolume: "Low (domain austin seo, domain austin seo company)",
-    conversionRate: "High (tech market, high-value clients)",
   }
 );
 
