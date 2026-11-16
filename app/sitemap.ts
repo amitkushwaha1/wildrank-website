@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { INDUSTRIES, SERVICES } from "@/data/industries";
 import { POSTS } from "@/data/blog";
+import { getAllCitySlugs, getCityAreas } from "@/data/cityAreas";
 
 const BASE_URL = "https://wildranktechnologies.com";
 
@@ -105,5 +106,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...industryRoutes, ...articleRoutes];
+  // City area pages (neighborhood-specific SEO pages).
+  const areaRoutes: MetadataRoute.Sitemap = [];
+  for (const city of getAllCitySlugs()) {
+    // City index page
+    areaRoutes.push({
+      url: `${BASE_URL}/areas/${city}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    });
+    // Individual area pages
+    for (const area of getCityAreas(city)) {
+      areaRoutes.push({
+        url: `${BASE_URL}/areas/${city}/${area.areaSlug}`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.5,
+      });
+    }
+  }
+
+  return [...staticRoutes, ...industryRoutes, ...articleRoutes, ...areaRoutes];
 }
