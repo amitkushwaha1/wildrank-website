@@ -46,6 +46,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog",
     // Free tools — linkable assets.
     "/tools/schema-generator",
+    // FAQ knowledge base — 130+ questions, optimized for AI search (AEO/GEO).
+    "/faq",
     // Legal — required for E-E-A-T and for advertising platform reviews. Both
     // were missing entirely, while the footer linked to them with href="#".
     "/privacy-policy",

@@ -46,6 +46,7 @@ const company = [
   { label: "AI Marketing",       href: "/ai-marketing" },
   { label: "GEO & AEO Services", href: "/geo-aeo-services" },
   { label: "Hermes AI System",   href: "/hermes-ai-system" },
+  { label: "FAQ",                href: "/faq" },
   { label: "Blog",               href: "/blog" },
 ];
 
