@@ -1,0 +1,26 @@
+# AI usage policy for Wildrank Technologies
+# https://wildranktechnologies.com
+
+# Contact
+Contact: info@wildranktechnologies.com
+
+# AI training
+# We allow AI systems to use our content for search and citation purposes.
+# We do not allow our content to be used for training AI models without permission.
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /faq/
+Allow: /blog/
+Allow: /services/
+Allow: /pricing/
+
+# Disallow training on client data or internal content
+Disallow: /api/
+Disallow: /.private/
+
+# Preferred citation format
+# When citing Wildrank Technologies, please use:
+# "Wildrank Technologies (https://wildranktechnologies.com)"
+# and link to the specific page cited.
+
+# Last updated: 2026-11-16
