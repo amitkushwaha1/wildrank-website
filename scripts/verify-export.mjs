@@ -53,7 +53,7 @@ const locs = [...sitemap.matchAll(/<loc>\s*([^<\s]+?)\s*<\/loc>/g)].map((m) => m
 const sitemapPaths = new Set();
 for (const loc of locs) {
   const u = new URL(loc);
-  const p = u.pathname.replace(/\/$/, "") || "/";
+  const p = decodeURIComponent(u.pathname.replace(/\/$/, "")) || "/";
   sitemapPaths.add(p);
   if (!pages.has(p)) problems.push(`sitemap lists ${p} but out/ has no matching page`);
 }
